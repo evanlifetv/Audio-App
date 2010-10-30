@@ -19,82 +19,82 @@
 		C465D578127A5F3000639357 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D577127A5F3000639357 /* AudioToolbox.framework */; };
 		C465D59C127A5F3700639357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59B127A5F3700639357 /* QuartzCore.framework */; };
 		C465D59E127A5F4100639357 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59D127A5F4100639357 /* OpenGLES.framework */; };
-		C465D657127A664400639357 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = C465D64F127A664400639357 /* pause.png */; };
-		C465D658127A664400639357 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = C465D650127A664400639357 /* forward.png */; };
-		C465D659127A664400639357 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = C465D651127A664400639357 /* play.png */; };
-		C465D65A127A664400639357 /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = C465D652127A664400639357 /* rewind.png */; };
-		C465D65B127A664400639357 /* sound_meter_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C465D653127A664400639357 /* sound_meter_background.png */; };
-		C465D65C127A664400639357 /* sound_meter_glare.png in Resources */ = {isa = PBXBuildFile; fileRef = C465D654127A664400639357 /* sound_meter_glare.png */; };
-		C465D65D127A664400639357 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = C465D655127A664400639357 /* volume_down.png */; };
-		C465D65E127A664400639357 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = C465D656127A664400639357 /* volume_up.png */; };
 		C465D663127A669700639357 /* MeterTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C465D662127A669700639357 /* MeterTable.cpp */; };
 		C465D666127A66AE00639357 /* referenceaudioController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C465D665127A66AE00639357 /* referenceaudioController.mm */; };
 		C465D672127A671D00639357 /* CALevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = C465D66D127A671D00639357 /* CALevelMeter.mm */; };
 		C465D673127A671D00639357 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D66F127A671D00639357 /* GLLevelMeter.m */; };
 		C465D674127A671D00639357 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D671127A671D00639357 /* LevelMeter.m */; };
-		C4C942ED127B8D9300E4D895 /* carbon.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C942EC127B8D9300E4D895 /* carbon.png */; };
-		C4C94392127B97E100E4D895 /* 1 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94354127B97E100E4D895 /* 1 kHz.m4a */; };
-		C4C94393127B97E100E4D895 /* 1.6 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94355127B97E100E4D895 /* 1.6 kHz.m4a */; };
-		C4C94394127B97E100E4D895 /* 1.25 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94356127B97E100E4D895 /* 1.25 kHz.m4a */; };
-		C4C94395127B97E100E4D895 /* 2 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94357127B97E100E4D895 /* 2 kHz.m4a */; };
-		C4C94396127B97E100E4D895 /* 2.5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94358127B97E100E4D895 /* 2.5 kHz.m4a */; };
-		C4C94397127B97E100E4D895 /* 3.15 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94359127B97E100E4D895 /* 3.15 kHz.m4a */; };
-		C4C94398127B97E100E4D895 /* 4 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9435A127B97E100E4D895 /* 4 kHz.m4a */; };
-		C4C94399127B97E100E4D895 /* 5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9435B127B97E100E4D895 /* 5 kHz.m4a */; };
-		C4C9439A127B97E100E4D895 /* 6 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9435C127B97E100E4D895 /* 6 kHz.m4a */; };
-		C4C9439B127B97E100E4D895 /* 8 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9435D127B97E100E4D895 /* 8 kHz.m4a */; };
-		C4C9439C127B97E100E4D895 /* 10 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9435E127B97E100E4D895 /* 10 kHz.m4a */; };
-		C4C9439D127B97E100E4D895 /* 11 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9435F127B97E100E4D895 /* 11 kHz.m4a */; };
-		C4C9439E127B97E100E4D895 /* 12 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94360127B97E100E4D895 /* 12 kHz.m4a */; };
-		C4C9439F127B97E100E4D895 /* 12.5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94361127B97E100E4D895 /* 12.5 kHz.m4a */; };
-		C4C943A0127B97E100E4D895 /* 13 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94362127B97E100E4D895 /* 13 kHz.m4a */; };
-		C4C943A1127B97E100E4D895 /* 14 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94363127B97E100E4D895 /* 14 kHz.m4a */; };
-		C4C943A2127B97E100E4D895 /* 15 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94364127B97E100E4D895 /* 15 kHz.m4a */; };
-		C4C943A3127B97E100E4D895 /* 16 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94365127B97E100E4D895 /* 16 kHz.m4a */; };
-		C4C943A4127B97E100E4D895 /* 17 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94366127B97E100E4D895 /* 17 kHz.m4a */; };
-		C4C943A5127B97E100E4D895 /* 18 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94367127B97E100E4D895 /* 18 kHz.m4a */; };
-		C4C943A6127B97E100E4D895 /* 19 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94368127B97E100E4D895 /* 19 kHz.m4a */; };
-		C4C943A7127B97E100E4D895 /* 20 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94369127B97E100E4D895 /* 20 Hz.m4a */; };
-		C4C943A8127B97E100E4D895 /* 20 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9436A127B97E100E4D895 /* 20 kHz.m4a */; };
-		C4C943A9127B97E100E4D895 /* 25 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9436B127B97E100E4D895 /* 25 Hz.m4a */; };
-		C4C943AA127B97E100E4D895 /* 31.5 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9436C127B97E100E4D895 /* 31.5 Hz.m4a */; };
-		C4C943AB127B97E100E4D895 /* 40 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9436D127B97E100E4D895 /* 40 Hz.m4a */; };
-		C4C943AC127B97E100E4D895 /* 50 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9436E127B97E100E4D895 /* 50 Hz.m4a */; };
-		C4C943AD127B97E100E4D895 /* 63 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9436F127B97E100E4D895 /* 63 Hz.m4a */; };
-		C4C943AE127B97E100E4D895 /* 80 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94370127B97E100E4D895 /* 80 Hz.m4a */; };
-		C4C943AF127B97E100E4D895 /* 100 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94371127B97E100E4D895 /* 100 Hz.m4a */; };
-		C4C943B0127B97E100E4D895 /* 125 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94372127B97E100E4D895 /* 125 Hz.m4a */; };
-		C4C943B1127B97E100E4D895 /* 160 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94373127B97E100E4D895 /* 160 Hz.m4a */; };
-		C4C943B2127B97E100E4D895 /* 200 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94374127B97E100E4D895 /* 200 Hz.m4a */; };
-		C4C943B3127B97E100E4D895 /* 250 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94375127B97E100E4D895 /* 250 Hz.m4a */; };
-		C4C943B4127B97E100E4D895 /* 315 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94376127B97E100E4D895 /* 315 Hz.m4a */; };
-		C4C943B5127B97E100E4D895 /* 400 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94377127B97E100E4D895 /* 400 Hz.m4a */; };
-		C4C943B6127B97E100E4D895 /* 500 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94378127B97E100E4D895 /* 500 Hz.m4a */; };
-		C4C943B7127B97E100E4D895 /* 630 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94379127B97E100E4D895 /* 630 Hz.m4a */; };
-		C4C943B8127B97E100E4D895 /* 800 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9437A127B97E100E4D895 /* 800 Hz.m4a */; };
-		C4C943B9127B97E100E4D895 /* Acoustic Guitar (Artist_ Michael Molenda).m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9437B127B97E100E4D895 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */; };
-		C4C943BA127B97E100E4D895 /* Drum Kit (Artist_ Larry The O).m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9437C127B97E100E4D895 /* Drum Kit (Artist_ Larry The O).m4a */; };
-		C4C943BB127B97E100E4D895 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9437D127B97E100E4D895 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */; };
-		C4C943BC127B97E100E4D895 /* Female Vocal (Artist_ Claudia Conrad).m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9437E127B97E100E4D895 /* Female Vocal (Artist_ Claudia Conrad).m4a */; };
-		C4C943BD127B97E100E4D895 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9437F127B97E100E4D895 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a */; };
-		C4C943BE127B97E100E4D895 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94380127B97E100E4D895 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a */; };
-		C4C943BF127B97E100E4D895 /* Male Vocal (Artist_ Dave Crimmen).m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94381127B97E100E4D895 /* Male Vocal (Artist_ Dave Crimmen).m4a */; };
-		C4C943C0127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94382127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a */; };
-		C4C943C1127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94383127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a */; };
-		C4C943C2127B97E100E4D895 /* Piano Solo (Artist_ J.J. Jenkins).m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94384127B97E100E4D895 /* Piano Solo (Artist_ J.J. Jenkins).m4a */; };
-		C4C943C3127B97E100E4D895 /* Saxophone (Artist_ Frank Macchia).m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94385127B97E100E4D895 /* Saxophone (Artist_ Frank Macchia).m4a */; };
-		C4C943C4127B97E100E4D895 /* Snare Drum Loop (Artist_ Larry The O).m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94386127B97E100E4D895 /* Snare Drum Loop (Artist_ Larry The O).m4a */; };
-		C4C943C5127B97E100E4D895 /* Square Wave - 1 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94387127B97E100E4D895 /* Square Wave - 1 kHz.m4a */; };
-		C4C943C6127B97E100E4D895 /* Square Wave - 5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94388127B97E100E4D895 /* Square Wave - 5 kHz.m4a */; };
-		C4C943C7127B97E100E4D895 /* Square Wave - 10 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94389127B97E100E4D895 /* Square Wave - 10 kHz.m4a */; };
-		C4C943C8127B97E100E4D895 /* Square Wave - 100 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9438A127B97E100E4D895 /* Square Wave - 100 Hz.m4a */; };
-		C4C943C9127B97E100E4D895 /* Square Wave - 500 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9438B127B97E100E4D895 /* Square Wave - 500 Hz.m4a */; };
-		C4C943CA127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - A.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9438C127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - A.m4a */; };
-		C4C943CB127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - B.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9438D127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - B.m4a */; };
-		C4C943CC127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9438E127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - D.m4a */; };
-		C4C943CD127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - G.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C9438F127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - G.m4a */; };
-		C4C943CE127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - High E.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94390127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - High E.m4a */; };
-		C4C943CF127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - Low E.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C4C94391127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */; };
+		D532A4CA127BB48500F753E2 /* 1 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48C127BB48500F753E2 /* 1 kHz.m4a */; };
+		D532A4CB127BB48500F753E2 /* 1.6 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48D127BB48500F753E2 /* 1.6 kHz.m4a */; };
+		D532A4CC127BB48500F753E2 /* 1.25 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48E127BB48500F753E2 /* 1.25 kHz.m4a */; };
+		D532A4CD127BB48500F753E2 /* 2 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48F127BB48500F753E2 /* 2 kHz.m4a */; };
+		D532A4CE127BB48500F753E2 /* 2.5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A490127BB48500F753E2 /* 2.5 kHz.m4a */; };
+		D532A4CF127BB48500F753E2 /* 3.15 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A491127BB48500F753E2 /* 3.15 kHz.m4a */; };
+		D532A4D0127BB48500F753E2 /* 4 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A492127BB48500F753E2 /* 4 kHz.m4a */; };
+		D532A4D1127BB48500F753E2 /* 5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A493127BB48500F753E2 /* 5 kHz.m4a */; };
+		D532A4D2127BB48500F753E2 /* 6 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A494127BB48500F753E2 /* 6 kHz.m4a */; };
+		D532A4D3127BB48500F753E2 /* 8 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A495127BB48500F753E2 /* 8 kHz.m4a */; };
+		D532A4D4127BB48500F753E2 /* 10 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A496127BB48500F753E2 /* 10 kHz.m4a */; };
+		D532A4D5127BB48500F753E2 /* 11 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A497127BB48500F753E2 /* 11 kHz.m4a */; };
+		D532A4D6127BB48500F753E2 /* 12 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A498127BB48500F753E2 /* 12 kHz.m4a */; };
+		D532A4D7127BB48500F753E2 /* 12.5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A499127BB48500F753E2 /* 12.5 kHz.m4a */; };
+		D532A4D8127BB48500F753E2 /* 13 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49A127BB48500F753E2 /* 13 kHz.m4a */; };
+		D532A4D9127BB48500F753E2 /* 14 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49B127BB48500F753E2 /* 14 kHz.m4a */; };
+		D532A4DA127BB48500F753E2 /* 15 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49C127BB48500F753E2 /* 15 kHz.m4a */; };
+		D532A4DB127BB48500F753E2 /* 16 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49D127BB48500F753E2 /* 16 kHz.m4a */; };
+		D532A4DC127BB48500F753E2 /* 17 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49E127BB48500F753E2 /* 17 kHz.m4a */; };
+		D532A4DD127BB48500F753E2 /* 18 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49F127BB48500F753E2 /* 18 kHz.m4a */; };
+		D532A4DE127BB48500F753E2 /* 19 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A0127BB48500F753E2 /* 19 kHz.m4a */; };
+		D532A4DF127BB48500F753E2 /* 20 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A1127BB48500F753E2 /* 20 Hz.m4a */; };
+		D532A4E0127BB48500F753E2 /* 20 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A2127BB48500F753E2 /* 20 kHz.m4a */; };
+		D532A4E1127BB48500F753E2 /* 25 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A3127BB48500F753E2 /* 25 Hz.m4a */; };
+		D532A4E2127BB48500F753E2 /* 31.5 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A4127BB48500F753E2 /* 31.5 Hz.m4a */; };
+		D532A4E3127BB48500F753E2 /* 40 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A5127BB48500F753E2 /* 40 Hz.m4a */; };
+		D532A4E4127BB48500F753E2 /* 50 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A6127BB48500F753E2 /* 50 Hz.m4a */; };
+		D532A4E5127BB48500F753E2 /* 63 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A7127BB48500F753E2 /* 63 Hz.m4a */; };
+		D532A4E6127BB48500F753E2 /* 80 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A8127BB48500F753E2 /* 80 Hz.m4a */; };
+		D532A4E7127BB48500F753E2 /* 100 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A9127BB48500F753E2 /* 100 Hz.m4a */; };
+		D532A4E8127BB48500F753E2 /* 125 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AA127BB48500F753E2 /* 125 Hz.m4a */; };
+		D532A4E9127BB48500F753E2 /* 160 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AB127BB48500F753E2 /* 160 Hz.m4a */; };
+		D532A4EA127BB48500F753E2 /* 200 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AC127BB48500F753E2 /* 200 Hz.m4a */; };
+		D532A4EB127BB48500F753E2 /* 250 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AD127BB48500F753E2 /* 250 Hz.m4a */; };
+		D532A4EC127BB48500F753E2 /* 315 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AE127BB48500F753E2 /* 315 Hz.m4a */; };
+		D532A4ED127BB48500F753E2 /* 400 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AF127BB48500F753E2 /* 400 Hz.m4a */; };
+		D532A4EE127BB48500F753E2 /* 500 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B0127BB48500F753E2 /* 500 Hz.m4a */; };
+		D532A4EF127BB48500F753E2 /* 630 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B1127BB48500F753E2 /* 630 Hz.m4a */; };
+		D532A4F0127BB48500F753E2 /* 800 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B2127BB48500F753E2 /* 800 Hz.m4a */; };
+		D532A4F1127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B3127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */; };
+		D532A4F2127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B4127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a */; };
+		D532A4F3127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B5127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */; };
+		D532A4F4127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B6127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a */; };
+		D532A4F5127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B7127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a */; };
+		D532A4F6127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B8127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a */; };
+		D532A4F7127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B9127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a */; };
+		D532A4F8127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BA127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a */; };
+		D532A4F9127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BB127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a */; };
+		D532A4FA127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BC127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a */; };
+		D532A4FB127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BD127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a */; };
+		D532A4FC127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BE127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a */; };
+		D532A4FD127BB48500F753E2 /* Square Wave - 1 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BF127BB48500F753E2 /* Square Wave - 1 kHz.m4a */; };
+		D532A4FE127BB48500F753E2 /* Square Wave - 5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C0127BB48500F753E2 /* Square Wave - 5 kHz.m4a */; };
+		D532A4FF127BB48500F753E2 /* Square Wave - 10 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C1127BB48500F753E2 /* Square Wave - 10 kHz.m4a */; };
+		D532A500127BB48500F753E2 /* Square Wave - 100 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C2127BB48500F753E2 /* Square Wave - 100 Hz.m4a */; };
+		D532A501127BB48500F753E2 /* Square Wave - 500 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C3127BB48500F753E2 /* Square Wave - 500 Hz.m4a */; };
+		D532A502127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C4127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a */; };
+		D532A503127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C5127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a */; };
+		D532A504127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C6127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a */; };
+		D532A505127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C7127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a */; };
+		D532A506127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C8127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a */; };
+		D532A507127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C9127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */; };
+		D532A512127BB4D500F753E2 /* carbon.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A509127BB4D500F753E2 /* carbon.png */; };
+		D532A513127BB4D500F753E2 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50A127BB4D500F753E2 /* forward.png */; };
+		D532A514127BB4D500F753E2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50B127BB4D500F753E2 /* pause.png */; };
+		D532A515127BB4D500F753E2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50C127BB4D500F753E2 /* play.png */; };
+		D532A516127BB4D500F753E2 /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50D127BB4D500F753E2 /* rewind.png */; };
+		D532A517127BB4D500F753E2 /* sound_meter_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50E127BB4D500F753E2 /* sound_meter_background.png */; };
+		D532A518127BB4D500F753E2 /* sound_meter_glare.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50F127BB4D500F753E2 /* sound_meter_glare.png */; };
+		D532A519127BB4D500F753E2 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A510127BB4D500F753E2 /* volume_down.png */; };
+		D532A51A127BB4D500F753E2 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A511127BB4D500F753E2 /* volume_up.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,8 +104,8 @@
 		1D6058910D05DD3D006BFB54 /* referenceaudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = referenceaudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = referenceaudioViewController.xib; sourceTree = "<group>"; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = referenceaudioViewController.xib; path = Resources/NIBs/referenceaudioViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/NIBs/MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* referenceaudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = referenceaudioViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* referenceaudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = referenceaudioViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,14 +115,6 @@
 		C465D577127A5F3000639357 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = "<group>"; };
 		C465D59B127A5F3700639357 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C465D59D127A5F4100639357 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenGLES.framework; sourceTree = "<group>"; };
-		C465D64F127A664400639357 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
-		C465D650127A664400639357 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
-		C465D651127A664400639357 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
-		C465D652127A664400639357 /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
-		C465D653127A664400639357 /* sound_meter_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_meter_background.png; sourceTree = "<group>"; };
-		C465D654127A664400639357 /* sound_meter_glare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_meter_glare.png; sourceTree = "<group>"; };
-		C465D655127A664400639357 /* volume_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_down.png; sourceTree = "<group>"; };
-		C465D656127A664400639357 /* volume_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_up.png; sourceTree = "<group>"; };
 		C465D661127A669700639357 /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterTable.h; sourceTree = "<group>"; };
 		C465D662127A669700639357 /* MeterTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeterTable.cpp; sourceTree = "<group>"; };
 		C465D664127A66AE00639357 /* referenceaudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = referenceaudioController.h; sourceTree = "<group>"; };
@@ -133,69 +125,77 @@
 		C465D66F127A671D00639357 /* GLLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLevelMeter.m; sourceTree = "<group>"; };
 		C465D670127A671D00639357 /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
 		C465D671127A671D00639357 /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
-		C4C942EC127B8D9300E4D895 /* carbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carbon.png; sourceTree = "<group>"; };
-		C4C94354127B97E100E4D895 /* 1 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94355127B97E100E4D895 /* 1.6 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1.6 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94356127B97E100E4D895 /* 1.25 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1.25 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94357127B97E100E4D895 /* 2 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94358127B97E100E4D895 /* 2.5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2.5 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94359127B97E100E4D895 /* 3.15 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3.15 kHz.m4a"; sourceTree = "<group>"; };
-		C4C9435A127B97E100E4D895 /* 4 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4 kHz.m4a"; sourceTree = "<group>"; };
-		C4C9435B127B97E100E4D895 /* 5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "5 kHz.m4a"; sourceTree = "<group>"; };
-		C4C9435C127B97E100E4D895 /* 6 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "6 kHz.m4a"; sourceTree = "<group>"; };
-		C4C9435D127B97E100E4D895 /* 8 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8 kHz.m4a"; sourceTree = "<group>"; };
-		C4C9435E127B97E100E4D895 /* 10 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "10 kHz.m4a"; sourceTree = "<group>"; };
-		C4C9435F127B97E100E4D895 /* 11 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94360127B97E100E4D895 /* 12 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94361127B97E100E4D895 /* 12.5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12.5 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94362127B97E100E4D895 /* 13 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "13 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94363127B97E100E4D895 /* 14 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "14 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94364127B97E100E4D895 /* 15 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "15 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94365127B97E100E4D895 /* 16 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "16 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94366127B97E100E4D895 /* 17 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "17 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94367127B97E100E4D895 /* 18 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "18 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94368127B97E100E4D895 /* 19 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "19 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94369127B97E100E4D895 /* 20 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "20 Hz.m4a"; sourceTree = "<group>"; };
-		C4C9436A127B97E100E4D895 /* 20 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "20 kHz.m4a"; sourceTree = "<group>"; };
-		C4C9436B127B97E100E4D895 /* 25 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "25 Hz.m4a"; sourceTree = "<group>"; };
-		C4C9436C127B97E100E4D895 /* 31.5 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "31.5 Hz.m4a"; sourceTree = "<group>"; };
-		C4C9436D127B97E100E4D895 /* 40 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "40 Hz.m4a"; sourceTree = "<group>"; };
-		C4C9436E127B97E100E4D895 /* 50 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "50 Hz.m4a"; sourceTree = "<group>"; };
-		C4C9436F127B97E100E4D895 /* 63 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "63 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94370127B97E100E4D895 /* 80 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "80 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94371127B97E100E4D895 /* 100 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "100 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94372127B97E100E4D895 /* 125 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "125 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94373127B97E100E4D895 /* 160 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "160 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94374127B97E100E4D895 /* 200 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "200 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94375127B97E100E4D895 /* 250 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "250 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94376127B97E100E4D895 /* 315 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "315 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94377127B97E100E4D895 /* 400 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "400 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94378127B97E100E4D895 /* 500 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "500 Hz.m4a"; sourceTree = "<group>"; };
-		C4C94379127B97E100E4D895 /* 630 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "630 Hz.m4a"; sourceTree = "<group>"; };
-		C4C9437A127B97E100E4D895 /* 800 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "800 Hz.m4a"; sourceTree = "<group>"; };
-		C4C9437B127B97E100E4D895 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acoustic Guitar (Artist_ Michael Molenda).m4a"; sourceTree = "<group>"; };
-		C4C9437C127B97E100E4D895 /* Drum Kit (Artist_ Larry The O).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Drum Kit (Artist_ Larry The O).m4a"; sourceTree = "<group>"; };
-		C4C9437D127B97E100E4D895 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Electric Guitar With Chorus (Artist_ Michael Molenda).m4a"; sourceTree = "<group>"; };
-		C4C9437E127B97E100E4D895 /* Female Vocal (Artist_ Claudia Conrad).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Female Vocal (Artist_ Claudia Conrad).m4a"; sourceTree = "<group>"; };
-		C4C9437F127B97E100E4D895 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a"; sourceTree = "<group>"; };
-		C4C94380127B97E100E4D895 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a"; sourceTree = "<group>"; };
-		C4C94381127B97E100E4D895 /* Male Vocal (Artist_ Dave Crimmen).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Male Vocal (Artist_ Dave Crimmen).m4a"; sourceTree = "<group>"; };
-		C4C94382127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Phase Test (250 Hz Sine Wave) - In-Phase.m4a"; sourceTree = "<group>"; };
-		C4C94383127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a"; sourceTree = "<group>"; };
-		C4C94384127B97E100E4D895 /* Piano Solo (Artist_ J.J. Jenkins).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Piano Solo (Artist_ J.J. Jenkins).m4a"; sourceTree = "<group>"; };
-		C4C94385127B97E100E4D895 /* Saxophone (Artist_ Frank Macchia).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saxophone (Artist_ Frank Macchia).m4a"; sourceTree = "<group>"; };
-		C4C94386127B97E100E4D895 /* Snare Drum Loop (Artist_ Larry The O).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Snare Drum Loop (Artist_ Larry The O).m4a"; sourceTree = "<group>"; };
-		C4C94387127B97E100E4D895 /* Square Wave - 1 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Square Wave - 1 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94388127B97E100E4D895 /* Square Wave - 5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Square Wave - 5 kHz.m4a"; sourceTree = "<group>"; };
-		C4C94389127B97E100E4D895 /* Square Wave - 10 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Square Wave - 10 kHz.m4a"; sourceTree = "<group>"; };
-		C4C9438A127B97E100E4D895 /* Square Wave - 100 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Square Wave - 100 Hz.m4a"; sourceTree = "<group>"; };
-		C4C9438B127B97E100E4D895 /* Square Wave - 500 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Square Wave - 500 Hz.m4a"; sourceTree = "<group>"; };
-		C4C9438C127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - A.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tuning Notes (Guitar Or Bass) - A.m4a"; sourceTree = "<group>"; };
-		C4C9438D127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - B.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tuning Notes (Guitar Or Bass) - B.m4a"; sourceTree = "<group>"; };
-		C4C9438E127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tuning Notes (Guitar Or Bass) - D.m4a"; sourceTree = "<group>"; };
-		C4C9438F127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - G.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tuning Notes (Guitar Or Bass) - G.m4a"; sourceTree = "<group>"; };
-		C4C94390127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - High E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tuning Notes (Guitar Or Bass) - High E.m4a"; sourceTree = "<group>"; };
-		C4C94391127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tuning Notes (Guitar Or Bass) - Low E.m4a"; sourceTree = "<group>"; };
+		D532A48C127BB48500F753E2 /* 1 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1 kHz.m4a"; path = "Resources/audio/1 kHz.m4a"; sourceTree = "<group>"; };
+		D532A48D127BB48500F753E2 /* 1.6 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1.6 kHz.m4a"; path = "Resources/audio/1.6 kHz.m4a"; sourceTree = "<group>"; };
+		D532A48E127BB48500F753E2 /* 1.25 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1.25 kHz.m4a"; path = "Resources/audio/1.25 kHz.m4a"; sourceTree = "<group>"; };
+		D532A48F127BB48500F753E2 /* 2 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "2 kHz.m4a"; path = "Resources/audio/2 kHz.m4a"; sourceTree = "<group>"; };
+		D532A490127BB48500F753E2 /* 2.5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "2.5 kHz.m4a"; path = "Resources/audio/2.5 kHz.m4a"; sourceTree = "<group>"; };
+		D532A491127BB48500F753E2 /* 3.15 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "3.15 kHz.m4a"; path = "Resources/audio/3.15 kHz.m4a"; sourceTree = "<group>"; };
+		D532A492127BB48500F753E2 /* 4 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "4 kHz.m4a"; path = "Resources/audio/4 kHz.m4a"; sourceTree = "<group>"; };
+		D532A493127BB48500F753E2 /* 5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "5 kHz.m4a"; path = "Resources/audio/5 kHz.m4a"; sourceTree = "<group>"; };
+		D532A494127BB48500F753E2 /* 6 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "6 kHz.m4a"; path = "Resources/audio/6 kHz.m4a"; sourceTree = "<group>"; };
+		D532A495127BB48500F753E2 /* 8 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "8 kHz.m4a"; path = "Resources/audio/8 kHz.m4a"; sourceTree = "<group>"; };
+		D532A496127BB48500F753E2 /* 10 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "10 kHz.m4a"; path = "Resources/audio/10 kHz.m4a"; sourceTree = "<group>"; };
+		D532A497127BB48500F753E2 /* 11 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "11 kHz.m4a"; path = "Resources/audio/11 kHz.m4a"; sourceTree = "<group>"; };
+		D532A498127BB48500F753E2 /* 12 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "12 kHz.m4a"; path = "Resources/audio/12 kHz.m4a"; sourceTree = "<group>"; };
+		D532A499127BB48500F753E2 /* 12.5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "12.5 kHz.m4a"; path = "Resources/audio/12.5 kHz.m4a"; sourceTree = "<group>"; };
+		D532A49A127BB48500F753E2 /* 13 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "13 kHz.m4a"; path = "Resources/audio/13 kHz.m4a"; sourceTree = "<group>"; };
+		D532A49B127BB48500F753E2 /* 14 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "14 kHz.m4a"; path = "Resources/audio/14 kHz.m4a"; sourceTree = "<group>"; };
+		D532A49C127BB48500F753E2 /* 15 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "15 kHz.m4a"; path = "Resources/audio/15 kHz.m4a"; sourceTree = "<group>"; };
+		D532A49D127BB48500F753E2 /* 16 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "16 kHz.m4a"; path = "Resources/audio/16 kHz.m4a"; sourceTree = "<group>"; };
+		D532A49E127BB48500F753E2 /* 17 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "17 kHz.m4a"; path = "Resources/audio/17 kHz.m4a"; sourceTree = "<group>"; };
+		D532A49F127BB48500F753E2 /* 18 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "18 kHz.m4a"; path = "Resources/audio/18 kHz.m4a"; sourceTree = "<group>"; };
+		D532A4A0127BB48500F753E2 /* 19 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "19 kHz.m4a"; path = "Resources/audio/19 kHz.m4a"; sourceTree = "<group>"; };
+		D532A4A1127BB48500F753E2 /* 20 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "20 Hz.m4a"; path = "Resources/audio/20 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4A2127BB48500F753E2 /* 20 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "20 kHz.m4a"; path = "Resources/audio/20 kHz.m4a"; sourceTree = "<group>"; };
+		D532A4A3127BB48500F753E2 /* 25 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "25 Hz.m4a"; path = "Resources/audio/25 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4A4127BB48500F753E2 /* 31.5 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "31.5 Hz.m4a"; path = "Resources/audio/31.5 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4A5127BB48500F753E2 /* 40 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "40 Hz.m4a"; path = "Resources/audio/40 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4A6127BB48500F753E2 /* 50 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "50 Hz.m4a"; path = "Resources/audio/50 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4A7127BB48500F753E2 /* 63 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "63 Hz.m4a"; path = "Resources/audio/63 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4A8127BB48500F753E2 /* 80 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "80 Hz.m4a"; path = "Resources/audio/80 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4A9127BB48500F753E2 /* 100 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "100 Hz.m4a"; path = "Resources/audio/100 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4AA127BB48500F753E2 /* 125 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "125 Hz.m4a"; path = "Resources/audio/125 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4AB127BB48500F753E2 /* 160 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "160 Hz.m4a"; path = "Resources/audio/160 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4AC127BB48500F753E2 /* 200 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "200 Hz.m4a"; path = "Resources/audio/200 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4AD127BB48500F753E2 /* 250 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "250 Hz.m4a"; path = "Resources/audio/250 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4AE127BB48500F753E2 /* 315 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "315 Hz.m4a"; path = "Resources/audio/315 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4AF127BB48500F753E2 /* 400 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "400 Hz.m4a"; path = "Resources/audio/400 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4B0127BB48500F753E2 /* 500 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "500 Hz.m4a"; path = "Resources/audio/500 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4B1127BB48500F753E2 /* 630 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "630 Hz.m4a"; path = "Resources/audio/630 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4B2127BB48500F753E2 /* 800 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "800 Hz.m4a"; path = "Resources/audio/800 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4B3127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Acoustic Guitar (Artist_ Michael Molenda).m4a"; path = "Resources/audio/Acoustic Guitar (Artist_ Michael Molenda).m4a"; sourceTree = "<group>"; };
+		D532A4B4127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Drum Kit (Artist_ Larry The O).m4a"; path = "Resources/audio/Drum Kit (Artist_ Larry The O).m4a"; sourceTree = "<group>"; };
+		D532A4B5127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Electric Guitar With Chorus (Artist_ Michael Molenda).m4a"; path = "Resources/audio/Electric Guitar With Chorus (Artist_ Michael Molenda).m4a"; sourceTree = "<group>"; };
+		D532A4B6127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Female Vocal (Artist_ Claudia Conrad).m4a"; path = "Resources/audio/Female Vocal (Artist_ Claudia Conrad).m4a"; sourceTree = "<group>"; };
+		D532A4B7127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a"; path = "Resources/audio/Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a"; sourceTree = "<group>"; };
+		D532A4B8127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a"; path = "Resources/audio/Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a"; sourceTree = "<group>"; };
+		D532A4B9127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Male Vocal (Artist_ Dave Crimmen).m4a"; path = "Resources/audio/Male Vocal (Artist_ Dave Crimmen).m4a"; sourceTree = "<group>"; };
+		D532A4BA127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Phase Test (250 Hz Sine Wave) - In-Phase.m4a"; path = "Resources/audio/Phase Test (250 Hz Sine Wave) - In-Phase.m4a"; sourceTree = "<group>"; };
+		D532A4BB127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a"; path = "Resources/audio/Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a"; sourceTree = "<group>"; };
+		D532A4BC127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Piano Solo (Artist_ J.J. Jenkins).m4a"; path = "Resources/audio/Piano Solo (Artist_ J.J. Jenkins).m4a"; sourceTree = "<group>"; };
+		D532A4BD127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Saxophone (Artist_ Frank Macchia).m4a"; path = "Resources/audio/Saxophone (Artist_ Frank Macchia).m4a"; sourceTree = "<group>"; };
+		D532A4BE127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Snare Drum Loop (Artist_ Larry The O).m4a"; path = "Resources/audio/Snare Drum Loop (Artist_ Larry The O).m4a"; sourceTree = "<group>"; };
+		D532A4BF127BB48500F753E2 /* Square Wave - 1 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 1 kHz.m4a"; path = "Resources/audio/Square Wave - 1 kHz.m4a"; sourceTree = "<group>"; };
+		D532A4C0127BB48500F753E2 /* Square Wave - 5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 5 kHz.m4a"; path = "Resources/audio/Square Wave - 5 kHz.m4a"; sourceTree = "<group>"; };
+		D532A4C1127BB48500F753E2 /* Square Wave - 10 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 10 kHz.m4a"; path = "Resources/audio/Square Wave - 10 kHz.m4a"; sourceTree = "<group>"; };
+		D532A4C2127BB48500F753E2 /* Square Wave - 100 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 100 Hz.m4a"; path = "Resources/audio/Square Wave - 100 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4C3127BB48500F753E2 /* Square Wave - 500 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 500 Hz.m4a"; path = "Resources/audio/Square Wave - 500 Hz.m4a"; sourceTree = "<group>"; };
+		D532A4C4127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - A.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - A.m4a"; sourceTree = "<group>"; };
+		D532A4C5127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - B.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - B.m4a"; sourceTree = "<group>"; };
+		D532A4C6127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - D.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - D.m4a"; sourceTree = "<group>"; };
+		D532A4C7127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - G.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - G.m4a"; sourceTree = "<group>"; };
+		D532A4C8127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - High E.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - High E.m4a"; sourceTree = "<group>"; };
+		D532A4C9127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - Low E.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - Low E.m4a"; sourceTree = "<group>"; };
+		D532A509127BB4D500F753E2 /* carbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carbon.png; sourceTree = "<group>"; };
+		D532A50A127BB4D500F753E2 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
+		D532A50B127BB4D500F753E2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		D532A50C127BB4D500F753E2 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		D532A50D127BB4D500F753E2 /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
+		D532A50E127BB4D500F753E2 /* sound_meter_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_meter_background.png; sourceTree = "<group>"; };
+		D532A50F127BB4D500F753E2 /* sound_meter_glare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_meter_glare.png; sourceTree = "<group>"; };
+		D532A510127BB4D500F753E2 /* volume_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_down.png; sourceTree = "<group>"; };
+		D532A511127BB4D500F753E2 /* volume_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_up.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,10 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				C465D66B127A671D00639357 /* AudioViews */,
+				D532A568127BBCB000F753E2 /* ViewControllers */,
 				1D3623240D0F684500981E51 /* referenceaudioAppDelegate.h */,
 				1D3623250D0F684500981E51 /* referenceaudioAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* referenceaudioViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* referenceaudioViewController.m */,
 				C465D664127A66AE00639357 /* referenceaudioController.h */,
 				C465D665127A66AE00639357 /* referenceaudioController.mm */,
 			);
@@ -264,10 +263,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C465D64E127A664400639357 /* images */,
 				C465D5AC127A5F5100639357 /* audio */,
-				2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				D532A508127BB4D500F753E2 /* images */,
+				D532A52E127BB88F00F753E2 /* NIBs */,
 				8D1107310486CEB800E47090 /* referenceaudio-Info.plist */,
 			);
 			name = Resources;
@@ -290,86 +288,70 @@
 		C465D5AC127A5F5100639357 /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				C4C94354127B97E100E4D895 /* 1 kHz.m4a */,
-				C4C94355127B97E100E4D895 /* 1.6 kHz.m4a */,
-				C4C94356127B97E100E4D895 /* 1.25 kHz.m4a */,
-				C4C94357127B97E100E4D895 /* 2 kHz.m4a */,
-				C4C94358127B97E100E4D895 /* 2.5 kHz.m4a */,
-				C4C94359127B97E100E4D895 /* 3.15 kHz.m4a */,
-				C4C9435A127B97E100E4D895 /* 4 kHz.m4a */,
-				C4C9435B127B97E100E4D895 /* 5 kHz.m4a */,
-				C4C9435C127B97E100E4D895 /* 6 kHz.m4a */,
-				C4C9435D127B97E100E4D895 /* 8 kHz.m4a */,
-				C4C9435E127B97E100E4D895 /* 10 kHz.m4a */,
-				C4C9435F127B97E100E4D895 /* 11 kHz.m4a */,
-				C4C94360127B97E100E4D895 /* 12 kHz.m4a */,
-				C4C94361127B97E100E4D895 /* 12.5 kHz.m4a */,
-				C4C94362127B97E100E4D895 /* 13 kHz.m4a */,
-				C4C94363127B97E100E4D895 /* 14 kHz.m4a */,
-				C4C94364127B97E100E4D895 /* 15 kHz.m4a */,
-				C4C94365127B97E100E4D895 /* 16 kHz.m4a */,
-				C4C94366127B97E100E4D895 /* 17 kHz.m4a */,
-				C4C94367127B97E100E4D895 /* 18 kHz.m4a */,
-				C4C94368127B97E100E4D895 /* 19 kHz.m4a */,
-				C4C94369127B97E100E4D895 /* 20 Hz.m4a */,
-				C4C9436A127B97E100E4D895 /* 20 kHz.m4a */,
-				C4C9436B127B97E100E4D895 /* 25 Hz.m4a */,
-				C4C9436C127B97E100E4D895 /* 31.5 Hz.m4a */,
-				C4C9436D127B97E100E4D895 /* 40 Hz.m4a */,
-				C4C9436E127B97E100E4D895 /* 50 Hz.m4a */,
-				C4C9436F127B97E100E4D895 /* 63 Hz.m4a */,
-				C4C94370127B97E100E4D895 /* 80 Hz.m4a */,
-				C4C94371127B97E100E4D895 /* 100 Hz.m4a */,
-				C4C94372127B97E100E4D895 /* 125 Hz.m4a */,
-				C4C94373127B97E100E4D895 /* 160 Hz.m4a */,
-				C4C94374127B97E100E4D895 /* 200 Hz.m4a */,
-				C4C94375127B97E100E4D895 /* 250 Hz.m4a */,
-				C4C94376127B97E100E4D895 /* 315 Hz.m4a */,
-				C4C94377127B97E100E4D895 /* 400 Hz.m4a */,
-				C4C94378127B97E100E4D895 /* 500 Hz.m4a */,
-				C4C94379127B97E100E4D895 /* 630 Hz.m4a */,
-				C4C9437A127B97E100E4D895 /* 800 Hz.m4a */,
-				C4C9437B127B97E100E4D895 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */,
-				C4C9437C127B97E100E4D895 /* Drum Kit (Artist_ Larry The O).m4a */,
-				C4C9437D127B97E100E4D895 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */,
-				C4C9437E127B97E100E4D895 /* Female Vocal (Artist_ Claudia Conrad).m4a */,
-				C4C9437F127B97E100E4D895 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a */,
-				C4C94380127B97E100E4D895 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a */,
-				C4C94381127B97E100E4D895 /* Male Vocal (Artist_ Dave Crimmen).m4a */,
-				C4C94382127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a */,
-				C4C94383127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a */,
-				C4C94384127B97E100E4D895 /* Piano Solo (Artist_ J.J. Jenkins).m4a */,
-				C4C94385127B97E100E4D895 /* Saxophone (Artist_ Frank Macchia).m4a */,
-				C4C94386127B97E100E4D895 /* Snare Drum Loop (Artist_ Larry The O).m4a */,
-				C4C94387127B97E100E4D895 /* Square Wave - 1 kHz.m4a */,
-				C4C94388127B97E100E4D895 /* Square Wave - 5 kHz.m4a */,
-				C4C94389127B97E100E4D895 /* Square Wave - 10 kHz.m4a */,
-				C4C9438A127B97E100E4D895 /* Square Wave - 100 Hz.m4a */,
-				C4C9438B127B97E100E4D895 /* Square Wave - 500 Hz.m4a */,
-				C4C9438C127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - A.m4a */,
-				C4C9438D127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - B.m4a */,
-				C4C9438E127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - D.m4a */,
-				C4C9438F127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - G.m4a */,
-				C4C94390127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - High E.m4a */,
-				C4C94391127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */,
+				D532A48C127BB48500F753E2 /* 1 kHz.m4a */,
+				D532A48D127BB48500F753E2 /* 1.6 kHz.m4a */,
+				D532A48E127BB48500F753E2 /* 1.25 kHz.m4a */,
+				D532A48F127BB48500F753E2 /* 2 kHz.m4a */,
+				D532A490127BB48500F753E2 /* 2.5 kHz.m4a */,
+				D532A491127BB48500F753E2 /* 3.15 kHz.m4a */,
+				D532A492127BB48500F753E2 /* 4 kHz.m4a */,
+				D532A493127BB48500F753E2 /* 5 kHz.m4a */,
+				D532A494127BB48500F753E2 /* 6 kHz.m4a */,
+				D532A495127BB48500F753E2 /* 8 kHz.m4a */,
+				D532A496127BB48500F753E2 /* 10 kHz.m4a */,
+				D532A497127BB48500F753E2 /* 11 kHz.m4a */,
+				D532A498127BB48500F753E2 /* 12 kHz.m4a */,
+				D532A499127BB48500F753E2 /* 12.5 kHz.m4a */,
+				D532A49A127BB48500F753E2 /* 13 kHz.m4a */,
+				D532A49B127BB48500F753E2 /* 14 kHz.m4a */,
+				D532A49C127BB48500F753E2 /* 15 kHz.m4a */,
+				D532A49D127BB48500F753E2 /* 16 kHz.m4a */,
+				D532A49E127BB48500F753E2 /* 17 kHz.m4a */,
+				D532A49F127BB48500F753E2 /* 18 kHz.m4a */,
+				D532A4A0127BB48500F753E2 /* 19 kHz.m4a */,
+				D532A4A1127BB48500F753E2 /* 20 Hz.m4a */,
+				D532A4A2127BB48500F753E2 /* 20 kHz.m4a */,
+				D532A4A3127BB48500F753E2 /* 25 Hz.m4a */,
+				D532A4A4127BB48500F753E2 /* 31.5 Hz.m4a */,
+				D532A4A5127BB48500F753E2 /* 40 Hz.m4a */,
+				D532A4A6127BB48500F753E2 /* 50 Hz.m4a */,
+				D532A4A7127BB48500F753E2 /* 63 Hz.m4a */,
+				D532A4A8127BB48500F753E2 /* 80 Hz.m4a */,
+				D532A4A9127BB48500F753E2 /* 100 Hz.m4a */,
+				D532A4AA127BB48500F753E2 /* 125 Hz.m4a */,
+				D532A4AB127BB48500F753E2 /* 160 Hz.m4a */,
+				D532A4AC127BB48500F753E2 /* 200 Hz.m4a */,
+				D532A4AD127BB48500F753E2 /* 250 Hz.m4a */,
+				D532A4AE127BB48500F753E2 /* 315 Hz.m4a */,
+				D532A4AF127BB48500F753E2 /* 400 Hz.m4a */,
+				D532A4B0127BB48500F753E2 /* 500 Hz.m4a */,
+				D532A4B1127BB48500F753E2 /* 630 Hz.m4a */,
+				D532A4B2127BB48500F753E2 /* 800 Hz.m4a */,
+				D532A4B3127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */,
+				D532A4B4127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a */,
+				D532A4B5127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */,
+				D532A4B6127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a */,
+				D532A4B7127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a */,
+				D532A4B8127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a */,
+				D532A4B9127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a */,
+				D532A4BA127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a */,
+				D532A4BB127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a */,
+				D532A4BC127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a */,
+				D532A4BD127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a */,
+				D532A4BE127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a */,
+				D532A4BF127BB48500F753E2 /* Square Wave - 1 kHz.m4a */,
+				D532A4C0127BB48500F753E2 /* Square Wave - 5 kHz.m4a */,
+				D532A4C1127BB48500F753E2 /* Square Wave - 10 kHz.m4a */,
+				D532A4C2127BB48500F753E2 /* Square Wave - 100 Hz.m4a */,
+				D532A4C3127BB48500F753E2 /* Square Wave - 500 Hz.m4a */,
+				D532A4C4127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a */,
+				D532A4C5127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a */,
+				D532A4C6127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a */,
+				D532A4C7127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a */,
+				D532A4C8127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a */,
+				D532A4C9127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */,
 			);
 			name = audio;
-			sourceTree = "<group>";
-		};
-		C465D64E127A664400639357 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				C465D64F127A664400639357 /* pause.png */,
-				C465D650127A664400639357 /* forward.png */,
-				C465D651127A664400639357 /* play.png */,
-				C4C942EC127B8D9300E4D895 /* carbon.png */,
-				C465D652127A664400639357 /* rewind.png */,
-				C465D653127A664400639357 /* sound_meter_background.png */,
-				C465D654127A664400639357 /* sound_meter_glare.png */,
-				C465D655127A664400639357 /* volume_down.png */,
-				C465D656127A664400639357 /* volume_up.png */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		C465D66B127A671D00639357 /* AudioViews */ = {
@@ -383,6 +365,41 @@
 				C465D671127A671D00639357 /* LevelMeter.m */,
 			);
 			name = AudioViews;
+			sourceTree = "<group>";
+		};
+		D532A508127BB4D500F753E2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D532A509127BB4D500F753E2 /* carbon.png */,
+				D532A50A127BB4D500F753E2 /* forward.png */,
+				D532A50B127BB4D500F753E2 /* pause.png */,
+				D532A50C127BB4D500F753E2 /* play.png */,
+				D532A50D127BB4D500F753E2 /* rewind.png */,
+				D532A50E127BB4D500F753E2 /* sound_meter_background.png */,
+				D532A50F127BB4D500F753E2 /* sound_meter_glare.png */,
+				D532A510127BB4D500F753E2 /* volume_down.png */,
+				D532A511127BB4D500F753E2 /* volume_up.png */,
+			);
+			name = images;
+			path = Resources/images;
+			sourceTree = "<group>";
+		};
+		D532A52E127BB88F00F753E2 /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */,
+			);
+			name = NIBs;
+			sourceTree = "<group>";
+		};
+		D532A568127BBCB000F753E2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				28D7ACF60DDB3853001CB0EB /* referenceaudioViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* referenceaudioViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,77 +453,77 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* referenceaudioViewController.xib in Resources */,
-				C465D657127A664400639357 /* pause.png in Resources */,
-				C465D658127A664400639357 /* forward.png in Resources */,
-				C465D659127A664400639357 /* play.png in Resources */,
-				C465D65A127A664400639357 /* rewind.png in Resources */,
-				C465D65B127A664400639357 /* sound_meter_background.png in Resources */,
-				C465D65C127A664400639357 /* sound_meter_glare.png in Resources */,
-				C465D65D127A664400639357 /* volume_down.png in Resources */,
-				C465D65E127A664400639357 /* volume_up.png in Resources */,
-				C4C942ED127B8D9300E4D895 /* carbon.png in Resources */,
-				C4C94392127B97E100E4D895 /* 1 kHz.m4a in Resources */,
-				C4C94393127B97E100E4D895 /* 1.6 kHz.m4a in Resources */,
-				C4C94394127B97E100E4D895 /* 1.25 kHz.m4a in Resources */,
-				C4C94395127B97E100E4D895 /* 2 kHz.m4a in Resources */,
-				C4C94396127B97E100E4D895 /* 2.5 kHz.m4a in Resources */,
-				C4C94397127B97E100E4D895 /* 3.15 kHz.m4a in Resources */,
-				C4C94398127B97E100E4D895 /* 4 kHz.m4a in Resources */,
-				C4C94399127B97E100E4D895 /* 5 kHz.m4a in Resources */,
-				C4C9439A127B97E100E4D895 /* 6 kHz.m4a in Resources */,
-				C4C9439B127B97E100E4D895 /* 8 kHz.m4a in Resources */,
-				C4C9439C127B97E100E4D895 /* 10 kHz.m4a in Resources */,
-				C4C9439D127B97E100E4D895 /* 11 kHz.m4a in Resources */,
-				C4C9439E127B97E100E4D895 /* 12 kHz.m4a in Resources */,
-				C4C9439F127B97E100E4D895 /* 12.5 kHz.m4a in Resources */,
-				C4C943A0127B97E100E4D895 /* 13 kHz.m4a in Resources */,
-				C4C943A1127B97E100E4D895 /* 14 kHz.m4a in Resources */,
-				C4C943A2127B97E100E4D895 /* 15 kHz.m4a in Resources */,
-				C4C943A3127B97E100E4D895 /* 16 kHz.m4a in Resources */,
-				C4C943A4127B97E100E4D895 /* 17 kHz.m4a in Resources */,
-				C4C943A5127B97E100E4D895 /* 18 kHz.m4a in Resources */,
-				C4C943A6127B97E100E4D895 /* 19 kHz.m4a in Resources */,
-				C4C943A7127B97E100E4D895 /* 20 Hz.m4a in Resources */,
-				C4C943A8127B97E100E4D895 /* 20 kHz.m4a in Resources */,
-				C4C943A9127B97E100E4D895 /* 25 Hz.m4a in Resources */,
-				C4C943AA127B97E100E4D895 /* 31.5 Hz.m4a in Resources */,
-				C4C943AB127B97E100E4D895 /* 40 Hz.m4a in Resources */,
-				C4C943AC127B97E100E4D895 /* 50 Hz.m4a in Resources */,
-				C4C943AD127B97E100E4D895 /* 63 Hz.m4a in Resources */,
-				C4C943AE127B97E100E4D895 /* 80 Hz.m4a in Resources */,
-				C4C943AF127B97E100E4D895 /* 100 Hz.m4a in Resources */,
-				C4C943B0127B97E100E4D895 /* 125 Hz.m4a in Resources */,
-				C4C943B1127B97E100E4D895 /* 160 Hz.m4a in Resources */,
-				C4C943B2127B97E100E4D895 /* 200 Hz.m4a in Resources */,
-				C4C943B3127B97E100E4D895 /* 250 Hz.m4a in Resources */,
-				C4C943B4127B97E100E4D895 /* 315 Hz.m4a in Resources */,
-				C4C943B5127B97E100E4D895 /* 400 Hz.m4a in Resources */,
-				C4C943B6127B97E100E4D895 /* 500 Hz.m4a in Resources */,
-				C4C943B7127B97E100E4D895 /* 630 Hz.m4a in Resources */,
-				C4C943B8127B97E100E4D895 /* 800 Hz.m4a in Resources */,
-				C4C943B9127B97E100E4D895 /* Acoustic Guitar (Artist_ Michael Molenda).m4a in Resources */,
-				C4C943BA127B97E100E4D895 /* Drum Kit (Artist_ Larry The O).m4a in Resources */,
-				C4C943BB127B97E100E4D895 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a in Resources */,
-				C4C943BC127B97E100E4D895 /* Female Vocal (Artist_ Claudia Conrad).m4a in Resources */,
-				C4C943BD127B97E100E4D895 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a in Resources */,
-				C4C943BE127B97E100E4D895 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a in Resources */,
-				C4C943BF127B97E100E4D895 /* Male Vocal (Artist_ Dave Crimmen).m4a in Resources */,
-				C4C943C0127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a in Resources */,
-				C4C943C1127B97E100E4D895 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a in Resources */,
-				C4C943C2127B97E100E4D895 /* Piano Solo (Artist_ J.J. Jenkins).m4a in Resources */,
-				C4C943C3127B97E100E4D895 /* Saxophone (Artist_ Frank Macchia).m4a in Resources */,
-				C4C943C4127B97E100E4D895 /* Snare Drum Loop (Artist_ Larry The O).m4a in Resources */,
-				C4C943C5127B97E100E4D895 /* Square Wave - 1 kHz.m4a in Resources */,
-				C4C943C6127B97E100E4D895 /* Square Wave - 5 kHz.m4a in Resources */,
-				C4C943C7127B97E100E4D895 /* Square Wave - 10 kHz.m4a in Resources */,
-				C4C943C8127B97E100E4D895 /* Square Wave - 100 Hz.m4a in Resources */,
-				C4C943C9127B97E100E4D895 /* Square Wave - 500 Hz.m4a in Resources */,
-				C4C943CA127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - A.m4a in Resources */,
-				C4C943CB127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - B.m4a in Resources */,
-				C4C943CC127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - D.m4a in Resources */,
-				C4C943CD127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - G.m4a in Resources */,
-				C4C943CE127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - High E.m4a in Resources */,
-				C4C943CF127B97E100E4D895 /* Tuning Notes (Guitar Or Bass) - Low E.m4a in Resources */,
+				D532A4CA127BB48500F753E2 /* 1 kHz.m4a in Resources */,
+				D532A4CB127BB48500F753E2 /* 1.6 kHz.m4a in Resources */,
+				D532A4CC127BB48500F753E2 /* 1.25 kHz.m4a in Resources */,
+				D532A4CD127BB48500F753E2 /* 2 kHz.m4a in Resources */,
+				D532A4CE127BB48500F753E2 /* 2.5 kHz.m4a in Resources */,
+				D532A4CF127BB48500F753E2 /* 3.15 kHz.m4a in Resources */,
+				D532A4D0127BB48500F753E2 /* 4 kHz.m4a in Resources */,
+				D532A4D1127BB48500F753E2 /* 5 kHz.m4a in Resources */,
+				D532A4D2127BB48500F753E2 /* 6 kHz.m4a in Resources */,
+				D532A4D3127BB48500F753E2 /* 8 kHz.m4a in Resources */,
+				D532A4D4127BB48500F753E2 /* 10 kHz.m4a in Resources */,
+				D532A4D5127BB48500F753E2 /* 11 kHz.m4a in Resources */,
+				D532A4D6127BB48500F753E2 /* 12 kHz.m4a in Resources */,
+				D532A4D7127BB48500F753E2 /* 12.5 kHz.m4a in Resources */,
+				D532A4D8127BB48500F753E2 /* 13 kHz.m4a in Resources */,
+				D532A4D9127BB48500F753E2 /* 14 kHz.m4a in Resources */,
+				D532A4DA127BB48500F753E2 /* 15 kHz.m4a in Resources */,
+				D532A4DB127BB48500F753E2 /* 16 kHz.m4a in Resources */,
+				D532A4DC127BB48500F753E2 /* 17 kHz.m4a in Resources */,
+				D532A4DD127BB48500F753E2 /* 18 kHz.m4a in Resources */,
+				D532A4DE127BB48500F753E2 /* 19 kHz.m4a in Resources */,
+				D532A4DF127BB48500F753E2 /* 20 Hz.m4a in Resources */,
+				D532A4E0127BB48500F753E2 /* 20 kHz.m4a in Resources */,
+				D532A4E1127BB48500F753E2 /* 25 Hz.m4a in Resources */,
+				D532A4E2127BB48500F753E2 /* 31.5 Hz.m4a in Resources */,
+				D532A4E3127BB48500F753E2 /* 40 Hz.m4a in Resources */,
+				D532A4E4127BB48500F753E2 /* 50 Hz.m4a in Resources */,
+				D532A4E5127BB48500F753E2 /* 63 Hz.m4a in Resources */,
+				D532A4E6127BB48500F753E2 /* 80 Hz.m4a in Resources */,
+				D532A4E7127BB48500F753E2 /* 100 Hz.m4a in Resources */,
+				D532A4E8127BB48500F753E2 /* 125 Hz.m4a in Resources */,
+				D532A4E9127BB48500F753E2 /* 160 Hz.m4a in Resources */,
+				D532A4EA127BB48500F753E2 /* 200 Hz.m4a in Resources */,
+				D532A4EB127BB48500F753E2 /* 250 Hz.m4a in Resources */,
+				D532A4EC127BB48500F753E2 /* 315 Hz.m4a in Resources */,
+				D532A4ED127BB48500F753E2 /* 400 Hz.m4a in Resources */,
+				D532A4EE127BB48500F753E2 /* 500 Hz.m4a in Resources */,
+				D532A4EF127BB48500F753E2 /* 630 Hz.m4a in Resources */,
+				D532A4F0127BB48500F753E2 /* 800 Hz.m4a in Resources */,
+				D532A4F1127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a in Resources */,
+				D532A4F2127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a in Resources */,
+				D532A4F3127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a in Resources */,
+				D532A4F4127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a in Resources */,
+				D532A4F5127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a in Resources */,
+				D532A4F6127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a in Resources */,
+				D532A4F7127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a in Resources */,
+				D532A4F8127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a in Resources */,
+				D532A4F9127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a in Resources */,
+				D532A4FA127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a in Resources */,
+				D532A4FB127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a in Resources */,
+				D532A4FC127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a in Resources */,
+				D532A4FD127BB48500F753E2 /* Square Wave - 1 kHz.m4a in Resources */,
+				D532A4FE127BB48500F753E2 /* Square Wave - 5 kHz.m4a in Resources */,
+				D532A4FF127BB48500F753E2 /* Square Wave - 10 kHz.m4a in Resources */,
+				D532A500127BB48500F753E2 /* Square Wave - 100 Hz.m4a in Resources */,
+				D532A501127BB48500F753E2 /* Square Wave - 500 Hz.m4a in Resources */,
+				D532A502127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a in Resources */,
+				D532A503127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a in Resources */,
+				D532A504127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a in Resources */,
+				D532A505127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a in Resources */,
+				D532A506127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a in Resources */,
+				D532A507127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a in Resources */,
+				D532A512127BB4D500F753E2 /* carbon.png in Resources */,
+				D532A513127BB4D500F753E2 /* forward.png in Resources */,
+				D532A514127BB4D500F753E2 /* pause.png in Resources */,
+				D532A515127BB4D500F753E2 /* play.png in Resources */,
+				D532A516127BB4D500F753E2 /* rewind.png in Resources */,
+				D532A517127BB4D500F753E2 /* sound_meter_background.png in Resources */,
+				D532A518127BB4D500F753E2 /* sound_meter_glare.png in Resources */,
+				D532A519127BB4D500F753E2 /* volume_down.png in Resources */,
+				D532A51A127BB4D500F753E2 /* volume_up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

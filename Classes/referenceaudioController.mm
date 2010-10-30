@@ -410,6 +410,8 @@ void RouteChangeListener(	void *                  inClientData,
 #pragma mark TableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	[self.player stop];  //stop current playback
+	
 	NSString *filepath = (NSString*)[self.soundFiles objectAtIndex:indexPath.row];
 	self.fileName.text = [filepath lastPathComponent];
 	

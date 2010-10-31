@@ -31,7 +31,7 @@
 	
     referenceaudioViewController *vc1 = [[[referenceaudioViewController alloc] initWithNibName:@"referenceaudioViewController" bundle:nil] autorelease];
 	ToneGeneratorViewController *vc2 = [[[ToneGeneratorViewController alloc] initWithNibName:@"ToneGeneratorViewController" bundle:nil] autorelease];
-	
+
 	self.tabBarController.view.frame = CGRectMake(0, 530, 768, 494);
 	
 	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1, vc2, nil];

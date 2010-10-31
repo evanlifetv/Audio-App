@@ -24,6 +24,9 @@
 		C465D672127A671D00639357 /* CALevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = C465D66D127A671D00639357 /* CALevelMeter.mm */; };
 		C465D673127A671D00639357 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D66F127A671D00639357 /* GLLevelMeter.m */; };
 		C465D674127A671D00639357 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D671127A671D00639357 /* LevelMeter.m */; };
+		C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */; };
+		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
+		C4BA11E7127DEF3F009D8053 /* SweepGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA11E6127DEF3F009D8053 /* SweepGeneratorViewController.m */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
 		D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = D531BF53127DB97F0053ABCA /* Default-Landscape.png */; };
 		D532A4CA127BB48500F753E2 /* 1 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48C127BB48500F753E2 /* 1 kHz.m4a */; };
@@ -132,6 +135,11 @@
 		C465D66F127A671D00639357 /* GLLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLevelMeter.m; sourceTree = "<group>"; };
 		C465D670127A671D00639357 /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
 		C465D671127A671D00639357 /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
+		C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseViewController.h; sourceTree = "<group>"; };
+		C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseViewController.m; sourceTree = "<group>"; };
+		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SweepGeneratorViewController.xib; path = Classes/SweepGeneratorViewController.xib; sourceTree = "<group>"; };
+		C4BA11E5127DEF3F009D8053 /* SweepGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SweepGeneratorViewController.h; path = ../SweepGeneratorViewController.h; sourceTree = "<group>"; };
+		C4BA11E6127DEF3F009D8053 /* SweepGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SweepGeneratorViewController.m; path = ../SweepGeneratorViewController.m; sourceTree = "<group>"; };
 		C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PinkNoiseViewController.xib; path = Classes/PinkNoiseViewController.xib; sourceTree = "<group>"; };
 		D531BF53127DB97F0053ABCA /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		D532A48C127BB48500F753E2 /* 1 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1 kHz.m4a"; path = "Resources/audio/1 kHz.m4a"; sourceTree = "<group>"; };
@@ -406,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E4707A127DA55E00BA3DD6 /* AudioControlsViewController.xib */,
+				C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */,
 				C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */,
@@ -417,6 +426,10 @@
 		D532A568127BBCB000F753E2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C4BA11E5127DEF3F009D8053 /* SweepGeneratorViewController.h */,
+				C4BA11E6127DEF3F009D8053 /* SweepGeneratorViewController.m */,
+				C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */,
+				C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */,
 				D5E47078127DA55E00BA3DD6 /* AudioControlsViewController.h */,
 				D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.m */,
 				28D7ACF60DDB3853001CB0EB /* referenceaudioViewController.h */,
@@ -554,6 +567,7 @@
 				D5346529127DB8AE0063D06E /* Default-Portrait.png in Resources */,
 				D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */,
 				C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */,
+				C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +588,8 @@
 				C465D674127A671D00639357 /* LevelMeter.m in Sources */,
 				D5E47063127D2DAC00BA3DD6 /* ToneGeneratorViewController.m in Sources */,
 				D5E4707B127DA55E00BA3DD6 /* AudioControlsViewController.m in Sources */,
+				C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */,
+				C4BA11E7127DEF3F009D8053 /* SweepGeneratorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

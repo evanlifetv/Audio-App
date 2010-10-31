@@ -1,9 +1,3 @@
-/*
- 
-
- 
- */
-
 
 #import "referenceaudioController.h"
 #include "CALevelMeter.h"
@@ -111,14 +105,8 @@ void RouteChangeListener(	void *                  inClientData,
 {
 	self.soundFiles = [NSMutableArray arrayWithArray:[[NSBundle mainBundle] pathsForResourcesOfType:@"m4a" inDirectory:nil]];
 	[self.soundFilesTableView reloadData];
-	
-	for (NSString *filepath in self.soundFiles) {
-		NSLog(@"name is %@", [filepath lastPathComponent]);
-	}
-	
-	
+		
 	// Make the array to store our AVAudioPlayer objects
-	//soundFiles = [[NSMutableArray alloc] initWithCapacity:3];
 
 	playBtnBG = [[UIImage imageNamed:@"play.png"] retain];
 	pauseBtnBG = [[UIImage imageNamed:@"pause.png"] retain];
@@ -136,7 +124,7 @@ void RouteChangeListener(	void *                  inClientData,
 	progressBar.minimumValue = 0.0;	
 	
 	// Load the array with the sample file
-	NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"57 Frequency Sweep - 20 Hz To 20 kHz Upwards" ofType:@"m4a"]];
+	NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: [[NSBundle mainBundle] pathForResource:@"1 kHz" ofType:@"m4a"]];
 
 	self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];	
 	if (self.player)

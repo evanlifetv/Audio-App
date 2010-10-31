@@ -24,6 +24,7 @@
 		C465D672127A671D00639357 /* CALevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = C465D66D127A671D00639357 /* CALevelMeter.mm */; };
 		C465D673127A671D00639357 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D66F127A671D00639357 /* GLLevelMeter.m */; };
 		C465D674127A671D00639357 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D671127A671D00639357 /* LevelMeter.m */; };
+		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
 		D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = D531BF53127DB97F0053ABCA /* Default-Landscape.png */; };
 		D532A4CA127BB48500F753E2 /* 1 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48C127BB48500F753E2 /* 1 kHz.m4a */; };
 		D532A4CB127BB48500F753E2 /* 1.6 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48D127BB48500F753E2 /* 1.6 kHz.m4a */; };
@@ -131,6 +132,7 @@
 		C465D66F127A671D00639357 /* GLLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLevelMeter.m; sourceTree = "<group>"; };
 		C465D670127A671D00639357 /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
 		C465D671127A671D00639357 /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
+		C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PinkNoiseViewController.xib; path = Classes/PinkNoiseViewController.xib; sourceTree = "<group>"; };
 		D531BF53127DB97F0053ABCA /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		D532A48C127BB48500F753E2 /* 1 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1 kHz.m4a"; path = "Resources/audio/1 kHz.m4a"; sourceTree = "<group>"; };
 		D532A48D127BB48500F753E2 /* 1.6 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1.6 kHz.m4a"; path = "Resources/audio/1.6 kHz.m4a"; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				D5E4707A127DA55E00BA3DD6 /* AudioControlsViewController.xib */,
+				C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */,
 				D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */,
@@ -550,6 +553,7 @@
 				D5E4707C127DA55E00BA3DD6 /* AudioControlsViewController.xib in Resources */,
 				D5346529127DB8AE0063D06E /* Default-Portrait.png in Resources */,
 				D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */,
+				C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

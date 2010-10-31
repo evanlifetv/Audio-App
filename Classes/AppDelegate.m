@@ -10,6 +10,7 @@
 #import "AudioControlsViewController.h"
 #import "referenceaudioViewController.h"
 #import "ToneGeneratorViewController.h"
+#import "PinkNoiseViewController.h"
 
 @implementation referenceaudioAppDelegate
 
@@ -27,7 +28,6 @@
 	
 	self.controlsViewController = [[[AudioControlsViewController alloc] initWithNibName:@"AudioControlsViewController" bundle:nil] autorelease];
 	self.controlsViewController.view.frame = CGRectMake(0, 20, 768, 510);
-	
 	
     referenceaudioViewController *vc1 = [[[referenceaudioViewController alloc] initWithNibName:@"referenceaudioViewController" bundle:nil] autorelease];
 	ToneGeneratorViewController *vc2 = [[[ToneGeneratorViewController alloc] initWithNibName:@"ToneGeneratorViewController" bundle:nil] autorelease];

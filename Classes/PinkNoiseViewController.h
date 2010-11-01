@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PinkNoiseViewController : NSObject {
+@interface PinkNoiseViewController : UIViewController {
 
 }
 

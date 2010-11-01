@@ -11,5 +11,13 @@
 
 @implementation PinkNoiseViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+		self.tabBarItem.image = [UIImage imageNamed:@"forward.png"];
+        self.tabBarItem.title = @"Pink Noise";
+    }
+    return self;
+}
 
 @end

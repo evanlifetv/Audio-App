@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface SweepGeneratorViewController : NSObject {
+@interface SweepGeneratorViewController : UIViewController {
 
 }
 

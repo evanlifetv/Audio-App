@@ -3,7 +3,7 @@
 //  referenceaudio
 //
 //  Created by Evan Hamilton on 10/28/10.
-//  Copyright 2010 Lifechurchtv. All rights reserved.
+//  Copyright 2010 Evan Hamilton. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

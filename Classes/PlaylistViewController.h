@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface PlaylistViewController : NSObject {
+@interface PlaylistViewController : UIViewController {
 
 }
 

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface SupportViewController : NSObject {
+@interface SupportViewController : UIViewController {
 
 }
 

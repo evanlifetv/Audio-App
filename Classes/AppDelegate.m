@@ -12,6 +12,9 @@
 #import "ToneGeneratorViewController.h"
 #import "PinkNoiseViewController.h"
 #import "SweepGeneratorViewController.h"
+#import "SupportViewController.h"
+#import "PlaylistViewController.h"
+
 
 @implementation referenceaudioAppDelegate
 
@@ -27,21 +30,25 @@
     
 	self.window.backgroundColor = [UIColor blackColor];
 	
+	
+
+	
 	//initialize the audio controls view (top half of the screen)
 	self.controlsViewController = [[[AudioControlsViewController alloc] initWithNibName:@"AudioControlsViewController" bundle:nil] autorelease];
 	self.controlsViewController.view.frame = CGRectMake(0, 20, 768, 510);
 	
 	//initialize each view controller that will be a tab in the tab bar controller
-    referenceaudioViewController *vc1 = [[[referenceaudioViewController alloc] initWithNibName:@"referenceaudioViewController" bundle:nil] autorelease];
-	ToneGeneratorViewController *vc2 = [[[ToneGeneratorViewController alloc] initWithNibName:@"ToneGeneratorViewController" bundle:nil] autorelease];
-	PinkNoiseViewController *vc3 = [[[PinkNoiseViewController alloc] initWithNibName:@"PinkNoiseViewController" bundle:nil] autorelease];
-	SweepGeneratorViewController *vc4 = [[[SweepGeneratorViewController alloc] initWithNibName:@"SweepGeneratorViewController" bundle:nil] autorelease];
+	SweepGeneratorViewController *sweep = [[[SweepGeneratorViewController alloc] initWithNibName:@"SweepGeneratorViewController" bundle:nil] autorelease];
+	ToneGeneratorViewController *tone = [[[ToneGeneratorViewController alloc] initWithNibName:@"ToneGeneratorViewController" bundle:nil] autorelease];
+	PinkNoiseViewController *pink = [[[PinkNoiseViewController alloc] initWithNibName:@"PinkNoiseViewController" bundle:nil] autorelease];
+    PlaylistViewController *playlist = [[[PlaylistViewController alloc] initWithNibName:@"PlaylistViewController" bundle:nil] autorelease];
+	SupportViewController *support = [[[SupportViewController alloc] initWithNibName:@"SupportViewController" bundle:nil] autorelease];
 	
 	//set the tab bar controller's view to the bottom half of the screen
 	self.tabBarController.view.frame = CGRectMake(0, 530, 768, 494);
 	
 	//create an array out of the view controllers and give them to the tab bar controller
-	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1, vc2, vc3, vc4, nil];
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:sweep, tone, pink, playlist, support, nil];
 	
 	//add the audio controls view (top half)
 	[self.window addSubview:self.controlsViewController.view];

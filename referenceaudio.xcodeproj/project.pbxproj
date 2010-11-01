@@ -38,40 +38,6 @@
 		D532A4CC127BB48500F753E2 /* 1.25 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48E127BB48500F753E2 /* 1.25 kHz.m4a */; };
 		D532A4CD127BB48500F753E2 /* 2 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48F127BB48500F753E2 /* 2 kHz.m4a */; };
 		D532A4CE127BB48500F753E2 /* 2.5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A490127BB48500F753E2 /* 2.5 kHz.m4a */; };
-		D532A4CF127BB48500F753E2 /* 3.15 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A491127BB48500F753E2 /* 3.15 kHz.m4a */; };
-		D532A4D0127BB48500F753E2 /* 4 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A492127BB48500F753E2 /* 4 kHz.m4a */; };
-		D532A4D1127BB48500F753E2 /* 5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A493127BB48500F753E2 /* 5 kHz.m4a */; };
-		D532A4D2127BB48500F753E2 /* 6 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A494127BB48500F753E2 /* 6 kHz.m4a */; };
-		D532A4D3127BB48500F753E2 /* 8 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A495127BB48500F753E2 /* 8 kHz.m4a */; };
-		D532A4D4127BB48500F753E2 /* 10 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A496127BB48500F753E2 /* 10 kHz.m4a */; };
-		D532A4D5127BB48500F753E2 /* 11 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A497127BB48500F753E2 /* 11 kHz.m4a */; };
-		D532A4D6127BB48500F753E2 /* 12 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A498127BB48500F753E2 /* 12 kHz.m4a */; };
-		D532A4D7127BB48500F753E2 /* 12.5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A499127BB48500F753E2 /* 12.5 kHz.m4a */; };
-		D532A4D8127BB48500F753E2 /* 13 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49A127BB48500F753E2 /* 13 kHz.m4a */; };
-		D532A4D9127BB48500F753E2 /* 14 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49B127BB48500F753E2 /* 14 kHz.m4a */; };
-		D532A4DA127BB48500F753E2 /* 15 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49C127BB48500F753E2 /* 15 kHz.m4a */; };
-		D532A4DB127BB48500F753E2 /* 16 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49D127BB48500F753E2 /* 16 kHz.m4a */; };
-		D532A4DC127BB48500F753E2 /* 17 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49E127BB48500F753E2 /* 17 kHz.m4a */; };
-		D532A4DD127BB48500F753E2 /* 18 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A49F127BB48500F753E2 /* 18 kHz.m4a */; };
-		D532A4DE127BB48500F753E2 /* 19 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A0127BB48500F753E2 /* 19 kHz.m4a */; };
-		D532A4DF127BB48500F753E2 /* 20 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A1127BB48500F753E2 /* 20 Hz.m4a */; };
-		D532A4E0127BB48500F753E2 /* 20 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A2127BB48500F753E2 /* 20 kHz.m4a */; };
-		D532A4E1127BB48500F753E2 /* 25 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A3127BB48500F753E2 /* 25 Hz.m4a */; };
-		D532A4E2127BB48500F753E2 /* 31.5 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A4127BB48500F753E2 /* 31.5 Hz.m4a */; };
-		D532A4E3127BB48500F753E2 /* 40 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A5127BB48500F753E2 /* 40 Hz.m4a */; };
-		D532A4E4127BB48500F753E2 /* 50 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A6127BB48500F753E2 /* 50 Hz.m4a */; };
-		D532A4E5127BB48500F753E2 /* 63 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A7127BB48500F753E2 /* 63 Hz.m4a */; };
-		D532A4E6127BB48500F753E2 /* 80 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A8127BB48500F753E2 /* 80 Hz.m4a */; };
-		D532A4E7127BB48500F753E2 /* 100 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4A9127BB48500F753E2 /* 100 Hz.m4a */; };
-		D532A4E8127BB48500F753E2 /* 125 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AA127BB48500F753E2 /* 125 Hz.m4a */; };
-		D532A4E9127BB48500F753E2 /* 160 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AB127BB48500F753E2 /* 160 Hz.m4a */; };
-		D532A4EA127BB48500F753E2 /* 200 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AC127BB48500F753E2 /* 200 Hz.m4a */; };
-		D532A4EB127BB48500F753E2 /* 250 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AD127BB48500F753E2 /* 250 Hz.m4a */; };
-		D532A4EC127BB48500F753E2 /* 315 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AE127BB48500F753E2 /* 315 Hz.m4a */; };
-		D532A4ED127BB48500F753E2 /* 400 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4AF127BB48500F753E2 /* 400 Hz.m4a */; };
-		D532A4EE127BB48500F753E2 /* 500 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B0127BB48500F753E2 /* 500 Hz.m4a */; };
-		D532A4EF127BB48500F753E2 /* 630 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B1127BB48500F753E2 /* 630 Hz.m4a */; };
-		D532A4F0127BB48500F753E2 /* 800 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B2127BB48500F753E2 /* 800 Hz.m4a */; };
 		D532A4F1127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B3127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */; };
 		D532A4F2127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B4127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a */; };
 		D532A4F3127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B5127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */; };
@@ -157,40 +123,6 @@
 		D532A48E127BB48500F753E2 /* 1.25 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1.25 kHz.m4a"; path = "Resources/audio/1.25 kHz.m4a"; sourceTree = "<group>"; };
 		D532A48F127BB48500F753E2 /* 2 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "2 kHz.m4a"; path = "Resources/audio/2 kHz.m4a"; sourceTree = "<group>"; };
 		D532A490127BB48500F753E2 /* 2.5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "2.5 kHz.m4a"; path = "Resources/audio/2.5 kHz.m4a"; sourceTree = "<group>"; };
-		D532A491127BB48500F753E2 /* 3.15 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "3.15 kHz.m4a"; path = "Resources/audio/3.15 kHz.m4a"; sourceTree = "<group>"; };
-		D532A492127BB48500F753E2 /* 4 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "4 kHz.m4a"; path = "Resources/audio/4 kHz.m4a"; sourceTree = "<group>"; };
-		D532A493127BB48500F753E2 /* 5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "5 kHz.m4a"; path = "Resources/audio/5 kHz.m4a"; sourceTree = "<group>"; };
-		D532A494127BB48500F753E2 /* 6 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "6 kHz.m4a"; path = "Resources/audio/6 kHz.m4a"; sourceTree = "<group>"; };
-		D532A495127BB48500F753E2 /* 8 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "8 kHz.m4a"; path = "Resources/audio/8 kHz.m4a"; sourceTree = "<group>"; };
-		D532A496127BB48500F753E2 /* 10 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "10 kHz.m4a"; path = "Resources/audio/10 kHz.m4a"; sourceTree = "<group>"; };
-		D532A497127BB48500F753E2 /* 11 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "11 kHz.m4a"; path = "Resources/audio/11 kHz.m4a"; sourceTree = "<group>"; };
-		D532A498127BB48500F753E2 /* 12 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "12 kHz.m4a"; path = "Resources/audio/12 kHz.m4a"; sourceTree = "<group>"; };
-		D532A499127BB48500F753E2 /* 12.5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "12.5 kHz.m4a"; path = "Resources/audio/12.5 kHz.m4a"; sourceTree = "<group>"; };
-		D532A49A127BB48500F753E2 /* 13 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "13 kHz.m4a"; path = "Resources/audio/13 kHz.m4a"; sourceTree = "<group>"; };
-		D532A49B127BB48500F753E2 /* 14 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "14 kHz.m4a"; path = "Resources/audio/14 kHz.m4a"; sourceTree = "<group>"; };
-		D532A49C127BB48500F753E2 /* 15 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "15 kHz.m4a"; path = "Resources/audio/15 kHz.m4a"; sourceTree = "<group>"; };
-		D532A49D127BB48500F753E2 /* 16 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "16 kHz.m4a"; path = "Resources/audio/16 kHz.m4a"; sourceTree = "<group>"; };
-		D532A49E127BB48500F753E2 /* 17 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "17 kHz.m4a"; path = "Resources/audio/17 kHz.m4a"; sourceTree = "<group>"; };
-		D532A49F127BB48500F753E2 /* 18 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "18 kHz.m4a"; path = "Resources/audio/18 kHz.m4a"; sourceTree = "<group>"; };
-		D532A4A0127BB48500F753E2 /* 19 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "19 kHz.m4a"; path = "Resources/audio/19 kHz.m4a"; sourceTree = "<group>"; };
-		D532A4A1127BB48500F753E2 /* 20 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "20 Hz.m4a"; path = "Resources/audio/20 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4A2127BB48500F753E2 /* 20 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "20 kHz.m4a"; path = "Resources/audio/20 kHz.m4a"; sourceTree = "<group>"; };
-		D532A4A3127BB48500F753E2 /* 25 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "25 Hz.m4a"; path = "Resources/audio/25 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4A4127BB48500F753E2 /* 31.5 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "31.5 Hz.m4a"; path = "Resources/audio/31.5 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4A5127BB48500F753E2 /* 40 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "40 Hz.m4a"; path = "Resources/audio/40 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4A6127BB48500F753E2 /* 50 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "50 Hz.m4a"; path = "Resources/audio/50 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4A7127BB48500F753E2 /* 63 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "63 Hz.m4a"; path = "Resources/audio/63 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4A8127BB48500F753E2 /* 80 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "80 Hz.m4a"; path = "Resources/audio/80 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4A9127BB48500F753E2 /* 100 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "100 Hz.m4a"; path = "Resources/audio/100 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4AA127BB48500F753E2 /* 125 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "125 Hz.m4a"; path = "Resources/audio/125 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4AB127BB48500F753E2 /* 160 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "160 Hz.m4a"; path = "Resources/audio/160 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4AC127BB48500F753E2 /* 200 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "200 Hz.m4a"; path = "Resources/audio/200 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4AD127BB48500F753E2 /* 250 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "250 Hz.m4a"; path = "Resources/audio/250 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4AE127BB48500F753E2 /* 315 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "315 Hz.m4a"; path = "Resources/audio/315 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4AF127BB48500F753E2 /* 400 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "400 Hz.m4a"; path = "Resources/audio/400 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4B0127BB48500F753E2 /* 500 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "500 Hz.m4a"; path = "Resources/audio/500 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4B1127BB48500F753E2 /* 630 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "630 Hz.m4a"; path = "Resources/audio/630 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4B2127BB48500F753E2 /* 800 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "800 Hz.m4a"; path = "Resources/audio/800 Hz.m4a"; sourceTree = "<group>"; };
 		D532A4B3127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Acoustic Guitar (Artist_ Michael Molenda).m4a"; path = "Resources/audio/Acoustic Guitar (Artist_ Michael Molenda).m4a"; sourceTree = "<group>"; };
 		D532A4B4127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Drum Kit (Artist_ Larry The O).m4a"; path = "Resources/audio/Drum Kit (Artist_ Larry The O).m4a"; sourceTree = "<group>"; };
 		D532A4B5127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Electric Guitar With Chorus (Artist_ Michael Molenda).m4a"; path = "Resources/audio/Electric Guitar With Chorus (Artist_ Michael Molenda).m4a"; sourceTree = "<group>"; };
@@ -327,40 +259,6 @@
 				D532A48E127BB48500F753E2 /* 1.25 kHz.m4a */,
 				D532A48F127BB48500F753E2 /* 2 kHz.m4a */,
 				D532A490127BB48500F753E2 /* 2.5 kHz.m4a */,
-				D532A491127BB48500F753E2 /* 3.15 kHz.m4a */,
-				D532A492127BB48500F753E2 /* 4 kHz.m4a */,
-				D532A493127BB48500F753E2 /* 5 kHz.m4a */,
-				D532A494127BB48500F753E2 /* 6 kHz.m4a */,
-				D532A495127BB48500F753E2 /* 8 kHz.m4a */,
-				D532A496127BB48500F753E2 /* 10 kHz.m4a */,
-				D532A497127BB48500F753E2 /* 11 kHz.m4a */,
-				D532A498127BB48500F753E2 /* 12 kHz.m4a */,
-				D532A499127BB48500F753E2 /* 12.5 kHz.m4a */,
-				D532A49A127BB48500F753E2 /* 13 kHz.m4a */,
-				D532A49B127BB48500F753E2 /* 14 kHz.m4a */,
-				D532A49C127BB48500F753E2 /* 15 kHz.m4a */,
-				D532A49D127BB48500F753E2 /* 16 kHz.m4a */,
-				D532A49E127BB48500F753E2 /* 17 kHz.m4a */,
-				D532A49F127BB48500F753E2 /* 18 kHz.m4a */,
-				D532A4A0127BB48500F753E2 /* 19 kHz.m4a */,
-				D532A4A1127BB48500F753E2 /* 20 Hz.m4a */,
-				D532A4A2127BB48500F753E2 /* 20 kHz.m4a */,
-				D532A4A3127BB48500F753E2 /* 25 Hz.m4a */,
-				D532A4A4127BB48500F753E2 /* 31.5 Hz.m4a */,
-				D532A4A5127BB48500F753E2 /* 40 Hz.m4a */,
-				D532A4A6127BB48500F753E2 /* 50 Hz.m4a */,
-				D532A4A7127BB48500F753E2 /* 63 Hz.m4a */,
-				D532A4A8127BB48500F753E2 /* 80 Hz.m4a */,
-				D532A4A9127BB48500F753E2 /* 100 Hz.m4a */,
-				D532A4AA127BB48500F753E2 /* 125 Hz.m4a */,
-				D532A4AB127BB48500F753E2 /* 160 Hz.m4a */,
-				D532A4AC127BB48500F753E2 /* 200 Hz.m4a */,
-				D532A4AD127BB48500F753E2 /* 250 Hz.m4a */,
-				D532A4AE127BB48500F753E2 /* 315 Hz.m4a */,
-				D532A4AF127BB48500F753E2 /* 400 Hz.m4a */,
-				D532A4B0127BB48500F753E2 /* 500 Hz.m4a */,
-				D532A4B1127BB48500F753E2 /* 630 Hz.m4a */,
-				D532A4B2127BB48500F753E2 /* 800 Hz.m4a */,
 				D532A4B3127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */,
 				D532A4B4127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a */,
 				D532A4B5127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */,
@@ -512,40 +410,6 @@
 				D532A4CC127BB48500F753E2 /* 1.25 kHz.m4a in Resources */,
 				D532A4CD127BB48500F753E2 /* 2 kHz.m4a in Resources */,
 				D532A4CE127BB48500F753E2 /* 2.5 kHz.m4a in Resources */,
-				D532A4CF127BB48500F753E2 /* 3.15 kHz.m4a in Resources */,
-				D532A4D0127BB48500F753E2 /* 4 kHz.m4a in Resources */,
-				D532A4D1127BB48500F753E2 /* 5 kHz.m4a in Resources */,
-				D532A4D2127BB48500F753E2 /* 6 kHz.m4a in Resources */,
-				D532A4D3127BB48500F753E2 /* 8 kHz.m4a in Resources */,
-				D532A4D4127BB48500F753E2 /* 10 kHz.m4a in Resources */,
-				D532A4D5127BB48500F753E2 /* 11 kHz.m4a in Resources */,
-				D532A4D6127BB48500F753E2 /* 12 kHz.m4a in Resources */,
-				D532A4D7127BB48500F753E2 /* 12.5 kHz.m4a in Resources */,
-				D532A4D8127BB48500F753E2 /* 13 kHz.m4a in Resources */,
-				D532A4D9127BB48500F753E2 /* 14 kHz.m4a in Resources */,
-				D532A4DA127BB48500F753E2 /* 15 kHz.m4a in Resources */,
-				D532A4DB127BB48500F753E2 /* 16 kHz.m4a in Resources */,
-				D532A4DC127BB48500F753E2 /* 17 kHz.m4a in Resources */,
-				D532A4DD127BB48500F753E2 /* 18 kHz.m4a in Resources */,
-				D532A4DE127BB48500F753E2 /* 19 kHz.m4a in Resources */,
-				D532A4DF127BB48500F753E2 /* 20 Hz.m4a in Resources */,
-				D532A4E0127BB48500F753E2 /* 20 kHz.m4a in Resources */,
-				D532A4E1127BB48500F753E2 /* 25 Hz.m4a in Resources */,
-				D532A4E2127BB48500F753E2 /* 31.5 Hz.m4a in Resources */,
-				D532A4E3127BB48500F753E2 /* 40 Hz.m4a in Resources */,
-				D532A4E4127BB48500F753E2 /* 50 Hz.m4a in Resources */,
-				D532A4E5127BB48500F753E2 /* 63 Hz.m4a in Resources */,
-				D532A4E6127BB48500F753E2 /* 80 Hz.m4a in Resources */,
-				D532A4E7127BB48500F753E2 /* 100 Hz.m4a in Resources */,
-				D532A4E8127BB48500F753E2 /* 125 Hz.m4a in Resources */,
-				D532A4E9127BB48500F753E2 /* 160 Hz.m4a in Resources */,
-				D532A4EA127BB48500F753E2 /* 200 Hz.m4a in Resources */,
-				D532A4EB127BB48500F753E2 /* 250 Hz.m4a in Resources */,
-				D532A4EC127BB48500F753E2 /* 315 Hz.m4a in Resources */,
-				D532A4ED127BB48500F753E2 /* 400 Hz.m4a in Resources */,
-				D532A4EE127BB48500F753E2 /* 500 Hz.m4a in Resources */,
-				D532A4EF127BB48500F753E2 /* 630 Hz.m4a in Resources */,
-				D532A4F0127BB48500F753E2 /* 800 Hz.m4a in Resources */,
 				D532A4F1127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a in Resources */,
 				D532A4F2127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a in Resources */,
 				D532A4F3127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a in Resources */,

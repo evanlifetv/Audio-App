@@ -45,7 +45,7 @@
 					<object class="IBUILabel" id="670298321">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{503, 106}, {159, 24}}</string>
+						<string key="NSFrame">{{317, 20}, {159, 24}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -321,7 +321,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABD/gAAwwAAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABD+4AAwwAAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

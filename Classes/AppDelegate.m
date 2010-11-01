@@ -3,7 +3,7 @@
 //  referenceaudio
 //
 //  Created by Evan Hamilton on 10/28/10.
-//  Copyright 2010 Lifechurchtv. All rights reserved.
+//  Copyright Evan Hamilton. All rights reserved.
 //
 
 #import "AppDelegate.h"

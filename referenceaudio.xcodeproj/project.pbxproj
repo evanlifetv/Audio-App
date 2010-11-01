@@ -19,6 +19,7 @@
 		C4571E1A127E6B660070147C /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4571E19127E6B660070147C /* PlaylistViewController.m */; };
 		C4571E24127E6C260070147C /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4571E23127E6C260070147C /* SupportViewController.m */; };
 		C4571E27127E6CB80070147C /* SupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4571E26127E6CB80070147C /* SupportViewController.xib */; };
+		C45ECF60127E86DD0020D651 /* carbon.png in Resources */ = {isa = PBXBuildFile; fileRef = C45ECF5F127E86DD0020D651 /* carbon.png */; };
 		C465D562127A5F2700639357 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D561127A5F2700639357 /* AVFoundation.framework */; };
 		C465D578127A5F3000639357 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D577127A5F3000639357 /* AudioToolbox.framework */; };
 		C465D59C127A5F3700639357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59B127A5F3700639357 /* QuartzCore.framework */; };
@@ -61,7 +62,6 @@
 		D532A505127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C7127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a */; };
 		D532A506127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C8127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a */; };
 		D532A507127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C9127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */; };
-		D532A512127BB4D500F753E2 /* carbon.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A509127BB4D500F753E2 /* carbon.png */; };
 		D532A513127BB4D500F753E2 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50A127BB4D500F753E2 /* forward.png */; };
 		D532A514127BB4D500F753E2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50B127BB4D500F753E2 /* pause.png */; };
 		D532A515127BB4D500F753E2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50C127BB4D500F753E2 /* play.png */; };
@@ -97,6 +97,7 @@
 		C4571E22127E6C260070147C /* SupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SupportViewController.h; path = ../SupportViewController.h; sourceTree = "<group>"; };
 		C4571E23127E6C260070147C /* SupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SupportViewController.m; path = ../SupportViewController.m; sourceTree = "<group>"; };
 		C4571E26127E6CB80070147C /* SupportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SupportViewController.xib; path = Resources/NIBs/SupportViewController.xib; sourceTree = "<group>"; };
+		C45ECF5F127E86DD0020D651 /* carbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carbon.png; sourceTree = "<group>"; };
 		C465D561127A5F2700639357 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C465D577127A5F3000639357 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C465D59B127A5F3700639357 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -146,7 +147,6 @@
 		D532A4C7127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - G.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - G.m4a"; sourceTree = "<group>"; };
 		D532A4C8127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - High E.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - High E.m4a"; sourceTree = "<group>"; };
 		D532A4C9127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - Low E.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - Low E.m4a"; sourceTree = "<group>"; };
-		D532A509127BB4D500F753E2 /* carbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carbon.png; sourceTree = "<group>"; };
 		D532A50A127BB4D500F753E2 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
 		D532A50B127BB4D500F753E2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		D532A50C127BB4D500F753E2 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -302,8 +302,8 @@
 		D532A508127BB4D500F753E2 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D532A509127BB4D500F753E2 /* carbon.png */,
 				D532A50A127BB4D500F753E2 /* forward.png */,
+				C45ECF5F127E86DD0020D651 /* carbon.png */,
 				D532A50B127BB4D500F753E2 /* pause.png */,
 				D532A50C127BB4D500F753E2 /* play.png */,
 				D532A50D127BB4D500F753E2 /* rewind.png */,
@@ -433,7 +433,6 @@
 				D532A505127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a in Resources */,
 				D532A506127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a in Resources */,
 				D532A507127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a in Resources */,
-				D532A512127BB4D500F753E2 /* carbon.png in Resources */,
 				D532A513127BB4D500F753E2 /* forward.png in Resources */,
 				D532A514127BB4D500F753E2 /* pause.png in Resources */,
 				D532A515127BB4D500F753E2 /* play.png in Resources */,
@@ -450,6 +449,7 @@
 				C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */,
 				C4571E15127E6A130070147C /* PlaylistViewController.xib in Resources */,
 				C4571E27127E6CB80070147C /* SupportViewController.xib in Resources */,
+				C45ECF60127E86DD0020D651 /* carbon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

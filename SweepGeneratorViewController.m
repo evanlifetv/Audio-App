@@ -15,7 +15,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.tabBarItem.image = [UIImage imageNamed:@"sweep.png"];
-        self.tabBarItem.title = @"Sweep";
+        self.tabBarItem.title = @"Frequency Sweep";
     }
     return self;
 }

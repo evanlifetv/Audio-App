@@ -14,7 +14,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		self.tabBarItem.image = [UIImage imageNamed:@"volume_up.png"];
+		self.tabBarItem.image = [UIImage imageNamed:@"sweep.png"];
         self.tabBarItem.title = @"Sweep";
     }
     return self;

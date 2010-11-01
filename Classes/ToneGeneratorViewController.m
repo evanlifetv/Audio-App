@@ -16,7 +16,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		self.tabBarItem.image = [UIImage imageNamed:@"play.png"];
+		self.tabBarItem.image = [UIImage imageNamed:@"tone.png"];
         self.tabBarItem.title = @"Tone Generator";
     }
     return self;

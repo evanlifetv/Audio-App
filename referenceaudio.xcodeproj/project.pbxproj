@@ -15,6 +15,11 @@
 		2899E5220DE3E06400AC0155 /* referenceaudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* referenceaudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* referenceaudioViewController.m */; };
+		C4499125127F7C4D009FD582 /* pinknoise.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499120127F7C4D009FD582 /* pinknoise.png */; };
+		C4499126127F7C4D009FD582 /* support.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499121127F7C4D009FD582 /* support.png */; };
+		C4499127127F7C4D009FD582 /* sweep.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499122127F7C4D009FD582 /* sweep.png */; };
+		C4499128127F7C4D009FD582 /* tone.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499123127F7C4D009FD582 /* tone.png */; };
+		C4499129127F7C4D009FD582 /* playlist.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499124127F7C4D009FD582 /* playlist.png */; };
 		C4571E15127E6A130070147C /* PlaylistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4571E14127E6A130070147C /* PlaylistViewController.xib */; };
 		C4571E1A127E6B660070147C /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4571E19127E6B660070147C /* PlaylistViewController.m */; };
 		C4571E24127E6C260070147C /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4571E23127E6C260070147C /* SupportViewController.m */; };
@@ -91,6 +96,11 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* referenceaudio_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = referenceaudio_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* referenceaudio-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "referenceaudio-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C4499120127F7C4D009FD582 /* pinknoise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinknoise.png; sourceTree = "<group>"; };
+		C4499121127F7C4D009FD582 /* support.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = support.png; sourceTree = "<group>"; };
+		C4499122127F7C4D009FD582 /* sweep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sweep.png; sourceTree = "<group>"; };
+		C4499123127F7C4D009FD582 /* tone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tone.png; sourceTree = "<group>"; };
+		C4499124127F7C4D009FD582 /* playlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playlist.png; sourceTree = "<group>"; };
 		C4571E14127E6A130070147C /* PlaylistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PlaylistViewController.xib; path = Classes/PlaylistViewController.xib; sourceTree = "<group>"; };
 		C4571E18127E6B660070147C /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistViewController.h; sourceTree = "<group>"; };
 		C4571E19127E6B660070147C /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewController.m; sourceTree = "<group>"; };
@@ -302,6 +312,11 @@
 		D532A508127BB4D500F753E2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C4499120127F7C4D009FD582 /* pinknoise.png */,
+				C4499121127F7C4D009FD582 /* support.png */,
+				C4499122127F7C4D009FD582 /* sweep.png */,
+				C4499123127F7C4D009FD582 /* tone.png */,
+				C4499124127F7C4D009FD582 /* playlist.png */,
 				D532A50A127BB4D500F753E2 /* forward.png */,
 				C45ECF5F127E86DD0020D651 /* carbon.png */,
 				D532A50B127BB4D500F753E2 /* pause.png */,
@@ -450,6 +465,11 @@
 				C4571E15127E6A130070147C /* PlaylistViewController.xib in Resources */,
 				C4571E27127E6CB80070147C /* SupportViewController.xib in Resources */,
 				C45ECF60127E86DD0020D651 /* carbon.png in Resources */,
+				C4499125127F7C4D009FD582 /* pinknoise.png in Resources */,
+				C4499126127F7C4D009FD582 /* support.png in Resources */,
+				C4499127127F7C4D009FD582 /* sweep.png in Resources */,
+				C4499128127F7C4D009FD582 /* tone.png in Resources */,
+				C4499129127F7C4D009FD582 /* playlist.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

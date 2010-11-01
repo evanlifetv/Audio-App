@@ -55,6 +55,7 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
+						<bool key="IBUIEditable">NO</bool>
 						<string type="base64-UTF8" key="IBUIText">UHJhZXNlbnQgZ2FuZ3N0ZXIgdHVycGlzIGZvIHNoaXp6bGUgbWFoIG5penpsZSBmbyByaXp6bGUsIG1h
 aCBob21lIGctZGl6emxlIGxlbyBib29mcm9uIG1vbGVzdGllLiBHbyB0byBoaXp6bGUgdmVzdGlidWx1
 bSBhc3Mgdml6emxlIGJvb2Zyb24uIFF1aXNxdWUgc2h1dCB0aGUgc2hpenpsZSB1cCBvcm5hcmUgbWFn
@@ -304,7 +305,7 @@ YWUsIHB1bHZpbmFyIHB1bHZpbml6emxlLCB0aGF0J3MgdGhlIHNoaXp6bGUuCgo</string>
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>SupportViewController</string>
 					<string>UIResponder</string>
-					<string>{{606, 0}, {783, 856}}</string>
+					<string>{{606, 58}, {768, 1024}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">

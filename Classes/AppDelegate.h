@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  referenceaudio
+//  SoundTweak
 //
 //  Created by Evan Hamilton on 10/28/10.
 //  Copyright 2010 Evan Hamilton. All rights reserved.
@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface referenceaudioAppDelegate : NSObject <UIApplicationDelegate> {
+@interface SoundTweakAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow					*_window;
 	AudioControlsViewController	*_controlsViewController;
 	UITabBarController			*_tabBarController;

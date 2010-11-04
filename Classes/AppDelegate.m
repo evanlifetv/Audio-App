@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  referenceaudio
+//  SoundTweak
 //
 //  Created by Evan Hamilton on 10/28/10.
 //  Copyright Evan Hamilton. All rights reserved.
@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "AudioControlsViewController.h"
-#import "referenceaudioViewController.h"
 #import "ToneGeneratorViewController.h"
 #import "PinkNoiseViewController.h"
 #import "SweepGeneratorViewController.h"
@@ -16,7 +15,7 @@
 #import "PlaylistViewController.h"
 
 
-@implementation referenceaudioAppDelegate
+@implementation SoundTweakAppDelegate
 
 @synthesize window = _window;
 @synthesize controlsViewController = _controlsViewController;

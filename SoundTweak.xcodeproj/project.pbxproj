@@ -12,9 +12,10 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		2899E5220DE3E06400AC0155 /* referenceaudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		28D7ACF80DDB3853001CB0EB /* referenceaudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* referenceaudioViewController.m */; };
+		C4232E5F12837EDE00F5A4A6 /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4232E5C12837EDE00F5A4A6 /* SupportViewController.m */; };
+		C4232E6012837EDE00F5A4A6 /* SweepGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.m */; };
+		C428343012837BBF003A165D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C428342F12837BBF003A165D /* icon.png */; };
 		C4499125127F7C4D009FD582 /* pinknoise.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499120127F7C4D009FD582 /* pinknoise.png */; };
 		C4499126127F7C4D009FD582 /* support.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499121127F7C4D009FD582 /* support.png */; };
 		C4499127127F7C4D009FD582 /* sweep.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499122127F7C4D009FD582 /* sweep.png */; };
@@ -22,7 +23,6 @@
 		C4499129127F7C4D009FD582 /* playlist.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499124127F7C4D009FD582 /* playlist.png */; };
 		C4571E15127E6A130070147C /* PlaylistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4571E14127E6A130070147C /* PlaylistViewController.xib */; };
 		C4571E1A127E6B660070147C /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4571E19127E6B660070147C /* PlaylistViewController.m */; };
-		C4571E24127E6C260070147C /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4571E23127E6C260070147C /* SupportViewController.m */; };
 		C4571E27127E6CB80070147C /* SupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4571E26127E6CB80070147C /* SupportViewController.xib */; };
 		C45ECF60127E86DD0020D651 /* carbon.png in Resources */ = {isa = PBXBuildFile; fileRef = C45ECF5F127E86DD0020D651 /* carbon.png */; };
 		C465D562127A5F2700639357 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D561127A5F2700639357 /* AVFoundation.framework */; };
@@ -30,43 +30,13 @@
 		C465D59C127A5F3700639357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59B127A5F3700639357 /* QuartzCore.framework */; };
 		C465D59E127A5F4100639357 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59D127A5F4100639357 /* OpenGLES.framework */; };
 		C465D663127A669700639357 /* MeterTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C465D662127A669700639357 /* MeterTable.cpp */; };
-		C465D666127A66AE00639357 /* referenceaudioController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C465D665127A66AE00639357 /* referenceaudioController.mm */; };
 		C465D672127A671D00639357 /* CALevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = C465D66D127A671D00639357 /* CALevelMeter.mm */; };
 		C465D673127A671D00639357 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D66F127A671D00639357 /* GLLevelMeter.m */; };
 		C465D674127A671D00639357 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D671127A671D00639357 /* LevelMeter.m */; };
 		C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */; };
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
-		C4BA11E7127DEF3F009D8053 /* SweepGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA11E6127DEF3F009D8053 /* SweepGeneratorViewController.m */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
 		D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = D531BF53127DB97F0053ABCA /* Default-Landscape.png */; };
-		D532A4CA127BB48500F753E2 /* 1 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48C127BB48500F753E2 /* 1 kHz.m4a */; };
-		D532A4CB127BB48500F753E2 /* 1.6 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48D127BB48500F753E2 /* 1.6 kHz.m4a */; };
-		D532A4CC127BB48500F753E2 /* 1.25 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48E127BB48500F753E2 /* 1.25 kHz.m4a */; };
-		D532A4CD127BB48500F753E2 /* 2 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A48F127BB48500F753E2 /* 2 kHz.m4a */; };
-		D532A4CE127BB48500F753E2 /* 2.5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A490127BB48500F753E2 /* 2.5 kHz.m4a */; };
-		D532A4F1127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B3127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */; };
-		D532A4F2127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B4127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a */; };
-		D532A4F3127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B5127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */; };
-		D532A4F4127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B6127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a */; };
-		D532A4F5127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B7127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a */; };
-		D532A4F6127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B8127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a */; };
-		D532A4F7127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4B9127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a */; };
-		D532A4F8127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BA127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a */; };
-		D532A4F9127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BB127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a */; };
-		D532A4FA127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BC127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a */; };
-		D532A4FB127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BD127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a */; };
-		D532A4FC127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BE127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a */; };
-		D532A4FD127BB48500F753E2 /* Square Wave - 1 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4BF127BB48500F753E2 /* Square Wave - 1 kHz.m4a */; };
-		D532A4FE127BB48500F753E2 /* Square Wave - 5 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C0127BB48500F753E2 /* Square Wave - 5 kHz.m4a */; };
-		D532A4FF127BB48500F753E2 /* Square Wave - 10 kHz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C1127BB48500F753E2 /* Square Wave - 10 kHz.m4a */; };
-		D532A500127BB48500F753E2 /* Square Wave - 100 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C2127BB48500F753E2 /* Square Wave - 100 Hz.m4a */; };
-		D532A501127BB48500F753E2 /* Square Wave - 500 Hz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C3127BB48500F753E2 /* Square Wave - 500 Hz.m4a */; };
-		D532A502127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C4127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a */; };
-		D532A503127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C5127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a */; };
-		D532A504127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C6127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a */; };
-		D532A505127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C7127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a */; };
-		D532A506127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C8127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a */; };
-		D532A507127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D532A4C9127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */; };
 		D532A513127BB4D500F753E2 /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50A127BB4D500F753E2 /* forward.png */; };
 		D532A514127BB4D500F753E2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50B127BB4D500F753E2 /* pause.png */; };
 		D532A515127BB4D500F753E2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50C127BB4D500F753E2 /* play.png */; };
@@ -86,16 +56,18 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* referenceaudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = referenceaudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = referenceaudioViewController.xib; path = Resources/NIBs/referenceaudioViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/NIBs/MainWindow.xib; sourceTree = "<group>"; };
-		28D7ACF60DDB3853001CB0EB /* referenceaudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = referenceaudioViewController.h; sourceTree = "<group>"; };
-		28D7ACF70DDB3853001CB0EB /* referenceaudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = referenceaudioViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* referenceaudio_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = referenceaudio_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* referenceaudio-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "referenceaudio-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* SoundTweak_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTweak_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* SoundTweak-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SoundTweak-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C4232E5312837E9A00F5A4A6 /* SoundTweak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundTweak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4232E5B12837EDE00F5A4A6 /* SupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportViewController.h; sourceTree = "<group>"; };
+		C4232E5C12837EDE00F5A4A6 /* SupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportViewController.m; sourceTree = "<group>"; };
+		C4232E5D12837EDE00F5A4A6 /* SweepGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SweepGeneratorViewController.h; sourceTree = "<group>"; };
+		C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SweepGeneratorViewController.m; sourceTree = "<group>"; };
+		C428342F12837BBF003A165D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C4499120127F7C4D009FD582 /* pinknoise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinknoise.png; sourceTree = "<group>"; };
 		C4499121127F7C4D009FD582 /* support.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = support.png; sourceTree = "<group>"; };
 		C4499122127F7C4D009FD582 /* sweep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sweep.png; sourceTree = "<group>"; };
@@ -104,8 +76,6 @@
 		C4571E14127E6A130070147C /* PlaylistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PlaylistViewController.xib; path = Classes/PlaylistViewController.xib; sourceTree = "<group>"; };
 		C4571E18127E6B660070147C /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistViewController.h; sourceTree = "<group>"; };
 		C4571E19127E6B660070147C /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewController.m; sourceTree = "<group>"; };
-		C4571E22127E6C260070147C /* SupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SupportViewController.h; path = ../SupportViewController.h; sourceTree = "<group>"; };
-		C4571E23127E6C260070147C /* SupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SupportViewController.m; path = ../SupportViewController.m; sourceTree = "<group>"; };
 		C4571E26127E6CB80070147C /* SupportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SupportViewController.xib; path = Resources/NIBs/SupportViewController.xib; sourceTree = "<group>"; };
 		C45ECF5F127E86DD0020D651 /* carbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carbon.png; sourceTree = "<group>"; };
 		C465D561127A5F2700639357 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -114,8 +84,6 @@
 		C465D59D127A5F4100639357 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		C465D661127A669700639357 /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterTable.h; sourceTree = "<group>"; };
 		C465D662127A669700639357 /* MeterTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeterTable.cpp; sourceTree = "<group>"; };
-		C465D664127A66AE00639357 /* referenceaudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = referenceaudioController.h; sourceTree = "<group>"; };
-		C465D665127A66AE00639357 /* referenceaudioController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = referenceaudioController.mm; sourceTree = "<group>"; };
 		C465D66C127A671D00639357 /* CALevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALevelMeter.h; sourceTree = "<group>"; };
 		C465D66D127A671D00639357 /* CALevelMeter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CALevelMeter.mm; sourceTree = "<group>"; };
 		C465D66E127A671D00639357 /* GLLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLLevelMeter.h; sourceTree = "<group>"; };
@@ -125,38 +93,8 @@
 		C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseViewController.h; sourceTree = "<group>"; };
 		C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseViewController.m; sourceTree = "<group>"; };
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SweepGeneratorViewController.xib; path = Classes/SweepGeneratorViewController.xib; sourceTree = "<group>"; };
-		C4BA11E5127DEF3F009D8053 /* SweepGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SweepGeneratorViewController.h; path = ../SweepGeneratorViewController.h; sourceTree = "<group>"; };
-		C4BA11E6127DEF3F009D8053 /* SweepGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SweepGeneratorViewController.m; path = ../SweepGeneratorViewController.m; sourceTree = "<group>"; };
 		C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PinkNoiseViewController.xib; path = Classes/PinkNoiseViewController.xib; sourceTree = "<group>"; };
 		D531BF53127DB97F0053ABCA /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
-		D532A48C127BB48500F753E2 /* 1 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1 kHz.m4a"; path = "Resources/audio/1 kHz.m4a"; sourceTree = "<group>"; };
-		D532A48D127BB48500F753E2 /* 1.6 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1.6 kHz.m4a"; path = "Resources/audio/1.6 kHz.m4a"; sourceTree = "<group>"; };
-		D532A48E127BB48500F753E2 /* 1.25 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "1.25 kHz.m4a"; path = "Resources/audio/1.25 kHz.m4a"; sourceTree = "<group>"; };
-		D532A48F127BB48500F753E2 /* 2 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "2 kHz.m4a"; path = "Resources/audio/2 kHz.m4a"; sourceTree = "<group>"; };
-		D532A490127BB48500F753E2 /* 2.5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "2.5 kHz.m4a"; path = "Resources/audio/2.5 kHz.m4a"; sourceTree = "<group>"; };
-		D532A4B3127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Acoustic Guitar (Artist_ Michael Molenda).m4a"; path = "Resources/audio/Acoustic Guitar (Artist_ Michael Molenda).m4a"; sourceTree = "<group>"; };
-		D532A4B4127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Drum Kit (Artist_ Larry The O).m4a"; path = "Resources/audio/Drum Kit (Artist_ Larry The O).m4a"; sourceTree = "<group>"; };
-		D532A4B5127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Electric Guitar With Chorus (Artist_ Michael Molenda).m4a"; path = "Resources/audio/Electric Guitar With Chorus (Artist_ Michael Molenda).m4a"; sourceTree = "<group>"; };
-		D532A4B6127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Female Vocal (Artist_ Claudia Conrad).m4a"; path = "Resources/audio/Female Vocal (Artist_ Claudia Conrad).m4a"; sourceTree = "<group>"; };
-		D532A4B7127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a"; path = "Resources/audio/Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a"; sourceTree = "<group>"; };
-		D532A4B8127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a"; path = "Resources/audio/Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a"; sourceTree = "<group>"; };
-		D532A4B9127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Male Vocal (Artist_ Dave Crimmen).m4a"; path = "Resources/audio/Male Vocal (Artist_ Dave Crimmen).m4a"; sourceTree = "<group>"; };
-		D532A4BA127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Phase Test (250 Hz Sine Wave) - In-Phase.m4a"; path = "Resources/audio/Phase Test (250 Hz Sine Wave) - In-Phase.m4a"; sourceTree = "<group>"; };
-		D532A4BB127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a"; path = "Resources/audio/Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a"; sourceTree = "<group>"; };
-		D532A4BC127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Piano Solo (Artist_ J.J. Jenkins).m4a"; path = "Resources/audio/Piano Solo (Artist_ J.J. Jenkins).m4a"; sourceTree = "<group>"; };
-		D532A4BD127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Saxophone (Artist_ Frank Macchia).m4a"; path = "Resources/audio/Saxophone (Artist_ Frank Macchia).m4a"; sourceTree = "<group>"; };
-		D532A4BE127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Snare Drum Loop (Artist_ Larry The O).m4a"; path = "Resources/audio/Snare Drum Loop (Artist_ Larry The O).m4a"; sourceTree = "<group>"; };
-		D532A4BF127BB48500F753E2 /* Square Wave - 1 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 1 kHz.m4a"; path = "Resources/audio/Square Wave - 1 kHz.m4a"; sourceTree = "<group>"; };
-		D532A4C0127BB48500F753E2 /* Square Wave - 5 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 5 kHz.m4a"; path = "Resources/audio/Square Wave - 5 kHz.m4a"; sourceTree = "<group>"; };
-		D532A4C1127BB48500F753E2 /* Square Wave - 10 kHz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 10 kHz.m4a"; path = "Resources/audio/Square Wave - 10 kHz.m4a"; sourceTree = "<group>"; };
-		D532A4C2127BB48500F753E2 /* Square Wave - 100 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 100 Hz.m4a"; path = "Resources/audio/Square Wave - 100 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4C3127BB48500F753E2 /* Square Wave - 500 Hz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Square Wave - 500 Hz.m4a"; path = "Resources/audio/Square Wave - 500 Hz.m4a"; sourceTree = "<group>"; };
-		D532A4C4127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - A.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - A.m4a"; sourceTree = "<group>"; };
-		D532A4C5127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - B.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - B.m4a"; sourceTree = "<group>"; };
-		D532A4C6127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - D.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - D.m4a"; sourceTree = "<group>"; };
-		D532A4C7127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - G.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - G.m4a"; sourceTree = "<group>"; };
-		D532A4C8127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - High E.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - High E.m4a"; sourceTree = "<group>"; };
-		D532A4C9127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tuning Notes (Guitar Or Bass) - Low E.m4a"; path = "Resources/audio/Tuning Notes (Guitar Or Bass) - Low E.m4a"; sourceTree = "<group>"; };
 		D532A50A127BB4D500F753E2 /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
 		D532A50B127BB4D500F753E2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		D532A50C127BB4D500F753E2 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -199,8 +137,6 @@
 				D532A568127BBCB000F753E2 /* ViewControllers */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
-				C465D664127A66AE00639357 /* referenceaudioController.h */,
-				C465D665127A66AE00639357 /* referenceaudioController.mm */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -208,7 +144,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* referenceaudio.app */,
+				C4232E5312837E9A00F5A4A6 /* SoundTweak.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,7 +166,7 @@
 			children = (
 				C465D661127A669700639357 /* MeterTable.h */,
 				C465D662127A669700639357 /* MeterTable.cpp */,
-				32CA4F630368D1EE00C91783 /* referenceaudio_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* SoundTweak_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -242,7 +178,7 @@
 				C465D5AC127A5F5100639357 /* audio */,
 				D532A508127BB4D500F753E2 /* images */,
 				D532A52E127BB88F00F753E2 /* NIBs */,
-				8D1107310486CEB800E47090 /* referenceaudio-Info.plist */,
+				8D1107310486CEB800E47090 /* SoundTweak-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -264,34 +200,6 @@
 		C465D5AC127A5F5100639357 /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				D532A48C127BB48500F753E2 /* 1 kHz.m4a */,
-				D532A48D127BB48500F753E2 /* 1.6 kHz.m4a */,
-				D532A48E127BB48500F753E2 /* 1.25 kHz.m4a */,
-				D532A48F127BB48500F753E2 /* 2 kHz.m4a */,
-				D532A490127BB48500F753E2 /* 2.5 kHz.m4a */,
-				D532A4B3127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a */,
-				D532A4B4127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a */,
-				D532A4B5127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a */,
-				D532A4B6127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a */,
-				D532A4B7127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a */,
-				D532A4B8127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a */,
-				D532A4B9127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a */,
-				D532A4BA127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a */,
-				D532A4BB127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a */,
-				D532A4BC127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a */,
-				D532A4BD127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a */,
-				D532A4BE127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a */,
-				D532A4BF127BB48500F753E2 /* Square Wave - 1 kHz.m4a */,
-				D532A4C0127BB48500F753E2 /* Square Wave - 5 kHz.m4a */,
-				D532A4C1127BB48500F753E2 /* Square Wave - 10 kHz.m4a */,
-				D532A4C2127BB48500F753E2 /* Square Wave - 100 Hz.m4a */,
-				D532A4C3127BB48500F753E2 /* Square Wave - 500 Hz.m4a */,
-				D532A4C4127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a */,
-				D532A4C5127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a */,
-				D532A4C6127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a */,
-				D532A4C7127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a */,
-				D532A4C8127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a */,
-				D532A4C9127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a */,
 			);
 			name = audio;
 			sourceTree = "<group>";
@@ -315,6 +223,7 @@
 				C4499120127F7C4D009FD582 /* pinknoise.png */,
 				C4499121127F7C4D009FD582 /* support.png */,
 				C4499122127F7C4D009FD582 /* sweep.png */,
+				C428342F12837BBF003A165D /* icon.png */,
 				C4499123127F7C4D009FD582 /* tone.png */,
 				C4499124127F7C4D009FD582 /* playlist.png */,
 				D532A50A127BB4D500F753E2 /* forward.png */,
@@ -342,7 +251,6 @@
 				C4571E26127E6CB80070147C /* SupportViewController.xib */,
 				C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				2899E5210DE3E06400AC0155 /* referenceaudioViewController.xib */,
 				D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */,
 			);
 			name = NIBs;
@@ -351,20 +259,18 @@
 		D532A568127BBCB000F753E2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C4BA11E5127DEF3F009D8053 /* SweepGeneratorViewController.h */,
-				C4BA11E6127DEF3F009D8053 /* SweepGeneratorViewController.m */,
+				C4232E5B12837EDE00F5A4A6 /* SupportViewController.h */,
+				C4232E5C12837EDE00F5A4A6 /* SupportViewController.m */,
+				C4232E5D12837EDE00F5A4A6 /* SweepGeneratorViewController.h */,
+				C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.m */,
 				C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */,
 				C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */,
 				D5E47078127DA55E00BA3DD6 /* AudioControlsViewController.h */,
 				D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.m */,
-				28D7ACF60DDB3853001CB0EB /* referenceaudioViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* referenceaudioViewController.m */,
 				D5E47060127D2DAC00BA3DD6 /* ToneGeneratorViewController.h */,
 				D5E47061127D2DAC00BA3DD6 /* ToneGeneratorViewController.m */,
 				C4571E18127E6B660070147C /* PlaylistViewController.h */,
 				C4571E19127E6B660070147C /* PlaylistViewController.m */,
-				C4571E22127E6C260070147C /* SupportViewController.h */,
-				C4571E23127E6C260070147C /* SupportViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -372,9 +278,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* referenceaudio */ = {
+		1D6058900D05DD3D006BFB54 /* SoundTweak */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "referenceaudio" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SoundTweak" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -384,9 +290,9 @@
 			);
 			dependencies = (
 			);
-			name = referenceaudio;
-			productName = referenceaudio;
-			productReference = 1D6058910D05DD3D006BFB54 /* referenceaudio.app */;
+			name = SoundTweak;
+			productName = SoundTweak;
+			productReference = C4232E5312837E9A00F5A4A6 /* SoundTweak.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -394,7 +300,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "referenceaudio" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SoundTweak" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -408,7 +314,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* referenceaudio */,
+				1D6058900D05DD3D006BFB54 /* SoundTweak */,
 			);
 		};
 /* End PBXProject section */
@@ -419,35 +325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				2899E5220DE3E06400AC0155 /* referenceaudioViewController.xib in Resources */,
-				D532A4CA127BB48500F753E2 /* 1 kHz.m4a in Resources */,
-				D532A4CB127BB48500F753E2 /* 1.6 kHz.m4a in Resources */,
-				D532A4CC127BB48500F753E2 /* 1.25 kHz.m4a in Resources */,
-				D532A4CD127BB48500F753E2 /* 2 kHz.m4a in Resources */,
-				D532A4CE127BB48500F753E2 /* 2.5 kHz.m4a in Resources */,
-				D532A4F1127BB48500F753E2 /* Acoustic Guitar (Artist_ Michael Molenda).m4a in Resources */,
-				D532A4F2127BB48500F753E2 /* Drum Kit (Artist_ Larry The O).m4a in Resources */,
-				D532A4F3127BB48500F753E2 /* Electric Guitar With Chorus (Artist_ Michael Molenda).m4a in Resources */,
-				D532A4F4127BB48500F753E2 /* Female Vocal (Artist_ Claudia Conrad).m4a in Resources */,
-				D532A4F5127BB48500F753E2 /* Frequency Sweep - 20 Hz To 20 kHz Upwards.m4a in Resources */,
-				D532A4F6127BB48500F753E2 /* Frequency Sweep - 20 kHz To 20 Hz Downwards.m4a in Resources */,
-				D532A4F7127BB48500F753E2 /* Male Vocal (Artist_ Dave Crimmen).m4a in Resources */,
-				D532A4F8127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - In-Phase.m4a in Resources */,
-				D532A4F9127BB48500F753E2 /* Phase Test (250 Hz Sine Wave) - Out-Of-Phase.m4a in Resources */,
-				D532A4FA127BB48500F753E2 /* Piano Solo (Artist_ J.J. Jenkins).m4a in Resources */,
-				D532A4FB127BB48500F753E2 /* Saxophone (Artist_ Frank Macchia).m4a in Resources */,
-				D532A4FC127BB48500F753E2 /* Snare Drum Loop (Artist_ Larry The O).m4a in Resources */,
-				D532A4FD127BB48500F753E2 /* Square Wave - 1 kHz.m4a in Resources */,
-				D532A4FE127BB48500F753E2 /* Square Wave - 5 kHz.m4a in Resources */,
-				D532A4FF127BB48500F753E2 /* Square Wave - 10 kHz.m4a in Resources */,
-				D532A500127BB48500F753E2 /* Square Wave - 100 Hz.m4a in Resources */,
-				D532A501127BB48500F753E2 /* Square Wave - 500 Hz.m4a in Resources */,
-				D532A502127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - A.m4a in Resources */,
-				D532A503127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - B.m4a in Resources */,
-				D532A504127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - D.m4a in Resources */,
-				D532A505127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - G.m4a in Resources */,
-				D532A506127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - High E.m4a in Resources */,
-				D532A507127BB48500F753E2 /* Tuning Notes (Guitar Or Bass) - Low E.m4a in Resources */,
 				D532A513127BB4D500F753E2 /* forward.png in Resources */,
 				D532A514127BB4D500F753E2 /* pause.png in Resources */,
 				D532A515127BB4D500F753E2 /* play.png in Resources */,
@@ -470,6 +347,7 @@
 				C4499127127F7C4D009FD582 /* sweep.png in Resources */,
 				C4499128127F7C4D009FD582 /* tone.png in Resources */,
 				C4499129127F7C4D009FD582 /* playlist.png in Resources */,
+				C428343012837BBF003A165D /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,18 +360,16 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
-				28D7ACF80DDB3853001CB0EB /* referenceaudioViewController.m in Sources */,
 				C465D663127A669700639357 /* MeterTable.cpp in Sources */,
-				C465D666127A66AE00639357 /* referenceaudioController.mm in Sources */,
 				C465D672127A671D00639357 /* CALevelMeter.mm in Sources */,
 				C465D673127A671D00639357 /* GLLevelMeter.m in Sources */,
 				C465D674127A671D00639357 /* LevelMeter.m in Sources */,
 				D5E47063127D2DAC00BA3DD6 /* ToneGeneratorViewController.m in Sources */,
 				D5E4707B127DA55E00BA3DD6 /* AudioControlsViewController.m in Sources */,
 				C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */,
-				C4BA11E7127DEF3F009D8053 /* SweepGeneratorViewController.m in Sources */,
 				C4571E1A127E6B660070147C /* PlaylistViewController.m in Sources */,
-				C4571E24127E6C260070147C /* SupportViewController.m in Sources */,
+				C4232E5F12837EDE00F5A4A6 /* SupportViewController.m in Sources */,
+				C4232E6012837EDE00F5A4A6 /* SweepGeneratorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,9 +384,9 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = referenceaudio_Prefix.pch;
-				INFOPLIST_FILE = "referenceaudio-Info.plist";
-				PRODUCT_NAME = referenceaudio;
+				GCC_PREFIX_HEADER = SoundTweak_Prefix.pch;
+				INFOPLIST_FILE = "SoundTweak-Info.plist";
+				PRODUCT_NAME = SoundTweak;
 			};
 			name = Debug;
 		};
@@ -520,9 +396,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = referenceaudio_Prefix.pch;
-				INFOPLIST_FILE = "referenceaudio-Info.plist";
-				PRODUCT_NAME = referenceaudio;
+				GCC_PREFIX_HEADER = SoundTweak_Prefix.pch;
+				INFOPLIST_FILE = "SoundTweak-Info.plist";
+				PRODUCT_NAME = SoundTweak;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -559,7 +435,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "referenceaudio" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SoundTweak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -568,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "referenceaudio" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SoundTweak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

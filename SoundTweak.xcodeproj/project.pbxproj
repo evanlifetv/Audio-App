@@ -16,6 +16,7 @@
 		C4232E5F12837EDE00F5A4A6 /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4232E5C12837EDE00F5A4A6 /* SupportViewController.m */; };
 		C4232E6012837EDE00F5A4A6 /* SweepGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.m */; };
 		C428343012837BBF003A165D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C428342F12837BBF003A165D /* icon.png */; };
+		C44959AD128389D600FE550A /* SoundTweak-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C44959AC128389D600FE550A /* SoundTweak-Logo.png */; };
 		C4499125127F7C4D009FD582 /* pinknoise.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499120127F7C4D009FD582 /* pinknoise.png */; };
 		C4499126127F7C4D009FD582 /* support.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499121127F7C4D009FD582 /* support.png */; };
 		C4499127127F7C4D009FD582 /* sweep.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499122127F7C4D009FD582 /* sweep.png */; };
@@ -68,6 +69,7 @@
 		C4232E5D12837EDE00F5A4A6 /* SweepGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SweepGeneratorViewController.h; sourceTree = "<group>"; };
 		C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SweepGeneratorViewController.m; sourceTree = "<group>"; };
 		C428342F12837BBF003A165D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C44959AC128389D600FE550A /* SoundTweak-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SoundTweak-Logo.png"; sourceTree = "<group>"; };
 		C4499120127F7C4D009FD582 /* pinknoise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinknoise.png; sourceTree = "<group>"; };
 		C4499121127F7C4D009FD582 /* support.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = support.png; sourceTree = "<group>"; };
 		C4499122127F7C4D009FD582 /* sweep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sweep.png; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		D532A508127BB4D500F753E2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C44959AC128389D600FE550A /* SoundTweak-Logo.png */,
 				C4499120127F7C4D009FD582 /* pinknoise.png */,
 				C4499121127F7C4D009FD582 /* support.png */,
 				C4499122127F7C4D009FD582 /* sweep.png */,
@@ -348,6 +351,7 @@
 				C4499128127F7C4D009FD582 /* tone.png in Resources */,
 				C4499129127F7C4D009FD582 /* playlist.png in Resources */,
 				C428343012837BBF003A165D /* icon.png in Resources */,
+				C44959AD128389D600FE550A /* SoundTweak-Logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

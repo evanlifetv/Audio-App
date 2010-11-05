@@ -96,14 +96,13 @@
 					<object class="IBUIButton" id="108941860">
 						<reference key="NSNextResponder" ref="821238009"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{91, 63}, {195, 143}}</string>
+						<string key="NSFrame">{{47, 65}, {285, 176}}</string>
 						<reference key="NSSuperview" ref="821238009"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="602481321"/>
-						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Logo / Brand</string>
 						<reference key="IBUIHighlightedTitleColor" ref="817179510"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
@@ -111,6 +110,10 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="940647474"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">SoundTweak-Logo.png</string>
+						</object>
 					</object>
 					<object class="IBUIButton" id="457202507">
 						<reference key="NSNextResponder" ref="821238009"/>
@@ -364,7 +367,6 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="352107561"/>
-							<reference ref="108941860"/>
 							<reference ref="985701606"/>
 							<reference ref="800448688"/>
 							<reference ref="542204914"/>
@@ -377,6 +379,7 @@
 							<reference ref="357232904"/>
 							<reference ref="523101956"/>
 							<reference ref="457202507"/>
+							<reference ref="108941860"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -505,6 +508,7 @@
 					<string>5.IBViewBoundsToFrameTransform</string>
 					<string>7.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
+					<string>9.IBViewBoundsToFrameTransform</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -560,7 +564,7 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">AUPcAABD7IAAA</bytes>
 					</object>
-					<string>{{60, 334}, {768, 510}}</string>
+					<string>{{1078, 695}, {768, 510}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -568,6 +572,9 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABCiAAAw28AAA</bytes>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -853,6 +860,7 @@
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>SoundTweak-Logo.png</string>
 				<string>sound_meter_background.png</string>
 				<string>sound_meter_glare.png</string>
 				<string>volume_down.png</string>
@@ -860,6 +868,7 @@
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{285, 176}</string>
 				<string>{265, 89}</string>
 				<string>{265, 89}</string>
 				<string>{9, 15}</string>

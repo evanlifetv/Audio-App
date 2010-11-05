@@ -88,7 +88,7 @@
 							<reference key="IBUITabBar"/>
 						</object>
 						<reference key="IBUIParentViewController" ref="334210231"/>
-						<string key="IBUINibName">referenceaudioViewController</string>
+						<string key="IBUINibName">SoundTweakViewController</string>
 						<reference key="IBUISimulatedStatusBarMetrics" ref="456458906"/>
 						<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 							<int key="interfaceOrientation">1</int>
@@ -183,7 +183,7 @@
 						<int key="objectID">6</int>
 						<reference key="object" ref="250404236"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">referenceaudio App Delegate</string>
+						<string key="objectName">SoundTweak App Delegate</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">43</int>
@@ -280,9 +280,9 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>referenceaudioAppDelegate</string>
+					<string>SoundTweakAppDelegate</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>referenceaudioViewController</string>
+					<string>SoundTweakViewController</string>
 					<string>{{512, 351}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
@@ -317,7 +317,7 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">referenceaudioAppDelegate</string>
+					<string key="className">SoundTweakAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -357,7 +357,7 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">referenceaudioController</string>
+					<string key="className">SoundTweakController</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="actions">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -516,26 +516,26 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/referenceaudioController.h</string>
+						<string key="minorKey">Classes/SoundTweakController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">referenceaudioViewController</string>
+					<string key="className">SoundTweakViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">controller</string>
-						<string key="NS.object.0">referenceaudioController</string>
+						<string key="NS.object.0">SoundTweakController</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<string key="NS.key.0">controller</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
 							<string key="name">controller</string>
-							<string key="candidateClassName">referenceaudioController</string>
+							<string key="candidateClassName">SoundTweakController</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/referenceaudioViewController.h</string>
+						<string key="minorKey">Classes/SoundTweakViewController.h</string>
 					</object>
 				</object>
 			</object>
@@ -831,7 +831,7 @@
 			<integer value="3100" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">referenceaudio.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">SoundTweak.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<string key="IBCocoaTouchPluginVersion">132</string>
 	</data>

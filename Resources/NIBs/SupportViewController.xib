@@ -602,7 +602,7 @@ YWUsIHB1bHZpbmFyIHB1bHZpbml6emxlLCB0aGF0J3MgdGhlIHNoaXp6bGUuCgo</string>
 			<integer value="3100" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">../../referenceaudio.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../../SoundTweak.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<string key="IBCocoaTouchPluginVersion">132</string>
 	</data>

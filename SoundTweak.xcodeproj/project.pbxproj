@@ -47,6 +47,7 @@
 		D532A519127BB4D500F753E2 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A510127BB4D500F753E2 /* volume_down.png */; };
 		D532A51A127BB4D500F753E2 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A511127BB4D500F753E2 /* volume_up.png */; };
 		D5346529127DB8AE0063D06E /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = D5346528127DB8AE0063D06E /* Default-Portrait.png */; };
+		D566984A1283C232004398AF /* ToneController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56698491283C232004398AF /* ToneController.m */; };
 		D5E47063127D2DAC00BA3DD6 /* ToneGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E47061127D2DAC00BA3DD6 /* ToneGeneratorViewController.m */; };
 		D5E47064127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */; };
 		D5E4707B127DA55E00BA3DD6 /* AudioControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.m */; };
@@ -106,6 +107,8 @@
 		D532A510127BB4D500F753E2 /* volume_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_down.png; sourceTree = "<group>"; };
 		D532A511127BB4D500F753E2 /* volume_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_up.png; sourceTree = "<group>"; };
 		D5346528127DB8AE0063D06E /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		D56698481283C232004398AF /* ToneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneController.h; sourceTree = "<group>"; };
+		D56698491283C232004398AF /* ToneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneController.m; sourceTree = "<group>"; };
 		D5E47060127D2DAC00BA3DD6 /* ToneGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneGeneratorViewController.h; sourceTree = "<group>"; };
 		D5E47061127D2DAC00BA3DD6 /* ToneGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneGeneratorViewController.m; sourceTree = "<group>"; };
 		D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ToneGeneratorViewController.xib; path = Classes/ToneGeneratorViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				C465D66B127A671D00639357 /* AudioViews */,
+				D56698451283C1E8004398AF /* Controllers */,
 				D532A568127BBCB000F753E2 /* ViewControllers */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
@@ -177,7 +181,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C465D5AC127A5F5100639357 /* audio */,
 				D532A508127BB4D500F753E2 /* images */,
 				D532A52E127BB88F00F753E2 /* NIBs */,
 				8D1107310486CEB800E47090 /* SoundTweak-Info.plist */,
@@ -197,13 +200,6 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C465D5AC127A5F5100639357 /* audio */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = audio;
 			sourceTree = "<group>";
 		};
 		C465D66B127A671D00639357 /* AudioViews */ = {
@@ -276,6 +272,15 @@
 				C4571E19127E6B660070147C /* PlaylistViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D56698451283C1E8004398AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D56698481283C232004398AF /* ToneController.h */,
+				D56698491283C232004398AF /* ToneController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +379,7 @@
 				C4571E1A127E6B660070147C /* PlaylistViewController.m in Sources */,
 				C4232E5F12837EDE00F5A4A6 /* SupportViewController.m in Sources */,
 				C4232E6012837EDE00F5A4A6 /* SweepGeneratorViewController.m in Sources */,
+				D566984A1283C232004398AF /* ToneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

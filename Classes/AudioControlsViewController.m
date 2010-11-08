@@ -1,15 +1,31 @@
-    //
+//
 //  AudioControlsViewController.m
-//  referenceaudio
+//  SoundTweak
 //
 //  Created by Bryan Montz on 10/31/10.
 //  Copyright 2010 Evan Hamilton. All rights reserved.
 //
 
 #import "AudioControlsViewController.h"
-
+#import "ToneGeneratorViewController.h"
+#import "ToneController.h"
 
 @implementation AudioControlsViewController
+
+@synthesize playButton = _playButton;
+@synthesize visibleViewController = _visibleViewController;
+
+
++ (AudioControlsViewController*)sharedInstance
+{
+	static AudioControlsViewController *sharedInstance;
+	@synchronized(self) {
+		if (!sharedInstance) {
+			sharedInstance = [[AudioControlsViewController alloc] initWithNibName:@"AudioControlsViewController" bundle:nil];
+		}
+	}
+	return sharedInstance;
+}
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -46,13 +62,25 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+	self.playButton = nil;
 }
 
 
 - (void)dealloc {
+	[_playButton release], _playButton = nil;
+    [_visibleViewController release], _visibleViewController = nil;
+	
     [super dealloc];
+}
+
+
+
+- (IBAction)playButtonPressed
+{
+	if ([self.visibleViewController isKindOfClass:[ToneGeneratorViewController class]]) {
+		[[ToneController sharedInstance] togglePlay];
+	}
 }
 
 

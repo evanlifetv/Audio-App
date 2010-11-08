@@ -15,7 +15,13 @@
 #import "PlaylistViewController.h"
 
 
-@implementation SoundTweakAppDelegate
+@interface AppDelegate()
+- (void)saveState;
+- (void)restoreState;
+@end
+
+
+@implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize controlsViewController = _controlsViewController;
@@ -33,7 +39,7 @@
 
 	
 	//initialize the audio controls view (top half of the screen)
-	self.controlsViewController = [[[AudioControlsViewController alloc] initWithNibName:@"AudioControlsViewController" bundle:nil] autorelease];
+	self.controlsViewController = [[AudioControlsViewController sharedInstance] autorelease];
 	self.controlsViewController.view.frame = CGRectMake(0, 20, 768, 510);
 	
 	//initialize each view controller that will be a tab in the tab bar controller
@@ -54,21 +60,41 @@
 	//add the tab bar controllers view (bottom half)
     [self.window addSubview:self.tabBarController.view];
 	
+	[self restoreState];
+	
     [self.window makeKeyAndVisible];
 
 	return YES;
 }
 
 
-#pragma mark -
-#pragma mark Memory management
-
-- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
-    /*
-     Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
-     */
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+	[self saveState];
 }
 
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+	[self saveState];
+}
+
+
+- (void)saveState
+{
+	[[NSUserDefaults standardUserDefaults] setInteger:self.tabBarController.selectedIndex forKey:kLastSelectedTabIndex];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
+- (void)restoreState
+{
+	self.tabBarController.selectedIndex = [[NSUserDefaults standardUserDefaults] integerForKey:kLastSelectedTabIndex];
+}
+
+
+#pragma mark -
+#pragma mark Memory management
 
 - (void)dealloc {
 	[_window release], _window = nil;

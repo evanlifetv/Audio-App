@@ -1,8 +1,12 @@
 //
-// Prefix header for all source files of the 'referenceaudio' target in the 'referenceaudio' project
+// Prefix header for all source files of the 'SoundTweak' target in the 'SoundTweak' project
 //
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif
+
+//User defaults keys
+#define kLastToneFrequency @"lastToneFrequency"
+#define kLastSelectedTabIndex @"lastSelectedTabIndex"

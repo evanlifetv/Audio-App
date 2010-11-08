@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SoundTweakAppDelegate : NSObject <UIApplicationDelegate> {
+@interface AppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow					*_window;
 	AudioControlsViewController	*_controlsViewController;
 	UITabBarController			*_tabBarController;

@@ -25,6 +25,7 @@
 		C4571E15127E6A130070147C /* PlaylistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4571E14127E6A130070147C /* PlaylistViewController.xib */; };
 		C4571E1A127E6B660070147C /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4571E19127E6B660070147C /* PlaylistViewController.m */; };
 		C4571E27127E6CB80070147C /* SupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4571E26127E6CB80070147C /* SupportViewController.xib */; };
+		C45EB661128B9C670016610A /* tabberbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C45EB660128B9C670016610A /* tabberbackground.png */; };
 		C45ECF60127E86DD0020D651 /* carbon.png in Resources */ = {isa = PBXBuildFile; fileRef = C45ECF5F127E86DD0020D651 /* carbon.png */; };
 		C465D562127A5F2700639357 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D561127A5F2700639357 /* AVFoundation.framework */; };
 		C465D578127A5F3000639357 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D577127A5F3000639357 /* AudioToolbox.framework */; };
@@ -34,6 +35,8 @@
 		C465D672127A671D00639357 /* CALevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = C465D66D127A671D00639357 /* CALevelMeter.mm */; };
 		C465D673127A671D00639357 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D66F127A671D00639357 /* GLLevelMeter.m */; };
 		C465D674127A671D00639357 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D671127A671D00639357 /* LevelMeter.m */; };
+		C4751FA6128A1A2800BC216A /* controlbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FA5128A1A2800BC216A /* controlbackground.png */; };
+		C4751FDA128A202F00BC216A /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FD9128A202F00BC216A /* playbutton.png */; };
 		C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */; };
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
@@ -42,8 +45,6 @@
 		D532A514127BB4D500F753E2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50B127BB4D500F753E2 /* pause.png */; };
 		D532A515127BB4D500F753E2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50C127BB4D500F753E2 /* play.png */; };
 		D532A516127BB4D500F753E2 /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50D127BB4D500F753E2 /* rewind.png */; };
-		D532A517127BB4D500F753E2 /* sound_meter_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50E127BB4D500F753E2 /* sound_meter_background.png */; };
-		D532A518127BB4D500F753E2 /* sound_meter_glare.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50F127BB4D500F753E2 /* sound_meter_glare.png */; };
 		D532A519127BB4D500F753E2 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A510127BB4D500F753E2 /* volume_down.png */; };
 		D532A51A127BB4D500F753E2 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A511127BB4D500F753E2 /* volume_up.png */; };
 		D5346529127DB8AE0063D06E /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = D5346528127DB8AE0063D06E /* Default-Portrait.png */; };
@@ -80,6 +81,7 @@
 		C4571E18127E6B660070147C /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistViewController.h; sourceTree = "<group>"; };
 		C4571E19127E6B660070147C /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewController.m; sourceTree = "<group>"; };
 		C4571E26127E6CB80070147C /* SupportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SupportViewController.xib; path = Resources/NIBs/SupportViewController.xib; sourceTree = "<group>"; };
+		C45EB660128B9C670016610A /* tabberbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabberbackground.png; sourceTree = "<group>"; };
 		C45ECF5F127E86DD0020D651 /* carbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carbon.png; sourceTree = "<group>"; };
 		C465D561127A5F2700639357 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C465D577127A5F3000639357 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -93,6 +95,8 @@
 		C465D66F127A671D00639357 /* GLLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLevelMeter.m; sourceTree = "<group>"; };
 		C465D670127A671D00639357 /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
 		C465D671127A671D00639357 /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
+		C4751FA5128A1A2800BC216A /* controlbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlbackground.png; sourceTree = "<group>"; };
+		C4751FD9128A202F00BC216A /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
 		C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseViewController.h; sourceTree = "<group>"; };
 		C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseViewController.m; sourceTree = "<group>"; };
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SweepGeneratorViewController.xib; path = Classes/SweepGeneratorViewController.xib; sourceTree = "<group>"; };
@@ -102,8 +106,6 @@
 		D532A50B127BB4D500F753E2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		D532A50C127BB4D500F753E2 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		D532A50D127BB4D500F753E2 /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
-		D532A50E127BB4D500F753E2 /* sound_meter_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_meter_background.png; sourceTree = "<group>"; };
-		D532A50F127BB4D500F753E2 /* sound_meter_glare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_meter_glare.png; sourceTree = "<group>"; };
 		D532A510127BB4D500F753E2 /* volume_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_down.png; sourceTree = "<group>"; };
 		D532A511127BB4D500F753E2 /* volume_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_up.png; sourceTree = "<group>"; };
 		D5346528127DB8AE0063D06E /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
@@ -218,6 +220,9 @@
 		D532A508127BB4D500F753E2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C45EB660128B9C670016610A /* tabberbackground.png */,
+				C4751FA5128A1A2800BC216A /* controlbackground.png */,
+				C4751FD9128A202F00BC216A /* playbutton.png */,
 				C44959AC128389D600FE550A /* SoundTweak-Logo.png */,
 				C4499120127F7C4D009FD582 /* pinknoise.png */,
 				C4499121127F7C4D009FD582 /* support.png */,
@@ -230,8 +235,6 @@
 				D532A50B127BB4D500F753E2 /* pause.png */,
 				D532A50C127BB4D500F753E2 /* play.png */,
 				D532A50D127BB4D500F753E2 /* rewind.png */,
-				D532A50E127BB4D500F753E2 /* sound_meter_background.png */,
-				D532A50F127BB4D500F753E2 /* sound_meter_glare.png */,
 				D532A510127BB4D500F753E2 /* volume_down.png */,
 				D532A511127BB4D500F753E2 /* volume_up.png */,
 				D531BF53127DB97F0053ABCA /* Default-Landscape.png */,
@@ -337,8 +340,6 @@
 				D532A514127BB4D500F753E2 /* pause.png in Resources */,
 				D532A515127BB4D500F753E2 /* play.png in Resources */,
 				D532A516127BB4D500F753E2 /* rewind.png in Resources */,
-				D532A517127BB4D500F753E2 /* sound_meter_background.png in Resources */,
-				D532A518127BB4D500F753E2 /* sound_meter_glare.png in Resources */,
 				D532A519127BB4D500F753E2 /* volume_down.png in Resources */,
 				D532A51A127BB4D500F753E2 /* volume_up.png in Resources */,
 				D5E47064127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib in Resources */,
@@ -357,6 +358,9 @@
 				C4499129127F7C4D009FD582 /* playlist.png in Resources */,
 				C428343012837BBF003A165D /* icon.png in Resources */,
 				C44959AD128389D600FE550A /* SoundTweak-Logo.png in Resources */,
+				C4751FA6128A1A2800BC216A /* controlbackground.png in Resources */,
+				C4751FDA128A202F00BC216A /* playbutton.png in Resources */,
+				C45EB661128B9C670016610A /* tabberbackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

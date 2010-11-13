@@ -45,7 +45,7 @@
 					<object class="IBUIImageView" id="454115552">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{0, -1}, {768, 421}}</string>
+						<string key="NSFrameSize">{768, 444}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -159,7 +159,7 @@
 						<int key="IBUITextAlignment">1</int>
 					</object>
 				</object>
-				<string key="NSFrameSize">{768, 421}</string>
+				<string key="NSFrameSize">{768, 444}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -298,7 +298,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>ToneGeneratorViewController</string>
 					<string>UIResponder</string>
-					<string>{{815, 795}, {768, 421}}</string>
+					<string>{{845, 372}, {768, 444}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAxHqAAA</bytes>
@@ -325,7 +325,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw9EAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw9yAAA</bytes>
 					</object>
 				</object>
 			</object>

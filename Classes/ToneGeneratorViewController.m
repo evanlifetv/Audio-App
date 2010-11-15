@@ -9,10 +9,7 @@
 #import "ToneGeneratorViewController.h"
 #import "AudioControlsViewController.h"
 #import "ToneController.h"
-
-#define maxFrequency 20000
-#define minFrequency 20
-#define defaultFrequency 1000
+#import "NSString+Additions.h"
 
 @interface ToneGeneratorViewController()
 - (void)setDisplayedFrequency:(double)frequency;
@@ -33,12 +30,6 @@
         self.tabBarItem.title = @"Tone Generator";
     }
     return self;
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Overridden to allow any orientation.
-    return YES;
 }
 
 
@@ -105,15 +96,8 @@
 	double power = log(minFrequency) + aSlider.value * (log(maxFrequency) - log(minFrequency));
 	double frequencyInHz = exp(power);
 	
-	NSString *labelText = nil;
-	if (frequencyInHz >= 1000) {
-		labelText = [NSString stringWithFormat:@"%.3f kHz", frequencyInHz / 1000.0];
-	} else {
-		labelText = [NSString stringWithFormat:@"%.0f Hz", frequencyInHz];
-	}
-
 	[ToneController sharedInstance].frequency = frequencyInHz;
-	self.frequencyLabel.text = labelText;
+	self.frequencyLabel.text = [NSString stringForFrequency:frequencyInHz];
 }
 
 
@@ -125,14 +109,7 @@
 	self.slider.value = (log(frequency) - log(minFrequency)) / (log(maxFrequency) - log(minFrequency));
 	
 	//set the frequency label
-	NSString *labelText = nil;
-	if (frequency >= 1000) {
-		labelText = [NSString stringWithFormat:@"%.3f kHz", frequency / 1000.0];
-	} else {
-		labelText = [NSString stringWithFormat:@"%.0f Hz", frequency];
-	}
-	
-	self.frequencyLabel.text = labelText;
+	self.frequencyLabel.text = [NSString stringForFrequency:frequency];
 }
 
 

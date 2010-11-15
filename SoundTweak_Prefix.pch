@@ -10,3 +10,7 @@
 //User defaults keys
 #define kLastToneFrequency @"lastToneFrequency"
 #define kLastSelectedTabIndex @"lastSelectedTabIndex"
+
+#define maxFrequency 20000
+#define minFrequency 20
+#define defaultFrequency 1000

@@ -13,7 +13,9 @@
 @implementation AudioControlsViewController
 
 @synthesize playButton = _playButton;
+@synthesize volumeSlider = _volumeSlider;
 @synthesize visibleViewController = _visibleViewController;
+@synthesize audioTitleSlider = _audioTitleSlider;
 
 
 + (AudioControlsViewController*)sharedInstance
@@ -38,50 +40,29 @@
 }
 */
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-*/
 
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Overriden to allow any orientation.
-    return YES;
-}
-
--(void)viewWillAppear:(BOOL)animated{
-	
-	[self uiSetup];
-	
-}
-
--(void)uiSetup{
-	
 	//Slider Images
 	UIImage *stetchLeftTrack = [[UIImage imageNamed:@"sliderback.png"] stretchableImageWithLeftCapWidth:20.0 topCapHeight:0.0];
 	UIImage *stetchRightTrack = [[UIImage imageNamed:@"sliderback.png"]  stretchableImageWithLeftCapWidth:20.0 topCapHeight:0.0];
 	
-	
 	//Slider: Audio Title
-	AudioTitleSlider.backgroundColor = [UIColor clearColor];	
-	[AudioTitleSlider setThumbImage: [UIImage imageNamed:@"slider.png"] forState:UIControlStateNormal];
-	[AudioTitleSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
-	[AudioTitleSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
-	AudioTitleSlider.minimumValue = 0.0;
-	AudioTitleSlider.maximumValue = 100.0;
-	AudioTitleSlider.continuous = YES;
-	AudioTitleSlider.value = 20.0;
-	
+	self.audioTitleSlider.backgroundColor = [UIColor clearColor];	
+	[self.audioTitleSlider setThumbImage: [UIImage imageNamed:@"slider.png"] forState:UIControlStateNormal];
+	[self.audioTitleSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
+	[self.audioTitleSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
+	self.audioTitleSlider.minimumValue = 0.0;
+	self.audioTitleSlider.maximumValue = 100.0;
+	self.audioTitleSlider.continuous = YES;
+	self.audioTitleSlider.value = 20.0;
 }
 
 
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
+- (float)volume
+{
+	return self.volumeSlider.value;
 }
 
 
@@ -89,13 +70,16 @@
     [super viewDidUnload];
     
 	self.playButton = nil;
+	self.volumeSlider = nil;
+	self.audioTitleSlider = nil;
 }
 
 
 - (void)dealloc {
 	[_playButton release], _playButton = nil;
+	[_volumeSlider release], _volumeSlider = nil;
     [_visibleViewController release], _visibleViewController = nil;
-	
+	[_audioTitleSlider release], _audioTitleSlider = nil;
     [super dealloc];
 }
 

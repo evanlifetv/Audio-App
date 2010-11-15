@@ -18,7 +18,7 @@
 
 #import "ToneController.h"
 #import <AudioToolbox/AudioToolbox.h>
-
+#import "AudioControlsViewController.h"
 
 
 OSStatus RenderTone(
@@ -29,8 +29,8 @@ OSStatus RenderTone(
 					UInt32 						inNumberFrames, 
 					AudioBufferList 			*ioData)
 {
-	// Fixed amplitude is good enough for our purposes
-	const double amplitude = 0.25;
+	
+	double amplitude = (double)[[AudioControlsViewController sharedInstance] volume];
 	
 	// Get the tone parameters out of the view controller
 	//ToneGeneratorViewController *viewController = (ToneGeneratorViewController *)inRefCon;
@@ -53,8 +53,6 @@ OSStatus RenderTone(
 		}
 	}
 	
-	// Store the theta back in the view controller
-	//viewController->theta = theta;
 	[ToneController sharedInstance].theta = newTheta;
 	return noErr;
 }
@@ -74,6 +72,7 @@ OSStatus RenderTone(
 @synthesize sampleRate;
 @synthesize theta;
 
+
 + (ToneController*)sharedInstance
 {
 	static ToneController *sharedInstance;
@@ -87,6 +86,7 @@ OSStatus RenderTone(
 	}
 	return sharedInstance;
 }
+
 
 - (void)createToneUnit
 {
@@ -126,8 +126,7 @@ OSStatus RenderTone(
 	AudioStreamBasicDescription streamFormat;
 	streamFormat.mSampleRate = sampleRate;
 	streamFormat.mFormatID = kAudioFormatLinearPCM;
-	streamFormat.mFormatFlags =
-	kAudioFormatFlagsNativeFloatPacked | kAudioFormatFlagIsNonInterleaved;
+	streamFormat.mFormatFlags =	kAudioFormatFlagsNativeFloatPacked | kAudioFormatFlagIsNonInterleaved;
 	streamFormat.mBytesPerPacket = four_bytes_per_float;
 	streamFormat.mFramesPerPacket = 1;	
 	streamFormat.mBytesPerFrame = four_bytes_per_float;		

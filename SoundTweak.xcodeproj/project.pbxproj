@@ -55,6 +55,7 @@
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
 		C4EEAB161290D7A000B15A0A /* sliderback.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EEAB151290D7A000B15A0A /* sliderback.png */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
+		D52B922A1290FFB100021E68 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D52B92291290FFB100021E68 /* NSString+Additions.m */; };
 		D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = D531BF53127DB97F0053ABCA /* Default-Landscape.png */; };
 		D532A519127BB4D500F753E2 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A510127BB4D500F753E2 /* volume_down.png */; };
 		D532A51A127BB4D500F753E2 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A511127BB4D500F753E2 /* volume_up.png */; };
@@ -127,6 +128,8 @@
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SweepGeneratorViewController.xib; path = Classes/SweepGeneratorViewController.xib; sourceTree = "<group>"; };
 		C4EEAB151290D7A000B15A0A /* sliderback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderback.png; sourceTree = "<group>"; };
 		C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PinkNoiseViewController.xib; path = Classes/PinkNoiseViewController.xib; sourceTree = "<group>"; };
+		D52B92281290FFB100021E68 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		D52B92291290FFB100021E68 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		D531BF53127DB97F0053ABCA /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		D532A510127BB4D500F753E2 /* volume_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_down.png; sourceTree = "<group>"; };
 		D532A511127BB4D500F753E2 /* volume_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_up.png; sourceTree = "<group>"; };
@@ -182,6 +185,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D52B92171290FF7C00021E68 /* Categories */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -237,6 +241,15 @@
 				C465D671127A671D00639357 /* LevelMeter.m */,
 			);
 			name = AudioViews;
+			sourceTree = "<group>";
+		};
+		D52B92171290FF7C00021E68 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D52B92281290FFB100021E68 /* NSString+Additions.h */,
+				D52B92291290FFB100021E68 /* NSString+Additions.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		D532A508127BB4D500F753E2 /* images */ = {
@@ -428,6 +441,7 @@
 				C4232E5F12837EDE00F5A4A6 /* SupportViewController.m in Sources */,
 				C4232E6012837EDE00F5A4A6 /* SweepGeneratorViewController.m in Sources */,
 				D566984A1283C232004398AF /* ToneController.m in Sources */,
+				D52B922A1290FFB100021E68 /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

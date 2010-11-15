@@ -310,6 +310,105 @@
 					</object>
 					<int key="connectionID">26</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">endFrequencyLabel</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="955403855"/>
+					</object>
+					<int key="connectionID">33</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">endFrequencySlider</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="86356701"/>
+					</object>
+					<int key="connectionID">34</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">endFrequencyTitleLabel</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="870512150"/>
+					</object>
+					<int key="connectionID">35</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">startFrequencyLabel</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="751100351"/>
+					</object>
+					<int key="connectionID">36</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">startFrequencySlider</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="1066848304"/>
+					</object>
+					<int key="connectionID">37</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">startFrequencyTitleLabel</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="990023291"/>
+					</object>
+					<int key="connectionID">38</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">timeLabel</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="789935489"/>
+					</object>
+					<int key="connectionID">39</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">timeSlider</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="1039957432"/>
+					</object>
+					<int key="connectionID">40</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">timeTitleLabel</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="595126390"/>
+					</object>
+					<int key="connectionID">41</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sliderChangedValue:</string>
+						<reference key="source" ref="1066848304"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">42</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sliderChangedValue:</string>
+						<reference key="source" ref="86356701"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">43</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sliderChangedValue:</string>
+						<reference key="source" ref="1039957432"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">44</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -357,56 +456,67 @@
 						<int key="objectID">12</int>
 						<reference key="object" ref="670298321"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">Main Title Label</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
 						<reference key="object" ref="349890377"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">Details Text View</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">20</int>
 						<reference key="object" ref="1066848304"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">Start Frequency Slider</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">21</int>
 						<reference key="object" ref="86356701"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">End Frequency Slider</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">22</int>
 						<reference key="object" ref="1039957432"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">Time Slider</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">23</int>
 						<reference key="object" ref="990023291"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">Start Frequency Title Label</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">24</int>
 						<reference key="object" ref="870512150"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">End Frequency Title Label</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">25</int>
 						<reference key="object" ref="595126390"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">Time Title Label</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">27</int>
 						<reference key="object" ref="751100351"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">Start Frequency Label</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">28</int>
 						<reference key="object" ref="955403855"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">End Frequency Label</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">29</int>
 						<reference key="object" ref="789935489"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">Time Label</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">30</int>
@@ -422,6 +532,7 @@
 						<int key="objectID">32</int>
 						<reference key="object" ref="40787879"/>
 						<reference key="parent" ref="327397386"/>
+						<string key="objectName">Background Image View (frequencysweep.png)</string>
 					</object>
 				</object>
 			</object>
@@ -467,7 +578,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>SweepGeneratorViewController</string>
 					<string>UIResponder</string>
-					<string>{{680, 395}, {768, 444}}</string>
+					<string>{{619, 395}, {768, 444}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAxHqAAA</bytes>
@@ -544,7 +655,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">32</int>
+			<int key="maxID">44</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -552,6 +663,98 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">SweepGeneratorViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">sliderChangedValue:</string>
+						<string key="NS.object.0">UISlider</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">sliderChangedValue:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">sliderChangedValue:</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>endFrequencyLabel</string>
+							<string>endFrequencySlider</string>
+							<string>endFrequencyTitleLabel</string>
+							<string>startFrequencyLabel</string>
+							<string>startFrequencySlider</string>
+							<string>startFrequencyTitleLabel</string>
+							<string>timeLabel</string>
+							<string>timeSlider</string>
+							<string>timeTitleLabel</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UILabel</string>
+							<string>UISlider</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UISlider</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UISlider</string>
+							<string>UILabel</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>endFrequencyLabel</string>
+							<string>endFrequencySlider</string>
+							<string>endFrequencyTitleLabel</string>
+							<string>startFrequencyLabel</string>
+							<string>startFrequencySlider</string>
+							<string>startFrequencyTitleLabel</string>
+							<string>timeLabel</string>
+							<string>timeSlider</string>
+							<string>timeTitleLabel</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">endFrequencyLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">endFrequencySlider</string>
+								<string key="candidateClassName">UISlider</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">endFrequencyTitleLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">startFrequencyLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">startFrequencySlider</string>
+								<string key="candidateClassName">UISlider</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">startFrequencyTitleLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">timeLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">timeSlider</string>
+								<string key="candidateClassName">UISlider</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">timeTitleLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/SweepGeneratorViewController.h</string>
@@ -817,7 +1020,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">frequencysweep.png</string>
-			<string key="NS.object.0">{769, 476}</string>
+			<string key="NS.object.0">{768, 475}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">132</string>
 	</data>

@@ -11,18 +11,21 @@
 
 @interface AudioControlsViewController : UIViewController {
 	UIButton *_playButton;
+	UISlider *_volumeSlider;
 	id _visibleViewController;
-	IBOutlet UISlider *AudioTitleSlider;
+	UISlider *_audioTitleSlider;
 }
--(void)uiSetup;
 
 @property (nonatomic, retain) IBOutlet UIButton *playButton;
+@property (nonatomic, retain) IBOutlet UISlider *volumeSlider;
 @property (nonatomic, retain) id visibleViewController;
+@property (nonatomic, retain) IBOutlet UISlider *audioTitleSlider;
 
 //class methods
 + (AudioControlsViewController*)sharedInstance;
 
 //instance methods
+- (float)volume;
 - (IBAction)playButtonPressed;
 
 @end

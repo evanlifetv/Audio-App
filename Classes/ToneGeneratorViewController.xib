@@ -51,13 +51,13 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">tabberbackground.png</string>
+							<string key="NSResourceName">tonegenerator.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="670298321">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{310, 32}, {148, 21}}</string>
+						<string key="NSFrame">{{67, 49}, {183, 34}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -67,7 +67,7 @@
 						<string key="IBUIText">Tone Generator</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica</string>
-							<double key="NSSize">20</double>
+							<double key="NSSize">25</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<object class="NSColor" key="IBUITextColor">
@@ -82,12 +82,12 @@
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">20</float>
+						<float key="IBUIMinimumFontSize">25</float>
 					</object>
 					<object class="IBUITextView" id="349890377">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{76, 80}, {275, 260}}</string>
+						<string key="NSFrame">{{67, 112}, {225, 260}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -98,7 +98,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+						<string key="IBUIText">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
 						<reference key="IBUITextColor" ref="123034383"/>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
@@ -108,7 +108,7 @@
 					<object class="IBUISlider" id="309870023">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{431, 202}, {274, 23}}</string>
+						<string key="NSFrame">{{359, 231}, {274, 23}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -119,7 +119,7 @@
 					<object class="IBUILabel" id="942818628">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{433, 164}, {270, 21}}</string>
+						<string key="NSFrame">{{361, 202}, {270, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -140,7 +140,7 @@
 					<object class="IBUILabel" id="191138686">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{433, 232}, {270, 21}}</string>
+						<string key="NSFrame">{{645, 231}, {58, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -230,12 +230,12 @@
 						<reference key="object" ref="327397386"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="309870023"/>
 							<reference ref="191138686"/>
-							<reference ref="942818628"/>
-							<reference ref="349890377"/>
-							<reference ref="670298321"/>
 							<reference ref="454115552"/>
+							<reference ref="349890377"/>
+							<reference ref="309870023"/>
+							<reference ref="942818628"/>
+							<reference ref="670298321"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -298,26 +298,26 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>ToneGeneratorViewController</string>
 					<string>UIResponder</string>
-					<string>{{845, 372}, {768, 444}}</string>
+					<string>{{721, 599}, {768, 444}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAxHqAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDpQAAwlAAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABChgAAwqYAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCjAAAw7YAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABCeAAAw7YAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABD1oAAw3IAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABD14AAw18AAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABD9IAAwzEAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABD2IAAwzcAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -325,7 +325,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw9yAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw90AAA</bytes>
 					</object>
 				</object>
 			</object>
@@ -652,8 +652,8 @@
 		<string key="IBDocument.LastKnownRelativeProjectPath">../SoundTweak.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">tabberbackground.png</string>
-			<string key="NS.object.0">{768, 423}</string>
+			<string key="NS.key.0">tonegenerator.png</string>
+			<string key="NS.object.0">{769, 476}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">132</string>
 	</data>

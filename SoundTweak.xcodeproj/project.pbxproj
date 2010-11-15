@@ -45,6 +45,8 @@
 		C465D674127A671D00639357 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D671127A671D00639357 /* LevelMeter.m */; };
 		C4751FA6128A1A2800BC216A /* controlbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FA5128A1A2800BC216A /* controlbackground.png */; };
 		C4751FDA128A202F00BC216A /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FD9128A202F00BC216A /* playbutton.png */; };
+		C480AD521290F5C400AF07D2 /* tonegenerator.png in Resources */ = {isa = PBXBuildFile; fileRef = C480AD501290F5C400AF07D2 /* tonegenerator.png */; };
+		C480AD531290F5C400AF07D2 /* frequencysweep.png in Resources */ = {isa = PBXBuildFile; fileRef = C480AD511290F5C400AF07D2 /* frequencysweep.png */; };
 		C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */; };
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
 		C4EEAB161290D7A000B15A0A /* sliderback.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EEAB151290D7A000B15A0A /* sliderback.png */; };
@@ -110,6 +112,8 @@
 		C465D671127A671D00639357 /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
 		C4751FA5128A1A2800BC216A /* controlbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlbackground.png; sourceTree = "<group>"; };
 		C4751FD9128A202F00BC216A /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		C480AD501290F5C400AF07D2 /* tonegenerator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tonegenerator.png; sourceTree = "<group>"; };
+		C480AD511290F5C400AF07D2 /* frequencysweep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frequencysweep.png; sourceTree = "<group>"; };
 		C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseViewController.h; sourceTree = "<group>"; };
 		C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseViewController.m; sourceTree = "<group>"; };
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SweepGeneratorViewController.xib; path = Classes/SweepGeneratorViewController.xib; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 				C416DDC01290A997005FDAC0 /* pausebutton.png */,
 				C4499120127F7C4D009FD582 /* pinknoise.png */,
 				C4499121127F7C4D009FD582 /* support.png */,
+				C480AD501290F5C400AF07D2 /* tonegenerator.png */,
+				C480AD511290F5C400AF07D2 /* frequencysweep.png */,
 				C4499122127F7C4D009FD582 /* sweep.png */,
 				C45539301290EDE200FBC09A /* supportbackground.png */,
 				C428342F12837BBF003A165D /* icon.png */,
@@ -381,6 +387,8 @@
 				C45539291290E9E200FBC09A /* featurerequest.png in Resources */,
 				C455392A1290E9E200FBC09A /* websupport.png in Resources */,
 				C45539311290EDE200FBC09A /* supportbackground.png in Resources */,
+				C480AD521290F5C400AF07D2 /* tonegenerator.png in Resources */,
+				C480AD531290F5C400AF07D2 /* frequencysweep.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

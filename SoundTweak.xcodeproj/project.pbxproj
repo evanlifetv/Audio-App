@@ -13,6 +13,11 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		C416DDC11290A997005FDAC0 /* pausebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C416DDC01290A997005FDAC0 /* pausebutton.png */; };
+		C416DDC71290ABD1005FDAC0 /* meteroverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = C416DDC61290ABD1005FDAC0 /* meteroverlay.png */; };
+		C416DDCD1290B1A0005FDAC0 /* volumeknob.png in Resources */ = {isa = PBXBuildFile; fileRef = C416DDCB1290B1A0005FDAC0 /* volumeknob.png */; };
+		C416DDCE1290B1A0005FDAC0 /* volumeknobspeaker.png in Resources */ = {isa = PBXBuildFile; fileRef = C416DDCC1290B1A0005FDAC0 /* volumeknobspeaker.png */; };
+		C416DE301290C196005FDAC0 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = C416DE2F1290C196005FDAC0 /* slider.png */; };
 		C4232E5F12837EDE00F5A4A6 /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4232E5C12837EDE00F5A4A6 /* SupportViewController.m */; };
 		C4232E6012837EDE00F5A4A6 /* SweepGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.m */; };
 		C428343012837BBF003A165D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C428342F12837BBF003A165D /* icon.png */; };
@@ -37,9 +42,9 @@
 		C4751FDA128A202F00BC216A /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FD9128A202F00BC216A /* playbutton.png */; };
 		C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */; };
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
+		C4EEAB161290D7A000B15A0A /* sliderback.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EEAB151290D7A000B15A0A /* sliderback.png */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
 		D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = D531BF53127DB97F0053ABCA /* Default-Landscape.png */; };
-		D532A514127BB4D500F753E2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A50B127BB4D500F753E2 /* pause.png */; };
 		D532A519127BB4D500F753E2 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A510127BB4D500F753E2 /* volume_down.png */; };
 		D532A51A127BB4D500F753E2 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A511127BB4D500F753E2 /* volume_up.png */; };
 		D5346529127DB8AE0063D06E /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = D5346528127DB8AE0063D06E /* Default-Portrait.png */; };
@@ -60,6 +65,11 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* SoundTweak_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTweak_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* SoundTweak-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SoundTweak-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C416DDC01290A997005FDAC0 /* pausebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausebutton.png; sourceTree = "<group>"; };
+		C416DDC61290ABD1005FDAC0 /* meteroverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meteroverlay.png; sourceTree = "<group>"; };
+		C416DDCB1290B1A0005FDAC0 /* volumeknob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volumeknob.png; sourceTree = "<group>"; };
+		C416DDCC1290B1A0005FDAC0 /* volumeknobspeaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volumeknobspeaker.png; sourceTree = "<group>"; };
+		C416DE2F1290C196005FDAC0 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
 		C4232E5312837E9A00F5A4A6 /* SoundTweak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundTweak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4232E5B12837EDE00F5A4A6 /* SupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportViewController.h; sourceTree = "<group>"; };
 		C4232E5C12837EDE00F5A4A6 /* SupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportViewController.m; sourceTree = "<group>"; };
@@ -93,9 +103,9 @@
 		C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseViewController.h; sourceTree = "<group>"; };
 		C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseViewController.m; sourceTree = "<group>"; };
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SweepGeneratorViewController.xib; path = Classes/SweepGeneratorViewController.xib; sourceTree = "<group>"; };
+		C4EEAB151290D7A000B15A0A /* sliderback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderback.png; sourceTree = "<group>"; };
 		C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PinkNoiseViewController.xib; path = Classes/PinkNoiseViewController.xib; sourceTree = "<group>"; };
 		D531BF53127DB97F0053ABCA /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
-		D532A50B127BB4D500F753E2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		D532A510127BB4D500F753E2 /* volume_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_down.png; sourceTree = "<group>"; };
 		D532A511127BB4D500F753E2 /* volume_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_up.png; sourceTree = "<group>"; };
 		D5346528127DB8AE0063D06E /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
@@ -211,15 +221,20 @@
 			isa = PBXGroup;
 			children = (
 				C45EB660128B9C670016610A /* tabberbackground.png */,
+				C416DDC61290ABD1005FDAC0 /* meteroverlay.png */,
+				C4EEAB151290D7A000B15A0A /* sliderback.png */,
+				C416DE2F1290C196005FDAC0 /* slider.png */,
 				C4751FA5128A1A2800BC216A /* controlbackground.png */,
+				C416DDCB1290B1A0005FDAC0 /* volumeknob.png */,
+				C416DDCC1290B1A0005FDAC0 /* volumeknobspeaker.png */,
 				C4751FD9128A202F00BC216A /* playbutton.png */,
+				C416DDC01290A997005FDAC0 /* pausebutton.png */,
 				C4499120127F7C4D009FD582 /* pinknoise.png */,
 				C4499121127F7C4D009FD582 /* support.png */,
 				C4499122127F7C4D009FD582 /* sweep.png */,
 				C428342F12837BBF003A165D /* icon.png */,
 				C4499123127F7C4D009FD582 /* tone.png */,
 				C4499124127F7C4D009FD582 /* playlist.png */,
-				D532A50B127BB4D500F753E2 /* pause.png */,
 				D532A510127BB4D500F753E2 /* volume_down.png */,
 				D532A511127BB4D500F753E2 /* volume_up.png */,
 				D531BF53127DB97F0053ABCA /* Default-Landscape.png */,
@@ -321,7 +336,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				D532A514127BB4D500F753E2 /* pause.png in Resources */,
 				D532A519127BB4D500F753E2 /* volume_down.png in Resources */,
 				D532A51A127BB4D500F753E2 /* volume_up.png in Resources */,
 				D5E47064127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib in Resources */,
@@ -341,6 +355,12 @@
 				C4751FA6128A1A2800BC216A /* controlbackground.png in Resources */,
 				C4751FDA128A202F00BC216A /* playbutton.png in Resources */,
 				C45EB661128B9C670016610A /* tabberbackground.png in Resources */,
+				C416DDC11290A997005FDAC0 /* pausebutton.png in Resources */,
+				C416DDC71290ABD1005FDAC0 /* meteroverlay.png in Resources */,
+				C416DDCD1290B1A0005FDAC0 /* volumeknob.png in Resources */,
+				C416DDCE1290B1A0005FDAC0 /* volumeknobspeaker.png in Resources */,
+				C416DE301290C196005FDAC0 /* slider.png in Resources */,
+				C4EEAB161290D7A000B15A0A /* sliderback.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

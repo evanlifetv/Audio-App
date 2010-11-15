@@ -51,6 +51,31 @@
     return YES;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+	
+	[self uiSetup];
+	
+}
+
+-(void)uiSetup{
+	
+	//Slider Images
+	UIImage *stetchLeftTrack = [[UIImage imageNamed:@"sliderback.png"] stretchableImageWithLeftCapWidth:20.0 topCapHeight:0.0];
+	UIImage *stetchRightTrack = [[UIImage imageNamed:@"sliderback.png"]  stretchableImageWithLeftCapWidth:20.0 topCapHeight:0.0];
+	
+	
+	//Slider: Audio Title
+	AudioTitleSlider.backgroundColor = [UIColor clearColor];	
+	[AudioTitleSlider setThumbImage: [UIImage imageNamed:@"slider.png"] forState:UIControlStateNormal];
+	[AudioTitleSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
+	[AudioTitleSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
+	AudioTitleSlider.minimumValue = 0.0;
+	AudioTitleSlider.maximumValue = 100.0;
+	AudioTitleSlider.continuous = YES;
+	AudioTitleSlider.value = 20.0;
+	
+}
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -75,13 +100,11 @@
 }
 
 
-
 - (IBAction)playButtonPressed
 {
 	if ([self.visibleViewController isKindOfClass:[ToneGeneratorViewController class]]) {
 		[[ToneController sharedInstance] togglePlay];
 	}
 }
-
 
 @end

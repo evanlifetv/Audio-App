@@ -53,6 +53,8 @@
 		C480AD531290F5C400AF07D2 /* frequencysweep.png in Resources */ = {isa = PBXBuildFile; fileRef = C480AD511290F5C400AF07D2 /* frequencysweep.png */; };
 		C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */; };
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
+		C4BC013E1291FEB800DF908C /* fullrange.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BC013C1291FEB800DF908C /* fullrange.png */; };
+		C4BC013F1291FEB800DF908C /* bandwidthlimited.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BC013D1291FEB800DF908C /* bandwidthlimited.png */; };
 		C4EEAB161290D7A000B15A0A /* sliderback.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EEAB151290D7A000B15A0A /* sliderback.png */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
 		D52B922A1290FFB100021E68 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D52B92291290FFB100021E68 /* NSString+Additions.m */; };
@@ -126,6 +128,8 @@
 		C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseViewController.h; sourceTree = "<group>"; };
 		C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseViewController.m; sourceTree = "<group>"; };
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SweepGeneratorViewController.xib; path = Classes/SweepGeneratorViewController.xib; sourceTree = "<group>"; };
+		C4BC013C1291FEB800DF908C /* fullrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullrange.png; sourceTree = "<group>"; };
+		C4BC013D1291FEB800DF908C /* bandwidthlimited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bandwidthlimited.png; sourceTree = "<group>"; };
 		C4EEAB151290D7A000B15A0A /* sliderback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderback.png; sourceTree = "<group>"; };
 		C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PinkNoiseViewController.xib; path = Classes/PinkNoiseViewController.xib; sourceTree = "<group>"; };
 		D52B92281290FFB100021E68 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -283,6 +287,8 @@
 				C45539241290E9E200FBC09A /* emailsupport.png */,
 				C45539251290E9E200FBC09A /* featurerequest.png */,
 				C45539261290E9E200FBC09A /* websupport.png */,
+				C4BC013C1291FEB800DF908C /* fullrange.png */,
+				C4BC013D1291FEB800DF908C /* bandwidthlimited.png */,
 				D531BF53127DB97F0053ABCA /* Default-Landscape.png */,
 				D5346528127DB8AE0063D06E /* Default-Portrait.png */,
 			);
@@ -418,6 +424,8 @@
 				C4602AF012910576002D4FEF /* sliderbackmin-small.png in Resources */,
 				C4602AF112910576002D4FEF /* sliderthumb-small.png in Resources */,
 				C4602AF212910576002D4FEF /* sliderbackmax-small.png in Resources */,
+				C4BC013E1291FEB800DF908C /* fullrange.png in Resources */,
+				C4BC013F1291FEB800DF908C /* bandwidthlimited.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

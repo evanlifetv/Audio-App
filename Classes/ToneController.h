@@ -26,5 +26,6 @@
 
 //instance methods
 - (void)togglePlay;
+- (void)sweepFromFrequency:(int)fromFrequency toFrequency:(int)toFrequency withDuration:(int)duration;
 
 @end

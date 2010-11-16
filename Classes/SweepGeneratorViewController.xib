@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="10"/>
+			<integer value="32"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -108,7 +108,7 @@
 					<object class="IBUISlider" id="1066848304">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{420, 140}, {204, 23}}</string>
+						<string key="NSFrame">{{383, 135}, {241, 23}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -119,7 +119,7 @@
 					<object class="IBUISlider" id="86356701">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{420, 214}, {204, 23}}</string>
+						<string key="NSFrame">{{383, 227}, {241, 23}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -130,7 +130,7 @@
 					<object class="IBUISlider" id="1039957432">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{419, 285}, {204, 23}}</string>
+						<string key="NSFrame">{{383, 316}, {240, 23}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -141,7 +141,7 @@
 					<object class="IBUILabel" id="990023291">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{461, 105}, {122, 21}}</string>
+						<string key="NSFrame">{{385, 106}, {236, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -156,12 +156,14 @@
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
 						<int key="IBUIBaselineAdjustment">1</int>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">10</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 					<object class="IBUILabel" id="870512150">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{461, 185}, {121, 21}}</string>
+						<string key="NSFrame">{{385, 192}, {236, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -176,19 +178,21 @@
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
 						<int key="IBUIBaselineAdjustment">1</int>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">10</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 					<object class="IBUILabel" id="595126390">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{500, 256}, {41, 21}}</string>
+						<string key="NSFrame">{{385, 286}, {236, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Time</string>
+						<string key="IBUIText">Duration</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -196,12 +200,14 @@
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
 						<int key="IBUIBaselineAdjustment">1</int>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">10</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 					<object class="IBUILabel" id="751100351">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{655, 134}, {42, 21}}</string>
+						<string key="NSFrame">{{645, 134}, {61, 25}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -221,7 +227,7 @@
 					<object class="IBUILabel" id="955403855">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{650, 226}, {52, 21}}</string>
+						<string key="NSFrame">{{645, 226}, {61, 25}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -261,7 +267,7 @@
 					<object class="IBUISwitch" id="315350389">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{508, 339}, {94, 27}}</string>
+						<string key="NSFrame">{{508, 360}, {94, 27}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -272,7 +278,7 @@
 					<object class="IBUILabel" id="931542952">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{442, 342}, {55, 21}}</string>
+						<string key="NSFrame">{{442, 363}, {55, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -385,15 +391,6 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">sliderChangedValue:</string>
-						<reference key="source" ref="1066848304"/>
-						<reference key="destination" ref="841351856"/>
-						<int key="IBEventType">13</int>
-					</object>
-					<int key="connectionID">42</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">sliderChangedValue:</string>
 						<reference key="source" ref="86356701"/>
 						<reference key="destination" ref="841351856"/>
 						<int key="IBEventType">13</int>
@@ -408,6 +405,15 @@
 						<int key="IBEventType">13</int>
 					</object>
 					<int key="connectionID">44</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">sliderChangedValue:</string>
+						<reference key="source" ref="1066848304"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">47</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -438,9 +444,7 @@
 							<reference ref="1066848304"/>
 							<reference ref="86356701"/>
 							<reference ref="1039957432"/>
-							<reference ref="990023291"/>
 							<reference ref="870512150"/>
-							<reference ref="595126390"/>
 							<reference ref="315350389"/>
 							<reference ref="931542952"/>
 							<reference ref="40787879"/>
@@ -449,6 +453,8 @@
 							<reference ref="751100351"/>
 							<reference ref="955403855"/>
 							<reference ref="789935489"/>
+							<reference ref="595126390"/>
+							<reference ref="990023291"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -549,10 +555,13 @@
 					<string>12.IBViewBoundsToFrameTransform</string>
 					<string>14.IBPluginDependency</string>
 					<string>14.IBViewBoundsToFrameTransform</string>
+					<string>20.CustomClassName</string>
 					<string>20.IBPluginDependency</string>
 					<string>20.IBViewBoundsToFrameTransform</string>
+					<string>21.CustomClassName</string>
 					<string>21.IBPluginDependency</string>
 					<string>21.IBViewBoundsToFrameTransform</string>
+					<string>22.CustomClassName</string>
 					<string>22.IBPluginDependency</string>
 					<string>22.IBViewBoundsToFrameTransform</string>
 					<string>23.IBPluginDependency</string>
@@ -578,7 +587,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>SweepGeneratorViewController</string>
 					<string>UIResponder</string>
-					<string>{{619, 395}, {768, 444}}</string>
+					<string>{{-935, 209}, {768, 444}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAxHqAAA</bytes>
@@ -591,21 +600,24 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABCigAAw7uAAA</bytes>
 					</object>
+					<string>STSmallSlider</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDzgAAwzcAAA</bytes>
 					</object>
+					<string>STSmallSlider</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDzgAAw4CAAA</bytes>
 					</object>
+					<string>STSmallSlider</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDzYAAw6QAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABD4oAAwxIAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABD5oAAwvgAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -613,7 +625,7 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABD9gAAw5SAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABD+gAAw4mAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -655,11 +667,19 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">44</int>
+			<int key="maxID">47</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">STSmallSlider</string>
+					<string key="superclassName">UISlider</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/STSmallSlider.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">SweepGeneratorViewController</string>
 					<string key="superclassName">UIViewController</string>
@@ -691,13 +711,13 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UILabel</string>
-							<string>UISlider</string>
+							<string>STSmallSlider</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
-							<string>UISlider</string>
+							<string>STSmallSlider</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
-							<string>UISlider</string>
+							<string>STSmallSlider</string>
 							<string>UILabel</string>
 						</object>
 					</object>
@@ -723,7 +743,7 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">endFrequencySlider</string>
-								<string key="candidateClassName">UISlider</string>
+								<string key="candidateClassName">STSmallSlider</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">endFrequencyTitleLabel</string>
@@ -735,7 +755,7 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">startFrequencySlider</string>
-								<string key="candidateClassName">UISlider</string>
+								<string key="candidateClassName">STSmallSlider</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">startFrequencyTitleLabel</string>
@@ -747,7 +767,7 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">timeSlider</string>
-								<string key="candidateClassName">UISlider</string>
+								<string key="candidateClassName">STSmallSlider</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">timeTitleLabel</string>

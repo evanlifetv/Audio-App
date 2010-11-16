@@ -285,6 +285,7 @@
 					<string>12.IBViewBoundsToFrameTransform</string>
 					<string>14.IBPluginDependency</string>
 					<string>14.IBViewBoundsToFrameTransform</string>
+					<string>20.CustomClassName</string>
 					<string>20.IBPluginDependency</string>
 					<string>20.IBViewBoundsToFrameTransform</string>
 					<string>23.IBPluginDependency</string>
@@ -298,7 +299,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>ToneGeneratorViewController</string>
 					<string>UIResponder</string>
-					<string>{{721, 599}, {768, 444}}</string>
+					<string>{{622, 412}, {768, 444}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAxHqAAA</bytes>
@@ -311,6 +312,7 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABCeAAAw7YAAA</bytes>
 					</object>
+					<string>STSmallSlider</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABD14AAw18AAA</bytes>
@@ -351,6 +353,14 @@
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
+					<string key="className">STSmallSlider</string>
+					<string key="superclassName">UISlider</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/STSmallSlider.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">ToneGeneratorViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
@@ -374,7 +384,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UILabel</string>
-							<string>UISlider</string>
+							<string>STSmallSlider</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -392,7 +402,7 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">slider</string>
-								<string key="candidateClassName">UISlider</string>
+								<string key="candidateClassName">STSmallSlider</string>
 							</object>
 						</object>
 					</object>
@@ -653,7 +663,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">tonegenerator.png</string>
-			<string key="NS.object.0">{769, 476}</string>
+			<string key="NS.object.0">{768, 475}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">132</string>
 	</data>

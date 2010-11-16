@@ -36,9 +36,7 @@
 		C4571E15127E6A130070147C /* PlaylistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4571E14127E6A130070147C /* PlaylistViewController.xib */; };
 		C4571E1A127E6B660070147C /* PlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4571E19127E6B660070147C /* PlaylistViewController.m */; };
 		C4571E27127E6CB80070147C /* SupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4571E26127E6CB80070147C /* SupportViewController.xib */; };
-		C4602AF012910576002D4FEF /* sliderbackmin-small.png in Resources */ = {isa = PBXBuildFile; fileRef = C4602AED12910575002D4FEF /* sliderbackmin-small.png */; };
 		C4602AF112910576002D4FEF /* sliderthumb-small.png in Resources */ = {isa = PBXBuildFile; fileRef = C4602AEE12910576002D4FEF /* sliderthumb-small.png */; };
-		C4602AF212910576002D4FEF /* sliderbackmax-small.png in Resources */ = {isa = PBXBuildFile; fileRef = C4602AEF12910576002D4FEF /* sliderbackmax-small.png */; };
 		C465D562127A5F2700639357 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D561127A5F2700639357 /* AVFoundation.framework */; };
 		C465D578127A5F3000639357 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D577127A5F3000639357 /* AudioToolbox.framework */; };
 		C465D59C127A5F3700639357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59B127A5F3700639357 /* QuartzCore.framework */; };
@@ -57,6 +55,10 @@
 		C4BC013F1291FEB800DF908C /* bandwidthlimited.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BC013D1291FEB800DF908C /* bandwidthlimited.png */; };
 		C4EEAB161290D7A000B15A0A /* sliderback.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EEAB151290D7A000B15A0A /* sliderback.png */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
+		D51965401292374B00D14563 /* STSmallSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D519653F1292374B00D14563 /* STSmallSlider.m */; };
+		D519657E1292400B00D14563 /* sliderbackmax-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D519657C1292400B00D14563 /* sliderbackmax-small.png */; };
+		D519657F1292400B00D14563 /* sliderbackmin-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D519657D1292400B00D14563 /* sliderbackmin-small.png */; };
+		D51965FA12924D4500D14563 /* SweepController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51965F912924D4500D14563 /* SweepController.m */; };
 		D52B922A1290FFB100021E68 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D52B92291290FFB100021E68 /* NSString+Additions.m */; };
 		D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = D531BF53127DB97F0053ABCA /* Default-Landscape.png */; };
 		D532A519127BB4D500F753E2 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A510127BB4D500F753E2 /* volume_down.png */; };
@@ -106,9 +108,7 @@
 		C4571E18127E6B660070147C /* PlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistViewController.h; sourceTree = "<group>"; };
 		C4571E19127E6B660070147C /* PlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistViewController.m; sourceTree = "<group>"; };
 		C4571E26127E6CB80070147C /* SupportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SupportViewController.xib; path = Resources/NIBs/SupportViewController.xib; sourceTree = "<group>"; };
-		C4602AED12910575002D4FEF /* sliderbackmin-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderbackmin-small.png"; sourceTree = "<group>"; };
 		C4602AEE12910576002D4FEF /* sliderthumb-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderthumb-small.png"; sourceTree = "<group>"; };
-		C4602AEF12910576002D4FEF /* sliderbackmax-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderbackmax-small.png"; sourceTree = "<group>"; };
 		C465D561127A5F2700639357 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C465D577127A5F3000639357 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C465D59B127A5F3700639357 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -132,6 +132,12 @@
 		C4BC013D1291FEB800DF908C /* bandwidthlimited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bandwidthlimited.png; sourceTree = "<group>"; };
 		C4EEAB151290D7A000B15A0A /* sliderback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderback.png; sourceTree = "<group>"; };
 		C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PinkNoiseViewController.xib; path = Classes/PinkNoiseViewController.xib; sourceTree = "<group>"; };
+		D519653E1292374B00D14563 /* STSmallSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSmallSlider.h; sourceTree = "<group>"; };
+		D519653F1292374B00D14563 /* STSmallSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSmallSlider.m; sourceTree = "<group>"; };
+		D519657C1292400B00D14563 /* sliderbackmax-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderbackmax-small.png"; sourceTree = "<group>"; };
+		D519657D1292400B00D14563 /* sliderbackmin-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderbackmin-small.png"; sourceTree = "<group>"; };
+		D51965F812924D4500D14563 /* SweepController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SweepController.h; sourceTree = "<group>"; };
+		D51965F912924D4500D14563 /* SweepController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SweepController.m; sourceTree = "<group>"; };
 		D52B92281290FFB100021E68 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		D52B92291290FFB100021E68 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		D531BF53127DB97F0053ABCA /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				C465D66B127A671D00639357 /* AudioViews */,
+				D519653D1292372100D14563 /* Controls */,
 				D56698451283C1E8004398AF /* Controllers */,
 				D532A568127BBCB000F753E2 /* ViewControllers */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
@@ -247,6 +254,15 @@
 			name = AudioViews;
 			sourceTree = "<group>";
 		};
+		D519653D1292372100D14563 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D519653E1292374B00D14563 /* STSmallSlider.h */,
+				D519653F1292374B00D14563 /* STSmallSlider.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
 		D52B92171290FF7C00021E68 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,9 +275,9 @@
 		D532A508127BB4D500F753E2 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				C4602AED12910575002D4FEF /* sliderbackmin-small.png */,
+				D519657C1292400B00D14563 /* sliderbackmax-small.png */,
+				D519657D1292400B00D14563 /* sliderbackmin-small.png */,
 				C4602AEE12910576002D4FEF /* sliderthumb-small.png */,
-				C4602AEF12910576002D4FEF /* sliderbackmax-small.png */,
 				C416DDC61290ABD1005FDAC0 /* meteroverlay.png */,
 				C4EEAB151290D7A000B15A0A /* sliderback.png */,
 				C416DE2F1290C196005FDAC0 /* slider.png */,
@@ -334,6 +350,8 @@
 			children = (
 				D56698481283C232004398AF /* ToneController.h */,
 				D56698491283C232004398AF /* ToneController.m */,
+				D51965F812924D4500D14563 /* SweepController.h */,
+				D51965F912924D4500D14563 /* SweepController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -421,9 +439,9 @@
 				C480AD531290F5C400AF07D2 /* frequencysweep.png in Resources */,
 				C43824491290FFAB00E3C231 /* playlistbackground.png in Resources */,
 				C438244C1290FFE900E3C231 /* pinknoisebackground.png in Resources */,
-				C4602AF012910576002D4FEF /* sliderbackmin-small.png in Resources */,
 				C4602AF112910576002D4FEF /* sliderthumb-small.png in Resources */,
-				C4602AF212910576002D4FEF /* sliderbackmax-small.png in Resources */,
+				D519657E1292400B00D14563 /* sliderbackmax-small.png in Resources */,
+				D519657F1292400B00D14563 /* sliderbackmin-small.png in Resources */,
 				C4BC013E1291FEB800DF908C /* fullrange.png in Resources */,
 				C4BC013F1291FEB800DF908C /* bandwidthlimited.png in Resources */,
 			);
@@ -450,6 +468,8 @@
 				C4232E6012837EDE00F5A4A6 /* SweepGeneratorViewController.m in Sources */,
 				D566984A1283C232004398AF /* ToneController.m in Sources */,
 				D52B922A1290FFB100021E68 /* NSString+Additions.m in Sources */,
+				D51965401292374B00D14563 /* STSmallSlider.m in Sources */,
+				D51965FA12924D4500D14563 /* SweepController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

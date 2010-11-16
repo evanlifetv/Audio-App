@@ -10,6 +10,7 @@
 #import "AudioControlsViewController.h"
 #import "ToneController.h"
 #import "NSString+Additions.h"
+#import "STSmallSlider.h"
 
 @interface ToneGeneratorViewController()
 - (void)setDisplayedFrequency:(double)frequency;

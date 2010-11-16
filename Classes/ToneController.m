@@ -162,8 +162,21 @@ OSStatus RenderTone(
 		// Start playback
 		err = AudioOutputUnitStart(toneUnit);
 		NSAssert1(err == noErr, @"Error starting unit: %ld", err);
-		
 	}
+}
+
+
+- (void)sweepFromFrequency:(int)fromFrequency toFrequency:(int)toFrequency withDuration:(int)duration
+{
+	[self togglePlay];
+	
+	NSTimeInterval sleepTime = ((double)duration / (double)(abs(fromFrequency - toFrequency)));
+	
+	for (int i = fromFrequency; i <= toFrequency; i++) {
+		self.frequency = i;
+		[NSThread sleepForTimeInterval:sleepTime];
+	}
+	[self stop];
 }
 
 

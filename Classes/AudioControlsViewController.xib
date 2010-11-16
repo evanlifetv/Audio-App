@@ -82,6 +82,10 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
+						<object class="NSCustomResource" key="IBUISelectedImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">pausebutton.png</string>
+						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">playbutton.png</string>
@@ -694,7 +698,7 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABD2QAAw7IAAA</bytes>
 					</object>
-					<string>{{404, 688}, {768, 533}}</string>
+					<string>{{404, 323}, {768, 533}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
@@ -1037,6 +1041,7 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>controlbackground.png</string>
 				<string>meteroverlay.png</string>
+				<string>pausebutton.png</string>
 				<string>playbutton.png</string>
 				<string>volume_down.png</string>
 				<string>volume_up.png</string>
@@ -1047,6 +1052,7 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{768, 530}</string>
 				<string>{666, 100}</string>
+				<string>{86, 81}</string>
 				<string>{86, 81}</string>
 				<string>{9, 15}</string>
 				<string>{22, 21}</string>

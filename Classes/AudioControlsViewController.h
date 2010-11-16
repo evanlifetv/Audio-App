@@ -10,10 +10,10 @@
 
 
 @interface AudioControlsViewController : UIViewController {
-	UIButton *_playButton;
-	UISlider *_volumeSlider;
-	id _visibleViewController;
-	UISlider *_audioTitleSlider;
+	UIButton	*_playButton;
+	UISlider	*_volumeSlider;
+	id			_visibleViewController;
+	UISlider	*_audioTitleSlider;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *playButton;

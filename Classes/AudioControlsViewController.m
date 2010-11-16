@@ -7,6 +7,7 @@
 //
 
 #import "AudioControlsViewController.h"
+#import "SweepGeneratorViewController.h"
 #import "ToneGeneratorViewController.h"
 #import "ToneController.h"
 
@@ -29,34 +30,23 @@
 	return sharedInstance;
 }
 
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
 	//Slider Images
-	UIImage *stetchLeftTrack = [[UIImage imageNamed:@"sliderback.png"] stretchableImageWithLeftCapWidth:20.0 topCapHeight:0.0];
-	UIImage *stetchRightTrack = [[UIImage imageNamed:@"sliderback.png"]  stretchableImageWithLeftCapWidth:20.0 topCapHeight:0.0];
+	UIImage *stetchLeftTrack = [[UIImage imageNamed:@"sliderbackmax-small.png"] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
+	UIImage *stetchRightTrack = [[UIImage imageNamed:@"sliderbackmin-small.png"]  stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
 	
 	//Slider: Audio Title
-	self.audioTitleSlider.backgroundColor = [UIColor clearColor];	
+	self.audioTitleSlider.backgroundColor = [UIColor clearColor];
 	[self.audioTitleSlider setThumbImage: [UIImage imageNamed:@"slider.png"] forState:UIControlStateNormal];
 	[self.audioTitleSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
 	[self.audioTitleSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
 	self.audioTitleSlider.minimumValue = 0.0;
 	self.audioTitleSlider.maximumValue = 100.0;
 	self.audioTitleSlider.continuous = YES;
-	self.audioTitleSlider.value = 20.0;
+	self.audioTitleSlider.value = 0.0;
 }
 
 
@@ -86,9 +76,23 @@
 
 - (IBAction)playButtonPressed
 {
-	if ([self.visibleViewController isKindOfClass:[ToneGeneratorViewController class]]) {
+	self.playButton.selected = !self.playButton.selected;
+	
+	if ([self.visibleViewController isKindOfClass:[SweepGeneratorViewController class]]) {
+		[self performSelectorInBackground:@selector(generateSweep) withObject:nil];
+		
+	} else 
+		if ([self.visibleViewController isKindOfClass:[ToneGeneratorViewController class]]) {
 		[[ToneController sharedInstance] togglePlay];
 	}
+}
+
+- (void)generateSweep
+{
+	SweepGeneratorViewController *vc = (SweepGeneratorViewController*)self.visibleViewController;
+	[[ToneController sharedInstance] sweepFromFrequency:[vc frequencyFromStartSlider]
+												toFrequency:[vc frequencyFromEndSlider]
+											   withDuration:[vc durationFromTimeSlider]];
 }
 
 @end

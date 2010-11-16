@@ -7,7 +7,9 @@
 //
 
 #import "SweepGeneratorViewController.h"
+#import "AudioControlsViewController.h"
 #import "NSString+Additions.h"
+#import "STSmallSlider.h"
 
 #define minTime 1
 #define maxTime 30
@@ -32,6 +34,15 @@
         self.tabBarItem.title = @"Frequency Sweep";
     }
     return self;
+}
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	
+	[AudioControlsViewController sharedInstance].visibleViewController = self;
+	
 }
 
 
@@ -67,7 +78,7 @@
 }
 
 
-- (IBAction)sliderChangedValue:(UISlider *)aSlider
+- (IBAction)sliderChangedValue:(STSmallSlider *)aSlider
 {
 	if (aSlider == self.startFrequencySlider) {
 		double power = log(minFrequency) + aSlider.value * (log(maxFrequency) - log(minFrequency));
@@ -77,7 +88,7 @@
 	} else if (aSlider == self.endFrequencySlider) {
 		double power = log(minFrequency) + aSlider.value * (log(maxFrequency) - log(minFrequency));
 		double frequencyInHz = exp(power);
-		self.startFrequencyLabel.text = [NSString stringForFrequency:frequencyInHz];
+		self.endFrequencyLabel.text = [NSString stringForFrequency:frequencyInHz];
 		
 	} else {
 		//must be the time slider
@@ -86,6 +97,28 @@
 		self.timeLabel.text = [formatter stringFromNumber:[NSNumber numberWithDouble:minTime + aSlider.value * (maxTime - minTime)]];
 	}
 
+}
+
+
+- (int)frequencyFromStartSlider
+{
+	//if linear
+	//return self.slider.value * (maxFrequency - minFrequency) + minFrequency;
+	double power = self.startFrequencySlider.value * (log(maxFrequency) - log(minFrequency)) + log(minFrequency);
+	return (int)exp(power);
+}
+
+- (int)frequencyFromEndSlider
+{
+	//if linear
+	//return self.slider.value * (maxFrequency - minFrequency) + minFrequency;
+	double power = self.endFrequencySlider.value * (log(maxFrequency) - log(minFrequency)) + log(minFrequency);
+	return (int)exp(power);
+}
+
+- (int)durationFromTimeSlider
+{
+	return ceil(minTime + self.timeSlider.value * (maxTime - minTime));
 }
 
 @end

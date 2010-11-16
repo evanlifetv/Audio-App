@@ -58,7 +58,6 @@
 		D51965401292374B00D14563 /* STSmallSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D519653F1292374B00D14563 /* STSmallSlider.m */; };
 		D519657E1292400B00D14563 /* sliderbackmax-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D519657C1292400B00D14563 /* sliderbackmax-small.png */; };
 		D519657F1292400B00D14563 /* sliderbackmin-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D519657D1292400B00D14563 /* sliderbackmin-small.png */; };
-		D51965FA12924D4500D14563 /* SweepController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51965F912924D4500D14563 /* SweepController.m */; };
 		D52B922A1290FFB100021E68 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D52B92291290FFB100021E68 /* NSString+Additions.m */; };
 		D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = D531BF53127DB97F0053ABCA /* Default-Landscape.png */; };
 		D532A519127BB4D500F753E2 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A510127BB4D500F753E2 /* volume_down.png */; };
@@ -136,8 +135,6 @@
 		D519653F1292374B00D14563 /* STSmallSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSmallSlider.m; sourceTree = "<group>"; };
 		D519657C1292400B00D14563 /* sliderbackmax-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderbackmax-small.png"; sourceTree = "<group>"; };
 		D519657D1292400B00D14563 /* sliderbackmin-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderbackmin-small.png"; sourceTree = "<group>"; };
-		D51965F812924D4500D14563 /* SweepController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SweepController.h; sourceTree = "<group>"; };
-		D51965F912924D4500D14563 /* SweepController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SweepController.m; sourceTree = "<group>"; };
 		D52B92281290FFB100021E68 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		D52B92291290FFB100021E68 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		D531BF53127DB97F0053ABCA /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
@@ -350,8 +347,6 @@
 			children = (
 				D56698481283C232004398AF /* ToneController.h */,
 				D56698491283C232004398AF /* ToneController.m */,
-				D51965F812924D4500D14563 /* SweepController.h */,
-				D51965F912924D4500D14563 /* SweepController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -469,7 +464,6 @@
 				D566984A1283C232004398AF /* ToneController.m in Sources */,
 				D52B922A1290FFB100021E68 /* NSString+Additions.m in Sources */,
 				D51965401292374B00D14563 /* STSmallSlider.m in Sources */,
-				D51965FA12924D4500D14563 /* SweepController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

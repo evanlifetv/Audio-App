@@ -1,15 +1,15 @@
-//
-//  AudioControlsViewController.m
-//  SoundTweak
-//
-//  Created by Bryan Montz on 10/31/10.
-//  Copyright 2010 Evan Hamilton. All rights reserved.
-//
 
 #import "AudioControlsViewController.h"
 #import "SweepGeneratorViewController.h"
 #import "ToneGeneratorViewController.h"
 #import "ToneController.h"
+#import "STSweep.h"
+
+
+@interface AudioControlsViewController()
+- (void)generateSweep;
+@end
+
 
 @implementation AudioControlsViewController
 
@@ -47,14 +47,16 @@
 	self.audioTitleSlider.maximumValue = 100.0;
 	self.audioTitleSlider.continuous = YES;
 	self.audioTitleSlider.value = 0.0;
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(controllerDidStop)
+												 name:kToneControllerDidStop
+											   object:nil];
 }
 
 
-- (float)volume
-{
-	return self.volumeSlider.value;
-}
-
+#pragma mark -
+#pragma mark Memory management
 
 - (void)viewDidUnload {
     [super viewDidUnload];
@@ -66,6 +68,8 @@
 
 
 - (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
 	[_playButton release], _playButton = nil;
 	[_volumeSlider release], _volumeSlider = nil;
     [_visibleViewController release], _visibleViewController = nil;
@@ -74,12 +78,32 @@
 }
 
 
+#pragma mark -
+#pragma mark Accessors
+
+- (float)volume
+{
+	return self.volumeSlider.value;
+}
+
+
+#pragma mark -
+#pragma mark Actions
+
 - (IBAction)playButtonPressed
 {
 	self.playButton.selected = !self.playButton.selected;
 	
 	if ([self.visibleViewController isKindOfClass:[SweepGeneratorViewController class]]) {
-		[self performSelectorInBackground:@selector(generateSweep) withObject:nil];
+		if ([[ToneController sharedInstance] isSweeping]) {
+			[[ToneController sharedInstance] pauseSweep];
+		} else {
+			if ([ToneController sharedInstance].hasPausedSweep) {
+				[[ToneController sharedInstance] resumePausedSweep];
+			} else {
+				[self generateSweep];
+			}
+		}
 		
 	} else 
 		if ([self.visibleViewController isKindOfClass:[ToneGeneratorViewController class]]) {
@@ -87,12 +111,31 @@
 	}
 }
 
+
 - (void)generateSweep
 {
 	SweepGeneratorViewController *vc = (SweepGeneratorViewController*)self.visibleViewController;
-	[[ToneController sharedInstance] sweepFromFrequency:[vc frequencyFromStartSlider]
-												toFrequency:[vc frequencyFromEndSlider]
-											   withDuration:[vc durationFromTimeSlider]];
+	
+	STSweep* sweep = [STSweep sweepWithStartFrequency:[vc startFrequency]
+									 currentFrequency:[vc startFrequency]
+										 endFrequency:[vc endFrequency]
+											 duration:[vc duration]
+										 shouldRepeat:[vc.repeatSwitch isOn]];
+	
+	[[ToneController sharedInstance] performSelectorInBackground:@selector(playSweep:)
+													  withObject:sweep];
+
 }
+
+
+#pragma mark -
+#pragma mark Notification responses
+
+- (void)controllerDidStop
+{
+	self.playButton.selected = NO;
+}
+
+
 
 @end

@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="32"/>
+			<integer value="10"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -57,7 +57,7 @@
 					<object class="IBUILabel" id="670298321">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{58, 53}, {205, 24}}</string>
+						<string key="NSFrame">{{58, 45}, {655, 36}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -82,6 +82,7 @@
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">25</float>
 					</object>
 					<object class="IBUITextView" id="349890377">
@@ -254,7 +255,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">15 Seconds</string>
+						<string key="IBUIText">15 sec</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -365,30 +366,6 @@
 					<int key="connectionID">38</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">timeLabel</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="789935489"/>
-					</object>
-					<int key="connectionID">39</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">timeSlider</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="1039957432"/>
-					</object>
-					<int key="connectionID">40</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">timeTitleLabel</string>
-						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="595126390"/>
-					</object>
-					<int key="connectionID">41</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">sliderChangedValue:</string>
 						<reference key="source" ref="86356701"/>
@@ -414,6 +391,47 @@
 						<int key="IBEventType">13</int>
 					</object>
 					<int key="connectionID">47</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">durationLabel</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="789935489"/>
+					</object>
+					<int key="connectionID">48</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">durationTitleLabel</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="595126390"/>
+					</object>
+					<int key="connectionID">49</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">durationSlider</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="1039957432"/>
+					</object>
+					<int key="connectionID">50</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">repeatSwitch</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="315350389"/>
+					</object>
+					<int key="connectionID">51</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">repeatSwitchChangedValue:</string>
+						<reference key="source" ref="315350389"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">52</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -667,7 +685,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">47</int>
+			<int key="maxID">52</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -684,29 +702,51 @@
 					<string key="className">SweepGeneratorViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">sliderChangedValue:</string>
-						<string key="NS.object.0">UISlider</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>repeatSwitchChangedValue:</string>
+							<string>sliderChangedValue:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>UISlider</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">sliderChangedValue:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">sliderChangedValue:</string>
-							<string key="candidateClassName">UISlider</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>repeatSwitchChangedValue:</string>
+							<string>sliderChangedValue:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">repeatSwitchChangedValue:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">sliderChangedValue:</string>
+								<string key="candidateClassName">UISlider</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>durationLabel</string>
+							<string>durationSlider</string>
+							<string>durationTitleLabel</string>
 							<string>endFrequencyLabel</string>
 							<string>endFrequencySlider</string>
 							<string>endFrequencyTitleLabel</string>
+							<string>repeatSwitch</string>
 							<string>startFrequencyLabel</string>
 							<string>startFrequencySlider</string>
 							<string>startFrequencyTitleLabel</string>
-							<string>timeLabel</string>
-							<string>timeSlider</string>
-							<string>timeTitleLabel</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -716,6 +756,7 @@
 							<string>UILabel</string>
 							<string>STSmallSlider</string>
 							<string>UILabel</string>
+							<string>UISwitch</string>
 							<string>UILabel</string>
 							<string>STSmallSlider</string>
 							<string>UILabel</string>
@@ -725,18 +766,31 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>durationLabel</string>
+							<string>durationSlider</string>
+							<string>durationTitleLabel</string>
 							<string>endFrequencyLabel</string>
 							<string>endFrequencySlider</string>
 							<string>endFrequencyTitleLabel</string>
+							<string>repeatSwitch</string>
 							<string>startFrequencyLabel</string>
 							<string>startFrequencySlider</string>
 							<string>startFrequencyTitleLabel</string>
-							<string>timeLabel</string>
-							<string>timeSlider</string>
-							<string>timeTitleLabel</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">durationLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">durationSlider</string>
+								<string key="candidateClassName">STSmallSlider</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">durationTitleLabel</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">endFrequencyLabel</string>
 								<string key="candidateClassName">UILabel</string>
@@ -750,6 +804,10 @@
 								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">repeatSwitch</string>
+								<string key="candidateClassName">UISwitch</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">startFrequencyLabel</string>
 								<string key="candidateClassName">UILabel</string>
 							</object>
@@ -759,18 +817,6 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">startFrequencyTitleLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">timeLabel</string>
-								<string key="candidateClassName">UILabel</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">timeSlider</string>
-								<string key="candidateClassName">STSmallSlider</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">timeTitleLabel</string>
 								<string key="candidateClassName">UILabel</string>
 							</object>
 						</object>

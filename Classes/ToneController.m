@@ -19,6 +19,12 @@
 #import "ToneController.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "AudioControlsViewController.h"
+#import "STSweep.h"
+
+NSString * const kToneControllerWillStartPlayingSweep = @"kToneControllerWillStartPlayingSweep";
+NSString * const kToneControllerDidFinishPlayingSweep = @"kToneControllerDidFinishPlayingSweep";
+NSString * const kToneControllerDidInvalidatePausedSweep = @"kToneControllerDidInvalidatePausedSweep";
+NSString * const kToneControllerDidStop = @"kToneControllerDidStop";
 
 
 OSStatus RenderTone(
@@ -68,9 +74,12 @@ OSStatus RenderTone(
 
 @implementation ToneController
 
-@synthesize frequency;
-@synthesize sampleRate;
-@synthesize theta;
+@synthesize frequency = _frequency;
+@synthesize sampleRate = _sampleRate;
+@synthesize theta = _theta;
+@synthesize currentSweep = _currentSweep;
+@synthesize sweeping = _sweeping;
+@synthesize hasPausedSweep = _hasPausedSweep;
 
 
 + (ToneController*)sharedInstance
@@ -105,14 +114,14 @@ OSStatus RenderTone(
 	NSAssert(defaultOutput, @"Can't find default output");
 	
 	// Create a new unit based on this that we'll use for output
-	OSErr err = AudioComponentInstanceNew(defaultOutput, &toneUnit);
-	NSAssert1(toneUnit, @"Error creating unit: %ld", err);
+	OSErr err = AudioComponentInstanceNew(defaultOutput, &_toneUnit);
+	NSAssert1(_toneUnit, @"Error creating unit: %ld", err);
 	
 	// Set our tone rendering function on the unit
 	AURenderCallbackStruct input;
 	input.inputProc = RenderTone;
 	input.inputProcRefCon = self;
-	err = AudioUnitSetProperty(toneUnit, 
+	err = AudioUnitSetProperty(_toneUnit, 
 							   kAudioUnitProperty_SetRenderCallback, 
 							   kAudioUnitScope_Input,
 							   0, 
@@ -120,11 +129,11 @@ OSStatus RenderTone(
 							   sizeof(input));
 	NSAssert1(err == noErr, @"Error setting callback: %ld", err);
 	
-	// Set the format to 32 bit, single channel, floating point, linear PCM
+	// Set the format to 32-bit, single-channel, floating-point, linear PCM
 	const int four_bytes_per_float = 4;
 	const int eight_bits_per_byte = 8;
 	AudioStreamBasicDescription streamFormat;
-	streamFormat.mSampleRate = sampleRate;
+	streamFormat.mSampleRate = self.sampleRate;
 	streamFormat.mFormatID = kAudioFormatLinearPCM;
 	streamFormat.mFormatFlags =	kAudioFormatFlagsNativeFloatPacked | kAudioFormatFlagIsNonInterleaved;
 	streamFormat.mBytesPerPacket = four_bytes_per_float;
@@ -132,7 +141,7 @@ OSStatus RenderTone(
 	streamFormat.mBytesPerFrame = four_bytes_per_float;		
 	streamFormat.mChannelsPerFrame = 1;	
 	streamFormat.mBitsPerChannel = four_bytes_per_float * eight_bits_per_byte;
-	err = AudioUnitSetProperty (toneUnit,
+	err = AudioUnitSetProperty (_toneUnit,
 								kAudioUnitProperty_StreamFormat,
 								kAudioUnitScope_Input,
 								0,
@@ -141,51 +150,157 @@ OSStatus RenderTone(
 	NSAssert1(err == noErr, @"Error setting stream format: %ld", err);
 }
 
+
 - (void)togglePlay
 {
-	if (toneUnit)
-	{
-		AudioOutputUnitStop(toneUnit);
-		AudioUnitUninitialize(toneUnit);
-		AudioComponentInstanceDispose(toneUnit);
-		toneUnit = nil;
+	if (_toneUnit) {
+		[self stop];
 		
-	}
-	else
-	{
+	} else {
 		[self createToneUnit];
 		
 		// Stop changing parameters on the unit
-		OSErr err = AudioUnitInitialize(toneUnit);
+		OSErr err = AudioUnitInitialize(_toneUnit);
 		NSAssert1(err == noErr, @"Error initializing unit: %ld", err);
 		
 		// Start playback
-		err = AudioOutputUnitStart(toneUnit);
+		err = AudioOutputUnitStart(_toneUnit);
 		NSAssert1(err == noErr, @"Error starting unit: %ld", err);
 	}
 }
 
 
-- (void)sweepFromFrequency:(int)fromFrequency toFrequency:(int)toFrequency withDuration:(int)duration
+- (void)playSweep:(STSweep*)sweep
 {
+	//need an autorelease pool since this is running in the background
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	self.currentSweep = sweep;
+	self.sweeping = YES;
+	
+	[self performSelectorOnMainThread:@selector(notifyObserversWillStartPlayingSweep) withObject:nil waitUntilDone:NO];
+	
 	[self togglePlay];
 	
-	NSTimeInterval sleepTime = ((double)duration / (double)(abs(fromFrequency - toFrequency)));
+	NSTimeInterval sleepTime = ((double)sweep.duration / [sweep frequencySpan]);
 	
-	for (int i = fromFrequency; i <= toFrequency; i++) {
-		self.frequency = i;
-		[NSThread sleepForTimeInterval:sleepTime];
+	BOOL firstTimeThrough = YES;
+	while (firstTimeThrough || sweep.shouldRepeat) {
+		
+		double startFrequency = 1;
+		
+		if (firstTimeThrough && sweep.startFrequency != sweep.currentFrequency) {
+			//we are resuming a repeating sweep in the middle
+			startFrequency = sweep.currentFrequency;
+		} else {
+			startFrequency = sweep.startFrequency;
+		}
+		
+		if ([sweep isIncreasing]) {
+			for (int i = startFrequency; i <= sweep.endFrequency; i++) {
+				
+				if (self.hasPausedSweep) {
+					[pool release];
+					return;
+				}
+				
+				self.frequency = i;
+				[NSThread sleepForTimeInterval:sleepTime];
+			}
+		} else {
+			for (int i = startFrequency; i >= sweep.endFrequency; i--) {
+				
+				if (self.hasPausedSweep) {
+					[pool release];
+					return;
+				}
+				
+				self.frequency = i;
+				[NSThread sleepForTimeInterval:sleepTime];
+			}
+		}
+		firstTimeThrough = NO;
 	}
+	
 	[self stop];
+	
+	[self performSelectorOnMainThread:@selector(notifyObserversDidFinishPlayingSweep) withObject:nil waitUntilDone:NO];
+	
+	self.currentSweep = nil;
+	self.sweeping = NO;
+	
+	[pool release];
+}
+
+
+- (void)notifyObserversWillStartPlayingSweep
+{
+	[[NSNotificationCenter defaultCenter] postNotificationName:kToneControllerWillStartPlayingSweep object:nil];
+}
+
+
+- (void)notifyObserversDidFinishPlayingSweep
+{
+	[[NSNotificationCenter defaultCenter] postNotificationName:kToneControllerDidFinishPlayingSweep object:nil];
+}
+
+
+- (void)notifyObserversDidStop
+{
+	[[NSNotificationCenter defaultCenter] postNotificationName:kToneControllerDidStop object:nil];
+}
+
+
+- (void)pauseSweep
+{
+	//set the new sweep that will be resumable
+	self.currentSweep = [STSweep sweepWithStartFrequency:self.currentSweep.startFrequency
+										currentFrequency:self.frequency
+											endFrequency:self.currentSweep.endFrequency
+												duration:self.currentSweep.duration
+											shouldRepeat:self.currentSweep.shouldRepeat];
+	
+	
+	[self stop];
+	
+	[self notifyObserversDidFinishPlayingSweep];
+	
+	self.sweeping = NO;
+	self.hasPausedSweep = YES;
+}
+
+
+- (void)resumePausedSweep
+{
+	self.hasPausedSweep = NO;
+	self.sweeping = YES;
+	
+	[self performSelectorInBackground:@selector(playSweep:) withObject:self.currentSweep];
+}
+
+
+- (void)invalidatePausedSweep
+{
+	self.hasPausedSweep = NO;
+	self.currentSweep = nil;
+	self.sweeping = NO;
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:kToneControllerDidInvalidatePausedSweep object:nil];
 }
 
 
 - (void)stop
 {
-	if (toneUnit)
-	{
-		[self togglePlay];
+	if (_toneUnit) {
+		AudioOutputUnitStop(_toneUnit);
+		AudioUnitUninitialize(_toneUnit);
+		AudioComponentInstanceDispose(_toneUnit);
+		_toneUnit = nil;
+		
+		[self performSelectorOnMainThread:@selector(notifyObserversDidStop) withObject:nil waitUntilDone:NO];
 	}
+	self.sweeping = NO;
 }
+
 
 @end

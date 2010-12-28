@@ -15,8 +15,8 @@
 - (void)awakeFromNib
 {
 	//Slider Images
-	UIImage *stetchLeftTrack = [[UIImage imageNamed:@"sliderbackmax-small2.png"] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
-	UIImage *stetchRightTrack = [[UIImage imageNamed:@"sliderbackmin-small2.png"]  stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
+	UIImage *stetchLeftTrack = [[UIImage imageNamed:@"sliderbackmax-small.png"] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
+	UIImage *stetchRightTrack = [[UIImage imageNamed:@"sliderbackmin-small.png"]  stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
 	
 	//Slider: Audio Title
 	self.backgroundColor = [UIColor clearColor];	

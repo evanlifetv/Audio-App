@@ -1,10 +1,3 @@
-//
-//  AppDelegate.m
-//  SoundTweak
-//
-//  Created by Evan Hamilton on 10/28/10.
-//  Copyright Evan Hamilton. All rights reserved.
-//
 
 #import "AppDelegate.h"
 #import "AudioControlsViewController.h"
@@ -39,7 +32,7 @@
 
 	
 	//initialize the audio controls view (top half of the screen)
-	self.controlsViewController = [[AudioControlsViewController sharedInstance] autorelease];
+	self.controlsViewController = [AudioControlsViewController sharedInstance];
 	self.controlsViewController.view.frame = CGRectMake(0, 20, 768, 533);
 	
 	//initialize each view controller that will be a tab in the tab bar controller

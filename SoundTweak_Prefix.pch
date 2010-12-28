@@ -7,10 +7,16 @@
     #import <UIKit/UIKit.h>
 #endif
 
+
 //User defaults keys
 #define kLastToneFrequency @"lastToneFrequency"
 #define kLastSelectedTabIndex @"lastSelectedTabIndex"
 
-#define maxFrequency 20000
-#define minFrequency 20
-#define defaultFrequency 1000
+#define kLastSweepStartFrequency @"lastSweepStartFrequency"
+#define kLastSweepEndFrequency @"lastSweepEndFrequency"
+#define kLastSweepDuration @"lastSweepDuration"
+
+//Global defines
+#define MAX_FREQUENCY 20000.
+#define MIN_FREQUENCY 20.
+#define DEFAULT_FREQUENCY 1000

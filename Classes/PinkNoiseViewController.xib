@@ -97,7 +97,7 @@
 					<object class="IBUILabel" id="115594828">
 						<reference key="NSNextResponder" ref="918792201"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{57, 55}, {129, 21}}</string>
+						<string key="NSFrame">{{58, 45}, {655, 36}}</string>
 						<reference key="NSSuperview" ref="918792201"/>
 						<reference key="IBUIBackgroundColor" ref="873212258"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -117,6 +117,7 @@
 						</object>
 						<reference key="IBUIHighlightedColor" ref="419883247"/>
 						<int key="IBUIBaselineAdjustment">1</int>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">25</float>
 					</object>
 					<object class="IBUISlider" id="816602529">
@@ -391,7 +392,7 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABD3oAAw6GAAA</bytes>
 					</object>
-					<string>{{700, 401}, {768, 444}}</string>
+					<string>{{570, 27}, {768, 444}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAxHqAAA</bytes>

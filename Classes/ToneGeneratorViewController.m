@@ -40,8 +40,8 @@
 	
 	//load the last frequency
 	double lastFrequency = [[NSUserDefaults standardUserDefaults] doubleForKey:kLastToneFrequency];
-	if (lastFrequency > maxFrequency || lastFrequency < minFrequency) {
-		lastFrequency = defaultFrequency;
+	if (lastFrequency > MAX_FREQUENCY || lastFrequency < MIN_FREQUENCY) {
+		lastFrequency = DEFAULT_FREQUENCY;
 	}
 	[ToneController sharedInstance].frequency = lastFrequency;
 	[self setDisplayedFrequency:lastFrequency];
@@ -91,10 +91,10 @@
 - (IBAction)sliderChangedValue:(UISlider *)aSlider
 {
 	//if linear
-	//CGFloat frequencyInHz = aSlider.value * (maxFrequency - minFrequency) + minFrequency;
+	//CGFloat frequencyInHz = aSlider.value * (MAX_FREQUENCY - MIN_FREQUENCY) + MIN_FREQUENCY;
 	
 	//log scale
-	double power = log(minFrequency) + aSlider.value * (log(maxFrequency) - log(minFrequency));
+	double power = log(MIN_FREQUENCY) + aSlider.value * (log(MAX_FREQUENCY) - log(MIN_FREQUENCY));
 	double frequencyInHz = exp(power);
 	
 	[ToneController sharedInstance].frequency = frequencyInHz;
@@ -106,8 +106,8 @@
 {
 	//set the slider position
 	//if linear
-	//self.slider.value = (frequency - minFrequency) / (maxFrequency - minFrequency);
-	self.slider.value = (log(frequency) - log(minFrequency)) / (log(maxFrequency) - log(minFrequency));
+	//self.slider.value = (frequency - MIN_FREQUENCY) / (MAX_FREQUENCY - MIN_FREQUENCY);
+	self.slider.value = (log(frequency) - log(MIN_FREQUENCY)) / (log(MAX_FREQUENCY) - log(MIN_FREQUENCY));
 	
 	//set the frequency label
 	self.frequencyLabel.text = [NSString stringForFrequency:frequency];
@@ -117,8 +117,8 @@
 - (double)frequencyFromSlider
 {
 	//if linear
-	//return self.slider.value * (maxFrequency - minFrequency) + minFrequency;
-	double power = self.slider.value * (log(maxFrequency) - log(minFrequency)) + log(minFrequency);
+	//return self.slider.value * (MAX_FREQUENCY - MIN_FREQUENCY) + MIN_FREQUENCY;
+	double power = self.slider.value * (log(MAX_FREQUENCY) - log(MIN_FREQUENCY)) + log(MIN_FREQUENCY);
 	return exp(power);
 }
 

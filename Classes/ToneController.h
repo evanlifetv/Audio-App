@@ -1,31 +1,45 @@
-//
-//  ToneController.h
-//  SoundTweak
-//
-//  Created by Bryan Montz on 11/4/10.
-//  Copyright 2010 Evan Hamilton. All rights reserved.
-//
+
+@class STSweep;
 
 #import <Foundation/Foundation.h>
 #import <AudioUnit/AudioUnit.h>
 
 @interface ToneController : NSObject {
-	AudioComponentInstance toneUnit;
+	AudioComponentInstance _toneUnit;
 	
-	double frequency;
-	double sampleRate;
-	double theta;
+	double		_frequency;
+	double		_sampleRate;
+	double		_theta;
+	
+	STSweep*	_currentSweep;
+	BOOL		_sweeping;
+	BOOL		_hasPausedSweep;
 }
 
 @property (nonatomic) double frequency;
 @property (nonatomic) double sampleRate;
 @property (nonatomic) double theta;
 
+//sweep
+@property (nonatomic, retain) STSweep* currentSweep;
+@property (nonatomic, getter=isSweeping) BOOL sweeping;
+@property (nonatomic) BOOL hasPausedSweep;
+
+
 //class methods
 + (ToneController*)sharedInstance;
 
 //instance methods
 - (void)togglePlay;
-- (void)sweepFromFrequency:(int)fromFrequency toFrequency:(int)toFrequency withDuration:(int)duration;
+- (void)playSweep:(STSweep *)sweep;
+- (void)pauseSweep;
+- (void)resumePausedSweep;
+- (void)invalidatePausedSweep;
+- (void)stop;
 
 @end
+
+extern NSString * const kToneControllerWillStartPlayingSweep;
+extern NSString * const kToneControllerDidFinishPlayingSweep;
+extern NSString * const kToneControllerDidInvalidatePausedSweep;
+extern NSString * const kToneControllerDidStop;

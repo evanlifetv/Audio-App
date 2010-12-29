@@ -19,12 +19,17 @@
 #import "ToneController.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "AudioControlsViewController.h"
+#import <AVFoundation/AVAudioSession.h>
 #import "STSweep.h"
 
 NSString * const kToneControllerWillStartPlayingSweep = @"kToneControllerWillStartPlayingSweep";
 NSString * const kToneControllerDidFinishPlayingSweep = @"kToneControllerDidFinishPlayingSweep";
 NSString * const kToneControllerDidInvalidatePausedSweep = @"kToneControllerDidInvalidatePausedSweep";
 NSString * const kToneControllerDidStop = @"kToneControllerDidStop";
+
+@interface ToneController()
++ (void)setupAudioSession;
+@end
 
 
 OSStatus RenderTone(
@@ -91,9 +96,25 @@ OSStatus RenderTone(
 			sharedInstance.frequency = 1000;
 			sharedInstance.sampleRate = 44100.0;
 			sharedInstance.theta = 0.0;
+			
+			[self setupAudioSession];
 		}
 	}
 	return sharedInstance;
+}
+
+
++ (void)setupAudioSession
+{
+	NSError *setCategoryError = nil;
+	[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback
+										   error: &setCategoryError];
+	
+	if (setCategoryError) { /* handle the error condition */ }
+	
+	NSError *activationError = nil;
+	[[AVAudioSession sharedInstance] setActive: YES
+										 error: &activationError];
 }
 
 

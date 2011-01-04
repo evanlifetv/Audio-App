@@ -14,10 +14,13 @@ NSNumberFormatter *__formatter = nil;
 
 @interface SweepGeneratorViewController(privateMethods)
 - (void)refreshInterface;
-- (void)disableSliders;
-- (void)enableSliders;
+- (void)disableControls;
+- (void)enableControls;
 - (double)frequencyFromSlider:(STSmallSlider*)slider;
 - (void)setSlider:(STSmallSlider*)slider toFrequency:(double)frequency;
+- (void)beginObserving;
+- (void)saveState;
+- (void)loadState;
 @end
 
 
@@ -51,7 +54,7 @@ NSNumberFormatter *__formatter = nil;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.tabBarItem.image = [UIImage imageNamed:@"sweep.png"];
-        self.tabBarItem.title = @"Frequency Sweep";
+        self.tabBarItem.title = @"Sweep Generator";
     }
     return self;
 }
@@ -60,59 +63,9 @@ NSNumberFormatter *__formatter = nil;
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-		
-	self.durationSlider.minimumValue = MIN_DURATION;
-	self.durationSlider.maximumValue = MAX_DURATION;
-}
 
-
-- (void)viewWillAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
-	
-	//load last start and end frequencies
-	double startFrequency = [[NSUserDefaults standardUserDefaults] doubleForKey:kLastSweepStartFrequency];
-	double endFrequency = [[NSUserDefaults standardUserDefaults] doubleForKey:kLastSweepEndFrequency];
-	
-	if (startFrequency == 0 || endFrequency == 0) {
-		//user hasn't saved defaults yet, so load global defaults
-		startFrequency = MIN_FREQUENCY;
-		endFrequency = MAX_FREQUENCY;
-	}
-	
-	[self setSlider:_startFrequencySlider toFrequency:startFrequency];
-	[self setSlider:_endFrequencySlider toFrequency:endFrequency];
-	
-	
-	//load last duration
-	int lastDuration = [[NSUserDefaults standardUserDefaults] integerForKey:kLastSweepDuration];
-	
-	if (lastDuration < MIN_DURATION || lastDuration > MAX_DURATION) {
-		lastDuration = DEFAULT_DURATION;
-	}
-	self.durationSlider.value = lastDuration;
-	
-	[self refreshInterface];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(controllerWillStartSweep)
-												 name:kToneControllerWillStartPlayingSweep
-											   object:nil];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(controllerDidFinishSweep)
-												 name:kToneControllerDidFinishPlayingSweep
-											   object:nil];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(controllerDidInvalidatePausedSweep)
-												 name:kToneControllerDidInvalidatePausedSweep
-											   object:nil];
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(controllerDidStop)
-												 name:kToneControllerDidStop
-											   object:nil];
+	[self loadState];
+	[self beginObserving];
 }
 
 
@@ -127,11 +80,7 @@ NSNumberFormatter *__formatter = nil;
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
-	
-	[[NSUserDefaults standardUserDefaults] setDouble:[self startFrequency] forKey:kLastSweepStartFrequency];
-	[[NSUserDefaults standardUserDefaults] setDouble:[self endFrequency] forKey:kLastSweepEndFrequency];
-	[[NSUserDefaults standardUserDefaults] setInteger:[self duration] forKey:kLastSweepDuration];
-	
+		
 	[[ToneController sharedInstance] invalidatePausedSweep];
 	[[ToneController sharedInstance] stop];
 }
@@ -179,6 +128,40 @@ NSNumberFormatter *__formatter = nil;
 #pragma mark -
 #pragma mark Public methods
 
+- (void)beginObserving
+{
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(applicationDidEnterBackground:)
+												 name:UIApplicationDidEnterBackgroundNotification
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(applicationWillTerminate:)
+												 name:UIApplicationWillTerminateNotification
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(controllerWillStartSweep)
+												 name:kToneControllerWillStartPlayingSweep
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(controllerDidFinishSweep)
+												 name:kToneControllerDidFinishPlayingSweep
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(controllerDidInvalidatePausedSweep)
+												 name:kToneControllerDidInvalidatePausedSweep
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(controllerDidStop)
+												 name:kToneControllerDidStop
+											   object:nil];
+}
+
+
 - (double)startFrequency
 {
 	return [self frequencyFromSlider:self.startFrequencySlider];
@@ -200,32 +183,95 @@ NSNumberFormatter *__formatter = nil;
 #pragma mark -
 #pragma mark Notification responses
 
+- (void)applicationDidEnterBackground:(NSNotification*)notification
+{
+	[self saveState];
+}
+
+
+- (void)applicationWillTerminate:(NSNotification*)notification
+{
+	[self saveState];
+}
+
+
 - (void)controllerWillStartSweep
 {
-	[self disableSliders];
+	[self disableControls];
 }
 
 
 - (void)controllerDidFinishSweep
 {
-	[self enableSliders];
+	[self enableControls];
 }
 
 
 - (void)controllerDidInvalidatePausedSweep
 {
-	[self enableSliders];
+	[self enableControls];
 }
 
 
 - (void)controllerDidStop
 {
-	[self enableSliders];
+	[self enableControls];
 }
 
 
 #pragma mark -
 #pragma mark Private methods
+
+- (void)loadState
+{
+	self.durationSlider.minimumValue = MIN_DURATION;
+	self.durationSlider.maximumValue = MAX_DURATION;
+	
+	//load last start and end frequencies
+	double startFrequency = [[NSUserDefaults standardUserDefaults] doubleForKey:kLastSweepStartFrequency];
+	double endFrequency = [[NSUserDefaults standardUserDefaults] doubleForKey:kLastSweepEndFrequency];
+	
+	if (startFrequency == 0 || endFrequency == 0) {
+		//user hasn't saved defaults yet, so load global defaults
+		startFrequency = MIN_FREQUENCY;
+		endFrequency = MAX_FREQUENCY;
+	}
+	
+	[self setSlider:_startFrequencySlider toFrequency:startFrequency];
+	[self setSlider:_endFrequencySlider toFrequency:endFrequency];
+	
+	
+	//load last duration
+	int lastDuration = [[NSUserDefaults standardUserDefaults] integerForKey:kLastSweepDuration];
+	
+	if (lastDuration < MIN_DURATION || lastDuration > MAX_DURATION) {
+		lastDuration = DEFAULT_DURATION;
+	}
+	self.durationSlider.value = lastDuration;
+	
+	
+	//load last state of the repeat switch
+	BOOL repeatSwitchState = DEFAULT_REPEAT_SWITCH_STATE;
+	id repeatSwitchDefaultAsObject = [[NSUserDefaults standardUserDefaults] objectForKey:kLastRepeatSwitchState];
+	if (repeatSwitchDefaultAsObject) {
+		//the default had previously been saved, so load it
+		repeatSwitchState = [[NSUserDefaults standardUserDefaults] boolForKey:kLastRepeatSwitchState];
+	} //else just go with the default
+	[self.repeatSwitch setOn:repeatSwitchState];
+	
+	[self refreshInterface];
+}
+
+
+- (void)saveState
+{
+	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+	[defs setDouble:[self startFrequency] forKey:kLastSweepStartFrequency];
+	[defs setDouble:[self endFrequency] forKey:kLastSweepEndFrequency];
+	[defs setInteger:[self duration] forKey:kLastSweepDuration];
+	[defs setBool:self.repeatSwitch.isOn forKey:kLastRepeatSwitchState];
+}
+
 
 - (void)refreshInterface
 {
@@ -235,19 +281,21 @@ NSNumberFormatter *__formatter = nil;
 }
 
 
-- (void)disableSliders
+- (void)disableControls
 {
 	self.startFrequencySlider.enabled = NO;
 	self.endFrequencySlider.enabled = NO;
 	self.durationSlider.enabled = NO;
+	self.repeatSwitch.enabled = NO;
 }
 
 
-- (void)enableSliders
+- (void)enableControls
 {
 	self.startFrequencySlider.enabled = YES;
 	self.endFrequencySlider.enabled = YES;
 	self.durationSlider.enabled = YES;
+	self.repeatSwitch.enabled = YES;
 }
 
 

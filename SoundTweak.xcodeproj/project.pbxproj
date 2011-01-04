@@ -59,11 +59,12 @@
 		D519657E1292400B00D14563 /* sliderbackmax-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D519657C1292400B00D14563 /* sliderbackmax-small.png */; };
 		D519657F1292400B00D14563 /* sliderbackmin-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D519657D1292400B00D14563 /* sliderbackmin-small.png */; };
 		D52B922A1290FFB100021E68 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D52B92291290FFB100021E68 /* NSString+Additions.m */; };
-		D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = D531BF53127DB97F0053ABCA /* Default-Landscape.png */; };
 		D532A519127BB4D500F753E2 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A510127BB4D500F753E2 /* volume_down.png */; };
 		D532A51A127BB4D500F753E2 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A511127BB4D500F753E2 /* volume_up.png */; };
-		D5346529127DB8AE0063D06E /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = D5346528127DB8AE0063D06E /* Default-Portrait.png */; };
+		D5346529127DB8AE0063D06E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D5346528127DB8AE0063D06E /* Default.png */; };
 		D566984A1283C232004398AF /* ToneController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56698491283C232004398AF /* ToneController.m */; };
+		D5E0DDA812D2D7F9008851FC /* ShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E0DDA712D2D7F9008851FC /* ShareController.m */; };
+		D5E0DDB412D2D8EC008851FC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E0DDB312D2D8EC008851FC /* MessageUI.framework */; };
 		D5E47063127D2DAC00BA3DD6 /* ToneGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E47061127D2DAC00BA3DD6 /* ToneGeneratorViewController.m */; };
 		D5E47064127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */; };
 		D5E4707B127DA55E00BA3DD6 /* AudioControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.m */; };
@@ -78,8 +79,8 @@
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/NIBs/MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* SoundTweak_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTweak_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* SoundTweak-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SoundTweak-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		C416DDC01290A997005FDAC0 /* pausebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausebutton.png; sourceTree = "<group>"; };
 		C416DDC61290ABD1005FDAC0 /* meteroverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meteroverlay.png; sourceTree = "<group>"; };
 		C416DDCB1290B1A0005FDAC0 /* volumeknob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volumeknob.png; sourceTree = "<group>"; };
@@ -138,12 +139,14 @@
 		D519657D1292400B00D14563 /* sliderbackmin-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliderbackmin-small.png"; sourceTree = "<group>"; };
 		D52B92281290FFB100021E68 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		D52B92291290FFB100021E68 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
-		D531BF53127DB97F0053ABCA /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		D532A510127BB4D500F753E2 /* volume_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_down.png; sourceTree = "<group>"; };
 		D532A511127BB4D500F753E2 /* volume_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_up.png; sourceTree = "<group>"; };
-		D5346528127DB8AE0063D06E /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		D5346528127DB8AE0063D06E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D56698481283C232004398AF /* ToneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneController.h; sourceTree = "<group>"; };
 		D56698491283C232004398AF /* ToneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneController.m; sourceTree = "<group>"; };
+		D5E0DDA612D2D7F9008851FC /* ShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareController.h; sourceTree = "<group>"; };
+		D5E0DDA712D2D7F9008851FC /* ShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareController.m; sourceTree = "<group>"; };
+		D5E0DDB312D2D8EC008851FC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D5E47060127D2DAC00BA3DD6 /* ToneGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneGeneratorViewController.h; sourceTree = "<group>"; };
 		D5E47061127D2DAC00BA3DD6 /* ToneGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneGeneratorViewController.m; sourceTree = "<group>"; };
 		D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToneGeneratorViewController.xib; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 				C465D578127A5F3000639357 /* AudioToolbox.framework in Frameworks */,
 				C465D59C127A5F3700639357 /* QuartzCore.framework in Frameworks */,
 				C465D59E127A5F4100639357 /* OpenGLES.framework in Frameworks */,
+				D5E0DDB412D2D8EC008851FC /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +212,7 @@
 			children = (
 				C465D661127A669700639357 /* MeterTable.h */,
 				C465D662127A669700639357 /* MeterTable.cpp */,
-				32CA4F630368D1EE00C91783 /* SoundTweak_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -219,7 +223,7 @@
 			children = (
 				D532A508127BB4D500F753E2 /* images */,
 				D532A52E127BB88F00F753E2 /* NIBs */,
-				8D1107310486CEB800E47090 /* SoundTweak-Info.plist */,
+				8D1107310486CEB800E47090 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -234,6 +238,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				D5E0DDB312D2D8EC008851FC /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -269,13 +274,12 @@
 			name = "Required Icons";
 			sourceTree = "<group>";
 		};
-		D513927812CA6BF0003451C1 /* Splash screen images */ = {
+		D513927812CA6BF0003451C1 /* Splash screen image */ = {
 			isa = PBXGroup;
 			children = (
-				D531BF53127DB97F0053ABCA /* Default-Landscape.png */,
-				D5346528127DB8AE0063D06E /* Default-Portrait.png */,
+				D5346528127DB8AE0063D06E /* Default.png */,
 			);
-			name = "Splash screen images";
+			name = "Splash screen image";
 			sourceTree = "<group>";
 		};
 		D513929A12CA6D23003451C1 /* Tab Icons */ = {
@@ -321,7 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				D513927612CA6BE4003451C1 /* Required Icons */,
-				D513927812CA6BF0003451C1 /* Splash screen images */,
+				D513927812CA6BF0003451C1 /* Splash screen image */,
 				D513929A12CA6D23003451C1 /* Tab Icons */,
 				D519657C1292400B00D14563 /* sliderbackmax-small.png */,
 				D519657D1292400B00D14563 /* sliderbackmin-small.png */,
@@ -387,6 +391,8 @@
 		D56698451283C1E8004398AF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D5E0DDA612D2D7F9008851FC /* ShareController.h */,
+				D5E0DDA712D2D7F9008851FC /* ShareController.m */,
 				D56698481283C232004398AF /* ToneController.h */,
 				D56698491283C232004398AF /* ToneController.m */,
 			);
@@ -418,6 +424,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Evan Hamilton";
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SoundTweak" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -447,8 +456,7 @@
 				D532A51A127BB4D500F753E2 /* volume_up.png in Resources */,
 				D5E47064127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib in Resources */,
 				D5E4707C127DA55E00BA3DD6 /* AudioControlsViewController.xib in Resources */,
-				D5346529127DB8AE0063D06E /* Default-Portrait.png in Resources */,
-				D531BF54127DB97F0053ABCA /* Default-Landscape.png in Resources */,
+				D5346529127DB8AE0063D06E /* Default.png in Resources */,
 				C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */,
 				C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */,
 				C4571E15127E6A130070147C /* PlaylistViewController.xib in Resources */,
@@ -506,6 +514,7 @@
 				D52B922A1290FFB100021E68 /* NSString+Additions.m in Sources */,
 				D51965401292374B00D14563 /* STSmallSlider.m in Sources */,
 				D51392DA12CA70AB003451C1 /* STSweep.m in Sources */,
+				D5E0DDA812D2D7F9008851FC /* ShareController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,8 +529,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SoundTweak_Prefix.pch;
-				INFOPLIST_FILE = "SoundTweak-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = SoundTweak;
 			};
 			name = Debug;
@@ -532,8 +541,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = SoundTweak_Prefix.pch;
-				INFOPLIST_FILE = "SoundTweak-Info.plist";
+				GCC_PREFIX_HEADER = Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = SoundTweak;
 				VALIDATE_PRODUCT = YES;
 			};

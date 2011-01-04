@@ -15,8 +15,9 @@
 #define kLastSweepStartFrequency @"lastSweepStartFrequency"
 #define kLastSweepEndFrequency @"lastSweepEndFrequency"
 #define kLastSweepDuration @"lastSweepDuration"
+#define kLastRepeatSwitchState @"lastRepeatSwitchState"
 
-//Global defines
 #define MAX_FREQUENCY 20000.
 #define MIN_FREQUENCY 20.
-#define DEFAULT_FREQUENCY 1000
+#define DEFAULT_FREQUENCY 1000.
+#define DEFAULT_REPEAT_SWITCH_STATE YES

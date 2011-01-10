@@ -33,7 +33,7 @@
 	
 	//initialize the audio controls view (top half of the screen)
 	self.controlsViewController = [AudioControlsViewController sharedInstance];
-	self.controlsViewController.view.frame = CGRectMake(0, 20, 768, 533);
+	self.controlsViewController.view.frame = CGRectMake(0, 20, 768, 433);
 	
 	//initialize each view controller that will be a tab in the tab bar controller
 	SweepGeneratorViewController *sweep = [[[SweepGeneratorViewController alloc] initWithNibName:@"SweepGeneratorViewController" bundle:nil] autorelease];
@@ -43,7 +43,7 @@
 	SupportViewController *support = [[[SupportViewController alloc] initWithNibName:@"SupportViewController" bundle:nil] autorelease];
 	
 	//set the tab bar controller's view to the bottom half of the screen
-	self.tabBarController.view.frame = CGRectMake(0, 530, 768, 471);
+	self.tabBarController.view.frame = CGRectMake(0, 433, 768, 519);
 	
 	//create an array out of the view controllers and give them to the tab bar controller
 	self.tabBarController.viewControllers = [NSArray arrayWithObjects:sweep, tone, pink, playlist, support, nil];

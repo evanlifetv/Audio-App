@@ -19,6 +19,7 @@
 		C4232E5F12837EDE00F5A4A6 /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4232E5C12837EDE00F5A4A6 /* SupportViewController.m */; };
 		C4232E6012837EDE00F5A4A6 /* SweepGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.m */; };
 		C428343012837BBF003A165D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C428342F12837BBF003A165D /* Icon.png */; };
+		C4376ED212E373E00033587D /* CustomUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4376ED112E373E00033587D /* CustomUITabBarController.m */; };
 		C43824491290FFAB00E3C231 /* playlistbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C43824481290FFAB00E3C231 /* playlistbackground.png */; };
 		C438244C1290FFE900E3C231 /* pinknoisebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C438244B1290FFE900E3C231 /* pinknoisebackground.png */; };
 		C4499125127F7C4D009FD582 /* pinknoise.png in Resources */ = {isa = PBXBuildFile; fileRef = C4499120127F7C4D009FD582 /* pinknoise.png */; };
@@ -88,6 +89,8 @@
 		C4232E5D12837EDE00F5A4A6 /* SweepGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SweepGeneratorViewController.h; sourceTree = "<group>"; };
 		C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SweepGeneratorViewController.m; sourceTree = "<group>"; };
 		C428342F12837BBF003A165D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C4376ECE12E3736B0033587D /* CustomUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUITabBarController.h; sourceTree = "<group>"; };
+		C4376ED112E373E00033587D /* CustomUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUITabBarController.m; sourceTree = "<group>"; };
 		C43824481290FFAB00E3C231 /* playlistbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playlistbackground.png; sourceTree = "<group>"; };
 		C438244B1290FFE900E3C231 /* pinknoisebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinknoisebackground.png; sourceTree = "<group>"; };
 		C4499120127F7C4D009FD582 /* pinknoise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinknoise.png; sourceTree = "<group>"; };
@@ -389,6 +392,8 @@
 				D5E0DDA712D2D7F9008851FC /* ShareController.m */,
 				D56698481283C232004398AF /* ToneController.h */,
 				D56698491283C232004398AF /* ToneController.m */,
+				C4376ED112E373E00033587D /* CustomUITabBarController.m */,
+				C4376ECE12E3736B0033587D /* CustomUITabBarController.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				D51965401292374B00D14563 /* STSmallSlider.m in Sources */,
 				D51392DA12CA70AB003451C1 /* STSweep.m in Sources */,
 				D5E0DDA812D2D7F9008851FC /* ShareController.m in Sources */,
+				C4376ED212E373E00033587D /* CustomUITabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

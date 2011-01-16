@@ -38,7 +38,7 @@
 {
 	[super viewWillAppear:animated];
 	
-	self.tabBarController.view.frame = CGRectMake(0, 0, 768, 1024);
+	self.tabBarController.view.frame = CGRectMake(0, 0, kIPadFullWidth, kIPadFullHeight);
 }
 
 
@@ -46,7 +46,8 @@
 {
 	[super viewWillDisappear:animated];
 	
-	self.tabBarController.view.frame = CGRectMake(0, 530, 768, 494);
+	//set the tab bar controller's view to the bottom half of the screen
+	self.tabBarController.view.frame = CGRectMake(0, kStatusBarHeight + kControlsViewHeight - 1., kIPadFullWidth, kIPadFullHeight - kStatusBarHeight - kControlsViewHeight);
 }
 
 

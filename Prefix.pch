@@ -21,3 +21,10 @@
 #define MIN_FREQUENCY 20.
 #define DEFAULT_FREQUENCY 1000.
 #define DEFAULT_REPEAT_SWITCH_STATE YES
+
+#define kStatusBarHeight 20.
+#define kIPadFullWidth 768.
+#define kIPadFullHeight 1024.
+
+#define kControlsViewHeight 433.
+

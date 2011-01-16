@@ -28,9 +28,9 @@
     
 	self.window.backgroundColor = [UIColor blackColor];
 	
-	
+	UIImageView *img = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"meteroverlay.png"]] autorelease];
+    [self.tabBarController.tabBar insertSubview:img atIndex:0];
 
-	
 	//initialize the audio controls view (top half of the screen)
 	self.controlsViewController = [AudioControlsViewController sharedInstance];
 	self.controlsViewController.view.frame = CGRectMake(0, kStatusBarHeight, kIPadFullWidth, kControlsViewHeight);

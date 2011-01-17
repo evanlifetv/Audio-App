@@ -61,9 +61,11 @@
 		D532A519127BB4D500F753E2 /* volume_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A510127BB4D500F753E2 /* volume_down.png */; };
 		D532A51A127BB4D500F753E2 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A511127BB4D500F753E2 /* volume_up.png */; };
 		D5346529127DB8AE0063D06E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D5346528127DB8AE0063D06E /* Default.png */; };
+		D53F537812E3AAF7000BE052 /* MusicPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F537712E3AAF7000BE052 /* MusicPlayerController.m */; };
 		D566984A1283C232004398AF /* ToneController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56698491283C232004398AF /* ToneController.m */; };
 		D5E0DDA812D2D7F9008851FC /* ShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E0DDA712D2D7F9008851FC /* ShareController.m */; };
 		D5E0DDB412D2D8EC008851FC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E0DDB312D2D8EC008851FC /* MessageUI.framework */; };
+		D5E0DE1F12D2E75F008851FC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E0DE1E12D2E75F008851FC /* MediaPlayer.framework */; };
 		D5E47063127D2DAC00BA3DD6 /* ToneGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E47061127D2DAC00BA3DD6 /* ToneGeneratorViewController.m */; };
 		D5E47064127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */; };
 		D5E4707B127DA55E00BA3DD6 /* AudioControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.m */; };
@@ -140,11 +142,14 @@
 		D532A510127BB4D500F753E2 /* volume_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_down.png; sourceTree = "<group>"; };
 		D532A511127BB4D500F753E2 /* volume_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_up.png; sourceTree = "<group>"; };
 		D5346528127DB8AE0063D06E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D53F537612E3AAF7000BE052 /* MusicPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayerController.h; sourceTree = "<group>"; };
+		D53F537712E3AAF7000BE052 /* MusicPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerController.m; sourceTree = "<group>"; };
 		D56698481283C232004398AF /* ToneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneController.h; sourceTree = "<group>"; };
 		D56698491283C232004398AF /* ToneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneController.m; sourceTree = "<group>"; };
 		D5E0DDA612D2D7F9008851FC /* ShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareController.h; sourceTree = "<group>"; };
 		D5E0DDA712D2D7F9008851FC /* ShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareController.m; sourceTree = "<group>"; };
 		D5E0DDB312D2D8EC008851FC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D5E0DE1E12D2E75F008851FC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D5E47060127D2DAC00BA3DD6 /* ToneGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneGeneratorViewController.h; sourceTree = "<group>"; };
 		D5E47061127D2DAC00BA3DD6 /* ToneGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneGeneratorViewController.m; sourceTree = "<group>"; };
 		D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToneGeneratorViewController.xib; sourceTree = "<group>"; };
@@ -166,6 +171,7 @@
 				C465D59C127A5F3700639357 /* QuartzCore.framework in Frameworks */,
 				C465D59E127A5F4100639357 /* OpenGLES.framework in Frameworks */,
 				D5E0DDB412D2D8EC008851FC /* MessageUI.framework in Frameworks */,
+				D5E0DE1F12D2E75F008851FC /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +243,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				D5E0DDB312D2D8EC008851FC /* MessageUI.framework */,
+				D5E0DE1E12D2E75F008851FC /* MediaPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -388,6 +395,8 @@
 		D56698451283C1E8004398AF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D53F537612E3AAF7000BE052 /* MusicPlayerController.h */,
+				D53F537712E3AAF7000BE052 /* MusicPlayerController.m */,
 				D5E0DDA612D2D7F9008851FC /* ShareController.h */,
 				D5E0DDA712D2D7F9008851FC /* ShareController.m */,
 				D56698481283C232004398AF /* ToneController.h */,
@@ -511,6 +520,7 @@
 				D51965401292374B00D14563 /* STSmallSlider.m in Sources */,
 				D51392DA12CA70AB003451C1 /* STSweep.m in Sources */,
 				D5E0DDA812D2D7F9008851FC /* ShareController.m in Sources */,
+				D53F537812E3AAF7000BE052 /* MusicPlayerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

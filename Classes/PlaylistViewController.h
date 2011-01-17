@@ -2,15 +2,18 @@
 //  PlaylistViewController.h
 //  SoundTweak
 //
-//  Created by Evan Hamilton on 10/31/10.
+//  Created by Bryan Montz on 10/31/10.
 //  Copyright 2010 Evan Hamilton. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 
-@interface PlaylistViewController : UIViewController {
+@interface PlaylistViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
 
+	UITableView				*_tableView;
 }
+
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 @end

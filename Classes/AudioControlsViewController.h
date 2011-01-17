@@ -19,6 +19,7 @@
 
 //instance methods
 - (float)volume;
+- (IBAction)volumeSliderChanged;
 - (IBAction)playButtonPressed;
 
 @end

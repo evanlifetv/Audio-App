@@ -2,8 +2,10 @@
 #import "AudioControlsViewController.h"
 #import "SweepGeneratorViewController.h"
 #import "ToneGeneratorViewController.h"
+#import "PlaylistViewController.h"
 #import "ToneController.h"
 #import "STSweep.h"
+#import "MusicPlayerController.h"
 
 
 @interface AudioControlsViewController()
@@ -49,8 +51,23 @@
 	self.audioTitleSlider.value = 0.0;
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(applicationDidEnterBackground)
+												 name:UIApplicationDidEnterBackgroundNotification
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(controllerDidStop)
 												 name:kToneControllerDidStop
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(musicPlayerControllerDidSelectNewSong)
+												 name:kMusicPlayerControllerDidSelectNewSongNotification
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(musicPlayerControllerDidStop)
+												 name:kMusicPlayerControllerDidStopNotification
 											   object:nil];
 }
 
@@ -90,11 +107,16 @@
 #pragma mark -
 #pragma mark Actions
 
+- (IBAction)volumeSliderChanged
+{
+	[[MusicPlayerController sharedInstance] musicPlayer].volume = self.volumeSlider.value;
+}
+
+
 - (IBAction)playButtonPressed
 {
-	self.playButton.selected = !self.playButton.selected;
-	
 	if ([self.visibleViewController isKindOfClass:[SweepGeneratorViewController class]]) {
+		self.playButton.selected = !self.playButton.selected;
 		if ([[ToneController sharedInstance] isSweeping]) {
 			[[ToneController sharedInstance] pauseSweep];
 		} else {
@@ -105,9 +127,18 @@
 			}
 		}
 		
-	} else 
-		if ([self.visibleViewController isKindOfClass:[ToneGeneratorViewController class]]) {
+	}
+	else if ([self.visibleViewController isKindOfClass:[ToneGeneratorViewController class]]) {
+		self.playButton.selected = !self.playButton.selected;
 		[[ToneController sharedInstance] togglePlay];
+		
+	}
+	else if ([self.visibleViewController isKindOfClass:[PlaylistViewController class]]) {
+		if ([[MusicPlayerController sharedInstance] currentItem]) {
+			//this prevents switching the play/pause button to pause state if no song is selected
+			self.playButton.selected = !self.playButton.selected;
+		}
+		[[MusicPlayerController sharedInstance] togglePlay];
 	}
 }
 
@@ -131,11 +162,27 @@
 #pragma mark -
 #pragma mark Notification responses
 
+- (void)applicationDidEnterBackground
+{
+	self.playButton.selected = NO;
+}
+
+
 - (void)controllerDidStop
 {
 	self.playButton.selected = NO;
 }
 
 
+- (void)musicPlayerControllerDidSelectNewSong
+{
+	self.playButton.selected = NO;
+}
+
+
+- (void)musicPlayerControllerDidStop
+{
+	self.playButton.selected = NO;
+}
 
 @end

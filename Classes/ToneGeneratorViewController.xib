@@ -41,13 +41,13 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">tonegenerator.png</string>
+							<string key="NSResourceName">tab-background.png</string>
 						</object>
 					</object>
 					<object class="IBUILabel" id="670298321">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{48, 72}, {655, 36}}</string>
+						<string key="NSFrame">{{57, 45}, {655, 36}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="349890377"/>
@@ -56,18 +56,15 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Tone Generator</string>
+						<string key="IBUIText">TONE GENERATOR</string>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
+							<string key="NSName">LucidaGrande-Bold</string>
 							<double key="NSSize">25</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAxIDEAA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="743241346">
-								<int key="NSID">1</int>
-							</object>
+							<bytes key="NSRGB">MC42MDAwMDAwMjM4IDAuNjAwMDAwMDIzOCAwLjYwMDAwMDAyMzgAA</bytes>
 						</object>
 						<object class="NSColor" key="IBUIHighlightedColor" id="123034383">
 							<int key="NSColorSpace">3</int>
@@ -80,7 +77,7 @@
 					<object class="IBUITextView" id="349890377">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{67, 189}, {225, 260}}</string>
+						<string key="NSFrame">{{63, 114}, {235, 356}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="942818628"/>
@@ -129,7 +126,9 @@
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
-							<reference key="NSCustomColorSpace" ref="743241346"/>
+							<object class="NSColorSpace" key="NSCustomColorSpace" id="743241346">
+								<int key="NSID">1</int>
+							</object>
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -231,11 +230,11 @@
 						<reference key="object" ref="327397386"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="191138686"/>
-							<reference ref="349890377"/>
 							<reference ref="309870023"/>
 							<reference ref="942818628"/>
 							<reference ref="454115552"/>
 							<reference ref="670298321"/>
+							<reference ref="349890377"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -346,7 +345,7 @@
 		<nil key="IBDocument.LastKnownRelativeProjectPath"/>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">tonegenerator.png</string>
+			<string key="NS.key.0">tab-background.png</string>
 			<string key="NS.object.0">{768, 522}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">106</string>

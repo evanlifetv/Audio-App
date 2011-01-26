@@ -2,13 +2,13 @@
 #import "SupportViewController.h"
 #import "ShareController.h"
 
-#define WEB_SUPPORT_URL_STRING @"http://www.google.com"
-#define EMAIL_SUPPORT_ADDRESS @"evan.hamilton@lifechurch.tv"
+#define WEB_SUPPORT_URL_STRING @"http://soundtweakapp.com/"
+#define EMAIL_SUPPORT_ADDRESS @"evan@evanhamilton.tv"
 #define EMAIL_SUPPORT_SUBJECT @"Question About SoundTweak"
-#define BUG_REPORT_ADDRESS @"evan.hamilton@lifechurch.tv"
+#define BUG_REPORT_ADDRESS @"evan@evanhamilton.tv"
 #define BUG_REPORT_SUBJECT @"Bug Report"
 #define BUG_REPORT_BODY @"What I expected:\n\n\nWhat I saw:\n\n\nSteps to repeat:"
-#define FEATURE_REQUEST_ADDRESS @"evan.hamilton@lifechurch.tv"
+#define FEATURE_REQUEST_ADDRESS @"evan@evanhamilton.tv"
 #define FEATURE_REQUEST_SUBJECT @"Feature Request"
 
 @implementation SupportViewController

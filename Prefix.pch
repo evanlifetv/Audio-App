@@ -17,6 +17,8 @@
 #define kLastSweepDuration @"lastSweepDuration"
 #define kLastRepeatSwitchState @"lastRepeatSwitchState"
 
+#define kLastVolumeValue @"lastVolumeValue"
+
 #define MAX_FREQUENCY 20000.
 #define MIN_FREQUENCY 20.
 #define DEFAULT_FREQUENCY 1000.

@@ -6,19 +6,39 @@
 #import "ToneController.h"
 #import "STSweep.h"
 #import "MusicPlayerController.h"
-
+#import <MediaPlayer/MediaPlayer.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface AudioControlsViewController()
+- (void)beginObserving;
 - (void)generateSweep;
+- (void)setDeviceVolume:(float)newVolume;
 @end
 
 
 @implementation AudioControlsViewController
 
 @synthesize playButton = _playButton;
+@synthesize muteButton = _muteButton;
 @synthesize volumeSlider = _volumeSlider;
 @synthesize visibleViewController = _visibleViewController;
 @synthesize audioTitleSlider = _audioTitleSlider;
+
+
+//callback function for when user changes volume via device hardware buttons
+void deviceVolumeDidChange (void                      *inUserData,
+							AudioSessionPropertyID    inID,
+							UInt32                    inDataSize,
+							const void                *inData)
+{
+	AudioControlsViewController *vc = (AudioControlsViewController*)inUserData;
+	
+	float newGain = *(float *)inData;
+		
+	if (newGain > 0.) {
+		vc.muteButton.selected = NO;
+	}
+}
 
 
 + (AudioControlsViewController*)sharedInstance
@@ -26,7 +46,7 @@
 	static AudioControlsViewController *sharedInstance;
 	@synchronized(self) {
 		if (!sharedInstance) {
-			sharedInstance = [[AudioControlsViewController alloc] initWithNibName:@"AudioControlsViewController" bundle:nil];
+			sharedInstance = [[AudioControlsViewController alloc] init];
 		}
 	}
 	return sharedInstance;
@@ -49,6 +69,63 @@
 	self.audioTitleSlider.maximumValue = 100.0;
 	self.audioTitleSlider.continuous = YES;
 	self.audioTitleSlider.value = 0.0;
+	
+	//volume slider
+	MPVolumeView *aVolumeView = [[[MPVolumeView alloc] initWithFrame:CGRectMake(90., 353., 434., 23.)] autorelease];
+	
+	UISlider *slider = nil;
+	for (UIView *aView in aVolumeView.subviews) {
+		if ([aView isKindOfClass:[UISlider class]]) {
+			slider = (UISlider*)aView;
+			break;
+		}
+	}
+	
+	//skin the built-in UISlider how we want it
+	slider.backgroundColor = [UIColor clearColor];	
+	[slider setThumbImage: [UIImage imageNamed:@"sliderthumb-small.png"] forState:UIControlStateNormal];
+	[slider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
+	[slider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
+	[slider addTarget:self action:@selector(volumeSliderChanged) forControlEvents:UIControlEventValueChanged];
+	self.volumeSlider = slider;
+	
+	[self.view addSubview:aVolumeView];
+	
+	[self beginObserving];
+}
+
+
+#pragma mark -
+#pragma mark Memory management
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    
+	self.playButton = nil;
+	self.muteButton = nil;
+	self.volumeSlider = nil;
+	self.audioTitleSlider = nil;
+}
+
+
+- (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
+	[_playButton release];
+	[_muteButton release];
+	[_volumeSlider release];
+    [_visibleViewController release];
+	[_audioTitleSlider release];
+	
+    [super dealloc];
+}
+
+
+- (void)beginObserving
+{
+	AudioSessionAddPropertyListener (kAudioSessionProperty_CurrentHardwareOutputVolume,
+									 deviceVolumeDidChange,
+									 self);
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(applicationDidEnterBackground)
@@ -73,29 +150,6 @@
 
 
 #pragma mark -
-#pragma mark Memory management
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    
-	self.playButton = nil;
-	self.volumeSlider = nil;
-	self.audioTitleSlider = nil;
-}
-
-
-- (void)dealloc {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	
-	[_playButton release], _playButton = nil;
-	[_volumeSlider release], _volumeSlider = nil;
-    [_visibleViewController release], _visibleViewController = nil;
-	[_audioTitleSlider release], _audioTitleSlider = nil;
-    [super dealloc];
-}
-
-
-#pragma mark -
 #pragma mark Accessors
 
 - (float)volume
@@ -109,7 +163,9 @@
 
 - (IBAction)volumeSliderChanged
 {
-	[[MusicPlayerController sharedInstance] musicPlayer].volume = self.volumeSlider.value;
+	if (self.volumeSlider.value > 0.) {
+		self.muteButton.selected = NO;
+	}
 }
 
 
@@ -143,6 +199,38 @@
 }
 
 
+- (IBAction)muteButtonPressed
+{
+	self.muteButton.selected = !self.muteButton.selected;
+	
+	if (self.muteButton.selected) {
+		//user wants to mute
+		
+		//remember the volume before muting
+		UInt32 dataSize = sizeof(float);
+		float currentVolume = 0.0;
+		
+		AudioSessionGetProperty(kAudioSessionProperty_CurrentHardwareOutputVolume,
+								&dataSize,
+								&currentVolume);
+				
+		[[NSUserDefaults standardUserDefaults] setFloat:currentVolume forKey:kLastVolumeValue];
+		
+		[self setDeviceVolume:0.];
+		[self.volumeSlider setValue:0.];
+		[[MusicPlayerController sharedInstance] setVolume:0.];
+	}
+	else {
+		//user wants to un-mute
+		float resumeVolume = [[NSUserDefaults standardUserDefaults] floatForKey:kLastVolumeValue];
+		
+		[self setDeviceVolume:resumeVolume];
+		[self.volumeSlider setValue:resumeVolume];
+		[[MusicPlayerController sharedInstance] setVolume:resumeVolume];
+	}
+}
+
+
 - (void)generateSweep
 {
 	SweepGeneratorViewController *vc = (SweepGeneratorViewController*)self.visibleViewController;
@@ -156,6 +244,14 @@
 	[[ToneController sharedInstance] performSelectorInBackground:@selector(playSweep:)
 													  withObject:sweep];
 
+}
+
+
+- (void)setDeviceVolume:(float)newVolume
+{
+	AudioSessionSetProperty(kAudioSessionProperty_CurrentHardwareOutputVolume,
+							sizeof(newVolume),
+							&newVolume);
 }
 
 

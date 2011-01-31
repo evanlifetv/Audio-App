@@ -29,6 +29,7 @@
 - (void)selectSongAtIndex:(NSInteger)index;
 - (NSString*)titleForSongAtIndex:(NSInteger)index;
 - (void)togglePlay;
+- (void)setVolume:(float)newVolume;
 
 @end
 

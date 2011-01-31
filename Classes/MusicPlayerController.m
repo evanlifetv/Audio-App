@@ -136,6 +136,12 @@ static MusicPlayerController *__sharedInstance = nil;
 }
 
 
+- (void)setVolume:(float)newVolume
+{
+	[self musicPlayer].volume = newVolume;
+}
+
+
 #pragma mark -
 #pragma mark Private methods
 

@@ -47,6 +47,7 @@
 		C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */; };
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
+		C4F44B6912FCBBC300DD7803 /* fft-mock.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F44B6812FCBBC300DD7803 /* fft-mock.png */; };
 		D51392DA12CA70AB003451C1 /* STSweep.m in Sources */ = {isa = PBXBuildFile; fileRef = D51392D912CA70AB003451C1 /* STSweep.m */; };
 		D51965401292374B00D14563 /* STSmallSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D519653F1292374B00D14563 /* STSmallSlider.m */; };
 		D519657E1292400B00D14563 /* sliderbackmax-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D519657C1292400B00D14563 /* sliderbackmax-small.png */; };
@@ -119,6 +120,7 @@
 		C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseViewController.m; sourceTree = "<group>"; };
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SweepGeneratorViewController.xib; sourceTree = "<group>"; };
 		C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinkNoiseViewController.xib; sourceTree = "<group>"; };
+		C4F44B6812FCBBC300DD7803 /* fft-mock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fft-mock.png"; sourceTree = "<group>"; };
 		D51392D812CA70AB003451C1 /* STSweep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSweep.h; sourceTree = "<group>"; };
 		D51392D912CA70AB003451C1 /* STSweep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSweep.m; sourceTree = "<group>"; };
 		D519653E1292374B00D14563 /* STSmallSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSmallSlider.h; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				C416DDC61290ABD1005FDAC0 /* meteroverlay.png */,
 				C4751FA5128A1A2800BC216A /* controlbackground.png */,
 				C4751FD9128A202F00BC216A /* playbutton.png */,
+				C4F44B6812FCBBC300DD7803 /* fft-mock.png */,
 				C416DDC01290A997005FDAC0 /* pausebutton.png */,
 				C45539301290EDE200FBC09A /* supportbackground.png */,
 				D532A510127BB4D500F753E2 /* volume_down.png */,
@@ -469,6 +472,7 @@
 				D519657F1292400B00D14563 /* sliderbackmin-small.png in Resources */,
 				C47A7ECB12EFB68900F619B0 /* tab-background.png in Resources */,
 				C47A7ECD12EFB69500F619B0 /* tab-bar-background.png in Resources */,
+				C4F44B6912FCBBC300DD7803 /* fft-mock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -71,7 +71,7 @@ void deviceVolumeDidChange (void                      *inUserData,
 	self.audioTitleSlider.value = 0.0;
 	
 	//volume slider
-	MPVolumeView *aVolumeView = [[[MPVolumeView alloc] initWithFrame:CGRectMake(90., 353., 434., 23.)] autorelease];
+	MPVolumeView *aVolumeView = [[[MPVolumeView alloc] initWithFrame:CGRectMake(90., 353., 482., 23.)] autorelease];
 	
 	UISlider *slider = nil;
 	for (UIView *aView in aVolumeView.subviews) {

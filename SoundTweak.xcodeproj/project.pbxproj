@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
-		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -40,10 +39,26 @@
 		C465D672127A671D00639357 /* CALevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = C465D66D127A671D00639357 /* CALevelMeter.mm */; };
 		C465D673127A671D00639357 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D66F127A671D00639357 /* GLLevelMeter.m */; };
 		C465D674127A671D00639357 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D671127A671D00639357 /* LevelMeter.m */; };
+		C47282B812FE6AC3000F52F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C47282A612FE6AC3000F52F5 /* main.m */; };
 		C4751FA6128A1A2800BC216A /* controlbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FA5128A1A2800BC216A /* controlbackground.png */; };
 		C4751FDA128A202F00BC216A /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FD9128A202F00BC216A /* playbutton.png */; };
+		C47657B712FE721D004645DE /* rad2fft.c in Sources */ = {isa = PBXBuildFile; fileRef = C47657B312FE721D004645DE /* rad2fft.c */; };
+		C47657B812FE721D004645DE /* SpectrumAnalysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47657B512FE721D004645DE /* SpectrumAnalysis.cpp */; };
+		C47657C212FE722E004645DE /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47657B912FE722E004645DE /* CADebugMacros.cpp */; };
+		C47657C412FE722E004645DE /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47657BE12FE722E004645DE /* CAStreamBasicDescription.cpp */; };
+		C47657C512FE722E004645DE /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47657C012FE722E004645DE /* CAXException.cpp */; };
 		C47A7ECB12EFB68900F619B0 /* tab-background.png in Resources */ = {isa = PBXBuildFile; fileRef = C47A7ECA12EFB68900F619B0 /* tab-background.png */; };
 		C47A7ECD12EFB69500F619B0 /* tab-bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = C47A7ECC12EFB69500F619B0 /* tab-bar-background.png */; };
+		C47F2AFE12FE710C0060901D /* fft_off.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AF812FE710C0060901D /* fft_off.png */; };
+		C47F2AFF12FE710C0060901D /* fft_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AF912FE710C0060901D /* fft_on.png */; };
+		C47F2B0012FE710C0060901D /* mute_off.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AFA12FE710C0060901D /* mute_off.png */; };
+		C47F2B0112FE710C0060901D /* mute_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AFB12FE710C0060901D /* mute_on.png */; };
+		C47F2B0212FE710C0060901D /* oscilloscope.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AFC12FE710C0060901D /* oscilloscope.png */; };
+		C47F2B0312FE710C0060901D /* sonogram.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AFD12FE710C0060901D /* sonogram.png */; };
+		C47F2B0712FE71310060901D /* aurio_helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47F2B0412FE71310060901D /* aurio_helper.cpp */; };
+		C47F2B0E12FE714E0060901D /* aurioTouchAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C47F2B0912FE714E0060901D /* aurioTouchAppDelegate.mm */; };
+		C47F2B0F12FE714E0060901D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F2B0B12FE714E0060901D /* EAGLView.m */; };
+		C47F2B1012FE714E0060901D /* FFTBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47F2B0C12FE714E0060901D /* FFTBufferManager.cpp */; };
 		C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */; };
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
@@ -74,7 +89,6 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/NIBs/MainWindow.xib; sourceTree = "<group>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		C416DDC01290A997005FDAC0 /* pausebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausebutton.png; sourceTree = "<group>"; };
@@ -112,10 +126,37 @@
 		C465D66F127A671D00639357 /* GLLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLevelMeter.m; sourceTree = "<group>"; };
 		C465D670127A671D00639357 /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
 		C465D671127A671D00639357 /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
+		C47282A612FE6AC3000F52F5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Downloads/aurioTouch/main.m; sourceTree = "<group>"; };
 		C4751FA5128A1A2800BC216A /* controlbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlbackground.png; sourceTree = "<group>"; };
 		C4751FD9128A202F00BC216A /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		C47657B312FE721D004645DE /* rad2fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rad2fft.c; sourceTree = "<group>"; };
+		C47657B412FE721D004645DE /* rad2fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rad2fft.h; sourceTree = "<group>"; };
+		C47657B512FE721D004645DE /* SpectrumAnalysis.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpectrumAnalysis.cpp; sourceTree = "<group>"; };
+		C47657B612FE721D004645DE /* SpectrumAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectrumAnalysis.h; sourceTree = "<group>"; };
+		C47657B912FE722E004645DE /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		C47657BA12FE722E004645DE /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		C47657BD12FE722E004645DE /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		C47657BE12FE722E004645DE /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		C47657BF12FE722E004645DE /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		C47657C012FE722E004645DE /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		C47657C112FE722E004645DE /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
 		C47A7ECA12EFB68900F619B0 /* tab-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-background.png"; sourceTree = "<group>"; };
 		C47A7ECC12EFB69500F619B0 /* tab-bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-bar-background.png"; sourceTree = "<group>"; };
+		C47F2AF812FE710C0060901D /* fft_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fft_off.png; sourceTree = "<group>"; };
+		C47F2AF912FE710C0060901D /* fft_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fft_on.png; sourceTree = "<group>"; };
+		C47F2AFA12FE710C0060901D /* mute_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mute_off.png; sourceTree = "<group>"; };
+		C47F2AFB12FE710C0060901D /* mute_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mute_on.png; sourceTree = "<group>"; };
+		C47F2AFC12FE710C0060901D /* oscilloscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oscilloscope.png; sourceTree = "<group>"; };
+		C47F2AFD12FE710C0060901D /* sonogram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sonogram.png; sourceTree = "<group>"; };
+		C47F2B0412FE71310060901D /* aurio_helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aurio_helper.cpp; path = Classes/aurio_helper.cpp; sourceTree = "<group>"; };
+		C47F2B0512FE71310060901D /* aurio_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aurio_helper.h; path = Classes/aurio_helper.h; sourceTree = "<group>"; };
+		C47F2B0612FE71310060901D /* aurioTouch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aurioTouch_Prefix.pch; path = Classes/aurioTouch_Prefix.pch; sourceTree = "<group>"; };
+		C47F2B0812FE714E0060901D /* aurioTouchAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aurioTouchAppDelegate.h; sourceTree = "<group>"; };
+		C47F2B0912FE714E0060901D /* aurioTouchAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = aurioTouchAppDelegate.mm; sourceTree = "<group>"; };
+		C47F2B0A12FE714E0060901D /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		C47F2B0B12FE714E0060901D /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		C47F2B0C12FE714E0060901D /* FFTBufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFTBufferManager.cpp; sourceTree = "<group>"; };
+		C47F2B0D12FE714E0060901D /* FFTBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTBufferManager.h; sourceTree = "<group>"; };
 		C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseViewController.h; sourceTree = "<group>"; };
 		C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseViewController.m; sourceTree = "<group>"; };
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SweepGeneratorViewController.xib; sourceTree = "<group>"; };
@@ -171,6 +212,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C47F2B0812FE714E0060901D /* aurioTouchAppDelegate.h */,
+				C47F2B0912FE714E0060901D /* aurioTouchAppDelegate.mm */,
+				C47F2B0A12FE714E0060901D /* EAGLView.h */,
+				C47F2B0B12FE714E0060901D /* EAGLView.m */,
+				C47F2B0C12FE714E0060901D /* FFTBufferManager.cpp */,
+				C47F2B0D12FE714E0060901D /* FFTBufferManager.h */,
 				D56698451283C1E8004398AF /* Controllers */,
 				D51393D212CA9E5F003451C1 /* Delegates */,
 				D51392D712CA7091003451C1 /* Models */,
@@ -204,10 +251,15 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C47282A112FE6AC3000F52F5 /* fft */,
+				C47282A212FE6AC3000F52F5 /* iPublicUtility */,
+				C47F2B0412FE71310060901D /* aurio_helper.cpp */,
+				C47F2B0512FE71310060901D /* aurio_helper.h */,
+				C47F2B0612FE71310060901D /* aurioTouch_Prefix.pch */,
+				C47282A612FE6AC3000F52F5 /* main.m */,
 				C465D661127A669700639357 /* MeterTable.h */,
 				C465D662127A669700639357 /* MeterTable.cpp */,
 				32CA4F630368D1EE00C91783 /* Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -249,6 +301,46 @@
 				C465D671127A671D00639357 /* LevelMeter.m */,
 			);
 			name = AudioViews;
+			sourceTree = "<group>";
+		};
+		C47282A112FE6AC3000F52F5 /* fft */ = {
+			isa = PBXGroup;
+			children = (
+				C47657B312FE721D004645DE /* rad2fft.c */,
+				C47657B412FE721D004645DE /* rad2fft.h */,
+				C47657B512FE721D004645DE /* SpectrumAnalysis.cpp */,
+				C47657B612FE721D004645DE /* SpectrumAnalysis.h */,
+			);
+			name = fft;
+			path = ../Downloads/aurioTouch/fft;
+			sourceTree = "<group>";
+		};
+		C47282A212FE6AC3000F52F5 /* iPublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				C47657B912FE722E004645DE /* CADebugMacros.cpp */,
+				C47657BA12FE722E004645DE /* CADebugMacros.h */,
+				C47657BD12FE722E004645DE /* CAMath.h */,
+				C47657BE12FE722E004645DE /* CAStreamBasicDescription.cpp */,
+				C47657BF12FE722E004645DE /* CAStreamBasicDescription.h */,
+				C47657C012FE722E004645DE /* CAXException.cpp */,
+				C47657C112FE722E004645DE /* CAXException.h */,
+			);
+			name = iPublicUtility;
+			path = ../Downloads/aurioTouch/iPublicUtility;
+			sourceTree = "<group>";
+		};
+		C47282C212FE6AFC000F52F5 /* Old FFT Images */ = {
+			isa = PBXGroup;
+			children = (
+				C47F2AF812FE710C0060901D /* fft_off.png */,
+				C47F2AF912FE710C0060901D /* fft_on.png */,
+				C47F2AFA12FE710C0060901D /* mute_off.png */,
+				C47F2AFB12FE710C0060901D /* mute_on.png */,
+				C47F2AFC12FE710C0060901D /* oscilloscope.png */,
+				C47F2AFD12FE710C0060901D /* sonogram.png */,
+			);
+			name = "Old FFT Images";
 			sourceTree = "<group>";
 		};
 		D513913112CA5AAA003451C1 /* Views */ = {
@@ -319,6 +411,7 @@
 		D532A508127BB4D500F753E2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C47282C212FE6AFC000F52F5 /* Old FFT Images */,
 				D513927612CA6BE4003451C1 /* Required Icons */,
 				D513927812CA6BF0003451C1 /* Splash screen image */,
 				D513929A12CA6D23003451C1 /* Tab Icons */,
@@ -473,6 +566,12 @@
 				C47A7ECB12EFB68900F619B0 /* tab-background.png in Resources */,
 				C47A7ECD12EFB69500F619B0 /* tab-bar-background.png in Resources */,
 				C4F44B6912FCBBC300DD7803 /* fft-mock.png in Resources */,
+				C47F2AFE12FE710C0060901D /* fft_off.png in Resources */,
+				C47F2AFF12FE710C0060901D /* fft_on.png in Resources */,
+				C47F2B0012FE710C0060901D /* mute_off.png in Resources */,
+				C47F2B0112FE710C0060901D /* mute_on.png in Resources */,
+				C47F2B0212FE710C0060901D /* oscilloscope.png in Resources */,
+				C47F2B0312FE710C0060901D /* sonogram.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +582,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				C465D663127A669700639357 /* MeterTable.cpp in Sources */,
 				C465D672127A671D00639357 /* CALevelMeter.mm in Sources */,
@@ -501,6 +599,16 @@
 				D51392DA12CA70AB003451C1 /* STSweep.m in Sources */,
 				D5E0DDA812D2D7F9008851FC /* ShareController.m in Sources */,
 				D53F537812E3AAF7000BE052 /* MusicPlayerController.m in Sources */,
+				C47282B812FE6AC3000F52F5 /* main.m in Sources */,
+				C47F2B0712FE71310060901D /* aurio_helper.cpp in Sources */,
+				C47F2B0E12FE714E0060901D /* aurioTouchAppDelegate.mm in Sources */,
+				C47F2B0F12FE714E0060901D /* EAGLView.m in Sources */,
+				C47F2B1012FE714E0060901D /* FFTBufferManager.cpp in Sources */,
+				C47657B712FE721D004645DE /* rad2fft.c in Sources */,
+				C47657B812FE721D004645DE /* SpectrumAnalysis.cpp in Sources */,
+				C47657C212FE722E004645DE /* CADebugMacros.cpp in Sources */,
+				C47657C412FE722E004645DE /* CAStreamBasicDescription.cpp in Sources */,
+				C47657C512FE722E004645DE /* CAXException.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

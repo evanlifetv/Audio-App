@@ -39,14 +39,8 @@
 		C465D672127A671D00639357 /* CALevelMeter.mm in Sources */ = {isa = PBXBuildFile; fileRef = C465D66D127A671D00639357 /* CALevelMeter.mm */; };
 		C465D673127A671D00639357 /* GLLevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D66F127A671D00639357 /* GLLevelMeter.m */; };
 		C465D674127A671D00639357 /* LevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = C465D671127A671D00639357 /* LevelMeter.m */; };
-		C47282B812FE6AC3000F52F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C47282A612FE6AC3000F52F5 /* main.m */; };
 		C4751FA6128A1A2800BC216A /* controlbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FA5128A1A2800BC216A /* controlbackground.png */; };
 		C4751FDA128A202F00BC216A /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FD9128A202F00BC216A /* playbutton.png */; };
-		C47657B712FE721D004645DE /* rad2fft.c in Sources */ = {isa = PBXBuildFile; fileRef = C47657B312FE721D004645DE /* rad2fft.c */; };
-		C47657B812FE721D004645DE /* SpectrumAnalysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47657B512FE721D004645DE /* SpectrumAnalysis.cpp */; };
-		C47657C212FE722E004645DE /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47657B912FE722E004645DE /* CADebugMacros.cpp */; };
-		C47657C412FE722E004645DE /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47657BE12FE722E004645DE /* CAStreamBasicDescription.cpp */; };
-		C47657C512FE722E004645DE /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47657C012FE722E004645DE /* CAXException.cpp */; };
 		C47A7ECB12EFB68900F619B0 /* tab-background.png in Resources */ = {isa = PBXBuildFile; fileRef = C47A7ECA12EFB68900F619B0 /* tab-background.png */; };
 		C47A7ECD12EFB69500F619B0 /* tab-bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = C47A7ECC12EFB69500F619B0 /* tab-bar-background.png */; };
 		C47F2AFE12FE710C0060901D /* fft_off.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AF812FE710C0060901D /* fft_off.png */; };
@@ -55,10 +49,6 @@
 		C47F2B0112FE710C0060901D /* mute_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AFB12FE710C0060901D /* mute_on.png */; };
 		C47F2B0212FE710C0060901D /* oscilloscope.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AFC12FE710C0060901D /* oscilloscope.png */; };
 		C47F2B0312FE710C0060901D /* sonogram.png in Resources */ = {isa = PBXBuildFile; fileRef = C47F2AFD12FE710C0060901D /* sonogram.png */; };
-		C47F2B0712FE71310060901D /* aurio_helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47F2B0412FE71310060901D /* aurio_helper.cpp */; };
-		C47F2B0E12FE714E0060901D /* aurioTouchAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C47F2B0912FE714E0060901D /* aurioTouchAppDelegate.mm */; };
-		C47F2B0F12FE714E0060901D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F2B0B12FE714E0060901D /* EAGLView.m */; };
-		C47F2B1012FE714E0060901D /* FFTBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47F2B0C12FE714E0060901D /* FFTBufferManager.cpp */; };
 		C4BA1185127DE668009D8053 /* PinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */; };
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
@@ -72,7 +62,14 @@
 		D532A51A127BB4D500F753E2 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A511127BB4D500F753E2 /* volume_up.png */; };
 		D5346529127DB8AE0063D06E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D5346528127DB8AE0063D06E /* Default.png */; };
 		D53F537812E3AAF7000BE052 /* MusicPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F537712E3AAF7000BE052 /* MusicPlayerController.m */; };
+		D5527B5F12F91061009FF400 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5527B5E12F91061009FF400 /* CoreAudio.framework */; };
 		D566984A1283C232004398AF /* ToneController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56698491283C232004398AF /* ToneController.m */; };
+		D5A94D3012F6821E0099038F /* NoiseGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A94D2F12F6821E0099038F /* NoiseGenerator.m */; };
+		D5BD0D3B12FE63E30013216D /* TBCController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BD0D3A12FE63E30013216D /* TBCController.m */; };
+		D5BD0D7D12FE6F3E0013216D /* button-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BD0D7A12FE6F3E0013216D /* button-normal.png */; };
+		D5BD0D7E12FE6F3E0013216D /* button-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BD0D7B12FE6F3E0013216D /* button-highlighted.png */; };
+		D5BD0D7F12FE6F3E0013216D /* mute-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BD0D7C12FE6F3E0013216D /* mute-selected.png */; };
+		D5BD0E1E12FE778B0013216D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BD0E1D12FE778B0013216D /* main.m */; };
 		D5E0DDA812D2D7F9008851FC /* ShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E0DDA712D2D7F9008851FC /* ShareController.m */; };
 		D5E0DDB412D2D8EC008851FC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E0DDB312D2D8EC008851FC /* MessageUI.framework */; };
 		D5E0DE1F12D2E75F008851FC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E0DE1E12D2E75F008851FC /* MediaPlayer.framework */; };
@@ -126,20 +123,8 @@
 		C465D66F127A671D00639357 /* GLLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLLevelMeter.m; sourceTree = "<group>"; };
 		C465D670127A671D00639357 /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
 		C465D671127A671D00639357 /* LevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeter.m; sourceTree = "<group>"; };
-		C47282A612FE6AC3000F52F5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Downloads/aurioTouch/main.m; sourceTree = "<group>"; };
 		C4751FA5128A1A2800BC216A /* controlbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlbackground.png; sourceTree = "<group>"; };
 		C4751FD9128A202F00BC216A /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
-		C47657B312FE721D004645DE /* rad2fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rad2fft.c; sourceTree = "<group>"; };
-		C47657B412FE721D004645DE /* rad2fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rad2fft.h; sourceTree = "<group>"; };
-		C47657B512FE721D004645DE /* SpectrumAnalysis.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpectrumAnalysis.cpp; sourceTree = "<group>"; };
-		C47657B612FE721D004645DE /* SpectrumAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectrumAnalysis.h; sourceTree = "<group>"; };
-		C47657B912FE722E004645DE /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
-		C47657BA12FE722E004645DE /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
-		C47657BD12FE722E004645DE /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
-		C47657BE12FE722E004645DE /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
-		C47657BF12FE722E004645DE /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
-		C47657C012FE722E004645DE /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
-		C47657C112FE722E004645DE /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
 		C47A7ECA12EFB68900F619B0 /* tab-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-background.png"; sourceTree = "<group>"; };
 		C47A7ECC12EFB69500F619B0 /* tab-bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-bar-background.png"; sourceTree = "<group>"; };
 		C47F2AF812FE710C0060901D /* fft_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fft_off.png; sourceTree = "<group>"; };
@@ -148,15 +133,6 @@
 		C47F2AFB12FE710C0060901D /* mute_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mute_on.png; sourceTree = "<group>"; };
 		C47F2AFC12FE710C0060901D /* oscilloscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oscilloscope.png; sourceTree = "<group>"; };
 		C47F2AFD12FE710C0060901D /* sonogram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sonogram.png; sourceTree = "<group>"; };
-		C47F2B0412FE71310060901D /* aurio_helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aurio_helper.cpp; path = Classes/aurio_helper.cpp; sourceTree = "<group>"; };
-		C47F2B0512FE71310060901D /* aurio_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aurio_helper.h; path = Classes/aurio_helper.h; sourceTree = "<group>"; };
-		C47F2B0612FE71310060901D /* aurioTouch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aurioTouch_Prefix.pch; path = Classes/aurioTouch_Prefix.pch; sourceTree = "<group>"; };
-		C47F2B0812FE714E0060901D /* aurioTouchAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aurioTouchAppDelegate.h; sourceTree = "<group>"; };
-		C47F2B0912FE714E0060901D /* aurioTouchAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = aurioTouchAppDelegate.mm; sourceTree = "<group>"; };
-		C47F2B0A12FE714E0060901D /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
-		C47F2B0B12FE714E0060901D /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
-		C47F2B0C12FE714E0060901D /* FFTBufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFTBufferManager.cpp; sourceTree = "<group>"; };
-		C47F2B0D12FE714E0060901D /* FFTBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTBufferManager.h; sourceTree = "<group>"; };
 		C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseViewController.h; sourceTree = "<group>"; };
 		C4BA1184127DE668009D8053 /* PinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseViewController.m; sourceTree = "<group>"; };
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SweepGeneratorViewController.xib; sourceTree = "<group>"; };
@@ -175,8 +151,17 @@
 		D5346528127DB8AE0063D06E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D53F537612E3AAF7000BE052 /* MusicPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayerController.h; sourceTree = "<group>"; };
 		D53F537712E3AAF7000BE052 /* MusicPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerController.m; sourceTree = "<group>"; };
+		D5527B5E12F91061009FF400 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		D56698481283C232004398AF /* ToneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneController.h; sourceTree = "<group>"; };
 		D56698491283C232004398AF /* ToneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneController.m; sourceTree = "<group>"; };
+		D5A94D2E12F6821E0099038F /* NoiseGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoiseGenerator.h; sourceTree = "<group>"; };
+		D5A94D2F12F6821E0099038F /* NoiseGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoiseGenerator.m; sourceTree = "<group>"; };
+		D5BD0D3912FE63E30013216D /* TBCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCController.h; sourceTree = "<group>"; };
+		D5BD0D3A12FE63E30013216D /* TBCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCController.m; sourceTree = "<group>"; };
+		D5BD0D7A12FE6F3E0013216D /* button-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-normal.png"; sourceTree = "<group>"; };
+		D5BD0D7B12FE6F3E0013216D /* button-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-highlighted.png"; sourceTree = "<group>"; };
+		D5BD0D7C12FE6F3E0013216D /* mute-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mute-selected.png"; sourceTree = "<group>"; };
+		D5BD0E1D12FE778B0013216D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D5E0DDA612D2D7F9008851FC /* ShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareController.h; sourceTree = "<group>"; };
 		D5E0DDA712D2D7F9008851FC /* ShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareController.m; sourceTree = "<group>"; };
 		D5E0DDB312D2D8EC008851FC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -203,6 +188,7 @@
 				C465D59E127A5F4100639357 /* OpenGLES.framework in Frameworks */,
 				D5E0DDB412D2D8EC008851FC /* MessageUI.framework in Frameworks */,
 				D5E0DE1F12D2E75F008851FC /* MediaPlayer.framework in Frameworks */,
+				D5527B5F12F91061009FF400 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,12 +198,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C47F2B0812FE714E0060901D /* aurioTouchAppDelegate.h */,
-				C47F2B0912FE714E0060901D /* aurioTouchAppDelegate.mm */,
-				C47F2B0A12FE714E0060901D /* EAGLView.h */,
-				C47F2B0B12FE714E0060901D /* EAGLView.m */,
-				C47F2B0C12FE714E0060901D /* FFTBufferManager.cpp */,
-				C47F2B0D12FE714E0060901D /* FFTBufferManager.h */,
 				D56698451283C1E8004398AF /* Controllers */,
 				D51393D212CA9E5F003451C1 /* Delegates */,
 				D51392D712CA7091003451C1 /* Models */,
@@ -251,13 +231,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C47282A112FE6AC3000F52F5 /* fft */,
-				C47282A212FE6AC3000F52F5 /* iPublicUtility */,
-				C47F2B0412FE71310060901D /* aurio_helper.cpp */,
-				C47F2B0512FE71310060901D /* aurio_helper.h */,
-				C47F2B0612FE71310060901D /* aurioTouch_Prefix.pch */,
-				C47282A612FE6AC3000F52F5 /* main.m */,
 				C465D661127A669700639357 /* MeterTable.h */,
+				D5BD0E1D12FE778B0013216D /* main.m */,
 				C465D662127A669700639357 /* MeterTable.cpp */,
 				32CA4F630368D1EE00C91783 /* Prefix.pch */,
 			);
@@ -286,6 +261,7 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				D5E0DDB312D2D8EC008851FC /* MessageUI.framework */,
 				D5E0DE1E12D2E75F008851FC /* MediaPlayer.framework */,
+				D5527B5E12F91061009FF400 /* CoreAudio.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,33 +277,6 @@
 				C465D671127A671D00639357 /* LevelMeter.m */,
 			);
 			name = AudioViews;
-			sourceTree = "<group>";
-		};
-		C47282A112FE6AC3000F52F5 /* fft */ = {
-			isa = PBXGroup;
-			children = (
-				C47657B312FE721D004645DE /* rad2fft.c */,
-				C47657B412FE721D004645DE /* rad2fft.h */,
-				C47657B512FE721D004645DE /* SpectrumAnalysis.cpp */,
-				C47657B612FE721D004645DE /* SpectrumAnalysis.h */,
-			);
-			name = fft;
-			path = ../Downloads/aurioTouch/fft;
-			sourceTree = "<group>";
-		};
-		C47282A212FE6AC3000F52F5 /* iPublicUtility */ = {
-			isa = PBXGroup;
-			children = (
-				C47657B912FE722E004645DE /* CADebugMacros.cpp */,
-				C47657BA12FE722E004645DE /* CADebugMacros.h */,
-				C47657BD12FE722E004645DE /* CAMath.h */,
-				C47657BE12FE722E004645DE /* CAStreamBasicDescription.cpp */,
-				C47657BF12FE722E004645DE /* CAStreamBasicDescription.h */,
-				C47657C012FE722E004645DE /* CAXException.cpp */,
-				C47657C112FE722E004645DE /* CAXException.h */,
-			);
-			name = iPublicUtility;
-			path = ../Downloads/aurioTouch/iPublicUtility;
 			sourceTree = "<group>";
 		};
 		C47282C212FE6AFC000F52F5 /* Old FFT Images */ = {
@@ -415,6 +364,9 @@
 				D513927612CA6BE4003451C1 /* Required Icons */,
 				D513927812CA6BF0003451C1 /* Splash screen image */,
 				D513929A12CA6D23003451C1 /* Tab Icons */,
+				D5BD0D7A12FE6F3E0013216D /* button-normal.png */,
+				D5BD0D7B12FE6F3E0013216D /* button-highlighted.png */,
+				D5BD0D7C12FE6F3E0013216D /* mute-selected.png */,
 				D519657C1292400B00D14563 /* sliderbackmax-small.png */,
 				D519657D1292400B00D14563 /* sliderbackmin-small.png */,
 				C4602AEE12910576002D4FEF /* sliderthumb-small.png */,
@@ -475,10 +427,14 @@
 			children = (
 				D53F537612E3AAF7000BE052 /* MusicPlayerController.h */,
 				D53F537712E3AAF7000BE052 /* MusicPlayerController.m */,
+				D5A94D2E12F6821E0099038F /* NoiseGenerator.h */,
+				D5A94D2F12F6821E0099038F /* NoiseGenerator.m */,
 				D5E0DDA612D2D7F9008851FC /* ShareController.h */,
 				D5E0DDA712D2D7F9008851FC /* ShareController.m */,
 				D56698481283C232004398AF /* ToneController.h */,
 				D56698491283C232004398AF /* ToneController.m */,
+				D5BD0D3912FE63E30013216D /* TBCController.h */,
+				D5BD0D3A12FE63E30013216D /* TBCController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -572,6 +528,9 @@
 				C47F2B0112FE710C0060901D /* mute_on.png in Resources */,
 				C47F2B0212FE710C0060901D /* oscilloscope.png in Resources */,
 				C47F2B0312FE710C0060901D /* sonogram.png in Resources */,
+				D5BD0D7D12FE6F3E0013216D /* button-normal.png in Resources */,
+				D5BD0D7E12FE6F3E0013216D /* button-highlighted.png in Resources */,
+				D5BD0D7F12FE6F3E0013216D /* mute-selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,16 +558,9 @@
 				D51392DA12CA70AB003451C1 /* STSweep.m in Sources */,
 				D5E0DDA812D2D7F9008851FC /* ShareController.m in Sources */,
 				D53F537812E3AAF7000BE052 /* MusicPlayerController.m in Sources */,
-				C47282B812FE6AC3000F52F5 /* main.m in Sources */,
-				C47F2B0712FE71310060901D /* aurio_helper.cpp in Sources */,
-				C47F2B0E12FE714E0060901D /* aurioTouchAppDelegate.mm in Sources */,
-				C47F2B0F12FE714E0060901D /* EAGLView.m in Sources */,
-				C47F2B1012FE714E0060901D /* FFTBufferManager.cpp in Sources */,
-				C47657B712FE721D004645DE /* rad2fft.c in Sources */,
-				C47657B812FE721D004645DE /* SpectrumAnalysis.cpp in Sources */,
-				C47657C212FE722E004645DE /* CADebugMacros.cpp in Sources */,
-				C47657C412FE722E004645DE /* CAStreamBasicDescription.cpp in Sources */,
-				C47657C512FE722E004645DE /* CAXException.cpp in Sources */,
+				D5A94D3012F6821E0099038F /* NoiseGenerator.m in Sources */,
+				D5BD0D3B12FE63E30013216D /* TBCController.m in Sources */,
+				D5BD0E1E12FE778B0013216D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

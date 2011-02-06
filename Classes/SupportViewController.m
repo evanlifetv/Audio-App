@@ -1,6 +1,7 @@
 
 #import "SupportViewController.h"
 #import "ShareController.h"
+#import "TBCController.h"
 
 #define WEB_SUPPORT_URL_STRING @"http://soundtweakapp.com/"
 #define EMAIL_SUPPORT_ADDRESS @"evan@evanhamilton.tv"
@@ -38,7 +39,7 @@
 {
 	[super viewWillAppear:animated];
 	
-	self.tabBarController.view.frame = CGRectMake(0, 0, kIPadFullWidth, kIPadFullHeight);
+	[[TBCController sharedTBCController] setToFullSize];
 }
 
 
@@ -47,7 +48,7 @@
 	[super viewWillDisappear:animated];
 	
 	//set the tab bar controller's view to the bottom half of the screen
-	self.tabBarController.view.frame = CGRectMake(0, kStatusBarHeight + kControlsViewHeight - 1., kIPadFullWidth, kIPadFullHeight - kStatusBarHeight - kControlsViewHeight);
+	[[TBCController sharedTBCController] setToHalfSize];
 }
 
 
@@ -81,25 +82,25 @@
 
 - (IBAction)buttonPressed:(id)sender
 {
-	if (sender == self.webButton) {
+	if (sender == _webButton) {
 		NSURL *url = [NSURL URLWithString: WEB_SUPPORT_URL_STRING];
 		[[UIApplication sharedApplication] openURL:url];
 		
-	} else if (sender == self.emailButton) {
+	} else if (sender == _emailButton) {
 		if ([ShareController canSendEmail]) {
 			[[ShareController sharedInstance] sendEmailToAddress:EMAIL_SUPPORT_ADDRESS
 													 WithSubject:EMAIL_SUPPORT_SUBJECT
 															body:nil];
 		}
 		
-	} else if (sender == self.bugButton) {
+	} else if (sender == _bugButton) {
 		if ([ShareController canSendEmail]) {
 			[[ShareController sharedInstance] sendEmailToAddress:BUG_REPORT_ADDRESS
 													 WithSubject:BUG_REPORT_SUBJECT
 															body:BUG_REPORT_BODY];
 		}
 		
-	} else if (sender == self.featureButton) {
+	} else if (sender == _featureButton) {
 		if ([ShareController canSendEmail]) {
 			[[ShareController sharedInstance] sendEmailToAddress:FEATURE_REQUEST_ADDRESS
 													 WithSubject:FEATURE_REQUEST_SUBJECT

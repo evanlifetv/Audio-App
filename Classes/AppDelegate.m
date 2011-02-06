@@ -6,7 +6,7 @@
 #import "SweepGeneratorViewController.h"
 #import "SupportViewController.h"
 #import "PlaylistViewController.h"
-
+#import "TBCController.h"
 
 @interface AppDelegate()
 - (void)saveState;
@@ -33,17 +33,21 @@
 
 	//initialize the audio controls view (top half of the screen)
 	self.controlsViewController = [AudioControlsViewController sharedInstance];
-	self.controlsViewController.view.frame = CGRectMake(0, kStatusBarHeight, kIPadFullWidth, kControlsViewHeight);
+	CGFloat controlsViewHeight = _controlsViewController.view.frame.size.height;
+	
+	[[TBCController sharedTBCController] setTbc:_tabBarController];
+	
+	self.controlsViewController.view.frame = CGRectMake(0, kStatusBarHeight, kIPadFullWidth, controlsViewHeight);
 	
 	//initialize each view controller that will be a tab in the tab bar controller
-	SweepGeneratorViewController *sweep = [[[SweepGeneratorViewController alloc] initWithNibName:@"SweepGeneratorViewController" bundle:nil] autorelease];
-	ToneGeneratorViewController *tone = [[[ToneGeneratorViewController alloc] initWithNibName:@"ToneGeneratorViewController" bundle:nil] autorelease];
-	PinkNoiseViewController *pink = [[[PinkNoiseViewController alloc] initWithNibName:@"PinkNoiseViewController" bundle:nil] autorelease];
-    PlaylistViewController *playlist = [[[PlaylistViewController alloc] initWithNibName:@"PlaylistViewController" bundle:nil] autorelease];
-	SupportViewController *support = [[[SupportViewController alloc] initWithNibName:@"SupportViewController" bundle:nil] autorelease];
+	SweepGeneratorViewController *sweep = [[[SweepGeneratorViewController alloc] init] autorelease];
+	ToneGeneratorViewController *tone = [[[ToneGeneratorViewController alloc] init] autorelease];
+	PinkNoiseViewController *pink = [[[PinkNoiseViewController alloc] init] autorelease];
+    PlaylistViewController *playlist = [[[PlaylistViewController alloc] init] autorelease];
+	SupportViewController *support = [[[SupportViewController alloc] init] autorelease];
 	
 	//set the tab bar controller's view to the bottom half of the screen
-	self.tabBarController.view.frame = CGRectMake(0, kStatusBarHeight + kControlsViewHeight - 1., kIPadFullWidth, kIPadFullHeight - kStatusBarHeight - kControlsViewHeight);
+	[[TBCController sharedTBCController] setToHalfSize];
 	
 	//create an array out of the view controllers and give them to the tab bar controller
 	self.tabBarController.viewControllers = [NSArray arrayWithObjects:sweep, tone, pink, playlist, support, nil];
@@ -90,9 +94,9 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-	[_window release], _window = nil;
-	[_controlsViewController release], _controlsViewController = nil;
-    [_tabBarController release], _tabBarController = nil;
+	[_window release];
+	[_controlsViewController release];
+    [_tabBarController release];
     
     [super dealloc];
 }

@@ -6,7 +6,6 @@
 #import "ToneController.h"
 #import "STSweep.h"
 #import "MusicPlayerController.h"
-#import <MediaPlayer/MediaPlayer.h>
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface AudioControlsViewController()
@@ -22,7 +21,7 @@
 @synthesize muteButton = _muteButton;
 @synthesize volumeSlider = _volumeSlider;
 @synthesize visibleViewController = _visibleViewController;
-@synthesize audioTitleSlider = _audioTitleSlider;
+@synthesize volumeView = _volumeView;
 
 
 //callback function for when user changes volume via device hardware buttons
@@ -60,37 +59,23 @@ void deviceVolumeDidChange (void                      *inUserData,
 	UIImage *stetchLeftTrack = [[UIImage imageNamed:@"sliderbackmax-small.png"] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
 	UIImage *stetchRightTrack = [[UIImage imageNamed:@"sliderbackmin-small.png"]  stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
 	
-	//Slider: Audio Title
-	self.audioTitleSlider.backgroundColor = [UIColor clearColor];
-	[self.audioTitleSlider setThumbImage: [UIImage imageNamed:@"slider.png"] forState:UIControlStateNormal];
-	[self.audioTitleSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
-	[self.audioTitleSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
-	self.audioTitleSlider.minimumValue = 0.0;
-	self.audioTitleSlider.maximumValue = 100.0;
-	self.audioTitleSlider.continuous = YES;
-	self.audioTitleSlider.value = 0.0;
-	
-	//volume slider
-	MPVolumeView *aVolumeView = [[[MPVolumeView alloc] initWithFrame:CGRectMake(90., 353., 482., 23.)] autorelease];
-	
 	UISlider *slider = nil;
-	for (UIView *aView in aVolumeView.subviews) {
+	for (UIView *aView in self.volumeView.subviews) {
 		if ([aView isKindOfClass:[UISlider class]]) {
 			slider = (UISlider*)aView;
+			
+			//skin the built-in UISlider how we want it
+			slider.backgroundColor = [UIColor clearColor];	
+			[slider setThumbImage: [UIImage imageNamed:@"sliderthumb-small.png"] forState:UIControlStateNormal];
+			[slider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
+			[slider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
+			[slider addTarget:self action:@selector(volumeSliderChanged) forControlEvents:UIControlEventValueChanged];
+			self.volumeSlider = slider;
+			
 			break;
 		}
 	}
-	
-	//skin the built-in UISlider how we want it
-	slider.backgroundColor = [UIColor clearColor];	
-	[slider setThumbImage: [UIImage imageNamed:@"sliderthumb-small.png"] forState:UIControlStateNormal];
-	[slider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
-	[slider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
-	[slider addTarget:self action:@selector(volumeSliderChanged) forControlEvents:UIControlEventValueChanged];
-	self.volumeSlider = slider;
-	
-	[self.view addSubview:aVolumeView];
-	
+		
 	[self beginObserving];
 }
 
@@ -104,7 +89,7 @@ void deviceVolumeDidChange (void                      *inUserData,
 	self.playButton = nil;
 	self.muteButton = nil;
 	self.volumeSlider = nil;
-	self.audioTitleSlider = nil;
+	self.volumeView = nil;
 }
 
 
@@ -115,7 +100,7 @@ void deviceVolumeDidChange (void                      *inUserData,
 	[_muteButton release];
 	[_volumeSlider release];
     [_visibleViewController release];
-	[_audioTitleSlider release];
+	[_volumeView release];
 	
     [super dealloc];
 }

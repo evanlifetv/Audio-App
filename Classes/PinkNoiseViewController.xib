@@ -34,7 +34,7 @@
 					<object class="IBUIImageView" id="356699453">
 						<reference key="NSNextResponder" ref="918792201"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrameSize">{768, 522}</string>
+						<string key="NSFrameSize">{768, 481}</string>
 						<reference key="NSSuperview" ref="918792201"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="115594828"/>
@@ -89,7 +89,7 @@
 					<object class="IBUILabel" id="115594828">
 						<reference key="NSNextResponder" ref="918792201"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{57, 46}, {655, 36}}</string>
+						<string key="NSFrame">{{57, 24}, {655, 36}}</string>
 						<reference key="NSSuperview" ref="918792201"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="438780856"/>
@@ -112,6 +112,10 @@
 						<object class="NSColor" key="IBUIHighlightedColor" id="419883247">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
+						</object>
+						<object class="NSColor" key="IBUIShadowColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4yOTgwMzkyMjc3IDAuMjk4MDM5MjI3NyAwLjI5ODAzOTIyNzcAA</bytes>
 						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
@@ -161,6 +165,10 @@
 						<string key="IBUIText">Low Pass Filter</string>
 						<reference key="IBUITextColor" ref="419883247"/>
 						<reference key="IBUIHighlightedColor" ref="419883247"/>
+						<object class="NSColor" key="IBUIShadowColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4yOTgwMzkyMjc3IDAuMjk4MDM5MjI3NyAwLjI5ODAzOTIyNzcAA</bytes>
+						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
@@ -180,6 +188,10 @@
 						<string key="IBUIText">High Pass Filter</string>
 						<reference key="IBUITextColor" ref="419883247"/>
 						<reference key="IBUIHighlightedColor" ref="419883247"/>
+						<object class="NSColor" key="IBUIShadowColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC41MDE5NjA4MTQgMC41MDE5NjA4MTQgMC41MDE5NjA4MTQAA</bytes>
+						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
@@ -233,7 +245,6 @@
 						<string key="NSFrame">{{648, 326}, {57, 21}}</string>
 						<reference key="NSSuperview" ref="918792201"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -250,7 +261,7 @@
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
 				</array>
-				<string key="NSFrameSize">{768, 522}</string>
+				<string key="NSFrameSize">{768, 481}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="356699453"/>
@@ -444,7 +455,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">tab-background.png</string>
-			<string key="NS.object.0">{768, 522}</string>
+			<string key="NS.object.0">{768, 481}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">106</string>
 	</data>

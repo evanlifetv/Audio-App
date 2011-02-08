@@ -34,7 +34,7 @@
 					<object class="IBUIImageView" id="40787879">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrameSize">{768, 522}</string>
+						<string key="NSFrameSize">{768, 481}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="670298321"/>
@@ -48,7 +48,7 @@
 					<object class="IBUILabel" id="670298321">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{57, 46}, {655, 36}}</string>
+						<string key="NSFrame">{{57, 24}, {655, 36}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="349890377"/>
@@ -70,6 +70,10 @@
 						<object class="NSColor" key="IBUIHighlightedColor" id="123034383">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
+						</object>
+						<object class="NSColor" key="IBUIShadowColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC41MDE5NjA4MTQgMC41MDE5NjA4MTQgMC41MDE5NjA4MTQAA</bytes>
 						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
@@ -158,6 +162,10 @@
 							</object>
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
+						<object class="NSColor" key="IBUIShadowColor" id="799422805">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4yOTgwMzkyMjc3IDAuMjk4MDM5MjI3NyAwLjI5ODAzOTIyNzcAA</bytes>
+						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -182,6 +190,7 @@
 							<reference key="NSCustomColorSpace" ref="1005620473"/>
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
+						<reference key="IBUIShadowColor" ref="799422805"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -206,6 +215,7 @@
 							<reference key="NSCustomColorSpace" ref="1005620473"/>
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
+						<reference key="IBUIShadowColor" ref="799422805"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -230,6 +240,7 @@
 							<reference key="NSCustomColorSpace" ref="1005620473"/>
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
+						<reference key="IBUIShadowColor" ref="799422805"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
@@ -252,6 +263,7 @@
 							<reference key="NSCustomColorSpace" ref="1005620473"/>
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
+						<reference key="IBUIShadowColor" ref="799422805"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
@@ -274,6 +286,7 @@
 							<reference key="NSCustomColorSpace" ref="1005620473"/>
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
+						<reference key="IBUIShadowColor" ref="799422805"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
@@ -283,7 +296,6 @@
 						<string key="NSFrame">{{508, 360}, {94, 27}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -309,11 +321,12 @@
 							<reference key="NSCustomColorSpace" ref="1005620473"/>
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
+						<reference key="IBUIShadowColor" ref="799422805"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
 				</array>
-				<string key="NSFrameSize">{768, 522}</string>
+				<string key="NSFrameSize">{768, 481}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="40787879"/>
@@ -690,7 +703,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">tab-background.png</string>
-			<string key="NS.object.0">{768, 522}</string>
+			<string key="NS.object.0">{768, 481}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">106</string>
 	</data>

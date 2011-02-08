@@ -12,6 +12,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		C40D913A1300C80500802DE1 /* logo-text.png in Resources */ = {isa = PBXBuildFile; fileRef = C40D91391300C80500802DE1 /* logo-text.png */; };
 		C416DDC11290A997005FDAC0 /* pausebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C416DDC01290A997005FDAC0 /* pausebutton.png */; };
 		C416DDC71290ABD1005FDAC0 /* meteroverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = C416DDC61290ABD1005FDAC0 /* meteroverlay.png */; };
 		C4232E5F12837EDE00F5A4A6 /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4232E5C12837EDE00F5A4A6 /* SupportViewController.m */; };
@@ -88,6 +89,7 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/NIBs/MainWindow.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		C40D91391300C80500802DE1 /* logo-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-text.png"; sourceTree = "<group>"; };
 		C416DDC01290A997005FDAC0 /* pausebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausebutton.png; sourceTree = "<group>"; };
 		C416DDC61290ABD1005FDAC0 /* meteroverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meteroverlay.png; sourceTree = "<group>"; };
 		C4232E5312837E9A00F5A4A6 /* SoundTweak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundTweak.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +367,7 @@
 				D513927812CA6BF0003451C1 /* Splash screen image */,
 				D513929A12CA6D23003451C1 /* Tab Icons */,
 				D5BD0D7A12FE6F3E0013216D /* button-normal.png */,
+				C40D91391300C80500802DE1 /* logo-text.png */,
 				D5BD0D7B12FE6F3E0013216D /* button-highlighted.png */,
 				D5BD0D7C12FE6F3E0013216D /* mute-selected.png */,
 				D519657C1292400B00D14563 /* sliderbackmax-small.png */,
@@ -531,6 +534,7 @@
 				D5BD0D7D12FE6F3E0013216D /* button-normal.png in Resources */,
 				D5BD0D7E12FE6F3E0013216D /* button-highlighted.png in Resources */,
 				D5BD0D7F12FE6F3E0013216D /* mute-selected.png in Resources */,
+				C40D913A1300C80500802DE1 /* logo-text.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

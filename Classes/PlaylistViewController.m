@@ -42,7 +42,7 @@
 {
 	[super viewDidAppear:animated];
 	
-	[AudioControlsViewController sharedInstance].visibleViewController = self;
+	[AudioControlsViewController sharedInstance].currentType = kSTTabTypePlaylist;
 }
 
 

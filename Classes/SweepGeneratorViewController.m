@@ -4,13 +4,14 @@
 #import "NSString+Additions.h"
 #import "STSmallSlider.h"
 #import "ToneController.h"
+#import "STTypes.h"
 
 #define MIN_DURATION 1
 #define MAX_DURATION 30
 #define DEFAULT_DURATION 15
 
-
-NSNumberFormatter *__formatter = nil;
+static SweepGeneratorViewController *__sharedInstance = nil;
+static NSNumberFormatter *__formatter = nil;
 
 @interface SweepGeneratorViewController(privateMethods)
 - (void)refreshInterface;
@@ -40,10 +41,19 @@ NSNumberFormatter *__formatter = nil;
 
 + (void)initialize
 {
+    if (!__sharedInstance)
+        __sharedInstance = [[self alloc] init];
+    
 	if (!__formatter) {
 		__formatter = [[NSNumberFormatter alloc] init];
 		[__formatter setRoundingIncrement:[NSNumber numberWithInt:1]];
 	}
+}
+
+
++ (SweepGeneratorViewController *) sharedInstance
+{
+    return __sharedInstance;
 }
 
 
@@ -73,7 +83,7 @@ NSNumberFormatter *__formatter = nil;
 {
 	[super viewDidAppear:animated];
 	
-	[AudioControlsViewController sharedInstance].visibleViewController = self;
+	[AudioControlsViewController sharedInstance].currentType = kSTTabTypeSweep;
 }
 
 

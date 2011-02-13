@@ -28,6 +28,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *durationLabel;
 @property (nonatomic, retain) IBOutlet UISwitch *repeatSwitch;
 
++ (SweepGeneratorViewController *) sharedInstance;
+
 - (IBAction)sliderChangedValue:(UISlider *)aSlider;
 - (IBAction)repeatSwitchChangedValue:(id)aSwitch;
 - (double)startFrequency;

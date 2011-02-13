@@ -2,6 +2,7 @@
 #import "SupportViewController.h"
 #import "ShareController.h"
 #import "TBCController.h"
+#import "AudioControlsViewController.h"
 
 #define WEB_SUPPORT_URL_STRING @"http://soundtweakapp.com/"
 #define EMAIL_SUPPORT_ADDRESS @"evan@evanhamilton.tv"
@@ -40,6 +41,14 @@
 	[super viewWillAppear:animated];
 	
 	[[TBCController sharedTBCController] setToFullSize];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear: animated];
+    
+    [AudioControlsViewController sharedInstance].currentType = kSTTabTypeSupport;
 }
 
 

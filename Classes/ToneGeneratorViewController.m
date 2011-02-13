@@ -11,6 +11,8 @@
 #import "ToneController.h"
 #import "NSString+Additions.h"
 #import "STSmallSlider.h"
+#import "STTypes.h"
+
 
 @interface ToneGeneratorViewController()
 - (void)setDisplayedFrequency:(double)frequency;
@@ -52,8 +54,7 @@
 {
 	[super viewDidAppear:animated];
 	
-	[AudioControlsViewController sharedInstance].visibleViewController = self;
-
+	[AudioControlsViewController sharedInstance].currentType = kSTTabTypeTone;
 }
 
 
@@ -61,8 +62,8 @@
 {
 	[super viewWillDisappear:animated];
 	
-	
 	[[NSUserDefaults standardUserDefaults] setDouble:[self frequencyFromSlider] forKey:kLastToneFrequency];
+	[[ToneController sharedInstance] stop];
 }
 
 

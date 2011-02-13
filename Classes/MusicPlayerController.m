@@ -45,7 +45,7 @@ static MusicPlayerController *__sharedInstance = nil;
 
 - (id)init
 {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		_musicPlayer = [[MPMusicPlayerController applicationMusicPlayer] retain];
 		
 		//initialize the playlist data

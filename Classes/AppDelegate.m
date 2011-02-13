@@ -40,7 +40,7 @@
 	self.controlsViewController.view.frame = CGRectMake(0, kStatusBarHeight, kIPadFullWidth, controlsViewHeight);
 	
 	//initialize each view controller that will be a tab in the tab bar controller
-	SweepGeneratorViewController *sweep = [[[SweepGeneratorViewController alloc] init] autorelease];
+	SweepGeneratorViewController *sweep = [SweepGeneratorViewController sharedInstance];
 	ToneGeneratorViewController *tone = [[[ToneGeneratorViewController alloc] init] autorelease];
 	PinkNoiseViewController *pink = [[[PinkNoiseViewController alloc] init] autorelease];
     PlaylistViewController *playlist = [[[PlaylistViewController alloc] init] autorelease];

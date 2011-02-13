@@ -65,7 +65,6 @@
 		D53F537812E3AAF7000BE052 /* MusicPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F537712E3AAF7000BE052 /* MusicPlayerController.m */; };
 		D5527B5F12F91061009FF400 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5527B5E12F91061009FF400 /* CoreAudio.framework */; };
 		D566984A1283C232004398AF /* ToneController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56698491283C232004398AF /* ToneController.m */; };
-		D5A94D3012F6821E0099038F /* NoiseGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A94D2F12F6821E0099038F /* NoiseGenerator.m */; };
 		D5BD0D3B12FE63E30013216D /* TBCController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BD0D3A12FE63E30013216D /* TBCController.m */; };
 		D5BD0D7D12FE6F3E0013216D /* button-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BD0D7A12FE6F3E0013216D /* button-normal.png */; };
 		D5BD0D7E12FE6F3E0013216D /* button-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BD0D7B12FE6F3E0013216D /* button-highlighted.png */; };
@@ -78,6 +77,7 @@
 		D5E47064127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */; };
 		D5E4707B127DA55E00BA3DD6 /* AudioControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.m */; };
 		D5E4707C127DA55E00BA3DD6 /* AudioControlsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E4707A127DA55E00BA3DD6 /* AudioControlsViewController.xib */; };
+		D5F2581213078F7300A12D71 /* PinkNoiseController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2581113078F7100A12D71 /* PinkNoiseController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,8 +156,6 @@
 		D5527B5E12F91061009FF400 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		D56698481283C232004398AF /* ToneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneController.h; sourceTree = "<group>"; };
 		D56698491283C232004398AF /* ToneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneController.m; sourceTree = "<group>"; };
-		D5A94D2E12F6821E0099038F /* NoiseGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoiseGenerator.h; sourceTree = "<group>"; };
-		D5A94D2F12F6821E0099038F /* NoiseGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoiseGenerator.m; sourceTree = "<group>"; };
 		D5BD0D3912FE63E30013216D /* TBCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCController.h; sourceTree = "<group>"; };
 		D5BD0D3A12FE63E30013216D /* TBCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCController.m; sourceTree = "<group>"; };
 		D5BD0D7A12FE6F3E0013216D /* button-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-normal.png"; sourceTree = "<group>"; };
@@ -174,6 +172,9 @@
 		D5E47078127DA55E00BA3DD6 /* AudioControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioControlsViewController.h; sourceTree = "<group>"; };
 		D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioControlsViewController.m; sourceTree = "<group>"; };
 		D5E4707A127DA55E00BA3DD6 /* AudioControlsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioControlsViewController.xib; sourceTree = "<group>"; };
+		D5F2581013078F7100A12D71 /* PinkNoiseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseController.h; sourceTree = "<group>"; };
+		D5F2581113078F7100A12D71 /* PinkNoiseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseController.m; sourceTree = "<group>"; };
+		D5F25815130796B700A12D71 /* STTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +223,7 @@
 			children = (
 				D52B92171290FF7C00021E68 /* Categories */,
 				080E96DDFE201D6D7F000001 /* Classes */,
+				D5F258141307968A00A12D71 /* Orphan Headers */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -430,8 +432,8 @@
 			children = (
 				D53F537612E3AAF7000BE052 /* MusicPlayerController.h */,
 				D53F537712E3AAF7000BE052 /* MusicPlayerController.m */,
-				D5A94D2E12F6821E0099038F /* NoiseGenerator.h */,
-				D5A94D2F12F6821E0099038F /* NoiseGenerator.m */,
+				D5F2581013078F7100A12D71 /* PinkNoiseController.h */,
+				D5F2581113078F7100A12D71 /* PinkNoiseController.m */,
 				D5E0DDA612D2D7F9008851FC /* ShareController.h */,
 				D5E0DDA712D2D7F9008851FC /* ShareController.m */,
 				D56698481283C232004398AF /* ToneController.h */,
@@ -440,6 +442,14 @@
 				D5BD0D3A12FE63E30013216D /* TBCController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D5F258141307968A00A12D71 /* Orphan Headers */ = {
+			isa = PBXGroup;
+			children = (
+				D5F25815130796B700A12D71 /* STTypes.h */,
+			);
+			name = "Orphan Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,9 +572,9 @@
 				D51392DA12CA70AB003451C1 /* STSweep.m in Sources */,
 				D5E0DDA812D2D7F9008851FC /* ShareController.m in Sources */,
 				D53F537812E3AAF7000BE052 /* MusicPlayerController.m in Sources */,
-				D5A94D3012F6821E0099038F /* NoiseGenerator.m in Sources */,
 				D5BD0D3B12FE63E30013216D /* TBCController.m in Sources */,
 				D5BD0E1E12FE778B0013216D /* main.m in Sources */,
+				D5F2581213078F7300A12D71 /* PinkNoiseController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

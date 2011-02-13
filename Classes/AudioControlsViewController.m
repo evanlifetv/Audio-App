@@ -6,6 +6,7 @@
 #import "ToneController.h"
 #import "STSweep.h"
 #import "MusicPlayerController.h"
+#import "PinkNoiseController.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface AudioControlsViewController()
@@ -20,8 +21,8 @@
 @synthesize playButton = _playButton;
 @synthesize muteButton = _muteButton;
 @synthesize volumeSlider = _volumeSlider;
-@synthesize visibleViewController = _visibleViewController;
 @synthesize volumeView = _volumeView;
+@synthesize currentType = _currentType;
 
 
 //callback function for when user changes volume via device hardware buttons
@@ -99,7 +100,6 @@ void deviceVolumeDidChange (void                      *inUserData,
 	[_playButton release];
 	[_muteButton release];
 	[_volumeSlider release];
-    [_visibleViewController release];
 	[_volumeView release];
 	
     [super dealloc];
@@ -131,6 +131,11 @@ void deviceVolumeDidChange (void                      *inUserData,
 											 selector:@selector(musicPlayerControllerDidStop)
 												 name:kMusicPlayerControllerDidStopNotification
 											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver: self
+											 selector: @selector(controllerDidStop)
+												 name: kPinkNoiseControllerDidStopNotification
+											   object: nil];
 }
 
 
@@ -156,39 +161,52 @@ void deviceVolumeDidChange (void                      *inUserData,
 
 - (IBAction)playButtonPressed
 {
-	if ([self.visibleViewController isKindOfClass:[SweepGeneratorViewController class]]) {
-		self.playButton.selected = !self.playButton.selected;
-		if ([[ToneController sharedInstance] isSweeping]) {
-			[[ToneController sharedInstance] pauseSweep];
-		} else {
-			if ([ToneController sharedInstance].hasPausedSweep) {
-				[[ToneController sharedInstance] resumePausedSweep];
-			} else {
-				[self generateSweep];
-			}
-		}
-		
-	}
-	else if ([self.visibleViewController isKindOfClass:[ToneGeneratorViewController class]]) {
-		self.playButton.selected = !self.playButton.selected;
-		[[ToneController sharedInstance] togglePlay];
-		
-	}
-	else if ([self.visibleViewController isKindOfClass:[PlaylistViewController class]]) {
-		if ([[MusicPlayerController sharedInstance] currentItem]) {
-			//this prevents switching the play/pause button to pause state if no song is selected
-			self.playButton.selected = !self.playButton.selected;
-		}
-		[[MusicPlayerController sharedInstance] togglePlay];
-	}
+    switch (_currentType) {
+        case kSTTabTypeSweep:
+            _playButton.selected = !_playButton.selected;
+            if ([[ToneController sharedInstance] isSweeping]) {
+                [[ToneController sharedInstance] pauseSweep];
+            } else {
+                if ([ToneController sharedInstance].hasPausedSweep) {
+                    [[ToneController sharedInstance] resumePausedSweep];
+                } else {
+                    [self generateSweep];
+                }
+            }
+            break;
+            
+        case kSTTabTypeTone:
+            _playButton.selected = !_playButton.selected;
+            [[ToneController sharedInstance] togglePlay];
+            break;
+            
+        case kSTTabTypePlaylist:
+            if ([[MusicPlayerController sharedInstance] currentItem]) {
+                //this prevents switching the play/pause button to pause state if no song is selected
+                _playButton.selected = !_playButton.selected;
+            }
+            [[MusicPlayerController sharedInstance] togglePlay];
+            break;
+        
+        case kSTTabTypePinkNoise:
+            _playButton.selected = !_playButton.selected;
+            [[PinkNoiseController sharedInstance] togglePlay];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 
 - (IBAction)muteButtonPressed
 {
-	self.muteButton.selected = !self.muteButton.selected;
+    if (!_playButton.selected)
+        return;
+    
+	_muteButton.selected = !_muteButton.selected;
 	
-	if (self.muteButton.selected) {
+	if (_muteButton.selected) {
 		//user wants to mute
 		
 		//remember the volume before muting
@@ -213,12 +231,16 @@ void deviceVolumeDidChange (void                      *inUserData,
 		[self.volumeSlider setValue:resumeVolume];
 		[[MusicPlayerController sharedInstance] setVolume:resumeVolume];
 	}
+	
+	if (_currentType == kSTTabTypePinkNoise) {
+		[[PinkNoiseController sharedInstance] togglePlay];
+	}
 }
 
 
 - (void)generateSweep
 {
-	SweepGeneratorViewController *vc = (SweepGeneratorViewController*)self.visibleViewController;
+	SweepGeneratorViewController *vc = [SweepGeneratorViewController sharedInstance];
 	
 	STSweep* sweep = [STSweep sweepWithStartFrequency:[vc startFrequency]
 									 currentFrequency:[vc startFrequency]
@@ -226,8 +248,8 @@ void deviceVolumeDidChange (void                      *inUserData,
 											 duration:[vc duration]
 										 shouldRepeat:[vc.repeatSwitch isOn]];
 	
-	[[ToneController sharedInstance] performSelectorInBackground:@selector(playSweep:)
-													  withObject:sweep];
+	[[ToneController sharedInstance] performSelectorInBackground: @selector(playSweep:)
+													  withObject: sweep];
 
 }
 

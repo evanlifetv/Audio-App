@@ -27,6 +27,8 @@ NSString * const kToneControllerDidFinishPlayingSweep = @"kToneControllerDidFini
 NSString * const kToneControllerDidInvalidatePausedSweep = @"kToneControllerDidInvalidatePausedSweep";
 NSString * const kToneControllerDidStop = @"kToneControllerDidStop";
 
+static ToneController *__sharedInstance = nil;
+
 @interface ToneController()
 + (void)setupAudioSession;
 @end
@@ -41,12 +43,11 @@ OSStatus RenderTone(
 					AudioBufferList 			*ioData)
 {
 	
+    ToneController *tC = [ToneController sharedInstance];
+    
 	double amplitude = (double)[[AudioControlsViewController sharedInstance] volume];
-	
-	// Get the tone parameters out of the view controller
-	//ToneGeneratorViewController *viewController = (ToneGeneratorViewController *)inRefCon;
 	double newTheta = [ToneController sharedInstance].theta;
-	double theta_increment = 2.0 * M_PI * [ToneController sharedInstance].frequency / [ToneController sharedInstance].sampleRate;
+	double theta_increment = 2.0 * M_PI * tC.frequency / tC.sampleRate;
 	
 	// This is a mono tone generator so we only need the first buffer
 	const int channel = 0;
@@ -64,17 +65,9 @@ OSStatus RenderTone(
 		}
 	}
 	
-	[ToneController sharedInstance].theta = newTheta;
+	tC.theta = newTheta;
 	return noErr;
 }
-
-
-/*void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
-{
-	ToneGeneratorViewController *viewController = (ToneGeneratorViewController *)inClientData;
-	
-	[viewController stop];
-}*/
 
 
 @implementation ToneController
@@ -87,20 +80,34 @@ OSStatus RenderTone(
 @synthesize hasPausedSweep = _hasPausedSweep;
 
 
+#pragma -
+#pragma Singleton
+
++(void) initialize
+{
+    if (!__sharedInstance)
+        __sharedInstance = [[self alloc] init];
+}
+
+
 + (ToneController*)sharedInstance
 {
-	static ToneController *sharedInstance;
-	@synchronized(self) {
-		if (!sharedInstance) {
-			sharedInstance = [[ToneController alloc] init];
-			sharedInstance.frequency = 1000;
-			sharedInstance.sampleRate = 44100.0;
-			sharedInstance.theta = 0.0;
-			
-			[self setupAudioSession];
-		}
-	}
-	return sharedInstance;
+	return __sharedInstance;
+}
+
+
+-(id) init
+{
+    if ( !(self = [super init]) )
+        return nil;
+    
+    _frequency = 1000.;
+    _sampleRate = 44100.;
+    _theta = 0.;
+    
+    [[self class] setupAudioSession];
+    
+    return self;
 }
 
 

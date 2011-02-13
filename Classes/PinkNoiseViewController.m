@@ -7,7 +7,8 @@
 //
 
 #import "PinkNoiseViewController.h"
-
+#import "PinkNoiseController.h"
+#import "AudioControlsViewController.h"
 
 @implementation PinkNoiseViewController
 
@@ -19,5 +20,21 @@
     }
     return self;
 }
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	
+	[AudioControlsViewController sharedInstance].currentType = kSTTabTypePinkNoise;
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear: animated];
+	
+	[[PinkNoiseController sharedInstance] stop];
+}
+
 
 @end

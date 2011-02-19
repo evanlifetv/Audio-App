@@ -79,9 +79,8 @@ OSStatus RenderTone(
 @synthesize sweeping = _sweeping;
 @synthesize hasPausedSweep = _hasPausedSweep;
 
-
-#pragma -
-#pragma Singleton
+#pragma mark -
+#pragma mark Singleton
 
 +(void) initialize
 {

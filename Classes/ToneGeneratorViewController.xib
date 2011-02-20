@@ -3,13 +3,8 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1246</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">462.00</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">294</string>
-		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
 			<string>IBUIImageView</string>
@@ -113,7 +108,7 @@
 						<string key="NSFrame">{{359, 145}, {274, 23}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="191138686"/>
+						<reference key="NSNextKeyView" ref="947215413"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -136,7 +131,7 @@
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="743241346">
+							<object class="NSColorSpace" key="NSCustomColorSpace">
 								<int key="NSID">1</int>
 							</object>
 						</object>
@@ -148,6 +143,20 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<int key="IBUITextAlignment">1</int>
+					</object>
+					<object class="IBUIImageView" id="947215413">
+						<reference key="NSNextResponder" ref="327397386"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{639, 135}, {78, 41}}</string>
+						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="191138686"/>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">selected-freq-bg.png</string>
+						</object>
 					</object>
 					<object class="IBUILabel" id="191138686">
 						<reference key="NSNextResponder" ref="327397386"/>
@@ -163,9 +172,8 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">1kHz</string>
 						<object class="NSColor" key="IBUITextColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAxIDEAA</bytes>
-							<reference key="NSCustomColorSpace" ref="743241346"/>
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC41NjA3ODQzMzk5IDAuMjU0OTAxOTc1NCAwLjcxNzY0NzA3NTcAA</bytes>
 						</object>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
 						<reference key="IBUIShadowColor" ref="988194269"/>
@@ -569,6 +577,7 @@
 							<reference ref="775385409"/>
 							<reference ref="435737869"/>
 							<reference ref="35065938"/>
+							<reference ref="947215413"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -643,6 +652,11 @@
 						<reference key="object" ref="435737869"/>
 						<reference key="parent" ref="327397386"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">56</int>
+						<reference key="object" ref="947215413"/>
+						<reference key="parent" ref="327397386"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -686,12 +700,13 @@
 				<string key="37.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="38.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="39.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">55</int>
+			<int key="maxID">56</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -700,7 +715,7 @@
 					<string key="superclassName">UISlider</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/STSmallSlider.h</string>
+						<string key="minorKey">./classes-xjh84/STSmallSlider.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -708,17 +723,7 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="hotButtonPressed:">id</string>
-						<string key="sliderChangedValue:">UISlider</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="hotButtonPressed:">
-							<string key="name">hotButtonPressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sliderChangedValue:">
-							<string key="name">sliderChangedValue:</string>
-							<string key="candidateClassName">UISlider</string>
-						</object>
+						<string key="sliderChangedValue:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="frequencyLabel">UILabel</string>
@@ -732,51 +737,9 @@
 						<string key="hotButton750">UIButton</string>
 						<string key="slider">STSmallSlider</string>
 					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="frequencyLabel">
-							<string key="name">frequencyLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hotButton1000">
-							<string key="name">hotButton1000</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hotButton10k">
-							<string key="name">hotButton10k</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hotButton18k">
-							<string key="name">hotButton18k</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hotButton250">
-							<string key="name">hotButton250</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hotButton2500">
-							<string key="name">hotButton2500</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hotButton500">
-							<string key="name">hotButton500</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hotButton60">
-							<string key="name">hotButton60</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hotButton750">
-							<string key="name">hotButton750</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="slider">
-							<string key="name">slider</string>
-							<string key="candidateClassName">STSmallSlider</string>
-						</object>
-					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/ToneGeneratorViewController.h</string>
+						<string key="minorKey">./classes-xjh84/ToneGeneratorViewController.h</string>
 					</object>
 				</object>
 			</array>
@@ -784,12 +747,14 @@
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
+		<nil key="IBDocument.LastKnownRelativeProjectPath"/>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="button-highlighted.png">{74, 38}</string>
 			<string key="button-normal.png">{74, 38}</string>
+			<string key="selected-freq-bg.png">{78, 41}</string>
 			<string key="tab-background.png">{768, 481}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">294</string>
+		<string key="IBCocoaTouchPluginVersion">106</string>
 	</data>
 </archive>

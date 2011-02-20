@@ -3,8 +3,13 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1246</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
+		<string key="IBDocument.HIToolboxVersion">462.00</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+			<string key="NS.object.0">294</string>
+		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBUIButton</string>
 			<string>IBUIImageView</string>
@@ -126,7 +131,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">FFT</string>
+						<string key="IBUIText">fft</string>
 						<object class="NSFont" key="IBUIFont" id="252738222">
 							<string key="NSName">BauhausStd-Medium</string>
 							<double key="NSSize">17</double>
@@ -165,7 +170,6 @@
 						<string key="NSFrame">{{608, 413}, {68, 34}}</string>
 						<reference key="NSSuperview" ref="821238009"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -200,10 +204,6 @@
 						<reference key="NSNextKeyView" ref="85406382"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">fft-mock.png</string>
-						</object>
 					</object>
 					<object class="IBUIView" id="979292348">
 						<reference key="NSNextResponder" ref="821238009"/>
@@ -232,23 +232,6 @@
 					<int key="interfaceOrientation">3</int>
 				</object>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-			</object>
-			<object class="IBUIImageView" id="1057012866">
-				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">292</int>
-				<string key="NSFrameSize">{240, 62}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView"/>
-				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MAA</bytes>
-				</object>
-				<bool key="IBUIUserInteractionEnabled">NO</bool>
-				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-				<object class="NSCustomResource" key="IBUIImage">
-					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">logo-text.png</string>
-				</object>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -386,11 +369,6 @@
 						<reference key="parent" ref="821238009"/>
 						<string key="objectName">MP Volume View</string>
 					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">52</int>
-						<reference key="object" ref="1057012866"/>
-						<reference key="parent" ref="0"/>
-					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -423,7 +401,6 @@
 				<object class="NSAffineTransform" key="50.IBViewBoundsToFrameTransform">
 					<bytes key="NSTransformStruct">P4AAAL+AAABCrAAAw74AAA</bytes>
 				</object>
-				<string key="52.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
@@ -441,15 +418,47 @@
 						<string key="playButtonPressed">id</string>
 						<string key="volumeSliderChanged">id</string>
 					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="muteButtonPressed">
+							<string key="name">muteButtonPressed</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="playButtonPressed">
+							<string key="name">playButtonPressed</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="volumeSliderChanged">
+							<string key="name">volumeSliderChanged</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="muteButton">UIButton</string>
 						<string key="playButton">UIButton</string>
 						<string key="volumeSlider">UISlider</string>
 						<string key="volumeView">MPVolumeView</string>
 					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="muteButton">
+							<string key="name">muteButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="playButton">
+							<string key="name">playButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="volumeSlider">
+							<string key="name">volumeSlider</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="volumeView">
+							<string key="name">volumeView</string>
+							<string key="candidateClassName">MPVolumeView</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./classes-xjh84/AudioControlsViewController.h</string>
+						<string key="minorKey">./Classes/AudioControlsViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -457,7 +466,7 @@
 					<string key="superclassName">UIView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./classes-xjh84/MPVolumeView.h</string>
+						<string key="minorKey">./Classes/MPVolumeView.h</string>
 					</object>
 				</object>
 			</array>
@@ -465,20 +474,17 @@
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">../SoundTweak.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="button-highlighted.png">{74, 38}</string>
 			<string key="button-normal.png">{74, 38}</string>
 			<string key="controlbackground.png">{768, 482}</string>
-			<string key="fft-mock.png">{639, 158}</string>
-			<string key="logo-text.png">{157, 41}</string>
 			<string key="mute-selected.png">{74, 38}</string>
 			<string key="pausebutton.png">{86, 81}</string>
 			<string key="playbutton.png">{86, 81}</string>
 			<string key="volume_down.png">{9, 15}</string>
 			<string key="volume_up.png">{22, 21}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">106</string>
+		<string key="IBCocoaTouchPluginVersion">294</string>
 	</data>
 </archive>

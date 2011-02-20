@@ -13,7 +13,7 @@
 		<string>Icon.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>tv.evanhamilton.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>tv.evanhamilton.soundtweak</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

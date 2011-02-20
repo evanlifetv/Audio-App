@@ -93,6 +93,24 @@ static MusicPlayerController *__sharedInstance = nil;
 }
 
 
+-(NSString *) artistForSongAtIndex: (NSInteger) index
+{
+    MPMediaItem *song = [[self.soundTweakPlaylist items] objectAtIndex:index];
+	
+	return [song valueForProperty:MPMediaItemPropertyArtist];
+}
+
+
+-(UIImage*) artworkWithSize: (CGSize) imageSize forSongAtIndex: (NSInteger) index
+{
+    MPMediaItem *song = [[self.soundTweakPlaylist items] objectAtIndex:index];
+    
+    MPMediaItemArtwork *artwork = [song valueForProperty: MPMediaItemPropertyArtwork];
+    UIImage *artworkImage = [artwork imageWithSize: imageSize];
+    return artworkImage;
+}
+
+
 - (NSString*)titleForSongAtIndex:(NSInteger)index
 {
 	MPMediaItem *song = [[self.soundTweakPlaylist items] objectAtIndex:index];

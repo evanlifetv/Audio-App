@@ -27,7 +27,11 @@
 
 - (BOOL)deviceHasSoundTweakPlaylist;
 - (void)selectSongAtIndex:(NSInteger)index;
-- (NSString*)titleForSongAtIndex:(NSInteger)index;
+
+-(NSString *) artistForSongAtIndex: (NSInteger) index;
+-(NSString*) titleForSongAtIndex: (NSInteger) index;
+-(UIImage*) artworkWithSize: (CGSize) imageSize forSongAtIndex: (NSInteger) index;
+
 - (void)togglePlay;
 - (void)setVolume:(float)newVolume;
 

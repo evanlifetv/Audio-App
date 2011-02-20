@@ -14,7 +14,9 @@
 @implementation PlaylistViewController
 
 @synthesize tableView = _tableView;
-
+@synthesize artistLabel = _artistLabel;
+@synthesize songTitleLabel = _songTitleLabel;
+@synthesize artworkView = _artworkView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -62,13 +64,19 @@
 	[super viewDidUnload];
 	
 	self.tableView = nil;
+    self.artistLabel = nil;
+    self.songTitleLabel = nil;
+    self.artworkView = nil;
 }
 
 
 - (void)dealloc
 {
 	[_tableView release];
-	
+    [_artistLabel release];
+    [_songTitleLabel release];
+    [_artworkView release];
+    
 	[super dealloc];
 }
 
@@ -100,6 +108,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	[[MusicPlayerController sharedInstance] selectSongAtIndex:indexPath.row];
+    
+    _songTitleLabel.text = [[MusicPlayerController sharedInstance] titleForSongAtIndex: indexPath.row];
+    _artistLabel.text = [[MusicPlayerController sharedInstance] artistForSongAtIndex: indexPath.row];
+    _artworkView.image = [[MusicPlayerController sharedInstance] artworkWithSize:_artworkView.bounds.size forSongAtIndex:indexPath.row];
 }
 
 

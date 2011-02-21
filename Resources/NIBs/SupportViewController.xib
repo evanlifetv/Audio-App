@@ -3,8 +3,13 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1246</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
+		<string key="IBDocument.HIToolboxVersion">462.00</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+			<string key="NS.object.0">294</string>
+		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBUITextView</string>
 			<string>IBUIButton</string>
@@ -46,7 +51,7 @@
 					<object class="IBUITextView" id="309820256">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{136, 205}, {495, 143}}</string>
+						<string key="NSFrame">{{58, 205}, {651, 147}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -67,6 +72,11 @@ dSBzb24gb2YgYSBiaXp6bGUgcXVpenpsZSBhdWd1ZS4gCgo</string>
 						<object class="NSColor" key="IBUITextColor" id="942361921">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
+						</object>
+						<object class="NSFont" key="IBUIFont" id="93827559">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
 						</object>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
@@ -209,7 +219,7 @@ dSBzb24gb2YgYSBiaXp6bGUgcXVpenpsZSBhdWd1ZS4gCgo</string>
 					<object class="IBUITextView" id="49973235">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{136, 346}, {495, 187}}</string>
+						<string key="NSFrame">{{58, 346}, {651, 187}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
@@ -223,6 +233,7 @@ dSBzb24gb2YgYSBiaXp6bGUgcXVpenpsZSBhdWd1ZS4gCgo</string>
 						<bool key="IBUIEditable">NO</bool>
 						<string key="IBUIText">Get down get down cool elizzle check it out amizzle eros fo shizzle yippiyo. Vivamizzle ma nizzle pede ut shut the shizzle up. Gizzle rhoncizzle own yo' leo. Lorem ipsum hizzle crunk fo, consectetizzle stuff things. Mah nizzle nisi ligula, posuere sit hizzle, cool sizzle, fizzle mattizzle, shizzle my nizzle crocodizzle. Curabitizzle we gonna chung faucibizzle shizznit. Ut non leo. Dawg break yo neck, yall a fo shizzle accumsizzle fo shizzle. </string>
 						<reference key="IBUITextColor" ref="942361921"/>
+						<reference key="IBUIFont" ref="93827559"/>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -454,15 +465,40 @@ dSBzb24gb2YgYSBiaXp6bGUgcXVpenpsZSBhdWd1ZS4gCgo</string>
 						<string key="NS.key.0">buttonPressed:</string>
 						<string key="NS.object.0">id</string>
 					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">buttonPressed:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">buttonPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="bugButton">UIButton</string>
 						<string key="emailButton">UIButton</string>
 						<string key="featureButton">UIButton</string>
 						<string key="webButton">UIButton</string>
 					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="bugButton">
+							<string key="name">bugButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="emailButton">
+							<string key="name">emailButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="featureButton">
+							<string key="name">featureButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="webButton">
+							<string key="name">webButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./classes-xjh84/SupportViewController.h</string>
+						<string key="minorKey">./Classes/SupportViewController.h</string>
 					</object>
 				</object>
 			</array>
@@ -470,7 +506,6 @@ dSBzb24gb2YgYSBiaXp6bGUgcXVpenpsZSBhdWd1ZS4gCgo</string>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">../../SoundTweak.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="bugsupport.png">{303, 68}</string>
@@ -479,6 +514,6 @@ dSBzb24gb2YgYSBiaXp6bGUgcXVpenpsZSBhdWd1ZS4gCgo</string>
 			<string key="supportbackground.png">{769, 1007}</string>
 			<string key="websupport.png">{304, 76}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">106</string>
+		<string key="IBCocoaTouchPluginVersion">294</string>
 	</data>
 </archive>

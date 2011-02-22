@@ -10,7 +10,6 @@
 #import "MediaPlayer/MPMediaQuery.h"
 #import "MediaPlayer/MPMediaPlaylist.h"
 
-#define kSoundTweakPlaylistName @"SoundTweak"
 
 NSString * const kMusicPlayerControllerDidSelectNewSongNotification = @"kMusicPlayerControllerDidSelectNewSongNotification";
 NSString * const kMusicPlayerControllerDidStopNotification = @"kMusicPlayerControllerDidStopNotification";
@@ -19,6 +18,7 @@ static MusicPlayerController *__sharedInstance = nil;
 
 @interface MusicPlayerController()
 - (void)setCurrentItem:(MPMediaItem*)item;
+- (void) refreshPlaylist;
 @end
 
 
@@ -49,17 +49,35 @@ static MusicPlayerController *__sharedInstance = nil;
 		_musicPlayer = [[MPMusicPlayerController applicationMusicPlayer] retain];
 		
 		//initialize the playlist data
-		MPMediaQuery *query = [MPMediaQuery playlistsQuery];
-		MPMediaPropertyPredicate *soundTweakPlaylistPredicate = [MPMediaPropertyPredicate predicateWithValue:kSoundTweakPlaylistName
-																								 forProperty:MPMediaPlaylistPropertyName];
-		[query addFilterPredicate:soundTweakPlaylistPredicate];
-		
-		NSArray *returnedPlaylists = [query collections];
-		if (returnedPlaylists && [returnedPlaylists count] > 0) {
-			_soundTweakPlaylist = [[returnedPlaylists objectAtIndex:0] retain];
-		}
+		[self refreshPlaylist];
 	}
 	return self;
+}
+
+
+- (void) refreshPlaylist
+{
+    NSArray *playlistNames = [NSArray arrayWithObjects: @"SoundTweak", @"soundtweak", @"Soundtweak", @"soundTweak", nil];
+    
+    NSArray *returnedPlaylists = nil;
+    for (NSString *name in playlistNames) {
+        
+        MPMediaQuery *query = [MPMediaQuery playlistsQuery];
+        MPMediaPropertyPredicate *playlistPredicate = [MPMediaPropertyPredicate predicateWithValue: name
+                                                                                                 forProperty: MPMediaPlaylistPropertyName];
+        [query addFilterPredicate: playlistPredicate];
+        
+        returnedPlaylists = [query collections];
+        if (returnedPlaylists && [returnedPlaylists count] > 0) {
+            break;
+        }
+    }
+    
+    [_soundTweakPlaylist release];
+    if (returnedPlaylists && [returnedPlaylists count] > 0)
+        _soundTweakPlaylist = [[returnedPlaylists objectAtIndex:0] retain];
+    else
+        _soundTweakPlaylist = nil;
 }
 
 
@@ -81,6 +99,8 @@ static MusicPlayerController *__sharedInstance = nil;
 
 - (BOOL)deviceHasSoundTweakPlaylist
 {
+    [self refreshPlaylist];
+    
 	return (_soundTweakPlaylist != nil);
 }
 

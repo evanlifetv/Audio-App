@@ -31,13 +31,12 @@
 
 - (void)viewDidLoad
 {
-	[super viewDidLoad];
-	
-	if ([[MusicPlayerController sharedInstance] deviceHasSoundTweakPlaylist]) {
-		[self.tableView reloadData];
-	} else {
-		//user did not have a "SoundTweak" playlist
-	}
+    [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(didBecomeActive)
+                                                 name: UIApplicationDidBecomeActiveNotification
+                                               object: nil];
 }
 
 
@@ -46,6 +45,12 @@
     [super viewWillAppear: animated];
     
     _artworkView.image = [UIImage imageNamed: @"noartwork.png"];
+    
+	if ([[MusicPlayerController sharedInstance] deviceHasSoundTweakPlaylist]) {
+		[self.tableView reloadData];
+	} else {
+		//user did not have a "SoundTweak" playlist
+	}
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -80,12 +85,29 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver: self];
+    
 	[_tableView release];
     [_artistLabel release];
     [_songTitleLabel release];
     [_artworkView release];
     
 	[super dealloc];
+}
+
+
+
+#pragma mark -
+#pragma mark UITableViewDatasource and UITableViewDelegate
+
+- (void)didBecomeActive
+{
+    //app came back from being inactive, so check if user sync'ed a SoundTweak playlist
+    if ([[MusicPlayerController sharedInstance] deviceHasSoundTweakPlaylist]) {
+		[self.tableView reloadData];
+	} else {
+		//user did not have a "SoundTweak" playlist
+	}
 }
 
 
@@ -106,10 +128,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"cell"];
+    static NSString * const cellID = @"cellID";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellID];
     
     if (!cell) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellID] autorelease];
         cell.textLabel.textColor = [UIColor whiteColor];
         
         UIView *purpleBackView = [[[UIView alloc] initWithFrame: cell.frame] autorelease];

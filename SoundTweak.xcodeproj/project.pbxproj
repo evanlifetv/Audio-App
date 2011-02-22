@@ -58,6 +58,7 @@
 		D532A51A127BB4D500F753E2 /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D532A511127BB4D500F753E2 /* volume_up.png */; };
 		D5346529127DB8AE0063D06E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D5346528127DB8AE0063D06E /* Default.png */; };
 		D53F537812E3AAF7000BE052 /* MusicPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53F537712E3AAF7000BE052 /* MusicPlayerController.m */; };
+		D547807D13137A5D0006EE99 /* StyleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D547807C13137A5D0006EE99 /* StyleController.m */; };
 		D5527B5F12F91061009FF400 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5527B5E12F91061009FF400 /* CoreAudio.framework */; };
 		D566984A1283C232004398AF /* ToneController.m in Sources */ = {isa = PBXBuildFile; fileRef = D56698491283C232004398AF /* ToneController.m */; };
 		D5BD0D3B12FE63E30013216D /* TBCController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BD0D3A12FE63E30013216D /* TBCController.m */; };
@@ -144,6 +145,8 @@
 		D5346528127DB8AE0063D06E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D53F537612E3AAF7000BE052 /* MusicPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayerController.h; sourceTree = "<group>"; };
 		D53F537712E3AAF7000BE052 /* MusicPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerController.m; sourceTree = "<group>"; };
+		D547807B13137A5D0006EE99 /* StyleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleController.h; sourceTree = "<group>"; };
+		D547807C13137A5D0006EE99 /* StyleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleController.m; sourceTree = "<group>"; };
 		D5527B5E12F91061009FF400 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		D56698481283C232004398AF /* ToneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneController.h; sourceTree = "<group>"; };
 		D56698491283C232004398AF /* ToneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToneController.m; sourceTree = "<group>"; };
@@ -430,6 +433,8 @@
 				D56698491283C232004398AF /* ToneController.m */,
 				D5BD0D3912FE63E30013216D /* TBCController.h */,
 				D5BD0D3A12FE63E30013216D /* TBCController.m */,
+				D547807B13137A5D0006EE99 /* StyleController.h */,
+				D547807C13137A5D0006EE99 /* StyleController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 				D5BD0D3B12FE63E30013216D /* TBCController.m in Sources */,
 				D5BD0E1E12FE778B0013216D /* main.m in Sources */,
 				D5F2581213078F7300A12D71 /* PinkNoiseController.m in Sources */,
+				D547807D13137A5D0006EE99 /* StyleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

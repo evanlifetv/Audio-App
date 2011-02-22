@@ -9,6 +9,7 @@
 #import "PlaylistViewController.h"
 #import "MusicPlayerController.h"
 #import "AudioControlsViewController.h"
+#import "StyleController.h"
 
 
 @implementation PlaylistViewController
@@ -105,8 +106,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell* cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"] autorelease];
-	cell.textLabel.textColor = [UIColor whiteColor];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"cell"];
+    
+    if (!cell) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"] autorelease];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        
+        UIView *purpleBackView = [[[UIView alloc] initWithFrame: cell.frame] autorelease];
+        [purpleBackView setBackgroundColor: [StyleController soundTweakPurpleColor]];
+        cell.selectedBackgroundView = purpleBackView;
+    }
+	
 	cell.textLabel.text = [[MusicPlayerController sharedInstance] titleForSongAtIndex:indexPath.row];
 	return cell;
 }

@@ -15,7 +15,7 @@
 #define kLastSweepStartFrequency @"lastSweepStartFrequency"
 #define kLastSweepEndFrequency @"lastSweepEndFrequency"
 #define kLastSweepDuration @"lastSweepDuration"
-#define kLastRepeatSwitchState @"lastRepeatSwitchState"
+#define kLastRepeatButtonState @"lastRepeatSwitchState"
 
 #define kLastVolumeValue @"lastVolumeValue"
 

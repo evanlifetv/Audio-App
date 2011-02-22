@@ -248,7 +248,7 @@ void deviceVolumeDidChange (void                      *inUserData,
 									 currentFrequency:[vc startFrequency]
 										 endFrequency:[vc endFrequency]
 											 duration:[vc duration]
-										 shouldRepeat:[vc.repeatSwitch isOn]];
+										 shouldRepeat:vc.repeatButton.selected];
 	
 	[[ToneController sharedInstance] performSelectorInBackground: @selector(playSweep:)
 													  withObject: sweep];

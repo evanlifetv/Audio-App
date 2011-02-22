@@ -36,7 +36,7 @@ static NSNumberFormatter *__formatter = nil;
 @synthesize endFrequencyLabel = _endFrequencyLabel;
 @synthesize durationTitleLabel = _durationTitleLabel;
 @synthesize durationLabel = _durationLabel;
-@synthesize repeatSwitch = _repeatSwitch;
+@synthesize repeatButton = _repeatButton;
 
 
 + (void)initialize
@@ -112,7 +112,7 @@ static NSNumberFormatter *__formatter = nil;
     self.endFrequencyLabel = nil;
     self.durationTitleLabel = nil;
     self.durationLabel = nil;
-	self.repeatSwitch = nil;
+	self.repeatButton = nil;
 }
 
 
@@ -129,7 +129,7 @@ static NSNumberFormatter *__formatter = nil;
     [_endFrequencyLabel release];
     [_durationTitleLabel release];
     [_durationLabel release];
-	[_repeatSwitch release];
+	[_repeatButton release];
 	
 	[super dealloc];
 }
@@ -261,13 +261,13 @@ static NSNumberFormatter *__formatter = nil;
 	
 	
 	//load last state of the repeat switch
-	BOOL repeatSwitchState = DEFAULT_REPEAT_SWITCH_STATE;
-	id repeatSwitchDefaultAsObject = [[NSUserDefaults standardUserDefaults] objectForKey:kLastRepeatSwitchState];
-	if (repeatSwitchDefaultAsObject) {
+	BOOL repeatButtonState = DEFAULT_REPEAT_SWITCH_STATE;
+	id repeatButtonDefaultAsObject = [[NSUserDefaults standardUserDefaults] objectForKey:kLastRepeatButtonState];
+	if (repeatButtonDefaultAsObject) {
 		//the default had previously been saved, so load it
-		repeatSwitchState = [[NSUserDefaults standardUserDefaults] boolForKey:kLastRepeatSwitchState];
+		repeatButtonState = [[NSUserDefaults standardUserDefaults] boolForKey:kLastRepeatButtonState];
 	} //else just go with the default
-	[self.repeatSwitch setOn:repeatSwitchState];
+	_repeatButton.selected = repeatButtonState;
 	
 	[self refreshInterface];
 }
@@ -279,7 +279,7 @@ static NSNumberFormatter *__formatter = nil;
 	[defs setDouble:[self startFrequency] forKey:kLastSweepStartFrequency];
 	[defs setDouble:[self endFrequency] forKey:kLastSweepEndFrequency];
 	[defs setInteger:[self duration] forKey:kLastSweepDuration];
-	[defs setBool:self.repeatSwitch.isOn forKey:kLastRepeatSwitchState];
+	[defs setBool: _repeatButton.selected forKey:kLastRepeatButtonState];
 }
 
 
@@ -296,7 +296,7 @@ static NSNumberFormatter *__formatter = nil;
 	self.startFrequencySlider.enabled = NO;
 	self.endFrequencySlider.enabled = NO;
 	self.durationSlider.enabled = NO;
-	self.repeatSwitch.enabled = NO;
+	self.repeatButton.enabled = NO;
 }
 
 
@@ -305,7 +305,7 @@ static NSNumberFormatter *__formatter = nil;
 	self.startFrequencySlider.enabled = YES;
 	self.endFrequencySlider.enabled = YES;
 	self.durationSlider.enabled = YES;
-	self.repeatSwitch.enabled = YES;
+	self.repeatButton.enabled = YES;
 }
 
 
@@ -345,8 +345,10 @@ static NSNumberFormatter *__formatter = nil;
 
 
 //switch
-- (IBAction)repeatSwitchChangedValue:(id)aSwitch
+- (IBAction)repeatButtonPressed
 {
+    _repeatButton.selected = !_repeatButton.selected;
+    
 	[[ToneController sharedInstance] invalidatePausedSweep];
 }
 

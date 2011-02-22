@@ -14,7 +14,7 @@
 	UILabel			*_endFrequencyLabel;
 	UILabel			*_durationTitleLabel;
 	UILabel			*_durationLabel;
-	UISwitch		*_repeatSwitch;
+	UIButton		*_repeatButton;
 }
 
 @property (nonatomic, retain) IBOutlet STSmallSlider *startFrequencySlider;
@@ -26,12 +26,12 @@
 @property (nonatomic, retain) IBOutlet UILabel *endFrequencyLabel;
 @property (nonatomic, retain) IBOutlet UILabel *durationTitleLabel;
 @property (nonatomic, retain) IBOutlet UILabel *durationLabel;
-@property (nonatomic, retain) IBOutlet UISwitch *repeatSwitch;
+@property (nonatomic, retain) IBOutlet UIButton *repeatButton;
 
 + (SweepGeneratorViewController *) sharedInstance;
 
 - (IBAction)sliderChangedValue:(UISlider *)aSlider;
-- (IBAction)repeatSwitchChangedValue:(id)aSwitch;
+- (IBAction)repeatButtonPressed;
 - (double)startFrequency;
 - (double)endFrequency;
 - (int)duration;

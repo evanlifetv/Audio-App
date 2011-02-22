@@ -76,6 +76,8 @@ void deviceVolumeDidChange (void                      *inUserData,
 			break;
 		}
 	}
+    
+    self.volumeView.showsRouteButton = NO;
 		
 	[self beginObserving];
 }

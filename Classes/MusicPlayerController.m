@@ -106,7 +106,13 @@ static MusicPlayerController *__sharedInstance = nil;
     MPMediaItem *song = [[self.soundTweakPlaylist items] objectAtIndex:index];
     
     MPMediaItemArtwork *artwork = [song valueForProperty: MPMediaItemPropertyArtwork];
-    UIImage *artworkImage = [artwork imageWithSize: imageSize];
+    
+    UIImage *artworkImage = nil;
+    if (artwork)
+        artworkImage = [artwork imageWithSize: imageSize];
+    else
+        artworkImage = [UIImage imageNamed: @"noartwork.png"];
+    
     return artworkImage;
 }
 

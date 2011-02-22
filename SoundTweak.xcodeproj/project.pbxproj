@@ -73,6 +73,7 @@
 		D5E4707B127DA55E00BA3DD6 /* AudioControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.m */; };
 		D5E4707C127DA55E00BA3DD6 /* AudioControlsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E4707A127DA55E00BA3DD6 /* AudioControlsViewController.xib */; };
 		D5F2581213078F7300A12D71 /* PinkNoiseController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2581113078F7100A12D71 /* PinkNoiseController.m */; };
+		D5F78C7E1313759700F62B27 /* noartwork.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F78C7D1313759700F62B27 /* noartwork.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		D5F2581013078F7100A12D71 /* PinkNoiseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseController.h; sourceTree = "<group>"; };
 		D5F2581113078F7100A12D71 /* PinkNoiseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinkNoiseController.m; sourceTree = "<group>"; };
 		D5F25815130796B700A12D71 /* STTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTypes.h; sourceTree = "<group>"; };
+		D5F78C7D1313759700F62B27 /* noartwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noartwork.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +366,7 @@
 				C4751FA5128A1A2800BC216A /* controlbackground.png */,
 				C4751FD9128A202F00BC216A /* playbutton.png */,
 				C4F44B6812FCBBC300DD7803 /* fft-mock.png */,
+				D5F78C7D1313759700F62B27 /* noartwork.png */,
 				C416DDC01290A997005FDAC0 /* pausebutton.png */,
 				C45539301290EDE200FBC09A /* supportbackground.png */,
 				D532A510127BB4D500F753E2 /* volume_down.png */,
@@ -527,6 +530,7 @@
 				D5BD0D7F12FE6F3E0013216D /* mute-selected.png in Resources */,
 				C47DCDE81311C68600EAF745 /* playlist-bg.png in Resources */,
 				C47DCDE91311C68600EAF745 /* selected-freq-bg.png in Resources */,
+				D5F78C7E1313759700F62B27 /* noartwork.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

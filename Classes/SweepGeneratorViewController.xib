@@ -129,7 +129,7 @@
 					<object class="IBUITextView" id="349890377">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{62, 113}, {237, 356}}</string>
+						<string key="NSFrame">{{62, 93}, {237, 350}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="990023291"/>
@@ -142,8 +142,13 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+						<string key="IBUIText">Frequency sweeps allow you to test the entire spectrum of sound by _____________. Set your start and end frequency, and voila! Finding potential problem areas will be as easy as tying your shoes.</string>
 						<reference key="IBUITextColor" ref="123034383"/>
+						<object class="NSFont" key="IBUIFont" id="1044498870">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -303,11 +308,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">20KHz</string>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">17</double>
-							<int key="NSfFlags">16</int>
-						</object>
+						<reference key="IBUIFont" ref="1044498870"/>
 						<reference key="IBUITextColor" ref="781688911"/>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
 						<reference key="IBUIShadowColor" ref="799422805"/>

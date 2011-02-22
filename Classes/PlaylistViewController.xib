@@ -90,7 +90,7 @@
 					<object class="IBUITextView" id="349890377">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{63, 92}, {235, 356}}</string>
+						<string key="NSFrame">{{63, 92}, {235, 137}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="401385040"/>
@@ -103,7 +103,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">To enable this feature, please create a playlist called "SoundTweak" and sync the test songs you would like to have appear.</string>
+						<string key="IBUIText">This feature enables you to create your own playlist called “SoundTweak” by syncing your own songs. Hey, we just want you to listen to what you like.</string>
 						<reference key="IBUITextColor" ref="123034383"/>
 						<object class="NSFont" key="IBUIFont" id="425187898">
 							<string key="NSName">Helvetica</string>
@@ -247,7 +247,6 @@
 						<string key="NSFrame">{{673, 148}, {35, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>

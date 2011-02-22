@@ -55,7 +55,7 @@
 						<string key="NSFrame">{{341, 81}, {76, 74}}</string>
 						<reference key="NSSuperview" ref="821238009"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="369788662"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -195,16 +195,6 @@
 							<string key="NSResourceName">button-normal.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="369788662">
-						<reference key="NSNextResponder" ref="821238009"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{62, 179}, {639, 158}}</string>
-						<reference key="NSSuperview" ref="821238009"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="85406382"/>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-					</object>
 					<object class="IBUIView" id="979292348">
 						<reference key="NSNextResponder" ref="821238009"/>
 						<int key="NSvFlags">292</int>
@@ -316,7 +306,6 @@
 							<reference ref="126157887"/>
 							<reference ref="85406382"/>
 							<reference ref="358125287"/>
-							<reference ref="369788662"/>
 							<reference ref="979292348"/>
 							<reference ref="90416273"/>
 						</array>
@@ -359,11 +348,6 @@
 						<string key="objectName">Mute Button</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">49</int>
-						<reference key="object" ref="369788662"/>
-						<reference key="parent" ref="821238009"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">50</int>
 						<reference key="object" ref="979292348"/>
 						<reference key="parent" ref="821238009"/>
@@ -391,7 +375,6 @@
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="44.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="45.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="49.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<object class="NSAffineTransform" key="5.IBViewBoundsToFrameTransform">
 					<bytes key="NSTransformStruct">P4AAAL+AAABDrQAAwxMAAA</bytes>

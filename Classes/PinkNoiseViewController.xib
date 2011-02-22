@@ -3,8 +3,13 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1246</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
+		<string key="IBDocument.HIToolboxVersion">462.00</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+			<string key="NS.object.0">294</string>
+		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBUIImageView</string>
 			<string>IBUITextView</string>
@@ -126,7 +131,6 @@
 						<string key="NSFrame">{{381, 209}, {249, 22}}</string>
 						<reference key="NSSuperview" ref="918792201"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="873212258"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -151,7 +155,7 @@
 					<object class="IBUITextView" id="438780856">
 						<reference key="NSNextResponder" ref="918792201"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{63, 112}, {235, 357}}</string>
+						<string key="NSFrame">{{64, 92}, {235, 241}}</string>
 						<reference key="NSSuperview" ref="918792201"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="191929705"/>
@@ -161,7 +165,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">Press the play button, and you will hear our magically generated static!</string>
+						<string key="IBUIText">What is it? Pink noise is a random noise shaped from equal levels of each frequency, including low and high frequencies, allowing you to easily perfect any problem areas. You can thank us later, now press that play button and check out the best static around.</string>
 						<reference key="IBUITextColor" ref="419883247"/>
 						<reference key="IBUIFont" ref="691008142"/>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -293,7 +297,7 @@
 					<string key="superclassName">UIViewController</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./classes-xjh84/PinkNoiseViewController.h</string>
+						<string key="minorKey">./Classes/PinkNoiseViewController.h</string>
 					</object>
 				</object>
 			</array>
@@ -301,12 +305,11 @@
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">../SoundTweak.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">tab-background.png</string>
 			<string key="NS.object.0">{768, 481}</string>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">106</string>
+		<string key="IBCocoaTouchPluginVersion">294</string>
 	</data>
 </archive>

@@ -9,15 +9,16 @@
 #import "MusicPlayerController.h"
 #import "MediaPlayer/MPMediaQuery.h"
 #import "MediaPlayer/MPMediaPlaylist.h"
-
+#import "STSong.h"
 
 NSString * const kMusicPlayerControllerDidSelectNewSongNotification = @"kMusicPlayerControllerDidSelectNewSongNotification";
+NSString * const kMusicPlayerControllerDidBeginPlayingNotification = @"kMusicPlayerControllerDidBeginPlayingNotification";
 NSString * const kMusicPlayerControllerDidStopNotification = @"kMusicPlayerControllerDidStopNotification";
+NSString * const kMusicPlayerControllerDidPauseNotification = @"kMusicPlayerControllerDidPauseNotification";
 
 static MusicPlayerController *__sharedInstance = nil;
 
 @interface MusicPlayerController()
-- (void)setCurrentItem:(MPMediaItem*)item;
 - (void) refreshPlaylist;
 @end
 
@@ -25,7 +26,7 @@ static MusicPlayerController *__sharedInstance = nil;
 @implementation MusicPlayerController
 
 @synthesize musicPlayer = _musicPlayer;
-@synthesize currentItem = _currentItem;
+@synthesize selectedSong = _selectedSong;
 @synthesize soundTweakPlaylist = _soundTweakPlaylist;
 
 
@@ -47,7 +48,8 @@ static MusicPlayerController *__sharedInstance = nil;
 {
 	if ((self = [super init])) {
 		_musicPlayer = [[MPMusicPlayerController applicationMusicPlayer] retain];
-		
+		[_musicPlayer beginGeneratingPlaybackNotifications];
+        
 		//initialize the playlist data
 		[self refreshPlaylist];
 	}
@@ -87,7 +89,7 @@ static MusicPlayerController *__sharedInstance = nil;
 - (void)dealloc
 {
 	[_musicPlayer release];
-	[_currentItem release];
+	[_selectedSong release];
 	[_soundTweakPlaylist release];
 	
 	[super dealloc];
@@ -109,65 +111,45 @@ static MusicPlayerController *__sharedInstance = nil;
 {
 	NSArray *songs = [self.soundTweakPlaylist items];
 	MPMediaItem *songItem = [songs objectAtIndex:index];
-	[self setCurrentItem:songItem];
+    
+	[self setSelectedSong:[STSong songWithMediaItem: songItem]];
 }
 
 
--(NSString *) artistForSongAtIndex: (NSInteger) index
+- (STSong *) songAtIndex: (NSInteger) index
 {
-    MPMediaItem *song = [[self.soundTweakPlaylist items] objectAtIndex:index];
-	
-	return [song valueForProperty:MPMediaItemPropertyArtist];
-}
-
-
--(UIImage*) artworkWithSize: (CGSize) imageSize forSongAtIndex: (NSInteger) index
-{
-    MPMediaItem *song = [[self.soundTweakPlaylist items] objectAtIndex:index];
-    
-    MPMediaItemArtwork *artwork = [song valueForProperty: MPMediaItemPropertyArtwork];
-    
-    UIImage *artworkImage = nil;
-    if (artwork)
-        artworkImage = [artwork imageWithSize: imageSize];
-    else
-        artworkImage = [UIImage imageNamed: @"noartwork.png"];
-    
-    return artworkImage;
-}
-
-
-- (NSString*)titleForSongAtIndex:(NSInteger)index
-{
-	MPMediaItem *song = [[self.soundTweakPlaylist items] objectAtIndex:index];
-	
-	return [song valueForProperty:MPMediaItemPropertyTitle];
+    NSArray *songs = [self.soundTweakPlaylist items];
+	MPMediaItem *songItem = [songs objectAtIndex:index];
+    return [STSong songWithMediaItem: songItem];
 }
 
 
 - (void)togglePlay
 {
-	if (self.currentItem) {
+	if (_selectedSong) {
 		switch (self.musicPlayer.playbackState) {
 			case MPMusicPlaybackStatePlaying:
 				[self.musicPlayer pause];
+                [[NSNotificationCenter defaultCenter] postNotificationName: kMusicPlayerControllerDidPauseNotification
+                                                                    object:nil];
 				break;
 				
 			default:
 				[self.musicPlayer play];
+                [[NSNotificationCenter defaultCenter] postNotificationName: kMusicPlayerControllerDidBeginPlayingNotification
+                                                                    object: nil];
 				break;
 		}
 	}
 	else {
 		//no song is selected
-		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:nil
-														 message:@"Please select a song to play"
-														delegate:nil
-											   cancelButtonTitle:@"OK"
-											   otherButtonTitles:nil] autorelease];
+		UIAlertView *alert = [[[UIAlertView alloc] initWithTitle: nil
+														 message: @"Please select a song to play"
+														delegate: nil
+											   cancelButtonTitle: @"OK"
+											   otherButtonTitles: nil] autorelease];
 		[alert show];
 	}
-
 }
 
 
@@ -182,22 +164,22 @@ static MusicPlayerController *__sharedInstance = nil;
 
 - (void)setVolume:(float)newVolume
 {
-	[self musicPlayer].volume = newVolume;
+	_musicPlayer.volume = newVolume;
 }
 
 
 #pragma mark -
 #pragma mark Private methods
 
-- (void)setCurrentItem:(MPMediaItem*)item
+- (void)setSelectedSong:(STSong *) newSong
 {
-	if (_currentItem != item) {
-		[self.musicPlayer stop];
+	if (_selectedSong != newSong) {
+		[self stop];
 		
 		//either this is the first selection or the user changed the song selection
-		[_currentItem release];
-		_currentItem = [item retain];
-		[self.musicPlayer setQueueWithItemCollection:[MPMediaItemCollection collectionWithItems:[NSArray arrayWithObject:item]]];
+		[_selectedSong release];
+		_selectedSong = [newSong retain];
+		[self.musicPlayer setQueueWithItemCollection:[MPMediaItemCollection collectionWithItems:[NSArray arrayWithObject: newSong.sourceMediaItem]]];
 	
 		[[NSNotificationCenter defaultCenter] postNotificationName:kMusicPlayerControllerDidSelectNewSongNotification object:self];
 	}

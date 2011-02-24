@@ -11,26 +11,25 @@
 #import <MediaPlayer/MPMusicPlayerController.h>
 #import "MediaPlayer/MPMediaPlaylist.h"
 
+@class STSong;
+
 @interface MusicPlayerController : NSObject {
 
 	MPMusicPlayerController *_musicPlayer;
-	MPMediaItem				*_currentItem;
+    STSong                  *_selectedSong;
 	MPMediaPlaylist			*_soundTweakPlaylist;
 	
 }
 
 @property (nonatomic, readonly) MPMusicPlayerController *musicPlayer;
-@property (nonatomic, readonly) MPMediaItem *currentItem;
+@property (nonatomic, retain) STSong *selectedSong;
 @property (nonatomic, readonly) MPMediaPlaylist *soundTweakPlaylist;
 
 + (id)sharedInstance;
 
 - (BOOL)deviceHasSoundTweakPlaylist;
 - (void)selectSongAtIndex:(NSInteger)index;
-
--(NSString *) artistForSongAtIndex: (NSInteger) index;
--(NSString*) titleForSongAtIndex: (NSInteger) index;
--(UIImage*) artworkWithSize: (CGSize) imageSize forSongAtIndex: (NSInteger) index;
+- (STSong *) songAtIndex: (NSInteger) index;
 
 - (void)togglePlay;
 - (void)setVolume:(float)newVolume;
@@ -38,4 +37,6 @@
 @end
 
 extern NSString * const kMusicPlayerControllerDidSelectNewSongNotification;
+extern NSString * const kMusicPlayerControllerDidBeginPlayingNotification;
 extern NSString * const kMusicPlayerControllerDidStopNotification;
+extern NSString * const kMusicPlayerControllerDidPauseNotification;

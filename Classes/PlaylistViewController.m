@@ -10,7 +10,14 @@
 #import "MusicPlayerController.h"
 #import "AudioControlsViewController.h"
 #import "StyleController.h"
+#import "STSmallSlider.h"
+#import "STSong.h"
 
+@interface PlaylistViewController()
+-(NSString *) displayStringForTimeInterval: (NSTimeInterval) interval;
+-(void) startObservingMusicPlayer;
+-(void) stopObservingMusicPlayer;
+@end
 
 @implementation PlaylistViewController
 
@@ -18,6 +25,9 @@
 @synthesize artistLabel = _artistLabel;
 @synthesize songTitleLabel = _songTitleLabel;
 @synthesize artworkView = _artworkView;
+@synthesize scrubSlider = _scrubSlider;
+@synthesize currentTimeLabel = _currentTimeLabel;
+@synthesize remainingTimeLabel = _remainingTimeLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -37,6 +47,26 @@
                                              selector: @selector(didBecomeActive)
                                                  name: UIApplicationDidBecomeActiveNotification
                                                object: nil];
+    /*
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(didBeginPlaying)
+                                                 name: kMusicPlayerControllerDidBeginPlayingNotification
+                                               object: nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(didPause)
+                                                 name: kMusicPlayerControllerDidPauseNotification
+                                               object: nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(didStop)
+                                                 name: kMusicPlayerControllerDidStopNotification
+                                               object: nil];
+    */
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(playerStateDidChange:)
+                                                 name: MPMusicPlayerControllerPlaybackStateDidChangeNotification
+                                               object: nil];
 }
 
 
@@ -44,7 +74,7 @@
 {
     [super viewWillAppear: animated];
     
-    _artworkView.image = [UIImage imageNamed: @"noartwork.png"];
+    _artworkView.image = [UIImage imageNamed: @"noartwork.png"];  //load the "no artwork" image by default
     
 	if ([[MusicPlayerController sharedInstance] deviceHasSoundTweakPlaylist]) {
 		[self.tableView reloadData];
@@ -80,6 +110,9 @@
     self.artistLabel = nil;
     self.songTitleLabel = nil;
     self.artworkView = nil;
+    self.scrubSlider = nil;
+    self.currentTimeLabel = nil;
+    self.remainingTimeLabel = nil;
 }
 
 
@@ -91,10 +124,88 @@
     [_artistLabel release];
     [_songTitleLabel release];
     [_artworkView release];
+    [_scrubSlider release];
+    [_currentTimeLabel release];
+    [_remainingTimeLabel release];
+    
+    [_trackingTimer invalidate];
+    [_trackingTimer release];
     
 	[super dealloc];
 }
 
+
+#pragma mark -
+#pragma mark Actions
+
+-(void) playerStateDidChange: (NSNotification *) notification
+{
+    switch ([[[MusicPlayerController sharedInstance] musicPlayer] playbackState]) {
+        case MPMusicPlaybackStatePaused:
+        case MPMusicPlaybackStateStopped:
+            [self stopObservingMusicPlayer];
+            break;
+        
+        case MPMusicPlaybackStatePlaying:
+            [self startObservingMusicPlayer];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+-(IBAction) scrubSliderChanged
+{
+    NSTimeInterval currentPosition = _scrubSlider.value;
+    
+    STSong *song = [[MusicPlayerController sharedInstance] selectedSong];
+    
+    NSTimeInterval remainingTime = song.duration - currentPosition;
+    
+    _currentTimeLabel.text = [self displayStringForTimeInterval: currentPosition];
+    _remainingTimeLabel.text = [self displayStringForTimeInterval: remainingTime];
+    
+    [[[MusicPlayerController sharedInstance] musicPlayer] setCurrentPlaybackTime: currentPosition];
+}
+
+
+-(void) startObservingMusicPlayer
+{
+    if (!_trackingTimer) {
+        _trackingTimer = [[NSTimer timerWithTimeInterval: 0.25
+                                                  target: self
+                                                selector: @selector(timerFired:)
+                                                userInfo: nil
+                                                 repeats: YES] retain];
+        
+        [[NSRunLoop currentRunLoop] addTimer:_trackingTimer forMode:NSDefaultRunLoopMode];
+    }
+}
+
+
+-(void) stopObservingMusicPlayer
+{
+    [_trackingTimer invalidate];
+    [_trackingTimer release];
+    _trackingTimer = nil;
+}
+
+
+-(void) timerFired: (NSTimer *) timer
+{
+    NSLog(@"TIMER FIRED");
+    
+    //update the labels
+    STSong *song = [[MusicPlayerController sharedInstance] selectedSong];
+    NSTimeInterval currentPosition = [[[MusicPlayerController sharedInstance] musicPlayer] currentPlaybackTime];
+    
+    NSTimeInterval remainingTime = song.duration - floor(currentPosition);
+    
+    _currentTimeLabel.text = [self displayStringForTimeInterval: currentPosition];
+    _remainingTimeLabel.text = [self displayStringForTimeInterval: remainingTime];
+}
 
 
 #pragma mark -
@@ -141,7 +252,7 @@
         cell.selectedBackgroundView = purpleBackView;
     }
 	
-	cell.textLabel.text = [[MusicPlayerController sharedInstance] titleForSongAtIndex:indexPath.row];
+	cell.textLabel.text = [[MusicPlayerController sharedInstance] songAtIndex:indexPath.row].title;
 	return cell;
 }
 
@@ -150,10 +261,34 @@
 {
 	[[MusicPlayerController sharedInstance] selectSongAtIndex:indexPath.row];
     
-    _songTitleLabel.text = [[MusicPlayerController sharedInstance] titleForSongAtIndex: indexPath.row];
-    _artistLabel.text = [[MusicPlayerController sharedInstance] artistForSongAtIndex: indexPath.row];
-    _artworkView.image = [[MusicPlayerController sharedInstance] artworkWithSize:_artworkView.bounds.size forSongAtIndex:indexPath.row];
+    STSong *song = [[MusicPlayerController sharedInstance] selectedSong];
+    
+    _songTitleLabel.text = song.title;
+    _artistLabel.text = song.artist;
+    
+    NSTimeInterval totalTime = song.duration;
+    _currentTimeLabel.text = [self displayStringForTimeInterval: 0.];
+    _remainingTimeLabel.text = [self displayStringForTimeInterval: totalTime];
+    
+    _artworkView.image = [song artworkImageWithSize:_artworkView.bounds.size];
+    
+    [_scrubSlider setValue: 0. animated: NO];
+    _scrubSlider.minimumValue = 0.;
+    _scrubSlider.maximumValue = totalTime;
 }
 
+
+#pragma mark -
+#pragma mark Internal
+
+-(NSString *) displayStringForTimeInterval: (NSTimeInterval) interval
+{
+    if (interval < 0)
+        return @"0:00";
+    
+    int mins = floor(interval / 60.);
+    int secs = (int)floor(interval) % 60;
+    return [NSString stringWithFormat:@"%i:%02i", mins, secs];
+}
 
 @end

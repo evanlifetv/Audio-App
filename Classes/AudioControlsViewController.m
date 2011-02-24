@@ -129,15 +129,15 @@ void deviceVolumeDidChange (void                      *inUserData,
 												 name:kMusicPlayerControllerDidSelectNewSongNotification
 											   object:nil];
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(musicPlayerControllerDidStop)
-												 name:kMusicPlayerControllerDidStopNotification
-											   object:nil];
-	
 	[[NSNotificationCenter defaultCenter] addObserver: self
 											 selector: @selector(controllerDidStop)
 												 name: kPinkNoiseControllerDidStopNotification
 											   object: nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(playerStateDidChange)
+                                                 name: MPMusicPlayerControllerPlaybackStateDidChangeNotification
+                                               object: nil];
 }
 
 
@@ -183,7 +183,7 @@ void deviceVolumeDidChange (void                      *inUserData,
             break;
             
         case kSTTabTypePlaylist:
-            if ([[MusicPlayerController sharedInstance] currentItem]) {
+            if ([[MusicPlayerController sharedInstance] selectedSong]) {
                 //this prevents switching the play/pause button to pause state if no song is selected
                 _playButton.selected = !_playButton.selected;
             }
@@ -285,6 +285,20 @@ void deviceVolumeDidChange (void                      *inUserData,
 - (void)musicPlayerControllerDidStop
 {
 	self.playButton.selected = NO;
+}
+
+
+- (void)playerStateDidChange
+{
+    switch ([[[MusicPlayerController sharedInstance] musicPlayer] playbackState]) {
+        case MPMusicPlaybackStatePaused:
+        case MPMusicPlaybackStateStopped:
+            self.playButton.selected = NO;
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

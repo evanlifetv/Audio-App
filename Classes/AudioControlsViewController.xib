@@ -55,7 +55,7 @@
 						<string key="NSFrame">{{341, 81}, {76, 74}}</string>
 						<reference key="NSSuperview" ref="821238009"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="85406382"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -133,7 +133,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">fft</string>
 						<object class="NSFont" key="IBUIFont" id="252738222">
-							<string key="NSName">BauhausStd-Medium</string>
+							<string key="NSName">LucidaGrande</string>
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -170,6 +170,7 @@
 						<string key="NSFrame">{{608, 413}, {68, 34}}</string>
 						<reference key="NSSuperview" ref="821238009"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -177,15 +178,12 @@
 						<reference key="IBUIFont" ref="500989183"/>
 						<string key="IBUINormalTitle">Mute</string>
 						<reference key="IBUIHighlightedTitleColor" ref="817179510"/>
+						<reference key="IBUISelectedTitleColor" ref="817179510"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">2</int>
 							<bytes key="NSRGB">MC42MzEzNzI1NzEgMC4zNjg2Mjc0NTg4IDAuNzYwNzg0Mzg3NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="285829971"/>
-						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">button-highlighted.png</string>
-						</object>
 						<object class="NSCustomResource" key="IBUISelectedBackgroundImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">mute-selected.png</string>
@@ -375,6 +373,7 @@
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="44.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="45.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="1" key="45.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<object class="NSAffineTransform" key="5.IBViewBoundsToFrameTransform">
 					<bytes key="NSTransformStruct">P4AAAL+AAABDrQAAwxMAAA</bytes>
@@ -459,7 +458,6 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="button-highlighted.png">{74, 38}</string>
 			<string key="button-normal.png">{74, 38}</string>
 			<string key="controlbackground.png">{768, 482}</string>
 			<string key="mute-selected.png">{74, 38}</string>

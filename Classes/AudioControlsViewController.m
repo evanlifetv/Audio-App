@@ -203,9 +203,6 @@ void deviceVolumeDidChange (void                      *inUserData,
 
 - (IBAction)muteButtonPressed
 {
-    if (!_playButton.selected)
-        return;
-    
 	_muteButton.selected = !_muteButton.selected;
 	
 	if (_muteButton.selected) {

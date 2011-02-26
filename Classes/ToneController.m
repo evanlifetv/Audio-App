@@ -209,11 +209,12 @@ OSStatus RenderTone(
 	
 	[self togglePlay];
 	
-	NSTimeInterval sleepTime = ((double)sweep.duration / [sweep frequencySpan]);
-	
+    double freqSpan = [sweep frequencySpan];
+    
 	BOOL firstTimeThrough = YES;
 	while (firstTimeThrough || sweep.shouldRepeat) {
-		
+		NSDate *startTime = [NSDate date];
+        
 		double startFrequency = 1;
 		
 		if (firstTimeThrough && sweep.startFrequency != sweep.currentFrequency) {
@@ -223,29 +224,16 @@ OSStatus RenderTone(
 			startFrequency = sweep.startFrequency;
 		}
 		
-		if ([sweep isIncreasing]) {
-			for (int i = startFrequency; i <= sweep.endFrequency; i++) {
-				
-				if (self.hasPausedSweep) {
-					[pool release];
-					return;
-				}
-				
-				self.frequency = i;
-				[NSThread sleepForTimeInterval:sleepTime];
-			}
-		} else {
-			for (int i = startFrequency; i >= sweep.endFrequency; i--) {
-				
-				if (self.hasPausedSweep) {
-					[pool release];
-					return;
-				}
-				
-				self.frequency = i;
-				[NSThread sleepForTimeInterval:sleepTime];
-			}
-		}
+        while ([[NSDate date] timeIntervalSinceDate: startTime] < sweep.duration) {
+            if (!self.sweeping || self.hasPausedSweep || !self.currentSweep) {
+                [pool release];
+                return;
+            }
+            
+            int directionFactor = ([sweep isIncreasing]) ? 1 : -1;
+            self.frequency = startFrequency + directionFactor * freqSpan * ([[NSDate date] timeIntervalSinceDate: startTime] / sweep.duration);
+        }
+        
 		firstTimeThrough = NO;
 	}
 	
@@ -281,12 +269,25 @@ OSStatus RenderTone(
 - (void)pauseSweep
 {
 	//set the new sweep that will be resumable
-	self.currentSweep = [STSweep sweepWithStartFrequency:self.currentSweep.startFrequency
-										currentFrequency:self.frequency
-											endFrequency:self.currentSweep.endFrequency
-												duration:self.currentSweep.duration
-											shouldRepeat:self.currentSweep.shouldRepeat];
+	self.currentSweep = [STSweep sweepWithStartFrequency: _currentSweep.startFrequency
+										currentFrequency: _frequency
+											endFrequency: _currentSweep.endFrequency
+												duration: _currentSweep.duration
+											shouldRepeat: _currentSweep.shouldRepeat];
 	
+	
+	[self stop];
+	
+	[self notifyObserversDidFinishPlayingSweep];
+	
+	self.sweeping = NO;
+	self.hasPausedSweep = YES;
+}
+
+
+- (void)stopSweep
+{
+    self.currentSweep = nil;
 	
 	[self stop];
 	

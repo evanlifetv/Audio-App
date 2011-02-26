@@ -33,6 +33,7 @@
 - (void)togglePlay;
 - (void)playSweep:(STSweep *)sweep;
 - (void)pauseSweep;
+- (void)stopSweep;
 - (void)resumePausedSweep;
 - (void)invalidatePausedSweep;
 - (void)stop;

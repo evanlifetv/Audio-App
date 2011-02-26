@@ -195,8 +195,6 @@
 
 -(void) timerFired: (NSTimer *) timer
 {
-    NSLog(@"TIMER FIRED");
-    
     //update the labels
     STSong *song = [[MusicPlayerController sharedInstance] selectedSong];
     NSTimeInterval currentPosition = [[[MusicPlayerController sharedInstance] musicPlayer] currentPlaybackTime];

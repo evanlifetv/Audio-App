@@ -90,8 +90,8 @@ static NSNumberFormatter *__formatter = nil;
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
-		
-	[[ToneController sharedInstance] invalidatePausedSweep];
+    
+    [[ToneController sharedInstance] invalidatePausedSweep];
 	[[ToneController sharedInstance] stop];
 }
 

@@ -88,7 +88,7 @@ void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 
 - (unsigned long) randomNumber
 {
-    return arc4random() % 18446744073609551610UL;;
+    return arc4random() % ULLONG_MAX;
 }
 
 

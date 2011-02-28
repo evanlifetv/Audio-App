@@ -113,7 +113,7 @@ OSStatus RenderTone(
 + (void)setupAudioSession
 {
 	NSError *setCategoryError = nil;
-	[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback
+	[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayAndRecord
 										   error: &setCategoryError];
 	
 	if (setCategoryError) { /* handle the error condition */ }

@@ -142,7 +142,12 @@
 {
     switch ([[[MusicPlayerController sharedInstance] musicPlayer] playbackState]) {
         case MPMusicPlaybackStatePaused:
+            [self stopObservingMusicPlayer];
+            break;
         case MPMusicPlaybackStateStopped:
+            [[MusicPlayerController sharedInstance] musicPlayer].currentPlaybackTime = 0;
+            _scrubSlider.value = 0;
+            
             [self stopObservingMusicPlayer];
             break;
         
@@ -156,6 +161,7 @@
 }
 
 
+//slider events
 -(IBAction) scrubSliderChanged
 {
     NSTimeInterval currentPosition = _scrubSlider.value;
@@ -203,6 +209,11 @@
     
     _currentTimeLabel.text = [self displayStringForTimeInterval: currentPosition];
     _remainingTimeLabel.text = [self displayStringForTimeInterval: remainingTime];
+    
+    if (!_scrubSlider.touchInside) {
+        //don't want to programmatically change the position of the slider while the user has their finger on it
+        _scrubSlider.value = currentPosition;
+    }
 }
 
 

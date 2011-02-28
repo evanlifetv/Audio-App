@@ -199,10 +199,26 @@
 						<string key="NSFrame">{{81, 421}, {438, 20}}</string>
 						<reference key="NSSuperview" ref="821238009"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="126157887"/>
+						<reference key="NSNextKeyView" ref="893188789"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
+						</object>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+					</object>
+					<object class="IBUIView" id="893188789">
+						<reference key="NSNextResponder" ref="821238009"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{62, 184}, {643, 143}}</string>
+						<reference key="NSSuperview" ref="821238009"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="126157887"/>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+							<object class="NSColorSpace" key="NSCustomColorSpace">
+								<int key="NSID">2</int>
+							</object>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
@@ -274,6 +290,14 @@
 					</object>
 					<int key="connectionID">51</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">fftView</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="893188789"/>
+					</object>
+					<int key="connectionID">54</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -306,6 +330,7 @@
 							<reference ref="358125287"/>
 							<reference ref="979292348"/>
 							<reference ref="90416273"/>
+							<reference ref="893188789"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -351,6 +376,12 @@
 						<reference key="parent" ref="821238009"/>
 						<string key="objectName">MP Volume View</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">53</int>
+						<reference key="object" ref="893188789"/>
+						<reference key="parent" ref="821238009"/>
+						<string key="objectName">FFT View</string>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -383,12 +414,14 @@
 				<object class="NSAffineTransform" key="50.IBViewBoundsToFrameTransform">
 					<bytes key="NSTransformStruct">P4AAAL+AAABCrAAAw74AAA</bytes>
 				</object>
+				<string key="53.CustomClassName">EAGLView</string>
+				<string key="53.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">52</int>
+			<int key="maxID">54</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -415,12 +448,17 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="fftView">EAGLView</string>
 						<string key="muteButton">UIButton</string>
 						<string key="playButton">UIButton</string>
 						<string key="volumeSlider">UISlider</string>
 						<string key="volumeView">MPVolumeView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="fftView">
+							<string key="name">fftView</string>
+							<string key="candidateClassName">EAGLView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="muteButton">
 							<string key="name">muteButton</string>
 							<string key="candidateClassName">UIButton</string>
@@ -441,6 +479,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/AudioControlsViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">EAGLView</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/EAGLView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

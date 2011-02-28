@@ -94,8 +94,8 @@ void ToneInterruptionListener(void *inClientData, UInt32 inInterruptionState)
 
 - (OSStatus) processAudioBufferList:(AudioBufferList *)bufferList
 {
-    float     *bufferLeft = bufferList->mBuffers[0].mData;
-    float     *bufferRight = bufferList->mBuffers[1].mData;
+    float     *bufferLeft = (float*)(bufferList->mBuffers[0].mData);
+    float     *bufferRight = (float*)(bufferList->mBuffers[1].mData);
     
     UInt32     bufferSize = bufferList->mBuffers[0].mDataByteSize;
     UInt32     numChannels = bufferList->mBuffers[0].mNumberChannels;

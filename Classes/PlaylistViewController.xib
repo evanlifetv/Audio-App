@@ -41,6 +41,7 @@
 						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{768, 481}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="670298321"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -57,6 +58,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{63, 26}, {655, 36}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="349890377"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -90,6 +92,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{63, 92}, {235, 137}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="956689548"/>
 						<object class="NSColor" key="IBUIBackgroundColor" id="656820382">
 							<int key="NSColorSpace">3</int>
@@ -117,6 +120,7 @@
 						<int key="NSvFlags">256</int>
 						<string key="NSFrame">{{312, 169}, {403, 286}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="700054479"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -132,7 +136,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{319, 177}, {389, 269}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSWindow"/>
 						<reference key="IBUIBackgroundColor" ref="656820382"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -146,8 +150,9 @@
 					<object class="IBUILabel" id="956689548">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{356, 91}, {322, 22}}</string>
+						<string key="NSFrame">{{356, 86}, {322, 22}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="826817591"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -176,8 +181,9 @@
 					<object class="IBUILabel" id="826817591">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{356, 116}, {322, 22}}</string>
+						<string key="NSFrame">{{356, 111}, {322, 22}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="568159868"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -203,6 +209,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{319, 142}, {39, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="85757808"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -226,6 +233,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{673, 142}, {35, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="401385040"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -249,6 +257,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{78, 230}, {205, 205}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="530910614"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
@@ -261,15 +270,18 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{364, 141}, {297, 23}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="24984654"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
+						<bool key="IBUIContinuous">NO</bool>
 					</object>
 				</array>
 				<string key="NSFrameSize">{768, 481}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="150894562"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -493,7 +505,76 @@
 			<nil key="sourceID"/>
 			<int key="maxID">49</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">PlaylistViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">scrubSliderChanged</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">scrubSliderChanged</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">scrubSliderChanged</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="artistLabel">UILabel</string>
+						<string key="artworkView">UIImageView</string>
+						<string key="currentTimeLabel">UILabel</string>
+						<string key="remainingTimeLabel">UILabel</string>
+						<string key="scrubSlider">STSmallSlider</string>
+						<string key="songTitleLabel">UILabel</string>
+						<string key="tableView">UITableView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="artistLabel">
+							<string key="name">artistLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="artworkView">
+							<string key="name">artworkView</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="currentTimeLabel">
+							<string key="name">currentTimeLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="remainingTimeLabel">
+							<string key="name">remainingTimeLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="scrubSlider">
+							<string key="name">scrubSlider</string>
+							<string key="candidateClassName">STSmallSlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="songTitleLabel">
+							<string key="name">songTitleLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tableView">
+							<string key="name">tableView</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/PlaylistViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">STSmallSlider</string>
+					<string key="superclassName">UISlider</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/STSmallSlider.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

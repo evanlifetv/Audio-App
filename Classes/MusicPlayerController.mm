@@ -66,7 +66,7 @@ static MusicPlayerController *__sharedInstance = nil;
         
         MPMediaQuery *query = [MPMediaQuery playlistsQuery];
         MPMediaPropertyPredicate *playlistPredicate = [MPMediaPropertyPredicate predicateWithValue: name
-                                                                                                 forProperty: MPMediaPlaylistPropertyName];
+                                                                                       forProperty: MPMediaPlaylistPropertyName];
         [query addFilterPredicate: playlistPredicate];
         
         returnedPlaylists = [query collections];

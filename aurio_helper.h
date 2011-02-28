@@ -1,8 +1,8 @@
 /*
 
-    File: MeterTable.h
-Abstract: Class for handling conversion from linear scale to dB
- Version: 1.4
+    File: aurio_helper.h
+Abstract: Helper class for manipulating the remote i/o audio unit
+ Version: 1.21
 
 Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
 Inc. ("Apple") in consideration of your agreement to the following
@@ -47,33 +47,43 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 
 */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
+#if !defined(__rio_helper_h__)
+#define __rio_helper_h__
 
-class MeterTable
+#include "CAStreamBasicDescription.h"
+
+#define kNumDrawBuffers 12
+#define kDefaultDrawSamples 1024
+#define kMinDrawSamples 64
+#define kMaxDrawSamples 4096
+
+extern int drawBufferIdx;
+extern int drawBufferLen;
+extern int drawBufferLen_alloced;
+extern SInt8 *drawBuffers[];
+
+int SetupRemoteIO (AudioUnit& inRemoteIOUnit, AURenderCallbackStruct inRenderProcm, CAStreamBasicDescription& outFormat);
+void SilenceData(AudioBufferList *inData);
+
+class DCRejectionFilter
 {
 public:
-// MeterTable constructor arguments: 
-// inNumUISteps - the number of steps in the UI element that will be drawn. 
-//					This could be a height in pixels or number of bars in an LED style display.
-// inTableSize - The size of the table. The table needs to be large enough that there are no large gaps in the response.
-// inMinDecibels - the decibel value of the minimum displayed amplitude.
-// inRoot - this controls the curvature of the response. 2.0 is square root, 3.0 is cube root. But inRoot doesn't have to be integer valued, it could be 1.8 or 2.5, etc.
+	DCRejectionFilter(Float32 poleDist = DCRejectionFilter::kDefaultPoleDist);
 
-MeterTable(float inMinDecibels = -80., size_t inTableSize = 400, float inRoot = 2.0);	
-~MeterTable();
+	void InplaceFilter(SInt32* ioData, UInt32 numFrames, UInt32 strides);
+	void Reset();
+
+protected:
 	
-	float ValueAt(float inDecibels)
-	{
-		if (inDecibels < mMinDecibels) return  0.;
-		if (inDecibels >= 0.) return 1.;
-		int index = (int)(inDecibels * mScaleFactor);
-		return mTable[index];
-	}
-private:
-	float	mMinDecibels;
-	float	mDecibelResolution;
-	float	mScaleFactor;
-	float	*mTable;
+	// Coefficients
+	SInt16 mA1;
+	SInt16 mGain;
+
+	// State variables
+	SInt32 mY1;
+	SInt32 mX1;
+	
+	static const Float32 kDefaultPoleDist;
 };
+
+#endif

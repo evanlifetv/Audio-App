@@ -85,7 +85,7 @@
 					<object class="IBUIButton" id="816410217">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{232, 541}, {303, 68}}</string>
+						<string key="NSFrame">{{232, 461}, {303, 68}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="492100191"/>
@@ -117,7 +117,7 @@
 					<object class="IBUIButton" id="152820409">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{231, 608}, {304, 73}}</string>
+						<string key="NSFrame">{{231, 559}, {304, 73}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="816410217"/>
@@ -143,7 +143,7 @@
 					<object class="IBUIButton" id="492100191">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{232, 679}, {303, 70}}</string>
+						<string key="NSFrame">{{232, 658}, {303, 70}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="30091954"/>
@@ -193,7 +193,7 @@
 					<object class="IBUITextView" id="49973235">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{53, 188}, {651, 345}}</string>
+						<string key="NSFrame">{{91, 215}, {585, 293}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="152820409"/>
@@ -203,14 +203,23 @@
 						</object>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
+							<integer value="256" key="IBUIAccessibilityTraits"/>
+						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">New to this app? Need some guidance? We’d love to offer some advice, insight, and technical support!     Gonna need a lot more text here!</string>
+						<string type="base64-UTF8" key="IBUIText">TmV3IHRvIHRoaXMgYXBwPyBOZWVkIHNvbWUgZ3VpZGFuY2U/IFdl4oCZZCBsb3ZlIHRvIG9mZmVyIHNv
+bWUgYWR2aWNlLCBpbnNpZ2h0LCBhbmQgdGVjaG5pY2FsIHN1cHBvcnQhIA0NVmlzaXQgb3VyIFNvdW5k
+VHdlYWsgd2Vic2l0ZSBmb3IgYSBsaXN0IG9mIGZyZXF1ZW50bHkgYXNrZWQgcXVlc3Rpb25zIG9yIHRv
+IHNlZSB3aGF0IHdlIGFyZSB3b3JraW5nIG9uIGZvciBmdXR1cmUgcmVsZWFzZXMuIElmIHlvdSB3YW50
+IHRvIGhpdCB1cyB1cCB3aXRoIGVtYWlsLCByZXBvcnQgYSBidWcsIG9yIHJlcXVlc3QgYSBuZXcgZmVh
+dHVyZSwgc2VsZWN0IHRoZSBhcHByb3ByaWF0ZSBidXR0b24gYmVsb3cgYW5kIGdpdmUgdXMgYSBzaG91
+dC4gV2XigJlkIGxvdmUgdG8gaGVhciBmcm9tIHlvdS4NA</string>
 						<reference key="IBUITextColor" ref="942361921"/>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica</string>
-							<double key="NSSize">17</double>
+							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">

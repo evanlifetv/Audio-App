@@ -162,6 +162,15 @@ static MusicPlayerController *__sharedInstance = nil;
 }
 
 
+- (void)pause
+{
+    if (self.musicPlayer.playbackState == MPMusicPlaybackStatePlaying) {
+		[self.musicPlayer pause];
+		[[NSNotificationCenter defaultCenter] postNotificationName:kMusicPlayerControllerDidStopNotification object:self];
+	}
+}
+
+
 - (void)setVolume:(float)newVolume
 {
 	_musicPlayer.volume = newVolume;

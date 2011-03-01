@@ -7,6 +7,7 @@
 #import "SupportViewController.h"
 #import "PlaylistViewController.h"
 #import "TBCController.h"
+#import <AVFoundation/AVAudioSession.h>
 
 @interface AppDelegate()
 - (void)saveState;
@@ -64,6 +65,10 @@
 	return YES;
 }
 
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+}
+
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
@@ -74,6 +79,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	[self saveState];
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    [self saveState];
 }
 
 

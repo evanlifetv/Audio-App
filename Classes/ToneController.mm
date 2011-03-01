@@ -104,7 +104,7 @@ OSStatus RenderTone(
     _sampleRate = 44100.;
     _theta = 0.;
     
-    [[self class] setupAudioSession];
+    //[[self class] setupAudioSession];
     
     return self;
 }
@@ -115,8 +115,6 @@ OSStatus RenderTone(
 	NSError *setCategoryError = nil;
 	[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayAndRecord
 										   error: &setCategoryError];
-	
-	if (setCategoryError) { /* handle the error condition */ }
 	
 	NSError *activationError = nil;
 	[[AVAudioSession sharedInstance] setActive: YES

@@ -171,6 +171,12 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 	animationTimer = nil;
 }
 
+- (NSTimeInterval) animationInterval
+{
+    return animationInterval;
+}
+
+
 - (void)setAnimationInterval:(NSTimeInterval)interval
 {
 	animationInterval = interval;
@@ -204,6 +210,10 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 // Updates the OpenGL view when the timer fires
 - (void)drawView
 {
+    if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground) {
+        return;
+    }
+    
     // the NSTimer seems to fire one final time even though it's been invalidated
     // so just make sure and not draw if we're resigning active
     if (self.applicationResignedActive) return;

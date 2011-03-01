@@ -142,10 +142,6 @@ void deviceVolumeDidChange (void                      *inUserData,
     
 	CFURLRef url = NULL;
 	try {	
-		//url = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, CFStringRef([[NSBundle mainBundle] pathForResource:@"button_press" ofType:@"caf"]), kCFURLPOSIXPathStyle, false);
-		//XThrowIfError(AudioServicesCreateSystemSoundID(url, &buttonPressSound), "couldn't create button tap alert sound");
-		//CFRelease(url);
-		
 		// Initialize and configure the audio session
 		XThrowIfError(AudioSessionInitialize(NULL, NULL, rioInterruptionListener, self), "couldn't initialize audio session");
         
@@ -585,6 +581,7 @@ void propListener(	void *                  inClientData,
                   const void *            inData)
 {
 	AudioControlsViewController *THIS = (AudioControlsViewController*)inClientData;
+    
 	if (inID == kAudioSessionProperty_AudioRouteChange)
 	{
 		try {
@@ -730,7 +727,9 @@ static OSStatus	PerformThru(
 		}
 		
 	//}
-	if (THIS->mute == YES) { SilenceData(ioData); }
+	//if (THIS->mute == YES) {
+        SilenceData(ioData);
+    //}
 	
 	return err;
 }

@@ -47,22 +47,7 @@
                                              selector: @selector(didBecomeActive)
                                                  name: UIApplicationDidBecomeActiveNotification
                                                object: nil];
-    /*
-    [[NSNotificationCenter defaultCenter] addObserver: self
-                                             selector: @selector(didBeginPlaying)
-                                                 name: kMusicPlayerControllerDidBeginPlayingNotification
-                                               object: nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver: self
-                                             selector: @selector(didPause)
-                                                 name: kMusicPlayerControllerDidPauseNotification
-                                               object: nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver: self
-                                             selector: @selector(didStop)
-                                                 name: kMusicPlayerControllerDidStopNotification
-                                               object: nil];
-    */
+
     [[NSNotificationCenter defaultCenter] addObserver: self
                                              selector: @selector(playerStateDidChange:)
                                                  name: MPMusicPlayerControllerPlaybackStateDidChangeNotification
@@ -95,7 +80,7 @@
 {
 	[super viewDidDisappear:animated];
 	
-	[[MusicPlayerController sharedInstance] stop];
+	[[MusicPlayerController sharedInstance] pause];
 }
 
 

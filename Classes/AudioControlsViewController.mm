@@ -18,7 +18,6 @@
 @interface AudioControlsViewController()
 - (void)beginObserving;
 - (void)generateSweep;
-- (void)setDeviceVolume:(float)newVolume;
 @end
 
 
@@ -449,7 +448,6 @@ void deviceVolumeDidChange (void                      *inUserData,
 				
 		[[NSUserDefaults standardUserDefaults] setFloat:currentVolume forKey:kLastVolumeValue];
 		
-		[self setDeviceVolume:0.];
 		[self.volumeSlider setValue:0.];
 		[[MusicPlayerController sharedInstance] setVolume:0.];
 	}
@@ -457,7 +455,6 @@ void deviceVolumeDidChange (void                      *inUserData,
 		//user wants to un-mute
 		float resumeVolume = [[NSUserDefaults standardUserDefaults] floatForKey:kLastVolumeValue];
 		
-		[self setDeviceVolume:resumeVolume];
 		[self.volumeSlider setValue:resumeVolume];
 		[[MusicPlayerController sharedInstance] setVolume:resumeVolume];
 	}
@@ -481,14 +478,6 @@ void deviceVolumeDidChange (void                      *inUserData,
 	[[ToneController sharedInstance] performSelectorInBackground: @selector(playSweep:)
 													  withObject: sweep];
 
-}
-
-
-- (void)setDeviceVolume:(float)newVolume
-{
-	AudioSessionSetProperty(kAudioSessionProperty_CurrentHardwareOutputVolume,
-							sizeof(newVolume),
-							&newVolume);
 }
 
 

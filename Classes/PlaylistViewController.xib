@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">294</string>
+			<string key="NS.object.0">300</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -100,6 +100,7 @@
 						</object>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
@@ -134,7 +135,7 @@
 					<object class="IBUITableView" id="530910614">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{319, 177}, {389, 269}}</string>
+						<string key="NSFrame">{{319, 177}, {387, 269}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
 						<reference key="IBUIBackgroundColor" ref="656820382"/>
@@ -583,6 +584,6 @@
 			<string key="playlist-bg.png">{241, 292}</string>
 			<string key="tab-background.png">{768, 481}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">294</string>
+		<string key="IBCocoaTouchPluginVersion">300</string>
 	</data>
 </archive>

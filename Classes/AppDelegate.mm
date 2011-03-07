@@ -67,6 +67,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    [[AudioControlsViewController sharedInstance] startFFT];
 }
 
 
@@ -81,8 +82,13 @@
 	[self saveState];
 }
 
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
+    [[AVAudioSession sharedInstance] setActive: NO error: NULL];
+    
+    [[AudioControlsViewController sharedInstance] stopFFT];
+    
     [self saveState];
 }
 

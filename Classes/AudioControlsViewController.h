@@ -121,6 +121,8 @@ inline double linearInterp(double valA, double valB, double fract)
 @property (nonatomic, assign)	BOOL					mute;
 @property (nonatomic, assign)	AURenderCallbackStruct	inputProc;
 
+- (void)startFFT;
+- (void)stopFFT;
 //FFT --------------------------------------------------
 
 @end

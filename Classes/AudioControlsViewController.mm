@@ -132,7 +132,6 @@ void deviceVolumeDidChange (void                      *inUserData,
     self.volumeView.showsRouteButton = NO;
     
     //FFT --------------------------------------------------
-    //displayMode = aurioTouchDisplayModeOscilloscopeWaveform;
     displayMode = aurioTouchDisplayModeOscilloscopeFFT;
 	
 	// Initialize our remote i/o unit
@@ -155,6 +154,14 @@ void deviceVolumeDidChange (void                      *inUserData,
 		UInt32 size = sizeof(hwSampleRate);
 		XThrowIfError(AudioSessionGetProperty(kAudioSessionProperty_CurrentHardwareSampleRate, &size, &hwSampleRate), "couldn't get hw sample rate");
 		
+        //override the audio category to allow mixing (corrects issue with MPMusicPlayerController interrupting the recording for FFT)
+        OSStatus propertySetError = 0;
+        UInt32 allowMixing = true;
+        
+        propertySetError = AudioSessionSetProperty (kAudioSessionProperty_OverrideCategoryMixWithOthers,
+                                                    sizeof (allowMixing),
+                                                    &allowMixing);
+        
 		XThrowIfError(AudioSessionSetActive(true), "couldn't set audio session active\n");
         
 		XThrowIfError(SetupRemoteIO(rioUnit, inputProc, thruFormat), "couldn't setup remote i/o unit");
@@ -311,6 +318,24 @@ void deviceVolumeDidChange (void                      *inUserData,
     //FFT --------------------------------------------------
     
     [super dealloc];
+}
+
+
+- (void)startFFT
+{
+    fftView.applicationResignedActive = NO;
+    [fftView startAnimation];
+    XThrowIfError(AudioSessionSetActive(true), "couldn't set audio session active");
+    XThrowIfError(AudioOutputUnitStart(self.rioUnit), "couldn't start unit");
+    
+}
+
+
+- (void)stopFFT
+{
+    fftView.applicationResignedActive = YES;
+    [fftView stopAnimation];
+    XThrowIfError(AudioOutputUnitStop(self.rioUnit), "couldn't stop unit");
 }
 
 
@@ -668,6 +693,7 @@ static OSStatus	PerformThru(
 							AudioBufferList 			*ioData)
 {
 	AudioControlsViewController *THIS = (AudioControlsViewController *)inRefCon;
+    
 	OSStatus err = AudioUnitRender(THIS->rioUnit, ioActionFlags, inTimeStamp, 1, inNumberFrames, ioData);
 	if (err) { printf("PerformThru: error %d\n", (int)err); return err; }
 	
@@ -675,8 +701,6 @@ static OSStatus	PerformThru(
 	for(UInt32 i = 0; i < ioData->mNumberBuffers; ++i)
 		THIS->dcFilter[i].InplaceFilter((SInt32*)(ioData->mBuffers[i].mData), inNumberFrames, 1);
 	
-	//if (THIS->displayMode == aurioTouchDisplayModeOscilloscopeWaveform)
-	//{
 		// The draw buffer is used to hold a copy of the most recent PCM data to be drawn on the oscilloscope
     
     if (!(THIS->_firstPassComplete)) {
@@ -715,21 +739,16 @@ static OSStatus	PerformThru(
 		drawBufferIdx += inNumberFrames;
         THIS->_firstPassComplete = YES;
 	}
-
-    //else if ((THIS->displayMode == aurioTouchDisplayModeSpectrum) || (THIS->displayMode == aurioTouchDisplayModeOscilloscopeFFT))
-	//else if ((THIS->displayMode == aurioTouchDisplayModeOscilloscopeFFT))
-	//{
-		if (THIS->fftBufferManager == NULL) return noErr;
-		
-		if (THIS->fftBufferManager->NeedsNewAudioData())
-		{
-			THIS->fftBufferManager->GrabAudioData(ioData); 
-		}
-		
-	//}
-	//if (THIS->mute == YES) {
-        SilenceData(ioData);
-    //}
+    
+    if (THIS->fftBufferManager == NULL) return noErr;
+    
+    if (THIS->fftBufferManager->NeedsNewAudioData())
+    {
+        THIS->fftBufferManager->GrabAudioData(ioData); 
+    }
+    
+    //don't let recorded audio pass back through to the output
+    SilenceData(ioData);
 	
 	return err;
 }

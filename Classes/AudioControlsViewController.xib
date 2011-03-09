@@ -55,7 +55,7 @@
 						<string key="NSFrame">{{341, 81}, {76, 74}}</string>
 						<reference key="NSSuperview" ref="821238009"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="85406382"/>
+						<reference key="NSNextKeyView" ref="893188789"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -193,32 +193,48 @@
 							<string key="NSResourceName">button-normal.png</string>
 						</object>
 					</object>
-					<object class="IBUIView" id="979292348">
-						<reference key="NSNextResponder" ref="821238009"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{81, 421}, {438, 20}}</string>
-						<reference key="NSSuperview" ref="821238009"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="893188789"/>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MCAwAA</bytes>
-						</object>
-						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-					</object>
 					<object class="IBUIView" id="893188789">
 						<reference key="NSNextResponder" ref="821238009"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{62, 184}, {643, 143}}</string>
+						<string key="NSFrame">{{62, 170}, {643, 143}}</string>
 						<reference key="NSSuperview" ref="821238009"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="126157887"/>
+						<reference key="NSNextKeyView" ref="85406382"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 							<object class="NSColorSpace" key="NSCustomColorSpace">
 								<int key="NSID">2</int>
 							</object>
+						</object>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+					</object>
+					<object class="IBUIImageView" id="503199585">
+						<reference key="NSNextResponder" ref="821238009"/>
+						<int key="NSvFlags">256</int>
+						<string key="NSFrame">{{62, 170}, {644, 143}}</string>
+						<reference key="NSSuperview" ref="821238009"/>
+						<reference key="NSWindow"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<int key="IBUIContentMode">4</int>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">bode.png</string>
+						</object>
+					</object>
+					<object class="IBUIView" id="979292348">
+						<reference key="NSNextResponder" ref="821238009"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{81, 421}, {438, 20}}</string>
+						<reference key="NSSuperview" ref="821238009"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="126157887"/>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
@@ -328,8 +344,9 @@
 							<reference ref="126157887"/>
 							<reference ref="85406382"/>
 							<reference ref="358125287"/>
-							<reference ref="979292348"/>
 							<reference ref="90416273"/>
+							<reference ref="979292348"/>
+							<reference ref="503199585"/>
 							<reference ref="893188789"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -373,14 +390,21 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">50</int>
 						<reference key="object" ref="979292348"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="821238009"/>
 						<string key="objectName">MP Volume View</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">53</int>
 						<reference key="object" ref="893188789"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="821238009"/>
 						<string key="objectName">FFT View</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">55</int>
+						<reference key="object" ref="503199585"/>
+						<reference key="parent" ref="821238009"/>
 					</object>
 				</array>
 			</object>
@@ -421,32 +445,13 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">54</int>
+			<int key="maxID">55</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">AudioControlsViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="muteButtonPressed">id</string>
-						<string key="playButtonPressed">id</string>
-						<string key="volumeSliderChanged">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="muteButtonPressed">
-							<string key="name">muteButtonPressed</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="playButtonPressed">
-							<string key="name">playButtonPressed</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="volumeSliderChanged">
-							<string key="name">volumeSliderChanged</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="fftView">EAGLView</string>
 						<string key="muteButton">UIButton</string>
@@ -504,6 +509,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="bode.png">{644, 143}</string>
 			<string key="button-normal.png">{74, 38}</string>
 			<string key="controlbackground.png">{768, 482}</string>
 			<string key="mute-selected.png">{74, 38}</string>

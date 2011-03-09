@@ -34,6 +34,7 @@
 		C465D578127A5F3000639357 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D577127A5F3000639357 /* AudioToolbox.framework */; };
 		C465D59C127A5F3700639357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59B127A5F3700639357 /* QuartzCore.framework */; };
 		C465D59E127A5F4100639357 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59D127A5F4100639357 /* OpenGLES.framework */; };
+		C468B4A3132714C200C29C83 /* bode.png in Resources */ = {isa = PBXBuildFile; fileRef = C468B4A2132714C200C29C83 /* bode.png */; };
 		C4751FA6128A1A2800BC216A /* controlbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FA5128A1A2800BC216A /* controlbackground.png */; };
 		C4751FDA128A202F00BC216A /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FD9128A202F00BC216A /* playbutton.png */; };
 		C47A7ECB12EFB68900F619B0 /* tab-background.png in Resources */ = {isa = PBXBuildFile; fileRef = C47A7ECA12EFB68900F619B0 /* tab-background.png */; };
@@ -116,6 +117,7 @@
 		C465D577127A5F3000639357 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C465D59B127A5F3700639357 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C465D59D127A5F4100639357 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C468B4A2132714C200C29C83 /* bode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bode.png; sourceTree = "<group>"; };
 		C4751FA5128A1A2800BC216A /* controlbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlbackground.png; sourceTree = "<group>"; };
 		C4751FD9128A202F00BC216A /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
 		C47A7ECA12EFB68900F619B0 /* tab-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-background.png"; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				D513929A12CA6D23003451C1 /* Tab Icons */,
 				D5BD0D7A12FE6F3E0013216D /* button-normal.png */,
 				D5BD0D7B12FE6F3E0013216D /* button-highlighted.png */,
+				C468B4A2132714C200C29C83 /* bode.png */,
 				D5BD0D7C12FE6F3E0013216D /* mute-selected.png */,
 				D519657C1292400B00D14563 /* sliderbackmax-small.png */,
 				D519657D1292400B00D14563 /* sliderbackmin-small.png */,
@@ -575,6 +578,7 @@
 				C47DCDE81311C68600EAF745 /* playlist-bg.png in Resources */,
 				C47DCDE91311C68600EAF745 /* selected-freq-bg.png in Resources */,
 				D5F78C7E1313759700F62B27 /* noartwork.png in Resources */,
+				C468B4A3132714C200C29C83 /* bode.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

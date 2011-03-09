@@ -12,6 +12,8 @@
 	<array>
 		<string>Icon.png</string>
 	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
 	<key>CFBundleIdentifier</key>
 	<string>tv.evanhamilton.soundtweak</string>
 	<key>CFBundleInfoDictionaryVersion</key>

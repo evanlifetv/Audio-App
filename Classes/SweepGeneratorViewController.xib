@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">300</string>
+			<string key="NS.object.0">294</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -41,6 +41,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{768, 481}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="670298321"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -54,6 +55,7 @@
 						<int key="NSvFlags">256</int>
 						<string key="NSFrame">{{636, 306}, {78, 41}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="789935489"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -70,6 +72,7 @@
 						<int key="NSvFlags">256</int>
 						<string key="NSFrame">{{636, 220}, {78, 41}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="955403855"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -83,6 +86,7 @@
 						<int key="NSvFlags">256</int>
 						<string key="NSFrame">{{636, 125}, {78, 41}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="751100351"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -96,6 +100,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{57, 24}, {655, 36}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="349890377"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -127,8 +132,9 @@
 					<object class="IBUITextView" id="349890377">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{62, 93}, {237, 350}}</string>
+						<string key="NSFrame">{{73, 94}, {214, 350}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="990023291"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -140,11 +146,11 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">Frequency sweeps allow you to test the entire spectrum of sound by _____________. Set your start and end frequency, and voila! Finding potential problem areas will be as easy as tying your shoes.</string>
+						<string key="IBUIText">The sweep function allows you to create your own frequency sweeps.Set your start and end frequency, duration, repeat if you choose, and voila! Finding potential problem areas will be as easy as tying your shoes.</string>
 						<reference key="IBUITextColor" ref="123034383"/>
-						<object class="NSFont" key="IBUIFont" id="1044498870">
+						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica</string>
-							<double key="NSSize">17</double>
+							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -157,6 +163,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{322, 135}, {302, 23}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="733628372"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -169,6 +176,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{322, 227}, {302, 23}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="900092312"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -181,6 +189,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{322, 316}, {301, 23}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="948799908"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -193,6 +202,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{355, 106}, {236, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1066848304"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -222,6 +232,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{355, 192}, {236, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="86356701"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -246,6 +257,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{355, 287}, {236, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1039957432"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -270,6 +282,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{645, 134}, {61, 25}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="870512150"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -291,6 +304,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{645, 226}, {61, 25}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="595126390"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -298,7 +312,11 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<string key="IBUIText">20KHz</string>
-						<reference key="IBUIFont" ref="1044498870"/>
+						<object class="NSFont" key="IBUIFont">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<reference key="IBUITextColor" ref="781688911"/>
 						<reference key="IBUIHighlightedColor" ref="123034383"/>
 						<reference key="IBUIShadowColor" ref="799422805"/>
@@ -310,6 +328,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{647, 316}, {56, 21}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="575316585"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -328,6 +347,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{436, 361}, {72, 37}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -361,6 +381,7 @@
 				</array>
 				<string key="NSFrameSize">{768, 481}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="40787879"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -698,7 +719,94 @@
 			<nil key="sourceID"/>
 			<int key="maxID">58</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">STSmallSlider</string>
+					<string key="superclassName">UISlider</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/STSmallSlider.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SweepGeneratorViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="repeatButtonPressed">id</string>
+						<string key="sliderChangedValue:">UISlider</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="repeatButtonPressed">
+							<string key="name">repeatButtonPressed</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="sliderChangedValue:">
+							<string key="name">sliderChangedValue:</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="durationLabel">UILabel</string>
+						<string key="durationSlider">STSmallSlider</string>
+						<string key="durationTitleLabel">UILabel</string>
+						<string key="endFrequencyLabel">UILabel</string>
+						<string key="endFrequencySlider">STSmallSlider</string>
+						<string key="endFrequencyTitleLabel">UILabel</string>
+						<string key="repeatButton">UIButton</string>
+						<string key="startFrequencyLabel">UILabel</string>
+						<string key="startFrequencySlider">STSmallSlider</string>
+						<string key="startFrequencyTitleLabel">UILabel</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="durationLabel">
+							<string key="name">durationLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="durationSlider">
+							<string key="name">durationSlider</string>
+							<string key="candidateClassName">STSmallSlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="durationTitleLabel">
+							<string key="name">durationTitleLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="endFrequencyLabel">
+							<string key="name">endFrequencyLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="endFrequencySlider">
+							<string key="name">endFrequencySlider</string>
+							<string key="candidateClassName">STSmallSlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="endFrequencyTitleLabel">
+							<string key="name">endFrequencyTitleLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="repeatButton">
+							<string key="name">repeatButton</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="startFrequencyLabel">
+							<string key="name">startFrequencyLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="startFrequencySlider">
+							<string key="name">startFrequencySlider</string>
+							<string key="candidateClassName">STSmallSlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="startFrequencyTitleLabel">
+							<string key="name">startFrequencyTitleLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/SweepGeneratorViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
@@ -709,6 +817,6 @@
 			<string key="selected-freq-bg.png">{78, 41}</string>
 			<string key="tab-background.png">{768, 481}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">300</string>
+		<string key="IBCocoaTouchPluginVersion">294</string>
 	</data>
 </archive>

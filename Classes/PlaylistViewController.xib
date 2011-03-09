@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">300</string>
+			<string key="NS.object.0">294</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -36,13 +36,12 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="150894562">
+					<object class="IBUIImageView" id="792311351">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{768, 481}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="670298321"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -90,7 +89,7 @@
 					<object class="IBUITextView" id="349890377">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{63, 92}, {235, 137}}</string>
+						<string key="NSFrame">{{71, 92}, {218, 137}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="956689548"/>
@@ -256,7 +255,7 @@
 					<object class="IBUIImageView" id="401385040">
 						<reference key="NSNextResponder" ref="327397386"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{78, 230}, {205, 205}}</string>
+						<string key="NSFrame">{{78, 234}, {205, 205}}</string>
 						<reference key="NSSuperview" ref="327397386"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="530910614"/>
@@ -283,7 +282,7 @@
 				<string key="NSFrameSize">{768, 481}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="150894562"/>
+				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MAA</bytes>
@@ -399,7 +398,6 @@
 						<reference key="object" ref="327397386"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="670298321"/>
-							<reference ref="150894562"/>
 							<reference ref="349890377"/>
 							<reference ref="401385040"/>
 							<reference ref="85757808"/>
@@ -409,6 +407,7 @@
 							<reference ref="568159868"/>
 							<reference ref="24984654"/>
 							<reference ref="700054479"/>
+							<reference ref="792311351"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -456,11 +455,6 @@
 						<reference key="parent" ref="327397386"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">43</int>
-						<reference key="object" ref="150894562"/>
-						<reference key="parent" ref="327397386"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">44</int>
 						<reference key="object" ref="85757808"/>
 						<reference key="parent" ref="327397386"/>
@@ -468,6 +462,11 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">47</int>
 						<reference key="object" ref="700054479"/>
+						<reference key="parent" ref="327397386"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">50</int>
+						<reference key="object" ref="792311351"/>
 						<reference key="parent" ref="327397386"/>
 					</object>
 				</array>
@@ -504,7 +503,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">49</int>
+			<int key="maxID">50</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -584,6 +583,6 @@
 			<string key="playlist-bg.png">{241, 292}</string>
 			<string key="tab-background.png">{768, 481}</string>
 		</dictionary>
-		<string key="IBCocoaTouchPluginVersion">300</string>
+		<string key="IBCocoaTouchPluginVersion">294</string>
 	</data>
 </archive>

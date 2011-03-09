@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">300</string>
+			<string key="NS.object.0">294</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBUITextView</string>
@@ -34,13 +34,16 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="356699453">
+					<object class="IBUIImageView" id="586281515">
 						<reference key="NSNextResponder" ref="918792201"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{768, 481}</string>
 						<reference key="NSSuperview" ref="918792201"/>
-						<reference key="NSNextKeyView" ref="115594828"/>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<reference key="NSWindow"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<int key="IBUIContentMode">4</int>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
@@ -52,6 +55,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{57, 24}, {655, 36}}</string>
 						<reference key="NSSuperview" ref="918792201"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="438780856"/>
 						<object class="NSColor" key="IBUIBackgroundColor" id="873212258">
 							<int key="NSColorSpace">3</int>
@@ -89,13 +93,14 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{372, 226}, {293, 30}}</string>
 						<reference key="NSSuperview" ref="918792201"/>
+						<reference key="NSWindow"/>
 						<reference key="IBUIBackgroundColor" ref="873212258"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Really have to figure out something to put here...</string>
+						<string key="IBUIText">Just hit that big ol' play button up top!!</string>
 						<object class="NSFont" key="IBUIFont" id="691008142">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">17</double>
@@ -114,8 +119,9 @@
 					<object class="IBUITextView" id="438780856">
 						<reference key="NSNextResponder" ref="918792201"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{64, 92}, {235, 241}}</string>
+						<string key="NSFrame">{{75, 95}, {212, 306}}</string>
 						<reference key="NSSuperview" ref="918792201"/>
+						<reference key="NSWindow"/>
 						<reference key="IBUIBackgroundColor" ref="873212258"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -123,7 +129,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">What is it? Pink noise is a random noise shaped from equal levels of each frequency, including low and high frequencies, allowing you to easily perfect any problem areas. You can thank us later, now press that play button and check out the best static around.</string>
+						<string key="IBUIText">If you love listening to TV static for hours on end, or if you've ever wondered what a distant star sounds like, then pink noise is for you. Pink noise is a generated sound that has equal energy per octave throughout its range. It can be very useful for finding problem areas in a room, or you can use it to lull yourself to sleep</string>
 						<reference key="IBUITextColor" ref="419883247"/>
 						<reference key="IBUIFont" ref="691008142"/>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -134,7 +140,7 @@
 				</array>
 				<string key="NSFrameSize">{768, 481}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView" ref="356699453"/>
+				<reference key="NSWindow"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MAA</bytes>
@@ -177,9 +183,9 @@
 						<reference key="object" ref="918792201"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="115594828"/>
-							<reference ref="356699453"/>
 							<reference ref="438780856"/>
 							<reference ref="728279861"/>
+							<reference ref="586281515"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -199,8 +205,8 @@
 						<reference key="parent" ref="918792201"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">21</int>
-						<reference key="object" ref="356699453"/>
+						<int key="objectID">23</int>
+						<reference key="object" ref="586281515"/>
 						<reference key="parent" ref="918792201"/>
 					</object>
 				</array>
@@ -221,10 +227,6 @@
 				<object class="NSAffineTransform" key="18.IBViewBoundsToFrameTransform">
 					<bytes key="NSTransformStruct">P4AAAL+AAABCbAAAw68AAA</bytes>
 				</object>
-				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<object class="NSAffineTransform" key="21.IBViewBoundsToFrameTransform">
-					<bytes key="NSTransformStruct">P4AAAL+AAAAAAAAAw90AAA</bytes>
-				</object>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<object class="NSAffineTransform" key="7.IBViewBoundsToFrameTransform">
 					<bytes key="NSTransformStruct">P4AAAL+AAABDrQAAwkAAAA</bytes>
@@ -234,9 +236,20 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">21</int>
+			<int key="maxID">23</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">PinkNoiseViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/PinkNoiseViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
@@ -245,6 +258,6 @@
 			<string key="NS.key.0">tab-background.png</string>
 			<string key="NS.object.0">{768, 481}</string>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">300</string>
+		<string key="IBCocoaTouchPluginVersion">294</string>
 	</data>
 </archive>

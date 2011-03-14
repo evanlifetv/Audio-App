@@ -34,7 +34,6 @@
 		C465D578127A5F3000639357 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D577127A5F3000639357 /* AudioToolbox.framework */; };
 		C465D59C127A5F3700639357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59B127A5F3700639357 /* QuartzCore.framework */; };
 		C465D59E127A5F4100639357 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C465D59D127A5F4100639357 /* OpenGLES.framework */; };
-		C468B4A3132714C200C29C83 /* bode.png in Resources */ = {isa = PBXBuildFile; fileRef = C468B4A2132714C200C29C83 /* bode.png */; };
 		C4751FA6128A1A2800BC216A /* controlbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FA5128A1A2800BC216A /* controlbackground.png */; };
 		C4751FDA128A202F00BC216A /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = C4751FD9128A202F00BC216A /* playbutton.png */; };
 		C47A7ECB12EFB68900F619B0 /* tab-background.png in Resources */ = {isa = PBXBuildFile; fileRef = C47A7ECA12EFB68900F619B0 /* tab-background.png */; };
@@ -45,6 +44,7 @@
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
 		C4F44B6912FCBBC300DD7803 /* fft-mock.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F44B6812FCBBC300DD7803 /* fft-mock.png */; };
+		D50F1DED132DBCB800D3AB60 /* bode-sound-spectrum.png in Resources */ = {isa = PBXBuildFile; fileRef = D50F1DEC132DBCB800D3AB60 /* bode-sound-spectrum.png */; };
 		D51392DA12CA70AB003451C1 /* STSweep.m in Sources */ = {isa = PBXBuildFile; fileRef = D51392D912CA70AB003451C1 /* STSweep.m */; };
 		D51965401292374B00D14563 /* STSmallSlider.mm in Sources */ = {isa = PBXBuildFile; fileRef = D519653F1292374B00D14563 /* STSmallSlider.mm */; };
 		D519657E1292400B00D14563 /* sliderbackmax-small.png in Resources */ = {isa = PBXBuildFile; fileRef = D519657C1292400B00D14563 /* sliderbackmax-small.png */; };
@@ -58,6 +58,7 @@
 		D5527B5F12F91061009FF400 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5527B5E12F91061009FF400 /* CoreAudio.framework */; };
 		D566984A1283C232004398AF /* ToneController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D56698491283C232004398AF /* ToneController.mm */; };
 		D5AA06BF131B636800D236FC /* StyleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AA06BE131B636800D236FC /* StyleController.m */; };
+		D5ABAEFD13273B4F00FB8C07 /* oscilloscope.png in Resources */ = {isa = PBXBuildFile; fileRef = D5ABAEFC13273B4F00FB8C07 /* oscilloscope.png */; };
 		D5BD0D3B12FE63E30013216D /* TBCController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BD0D3A12FE63E30013216D /* TBCController.m */; };
 		D5BD0D7D12FE6F3E0013216D /* button-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BD0D7A12FE6F3E0013216D /* button-normal.png */; };
 		D5BD0D7E12FE6F3E0013216D /* button-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BD0D7B12FE6F3E0013216D /* button-highlighted.png */; };
@@ -117,7 +118,6 @@
 		C465D577127A5F3000639357 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C465D59B127A5F3700639357 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C465D59D127A5F4100639357 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		C468B4A2132714C200C29C83 /* bode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bode.png; sourceTree = "<group>"; };
 		C4751FA5128A1A2800BC216A /* controlbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlbackground.png; sourceTree = "<group>"; };
 		C4751FD9128A202F00BC216A /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
 		C47A7ECA12EFB68900F619B0 /* tab-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-background.png"; sourceTree = "<group>"; };
@@ -129,6 +129,7 @@
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SweepGeneratorViewController.xib; sourceTree = "<group>"; };
 		C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinkNoiseViewController.xib; sourceTree = "<group>"; };
 		C4F44B6812FCBBC300DD7803 /* fft-mock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fft-mock.png"; sourceTree = "<group>"; };
+		D50F1DEC132DBCB800D3AB60 /* bode-sound-spectrum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bode-sound-spectrum.png"; sourceTree = "<group>"; };
 		D51392D812CA70AB003451C1 /* STSweep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSweep.h; sourceTree = "<group>"; };
 		D51392D912CA70AB003451C1 /* STSweep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSweep.m; sourceTree = "<group>"; };
 		D519653E1292374B00D14563 /* STSmallSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSmallSlider.h; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		D56698491283C232004398AF /* ToneController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ToneController.mm; sourceTree = "<group>"; };
 		D59EEA8C1310D4E200BC137D /* dist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dist.plist; sourceTree = "<group>"; };
 		D5AA06BE131B636800D236FC /* StyleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleController.m; sourceTree = "<group>"; };
+		D5ABAEFC13273B4F00FB8C07 /* oscilloscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oscilloscope.png; sourceTree = "<group>"; };
 		D5BD0D3912FE63E30013216D /* TBCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCController.h; sourceTree = "<group>"; };
 		D5BD0D3A12FE63E30013216D /* TBCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCController.m; sourceTree = "<group>"; };
 		D5BD0D7A12FE6F3E0013216D /* button-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-normal.png"; sourceTree = "<group>"; };
@@ -357,7 +359,8 @@
 				D513929A12CA6D23003451C1 /* Tab Icons */,
 				D5BD0D7A12FE6F3E0013216D /* button-normal.png */,
 				D5BD0D7B12FE6F3E0013216D /* button-highlighted.png */,
-				C468B4A2132714C200C29C83 /* bode.png */,
+				D5ABAEFC13273B4F00FB8C07 /* oscilloscope.png */,
+				D50F1DEC132DBCB800D3AB60 /* bode-sound-spectrum.png */,
 				D5BD0D7C12FE6F3E0013216D /* mute-selected.png */,
 				D519657C1292400B00D14563 /* sliderbackmax-small.png */,
 				D519657D1292400B00D14563 /* sliderbackmin-small.png */,
@@ -578,7 +581,8 @@
 				C47DCDE81311C68600EAF745 /* playlist-bg.png in Resources */,
 				C47DCDE91311C68600EAF745 /* selected-freq-bg.png in Resources */,
 				D5F78C7E1313759700F62B27 /* noartwork.png in Resources */,
-				C468B4A3132714C200C29C83 /* bode.png in Resources */,
+				D5ABAEFD13273B4F00FB8C07 /* oscilloscope.png in Resources */,
+				D50F1DED132DBCB800D3AB60 /* bode-sound-spectrum.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

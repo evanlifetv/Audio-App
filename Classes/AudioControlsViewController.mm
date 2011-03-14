@@ -18,6 +18,7 @@
 @interface AudioControlsViewController()
 - (void)beginObserving;
 - (void)generateSweep;
+- (void)createGLTexture:(GLuint *)texName fromCGImage:(CGImageRef)img;
 @end
 
 
@@ -203,7 +204,7 @@ void deviceVolumeDidChange (void                      *inUserData,
 	
 	// Enable multi touch so we can handle pinch and zoom in the oscilloscope
 	fftView.multipleTouchEnabled = YES;
-	
+	/*
 	// Set up our overlay view that pops up when we are pinching/zooming the oscilloscope
 	UIImage *img_ui = nil;
 	{
@@ -251,7 +252,8 @@ void deviceVolumeDidChange (void                      *inUserData,
 	[sampleSizeOverlay addSubview:sampleSizeText];
 	// Text view was retained by the above line, so we can release it now
 	[sampleSizeText release];
-	
+	*/
+    
 	// We don't add sampleSizeOverlay to our main view yet. We just hang on to it for now, and add it when we
 	// need to display it, i.e. when a user starts a pinch/zoom.
 	
@@ -286,6 +288,8 @@ void deviceVolumeDidChange (void                      *inUserData,
     [fftView stopAnimation];
     //FFT --------------------------------------------------
 }
+
+
 #pragma mark -
 #pragma mark Memory management
 
@@ -755,6 +759,31 @@ static OSStatus	PerformThru(
 }
 
 
+- (void)clearTextures
+{
+	bzero(texBitBuffer, sizeof(UInt32) * 512);
+	SpectrumLinkedTexture *curTex;
+	
+	for (curTex = firstTex; curTex; curTex = curTex->nextTex)
+	{
+		glBindTexture(GL_TEXTURE_2D, curTex->texName);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1, 512, 0, GL_RGBA, GL_UNSIGNED_BYTE, texBitBuffer);
+	}
+}
+
+
+- (void)setupViewForOscilloscope
+{
+	CGImageRef img;
+	
+	// Load our GL textures
+    img = [UIImage imageNamed:@"bode-sound-spectrum.png"].CGImage;
+    [self createGLTexture:&bgTexture fromCGImage:img];
+	
+	initted_oscilloscope = YES;
+}
+
+
 - (void)createGLTexture:(GLuint *)texName fromCGImage:(CGImageRef)img
 {
 	GLubyte *spriteData = NULL;
@@ -768,13 +797,14 @@ static OSStatus	PerformThru(
 	for (texW = 1; texW < imgW; texW *= 2) ;
 	for (texH = 1; texH < imgH; texH *= 2) ;
 	
-	// Allocated memory needed for the bitmap context
+	// Allocate memory needed for the bitmap context
 	spriteData = (GLubyte *) calloc(texH, texW * 4);
-	// Uses the bitmatp creation function provided by the Core Graphics framework. 
+    
+	// Uses the bitmap creation function provided by the Core Graphics framework. 
 	spriteContext = CGBitmapContextCreate(spriteData, texW, texH, 8, texW * 4, CGImageGetColorSpace(img), kCGImageAlphaPremultipliedLast);
 	
 	// Translate and scale the context to draw the image upside-down (conflict in flipped-ness between GL textures and CG contexts)
-	CGContextTranslateCTM(spriteContext, 0., texH);
+	CGContextTranslateCTM(spriteContext, 0., texH + 20.);
 	CGContextScaleCTM(spriteContext, 1., -1.);
 	
 	// After you create the context, you can draw the sprite image to the context.
@@ -786,16 +816,17 @@ static OSStatus	PerformThru(
 	glGenTextures(1, texName);
 	// Bind the texture name. 
 	glBindTexture(GL_TEXTURE_2D, *texName);
-	// Speidfy a 2D texture image, provideing the a pointer to the image data in memory
+	// Specify a 2D texture image, providing a pointer to the image data in memory
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, texW, texH, 0, GL_RGBA, GL_UNSIGNED_BYTE, spriteData);
-	// Set the texture parameters to use a minifying filter and a linear filer (weighted average)
+	// Set the texture parameters to use a minifying filter and a linear filter (weighted average)
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+    
 	// Enable use of the texture
 	glEnable(GL_TEXTURE_2D);
 	// Set a blending function to use
-	glBlendFunc(GL_SRC_ALPHA,GL_ONE);
-	//glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+	//glBlendFunc(GL_SRC_ALPHA,GL_ONE);
+    glBlendFunc(GL_ONE, GL_SRC_COLOR);//ST
 	// Enable blending
 	glEnable(GL_BLEND);
 	
@@ -803,122 +834,25 @@ static OSStatus	PerformThru(
 }
 
 
-- (void)setupViewForOscilloscope
-{
-	//CGImageRef img;
-	
-	// Load our GL textures
-	//!!!!!!!
-    //PUT OUR BACKGROUND IMAGE HERE
-	//img = [UIImage imageNamed:@"oscilloscope.png"].CGImage;
-	//[self createGLTexture:&bgTexture fromCGImage:img];
-	
-	//img = [UIImage imageNamed:@"fft_off.png"].CGImage;
-	//[self createGLTexture:&fftOffTexture fromCGImage:img];
-	
-	//img = [UIImage imageNamed:@"fft_on.png"].CGImage;
-	//[self createGLTexture:&fftOnTexture fromCGImage:img];
-	
-	//img = [UIImage imageNamed:@"mute_off.png"].CGImage;
-	//[self createGLTexture:&muteOffTexture fromCGImage:img];
-	
-	//img = [UIImage imageNamed:@"mute_on.png"].CGImage;
-	//[self createGLTexture:&muteOnTexture fromCGImage:img];
-    
-	//img = [UIImage imageNamed:@"sonogram.png"].CGImage;
-	//[self createGLTexture:&sonoTexture fromCGImage:img];
-    
-	initted_oscilloscope = YES;
-}
-
-
-- (void)clearTextures
-{
-	bzero(texBitBuffer, sizeof(UInt32) * 512);
-	SpectrumLinkedTexture *curTex;
-	
-	for (curTex = firstTex; curTex; curTex = curTex->nextTex)
-	{
-		glBindTexture(GL_TEXTURE_2D, curTex->texName);
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1, 512, 0, GL_RGBA, GL_UNSIGNED_BYTE, texBitBuffer);
-	}
-}
-
-/*
-- (void)setupViewForSpectrum
-{
-	glClearColor(0., 0., 0., 0.);
-	
-	spectrumRect = CGRectMake(10., 10., 460., 300.);
-	
-	// The bit buffer for the texture needs to be 512 pixels, because OpenGL textures are powers of 
-	// two in either dimensions. Our texture is drawing a strip of 300 vertical pixels on the screen, 
-	// so we need to step up to 512 (the nearest power of 2 greater than 300).
-	texBitBuffer = (UInt32 *)(malloc(sizeof(UInt32) * 512));
-	
-	// Clears the view with black
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-	
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);	
-	
-	NSUInteger texCount = ceil(CGRectGetWidth(spectrumRect) / (CGFloat)SPECTRUM_BAR_WIDTH);
-	GLuint *texNames;
-	
-	texNames = (GLuint *)(malloc(sizeof(GLuint) * texCount));
-	glGenTextures(texCount, texNames);
-	
-	int i;
-	SpectrumLinkedTexture *curTex = NULL;
-	firstTex = (SpectrumLinkedTexture *)(calloc(1, sizeof(SpectrumLinkedTexture)));
-	firstTex->texName = texNames[0];
-	curTex = firstTex;
-	
-	bzero(texBitBuffer, sizeof(UInt32) * 512);
-	
-	glBindTexture(GL_TEXTURE_2D, curTex->texName);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	
-	for (i=1; i<texCount; i++)
-	{
-		curTex->nextTex = (SpectrumLinkedTexture *)(calloc(1, sizeof(SpectrumLinkedTexture)));
-		curTex = curTex->nextTex;
-		curTex->texName = texNames[i];
-		
-		glBindTexture(GL_TEXTURE_2D, curTex->texName);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	}
-	
-	// Enable use of the texture
-	glEnable(GL_TEXTURE_2D);
-	// Set a blending function to use
-	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-	// Enable blending
-	glEnable(GL_BLEND);
-	
-	initted_spectrum = YES;
-	
-	free(texNames);
-	
-}
-*/
-
-
 - (void)drawOscilloscope
 {
+    //called by drawView
+    
 	// Clear the view
 	glClear(GL_COLOR_BUFFER_BIT);
 	
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+	//glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+    glBlendFunc(GL_ONE, GL_ZERO);  //ST
 	
-	glColor4f(1., 1., 1., 1.);
+	//glColor4f(1., 1., 1., 1.);
+    glColor4f(1., 1., 1., 1.);  //ST
 	
 	glPushMatrix();
 	
 	//glTranslatef(0., 480., 0.);
-    glTranslatef(0., 0., 0.);
+    glTranslatef(0., -73., 0.);  //ST
 	//glRotatef(-90., 0., 0., 1.);
-	glRotatef(0., 0., 0., 1.);
+	glRotatef(0., 0., 0., 1.);   //ST
 	
 	glEnable(GL_TEXTURE_2D);
 	glEnableClientState(GL_VERTEX_ARRAY);
@@ -927,18 +861,18 @@ static OSStatus	PerformThru(
 	{
 		// Draw our background oscilloscope screen
 		const GLfloat vertices[] = {
-			0., 0.,
-			512., 0., 
-			0.,  512.,
-			512.,  512.,
+		0., 0.,
+			1024., 0., 
+			0.,  1024.,
+			1024.,  1024.,
 		};
+        
 		const GLshort texCoords[] = {
 			0, 0,
 			1, 0,
 			0, 1,
 			1, 1,
 		};
-		
 		
 		glBindTexture(GL_TEXTURE_2D, bgTexture);
 		
@@ -948,87 +882,45 @@ static OSStatus	PerformThru(
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	}
 	
-	{
-		// Draw our buttons
-		const GLfloat vertices[] = {
-			0., 0.,
-			112, 0., 
-			0.,  64,
-			112,  64,
-		};
-		const GLshort texCoords[] = {
-			0, 0,
-			1, 0,
-			0, 1,
-			1, 1,
-		};
-		
-		glPushMatrix();
-		
-		glVertexPointer(2, GL_FLOAT, 0, vertices);
-		glTexCoordPointer(2, GL_SHORT, 0, texCoords);
+    if (fftBufferManager->HasNewAudioData())
+    {
+        if (fftBufferManager->ComputeFFT(l_fftData))
+            [self setFFTData:l_fftData length:fftBufferManager->GetNumberFrames() / 2];
+        else
+            hasNewFFTData = NO;
+    }
+    
+    if (hasNewFFTData)
+    {
         
-		glTranslatef(5, 0, 0);
-		glBindTexture(GL_TEXTURE_2D, sonoTexture);
-		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-		glTranslatef(99, 0, 0);
-		glBindTexture(GL_TEXTURE_2D, mute ? muteOnTexture : muteOffTexture);
-		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-		glTranslatef(99, 0, 0);
-		glBindTexture(GL_TEXTURE_2D, (displayMode == aurioTouchDisplayModeOscilloscopeFFT) ? fftOnTexture : fftOffTexture);
-		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-		
-		glPopMatrix();
-		
-	}
-	
-	
-	
-	if (displayMode == aurioTouchDisplayModeOscilloscopeFFT)
-	{			
-		if (fftBufferManager->HasNewAudioData())
-		{
-			if (fftBufferManager->ComputeFFT(l_fftData))
-				[self setFFTData:l_fftData length:fftBufferManager->GetNumberFrames() / 2];
-			else
-				hasNewFFTData = NO;
-		}
-        
-		if (hasNewFFTData)
-		{
+        int y, maxY;
+        maxY = drawBufferLen;
+        for (y=0; y<maxY; y++)
+        {
+            CGFloat yFract = (CGFloat)y / (CGFloat)(maxY - 1);
+            CGFloat fftIdx = yFract * ((CGFloat)fftLength);
             
-			int y, maxY;
-			maxY = drawBufferLen;
-			for (y=0; y<maxY; y++)
-			{
-				CGFloat yFract = (CGFloat)y / (CGFloat)(maxY - 1);
-				CGFloat fftIdx = yFract * ((CGFloat)fftLength);
-				
-				double fftIdx_i, fftIdx_f;
-				fftIdx_f = modf(fftIdx, &fftIdx_i);
-				
-				SInt8 fft_l, fft_r;
-				CGFloat fft_l_fl, fft_r_fl;
-				CGFloat interpVal;
-				
-				fft_l = (fftData[(int)fftIdx_i] & 0xFF000000) >> 24;
-				fft_r = (fftData[(int)fftIdx_i + 1] & 0xFF000000) >> 24;
-				fft_l_fl = (CGFloat)(fft_l + 80) / 64.;
-				fft_r_fl = (CGFloat)(fft_r + 80) / 64.;
-				interpVal = fft_l_fl * (1. - fftIdx_f) + fft_r_fl * fftIdx_f;
-				
-				interpVal = CLAMP(0., interpVal, 1.);
-                
-                //!!!!!!!!!!!!
-				drawBuffers[0][y] = (interpVal * 120);
-				
-			}
-			cycleOscilloscopeLines();
-			
-		}
-		
-	}
-	
+            double fftIdx_i, fftIdx_f;
+            fftIdx_f = modf(fftIdx, &fftIdx_i);
+            
+            SInt8 fft_l, fft_r;
+            CGFloat fft_l_fl, fft_r_fl;
+            CGFloat interpVal;
+            
+            fft_l = (fftData[(int)fftIdx_i] & 0xFF000000) >> 24;
+            fft_r = (fftData[(int)fftIdx_i + 1] & 0xFF000000) >> 24;
+            fft_l_fl = (CGFloat)(fft_l + 80) / 64.;
+            fft_r_fl = (CGFloat)(fft_r + 80) / 64.;
+            interpVal = fft_l_fl * (1. - fftIdx_f) + fft_r_fl * fftIdx_f;
+            
+            interpVal = CLAMP(0., interpVal, 1.);
+            
+            drawBuffers[0][y] = (interpVal * 120);
+            
+        }
+        cycleOscilloscopeLines();
+        
+    }
 	
 	
 	GLfloat *oscilLine_ptr;
@@ -1049,15 +941,15 @@ static OSStatus	PerformThru(
 	//glTranslatef(17., 182., 0.);
 	//glScalef(448., 116., 1.);
     
-    glTranslatef(0., 73., 0.);
-	glScalef(643., 70., 1.);
+    glTranslatef(8., 73., 0.);  //ST
+	glScalef(643., 70., 1.);    //ST
 	
 	// Set up some GL state for our oscilloscope lines
 	glDisable(GL_TEXTURE_2D);
 	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 	glDisableClientState(GL_COLOR_ARRAY);
 	glDisable(GL_LINE_SMOOTH);
-	glLineWidth(2.);
+	glLineWidth(1.);  //ST
 	
 	int drawBuffer_i;
 	// Draw a line for each stored line in our buffer (the lines are stored and fade over time)
@@ -1072,11 +964,16 @@ static OSStatus	PerformThru(
 		// Fill our vertex array with points
 		for (i=0.; i<max; i=i+1.)
 		{
-			*oscilLine_ptr++ = i/max;
-			*oscilLine_ptr++ = (Float32)(*drawBuffer_ptr++) / 128.;
+            GLfloat position = i/max;
+            GLfloat repFreq = (MAX_FREQUENCY - MIN_FREQUENCY) * position + MIN_FREQUENCY;
+            GLfloat logPlotPosition = (log(repFreq) - log(MIN_FREQUENCY)) / (log(MAX_FREQUENCY) - log(MIN_FREQUENCY));
+            
+			*oscilLine_ptr++ = logPlotPosition;
+            Float32 huh = (Float32)(*drawBuffer_ptr++) / 128.;
+			*oscilLine_ptr++ = huh;
 		}
 		
-		// If we're drawing the newest line, draw it in solid green. Otherwise, draw it in a faded green.
+		// If we're drawing the newest line, draw it in solid purple. Otherwise, draw it in a faded purple.
 		if (drawBuffer_i == 0)
 			glColor4f(89. / 255., 58. / 255., 141. / 255., 1.);
 		else
@@ -1181,173 +1078,15 @@ static OSStatus	PerformThru(
 	hasNewFFTData = NO;
 }
 
-
-/*
-- (void)drawSpectrum
-{
-	// Clear the view
-	glClear(GL_COLOR_BUFFER_BIT);
-	
-	if (fftBufferManager->HasNewAudioData())
-	{
-		if (fftBufferManager->ComputeFFT(l_fftData))
-		{
-			[self setFFTData:l_fftData length:fftBufferManager->GetNumberFrames() / 2];
-		}
-		else
-			hasNewFFTData = NO;
-	}
-	
-	if (hasNewFFTData) [self renderFFTToTex];
-	
-	glClear(GL_COLOR_BUFFER_BIT);
-	
-	glEnable(GL_TEXTURE);
-	glEnable(GL_TEXTURE_2D);
-	
-	glPushMatrix();
-	glTranslatef(0., 480., 0.);
-	glRotatef(-90., 0., 0., 1.);
-    //glRotatef(90., 0., 0., 1.);
-	glTranslatef(spectrumRect.origin.x + spectrumRect.size.width, spectrumRect.origin.y, 0.);
-	
-	GLfloat quadCoords[] = {
-		0., 0., 
-		SPECTRUM_BAR_WIDTH, 0., 
-		0., 512., 
-		SPECTRUM_BAR_WIDTH, 512., 
-	};
-	
-	GLshort texCoords[] = {
-		0, 0, 
-		1, 0, 
-		0, 1,
-		1, 1, 
-	};
-	
-	glVertexPointer(2, GL_FLOAT, 0, quadCoords);
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glTexCoordPointer(2, GL_SHORT, 0, texCoords);
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);	
-	
-	glColor4f(1., 1., 1., 1.);
-	
-	SpectrumLinkedTexture *thisTex;
-	glPushMatrix();
-	for (thisTex = firstTex; thisTex; thisTex = thisTex->nextTex)
-	{
-		glTranslatef(-(SPECTRUM_BAR_WIDTH), 0., 0.);
-		glBindTexture(GL_TEXTURE_2D, thisTex->texName);
-		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-	}
-	glPopMatrix();
-	glPopMatrix();
-	
-	glFlush();
-	
-}
-*/
-
 #pragma mark -
 #pragma mark EAGLView delegate
 
 - (void)drawView:(id)sender forTime:(NSTimeInterval)time
 {
-	//if ((displayMode == aurioTouchDisplayModeOscilloscopeWaveform) || (displayMode == aurioTouchDisplayModeOscilloscopeFFT))
-	//{
-		if (!initted_oscilloscope) [self setupViewForOscilloscope];
-		[self drawOscilloscope];
-	//} else if (displayMode == aurioTouchDisplayModeSpectrum) {
-	//	if (!initted_spectrum) [self setupViewForSpectrum];
-	//	[self drawSpectrum];
-	//}
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	// If we're if waveform mode and not currently in a pinch event, and we've got two touches, start a pinch event
-	if ((!pinchEvent) && ([[event allTouches] count] == 2) && (self.displayMode == aurioTouchDisplayModeOscilloscopeWaveform))
-	{
-		pinchEvent = event;
-		NSArray *t = [[event allTouches] allObjects];
-		lastPinchDist = fabs([[t objectAtIndex:0] locationInView:fftView].x - [[t objectAtIndex:1] locationInView:fftView].x);
-		
-		sampleSizeText.text = [NSString stringWithFormat:@"%i ms", drawBufferLen / (int)(hwSampleRate / 1000.)];
-		[fftView addSubview:sampleSizeOverlay];
-	}
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	// If we are in a pinch event...
-	if ((event == pinchEvent) && ([[event allTouches] count] == 2))
-	{
-		CGFloat thisPinchDist, pinchDiff;
-		NSArray *t = [[event allTouches] allObjects];
-		thisPinchDist = fabs([[t objectAtIndex:0] locationInView:fftView].x - [[t objectAtIndex:1] locationInView:fftView].x);
-		
-		// Find out how far we traveled since the last event
-		pinchDiff = thisPinchDist - lastPinchDist;
-		// Adjust our draw buffer length accordingly,
-		drawBufferLen -= 12 * (int)pinchDiff;
-		drawBufferLen = CLAMP(kMinDrawSamples, drawBufferLen, kMaxDrawSamples);
-		resetOscilLine = YES;
-		
-		// and display the size of our oscilloscope window in our overlay view
-		sampleSizeText.text = [NSString stringWithFormat:@"%i ms", drawBufferLen / (int)(hwSampleRate / 1000.)];
-		
-		lastPinchDist = thisPinchDist;
-	}
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-	if (event == pinchEvent)
-	{
-		// If our pinch/zoom has ended, nil out the pinchEvent and remove the overlay view
-		[sampleSizeOverlay removeFromSuperview];
-		pinchEvent = nil;
-		return;
-	}
-    /*
-	// any tap in sonogram view will exit back to the waveform
-	if (self.displayMode == aurioTouchDisplayModeSpectrum)
-	{
-		AudioServicesPlaySystemSound(buttonPressSound);
-		self.displayMode = aurioTouchDisplayModeOscilloscopeWaveform;
-		return;
-	}
-	*/
-    /*
-	UITouch *touch = [touches anyObject];
-	if (unitIsRunning)
-	{
-		if (CGRectContainsPoint(CGRectMake(0., 5., 52., 99.), [touch locationInView:fftView])) // The Sonogram button was touched
-		{
-			AudioServicesPlaySystemSound(buttonPressSound);
-			if ((self.displayMode == aurioTouchDisplayModeOscilloscopeWaveform) || (self.displayMode == aurioTouchDisplayModeOscilloscopeFFT))
-			{
-				if (!initted_spectrum) [self setupViewForSpectrum];
-				[self clearTextures];
-				self.displayMode = aurioTouchDisplayModeSpectrum;
-			}
-		}
-		else if (CGRectContainsPoint(CGRectMake(0., 104., 52., 99.), [touch locationInView:fftView])) // The Mute button was touched
-		{
-			AudioServicesPlaySystemSound(buttonPressSound);
-			self.mute = !(self.mute);
-			return;
-		}
-		else if (CGRectContainsPoint(CGRectMake(0., 203, 52., 99.), [touch locationInView:fftView])) // The FFT button was touched
-		{
-            //START HERE!!!!
-			AudioServicesPlaySystemSound(buttonPressSound);
-			self.displayMode = (self.displayMode == aurioTouchDisplayModeOscilloscopeWaveform) ?  aurioTouchDisplayModeOscilloscopeFFT :
-            aurioTouchDisplayModeOscilloscopeWaveform;
-			return;
-		}
-	}
-     */
+    if (!initted_oscilloscope)
+        [self setupViewForOscilloscope];
+    
+    [self drawOscilloscope];
 }
 //FFT --------------------------------------------------
 

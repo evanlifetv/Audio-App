@@ -199,13 +199,14 @@ Copyright (C) 2010 Apple Inc. All Rights Reserved.
 	glMatrixMode(GL_MODELVIEW);
 	
 	// Clears the view with black
-	//glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);  //BDM
+	//glClearColor(0.0f, 1.0f, 0.0f, 1.0f);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);  //ST
 	
 	glEnableClientState(GL_VERTEX_ARRAY);
 	///glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 	
 }
+
 
 // Updates the OpenGL view when the timer fires
 - (void)drawView

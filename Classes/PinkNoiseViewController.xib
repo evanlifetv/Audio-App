@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
 		<string key="IBDocument.SystemVersion">10J567</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">462.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">294</string>
+			<string key="NS.object.0">300</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBUITextView</string>
@@ -129,7 +129,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">If you love listening to TV static for hours on end, or if you've ever wondered what a distant star sounds like, then pink noise is for you. Pink noise is a generated sound that has equal energy per octave throughout its range. It can be very useful for finding problem areas in a room, or you can use it to lull yourself to sleep</string>
+						<string key="IBUIText">If you love listening to TV static for hours on end, or if you've ever wondered what a distant star sounds like, then pink noise is for you. Pink noise is a generated sound that has equal energy per octave throughout its range. It can be very useful for finding problem areas in a room, or you can use it to lull yourself to sleep.</string>
 						<reference key="IBUITextColor" ref="419883247"/>
 						<reference key="IBUIFont" ref="691008142"/>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -258,6 +258,6 @@
 			<string key="NS.key.0">tab-background.png</string>
 			<string key="NS.object.0">{768, 481}</string>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">294</string>
+		<string key="IBCocoaTouchPluginVersion">300</string>
 	</data>
 </archive>

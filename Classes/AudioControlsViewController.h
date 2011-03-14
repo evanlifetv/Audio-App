@@ -66,9 +66,9 @@ inline double linearInterp(double valA, double valB, double fract)
 	CGRect						spectrumRect;
 	
 	GLuint						bgTexture;
-	GLuint						muteOffTexture, muteOnTexture;
-	GLuint						fftOffTexture, fftOnTexture;
-	GLuint						sonoTexture;
+	//GLuint						muteOffTexture, muteOnTexture;
+	//GLuint						fftOffTexture, fftOnTexture;
+	//GLuint						sonoTexture;
 	
 	aurioTouchDisplayMode		displayMode;
 	

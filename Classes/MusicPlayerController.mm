@@ -10,11 +10,14 @@
 #import "MediaPlayer/MPMediaQuery.h"
 #import "MediaPlayer/MPMediaPlaylist.h"
 #import "STSong.h"
+#import <AudioToolbox/AudioToolbox.h>
 
+//notifications
 NSString * const kMusicPlayerControllerDidSelectNewSongNotification = @"kMusicPlayerControllerDidSelectNewSongNotification";
 NSString * const kMusicPlayerControllerDidBeginPlayingNotification = @"kMusicPlayerControllerDidBeginPlayingNotification";
 NSString * const kMusicPlayerControllerDidStopNotification = @"kMusicPlayerControllerDidStopNotification";
 NSString * const kMusicPlayerControllerDidPauseNotification = @"kMusicPlayerControllerDidPauseNotification";
+NSString * const kMusicPlayerControllerDidRefreshPlaylistNotification = @"kMusicPlayerControllerDidRefreshPlaylistNotification";
 
 static MusicPlayerController *__sharedInstance = nil;
 
@@ -39,7 +42,6 @@ static MusicPlayerController *__sharedInstance = nil;
 
 + (id)sharedInstance
 {
-	//Already set by +initialize.
     return __sharedInstance;
 }
 
@@ -52,6 +54,11 @@ static MusicPlayerController *__sharedInstance = nil;
         
 		//initialize the playlist data
 		[self refreshPlaylist];
+        
+        [[NSNotificationCenter defaultCenter] addObserver: self
+                                                 selector: @selector(didEnterBackground:)
+                                                     name: UIApplicationDidEnterBackgroundNotification
+                                                   object: nil];
 	}
 	return self;
 }
@@ -59,6 +66,13 @@ static MusicPlayerController *__sharedInstance = nil;
 
 - (void) refreshPlaylist
 {
+    [_soundTweakPlaylist release];
+    _soundTweakPlaylist = nil;
+    self.selectedSong = nil;
+    
+    AudioSessionSetActive(false);
+    AudioSessionSetActive(true);
+    
     NSArray *playlistNames = [NSArray arrayWithObjects: @"SoundTweak", @"soundtweak", @"Soundtweak", @"soundTweak", nil];
     
     NSArray *returnedPlaylists = nil;
@@ -75,11 +89,24 @@ static MusicPlayerController *__sharedInstance = nil;
         }
     }
     
-    [_soundTweakPlaylist release];
-    if (returnedPlaylists && [returnedPlaylists count] > 0)
-        _soundTweakPlaylist = [[returnedPlaylists objectAtIndex:0] retain];
-    else
-        _soundTweakPlaylist = nil;
+    MPMediaPlaylist *newPlaylist = nil;
+    if (returnedPlaylists && [returnedPlaylists count] > 0) {
+        newPlaylist = [[returnedPlaylists objectAtIndex:0] retain];
+    }
+    
+    if (newPlaylist) {
+        if (newPlaylist != _soundTweakPlaylist) {
+            _soundTweakPlaylist = [newPlaylist retain];
+        }
+        
+        NSLog(@"Found 'SoundTweak' playlist, and it contains %u tracks.", _soundTweakPlaylist.items.count);
+    }
+    else {
+        //user doesn't have a SoundTweak playlist
+        NSLog(@"No 'SoundTweak' playlist was found.");
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName: kMusicPlayerControllerDidRefreshPlaylistNotification object: nil];
 }
 
 
@@ -88,6 +115,8 @@ static MusicPlayerController *__sharedInstance = nil;
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver: self];
+    
 	[_musicPlayer release];
 	[_selectedSong release];
 	[_soundTweakPlaylist release];
@@ -101,9 +130,7 @@ static MusicPlayerController *__sharedInstance = nil;
 
 - (BOOL)deviceHasSoundTweakPlaylist
 {
-    [self refreshPlaylist];
-    
-	return (_soundTweakPlaylist != nil);
+	return (_soundTweakPlaylist != nil && [[_soundTweakPlaylist items] count] > 0);
 }
 
 
@@ -182,7 +209,7 @@ static MusicPlayerController *__sharedInstance = nil;
 
 - (void)setSelectedSong:(STSong *) newSong
 {
-	if (_selectedSong != newSong) {
+	if (newSong && _selectedSong != newSong) {
 		[self stop];
 		
 		//either this is the first selection or the user changed the song selection
@@ -192,7 +219,19 @@ static MusicPlayerController *__sharedInstance = nil;
 	
 		[[NSNotificationCenter defaultCenter] postNotificationName:kMusicPlayerControllerDidSelectNewSongNotification object:self];
 	}
+    else if (!newSong) {
+        [_selectedSong release];
+        _selectedSong = nil;
+        [self.musicPlayer setQueueWithItemCollection: nil];
+    }
 }
 
+
+-(void) didEnterBackground: (NSNotification *) notification
+{
+    [_soundTweakPlaylist release];
+    _soundTweakPlaylist = nil;
+    self.selectedSong = nil;
+}
 
 @end

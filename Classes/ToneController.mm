@@ -198,7 +198,7 @@ OSStatus RenderTone(
 - (void)playSweep:(STSweep*)sweep
 {
 	//need an autorelease pool since this is running in the background
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	NSAutoreleasePool *pool1 = [[NSAutoreleasePool alloc] init];
 	
 	self.currentSweep = sweep;
 	self.sweeping = YES;
@@ -211,6 +211,8 @@ OSStatus RenderTone(
     
 	BOOL firstTimeThrough = YES;
 	while (firstTimeThrough || sweep.shouldRepeat) {
+        NSAutoreleasePool *pool2 = [[NSAutoreleasePool alloc] init];
+        
 		NSDate *startTime = [NSDate date];
         
 		double startFrequency = 1;
@@ -222,17 +224,25 @@ OSStatus RenderTone(
 			startFrequency = sweep.startFrequency;
 		}
 		
-        while ([[NSDate date] timeIntervalSinceDate: startTime] < sweep.duration) {
+        NSTimeInterval checkDuration = 0.;
+        while (checkDuration < sweep.duration) {
+            NSAutoreleasePool *pool3 = [[NSAutoreleasePool alloc] init];
             if (!self.sweeping || self.hasPausedSweep || !self.currentSweep) {
-                [pool release];
+                [pool3 drain];
+                [pool2 drain];
+                [pool1 drain];
                 return;
             }
             
             int directionFactor = ([sweep isIncreasing]) ? 1 : -1;
             self.frequency = startFrequency + directionFactor * freqSpan * ([[NSDate date] timeIntervalSinceDate: startTime] / sweep.duration);
+            
+            checkDuration = [[NSDate date] timeIntervalSinceDate: startTime];
+            [pool3 drain];
         }
         
 		firstTimeThrough = NO;
+        [pool2 drain];
 	}
 	
 	[self stop];
@@ -242,24 +252,27 @@ OSStatus RenderTone(
 	self.currentSweep = nil;
 	self.sweeping = NO;
 	
-	[pool release];
+	[pool1 drain];
 }
 
 
 - (void)notifyObserversWillStartPlayingSweep
 {
+    NSAssert([NSThread isMainThread], @"must be on the main thread");
 	[[NSNotificationCenter defaultCenter] postNotificationName:kToneControllerWillStartPlayingSweep object:nil];
 }
 
 
 - (void)notifyObserversDidFinishPlayingSweep
 {
+    NSAssert([NSThread isMainThread], @"must be on the main thread");
 	[[NSNotificationCenter defaultCenter] postNotificationName:kToneControllerDidFinishPlayingSweep object:nil];
 }
 
 
 - (void)notifyObserversDidStop
 {
+    NSAssert([NSThread isMainThread], @"must be on the main thread");
 	[[NSNotificationCenter defaultCenter] postNotificationName:kToneControllerDidStop object:nil];
 }
 

@@ -27,6 +27,7 @@
 
 + (id)sharedInstance;
 
+- (void) refreshPlaylist;
 - (BOOL)deviceHasSoundTweakPlaylist;
 - (void)selectSongAtIndex:(NSInteger)index;
 - (STSong *) songAtIndex: (NSInteger) index;
@@ -40,3 +41,4 @@ extern NSString * const kMusicPlayerControllerDidSelectNewSongNotification;
 extern NSString * const kMusicPlayerControllerDidBeginPlayingNotification;
 extern NSString * const kMusicPlayerControllerDidStopNotification;
 extern NSString * const kMusicPlayerControllerDidPauseNotification;
+extern NSString * const kMusicPlayerControllerDidRefreshPlaylistNotification;

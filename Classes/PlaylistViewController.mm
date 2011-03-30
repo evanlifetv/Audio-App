@@ -17,6 +17,8 @@
 -(NSString *) displayStringForTimeInterval: (NSTimeInterval) interval;
 -(void) startObservingMusicPlayer;
 -(void) stopObservingMusicPlayer;
+-(void) refreshInterface;
+-(void) clearTrackData;
 @end
 
 @implementation PlaylistViewController
@@ -52,6 +54,11 @@
                                              selector: @selector(playerStateDidChange:)
                                                  name: MPMusicPlayerControllerPlaybackStateDidChangeNotification
                                                object: nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(controllerDidRefreshPlaylist)
+                                                 name: kMusicPlayerControllerDidRefreshPlaylistNotification
+                                               object: nil];
 }
 
 
@@ -61,12 +68,9 @@
     
     _artworkView.image = [UIImage imageNamed: @"noartwork.png"];  //load the "no artwork" image by default
     
-	if ([[MusicPlayerController sharedInstance] deviceHasSoundTweakPlaylist]) {
-		[self.tableView reloadData];
-	} else {
-		//user did not have a "SoundTweak" playlist
-	}
+    [[MusicPlayerController sharedInstance] refreshPlaylist];
 }
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -120,15 +124,42 @@
 }
 
 
+-(void) refreshInterface
+{
+    NSLog(@"refreshInterface in PlaylistViewController");
+    [_tableView reloadData];
+    
+	if ([[MusicPlayerController sharedInstance] deviceHasSoundTweakPlaylist]) {
+		_scrubSlider.enabled = YES;
+	} else {
+		//user did not have a "SoundTweak" playlist
+        _scrubSlider.enabled = NO;
+        [self clearTrackData];
+	}
+}
+
+
+-(void) clearTrackData
+{
+    _artworkView.image = [UIImage imageNamed: @"noartwork.png"];
+    _currentTimeLabel.text = [self displayStringForTimeInterval: 0.];
+    _remainingTimeLabel.text = [self displayStringForTimeInterval: 0.];
+    _artistLabel.text = nil;
+    _songTitleLabel.text = nil;
+}
+
+
 #pragma mark -
 #pragma mark Actions
 
 -(void) playerStateDidChange: (NSNotification *) notification
 {
     switch ([[[MusicPlayerController sharedInstance] musicPlayer] playbackState]) {
+            
         case MPMusicPlaybackStatePaused:
             [self stopObservingMusicPlayer];
             break;
+            
         case MPMusicPlaybackStateStopped:
             [[MusicPlayerController sharedInstance] musicPlayer].currentPlaybackTime = 0;
             _scrubSlider.value = 0;
@@ -143,6 +174,12 @@
         default:
             break;
     }
+}
+
+
+-(void) controllerDidRefreshPlaylist
+{
+    [self refreshInterface];
 }
 
 
@@ -202,17 +239,10 @@
 }
 
 
-#pragma mark -
-#pragma mark UITableViewDatasource and UITableViewDelegate
-
 - (void)didBecomeActive
 {
-    //app came back from being inactive, so check if user sync'ed a SoundTweak playlist
-    if ([[MusicPlayerController sharedInstance] deviceHasSoundTweakPlaylist]) {
-		[self.tableView reloadData];
-	} else {
-		//user did not have a "SoundTweak" playlist
-	}
+    NSLog(@"didBecomeActive in PlaylistViewController");
+    [[MusicPlayerController sharedInstance] refreshPlaylist];
 }
 
 
@@ -221,12 +251,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    NSLog(@"numberOfSectionsInTableView");
+    NSLog(@"hasPlaylist: %u", [[MusicPlayerController sharedInstance] deviceHasSoundTweakPlaylist]);
 	return ([[MusicPlayerController sharedInstance] deviceHasSoundTweakPlaylist]) ? 1 : 0;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"PlaylistViewController loading %u items\n\n", [[[[MusicPlayerController sharedInstance] soundTweakPlaylist] items] count]);
 	return [[[[MusicPlayerController sharedInstance] soundTweakPlaylist] items] count];
 }
 
@@ -241,7 +274,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellID] autorelease];
         cell.textLabel.textColor = [UIColor whiteColor];
         
-        UIView *purpleBackView = [[[UIView alloc] initWithFrame: cell.frame] autorelease];
+        UIView *purpleBackView = [[[UIView alloc] initWithFrame: cell.bounds] autorelease];
         [purpleBackView setBackgroundColor: [StyleController soundTweakPurpleColor]];
         cell.selectedBackgroundView = purpleBackView;
     }
@@ -277,7 +310,7 @@
 
 -(NSString *) displayStringForTimeInterval: (NSTimeInterval) interval
 {
-    if (interval < 0)
+    if (interval <= 0.)
         return @"0:00";
     
     int mins = floor(interval / 60.);

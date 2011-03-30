@@ -6,7 +6,7 @@
 #import "ToneController.h"
 #import "STTypes.h"
 
-#define MIN_DURATION 1
+#define MIN_DURATION 3
 #define MAX_DURATION 30
 #define DEFAULT_DURATION 15
 

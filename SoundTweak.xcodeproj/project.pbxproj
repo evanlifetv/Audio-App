@@ -57,6 +57,17 @@
 		D53F537812E3AAF7000BE052 /* MusicPlayerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D53F537712E3AAF7000BE052 /* MusicPlayerController.mm */; };
 		D5527B5F12F91061009FF400 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5527B5E12F91061009FF400 /* CoreAudio.framework */; };
 		D566984A1283C232004398AF /* ToneController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D56698491283C232004398AF /* ToneController.mm */; };
+		D57B5415136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57B5413136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.m */; };
+		D57B5416136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57B5414136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.xib */; };
+		D57B541A1369048E00DA62D8 /* iPhoneToneGeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57B54181369048E00DA62D8 /* iPhoneToneGeneratorViewController.m */; };
+		D57B541B1369048E00DA62D8 /* iPhoneToneGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57B54191369048E00DA62D8 /* iPhoneToneGeneratorViewController.xib */; };
+		D57B541D1369064300DA62D8 /* iPhoneMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57B541C1369064300DA62D8 /* iPhoneMainWindow.xib */; };
+		D57B5421136908F200DA62D8 /* iPhonePinkNoiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57B541F136908F200DA62D8 /* iPhonePinkNoiseViewController.m */; };
+		D57B5422136908F200DA62D8 /* iPhonePinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57B5420136908F200DA62D8 /* iPhonePinkNoiseViewController.xib */; };
+		D57B54261369090E00DA62D8 /* iPhoneSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57B54241369090E00DA62D8 /* iPhoneSupportViewController.m */; };
+		D57B54271369090E00DA62D8 /* iPhoneSupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57B54251369090E00DA62D8 /* iPhoneSupportViewController.xib */; };
+		D57B542B1369091C00DA62D8 /* iPhonePlaylistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57B54291369091C00DA62D8 /* iPhonePlaylistViewController.m */; };
+		D57B542C1369091C00DA62D8 /* iPhonePlaylistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57B542A1369091C00DA62D8 /* iPhonePlaylistViewController.xib */; };
 		D5AA06BF131B636800D236FC /* StyleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AA06BE131B636800D236FC /* StyleController.m */; };
 		D5ABAEFD13273B4F00FB8C07 /* oscilloscope.png in Resources */ = {isa = PBXBuildFile; fileRef = D5ABAEFC13273B4F00FB8C07 /* oscilloscope.png */; };
 		D5BD0D3B12FE63E30013216D /* TBCController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BD0D3A12FE63E30013216D /* TBCController.m */; };
@@ -149,6 +160,22 @@
 		D5527B5E12F91061009FF400 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		D56698481283C232004398AF /* ToneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToneController.h; sourceTree = "<group>"; };
 		D56698491283C232004398AF /* ToneController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ToneController.mm; sourceTree = "<group>"; };
+		D57B5412136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneSweepGeneratorViewController.h; sourceTree = "<group>"; };
+		D57B5413136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneSweepGeneratorViewController.m; sourceTree = "<group>"; };
+		D57B5414136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iPhoneSweepGeneratorViewController.xib; sourceTree = "<group>"; };
+		D57B54171369048E00DA62D8 /* iPhoneToneGeneratorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneToneGeneratorViewController.h; sourceTree = "<group>"; };
+		D57B54181369048E00DA62D8 /* iPhoneToneGeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneToneGeneratorViewController.m; sourceTree = "<group>"; };
+		D57B54191369048E00DA62D8 /* iPhoneToneGeneratorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iPhoneToneGeneratorViewController.xib; sourceTree = "<group>"; };
+		D57B541C1369064300DA62D8 /* iPhoneMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iPhoneMainWindow.xib; sourceTree = "<group>"; };
+		D57B541E136908F100DA62D8 /* iPhonePinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhonePinkNoiseViewController.h; sourceTree = "<group>"; };
+		D57B541F136908F200DA62D8 /* iPhonePinkNoiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhonePinkNoiseViewController.m; sourceTree = "<group>"; };
+		D57B5420136908F200DA62D8 /* iPhonePinkNoiseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iPhonePinkNoiseViewController.xib; sourceTree = "<group>"; };
+		D57B54231369090D00DA62D8 /* iPhoneSupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneSupportViewController.h; sourceTree = "<group>"; };
+		D57B54241369090E00DA62D8 /* iPhoneSupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneSupportViewController.m; sourceTree = "<group>"; };
+		D57B54251369090E00DA62D8 /* iPhoneSupportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iPhoneSupportViewController.xib; sourceTree = "<group>"; };
+		D57B54281369091B00DA62D8 /* iPhonePlaylistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhonePlaylistViewController.h; sourceTree = "<group>"; };
+		D57B54291369091C00DA62D8 /* iPhonePlaylistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhonePlaylistViewController.m; sourceTree = "<group>"; };
+		D57B542A1369091C00DA62D8 /* iPhonePlaylistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iPhonePlaylistViewController.xib; sourceTree = "<group>"; };
 		D59EEA8C1310D4E200BC137D /* dist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dist.plist; sourceTree = "<group>"; };
 		D5AA06BE131B636800D236FC /* StyleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleController.m; sourceTree = "<group>"; };
 		D5ABAEFC13273B4F00FB8C07 /* oscilloscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oscilloscope.png; sourceTree = "<group>"; };
@@ -390,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				D57B541C1369064300DA62D8 /* iPhoneMainWindow.xib */,
 			);
 			name = NIBs;
 			sourceTree = "<group>";
@@ -397,24 +425,8 @@
 		D532A568127BBCB000F753E2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D5E47078127DA55E00BA3DD6 /* AudioControlsViewController.h */,
-				D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.mm */,
-				D5E4707A127DA55E00BA3DD6 /* AudioControlsViewController.xib */,
-				C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */,
-				C4BA1184127DE668009D8053 /* PinkNoiseViewController.mm */,
-				C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */,
-				C4571E18127E6B660070147C /* PlaylistViewController.h */,
-				C4571E19127E6B660070147C /* PlaylistViewController.mm */,
-				C4571E14127E6A130070147C /* PlaylistViewController.xib */,
-				C4232E5B12837EDE00F5A4A6 /* SupportViewController.h */,
-				C4232E5C12837EDE00F5A4A6 /* SupportViewController.mm */,
-				C4571E26127E6CB80070147C /* SupportViewController.xib */,
-				C4232E5D12837EDE00F5A4A6 /* SweepGeneratorViewController.h */,
-				C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.mm */,
-				C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */,
-				D5E47060127D2DAC00BA3DD6 /* ToneGeneratorViewController.h */,
-				D5E47061127D2DAC00BA3DD6 /* ToneGeneratorViewController.mm */,
-				D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */,
+				D57B54101369027A00DA62D8 /* iPad */,
+				D57B54111369028B00DA62D8 /* iPhone */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -437,6 +449,53 @@
 				D5AA06BE131B636800D236FC /* StyleController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D57B54101369027A00DA62D8 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				D5E47078127DA55E00BA3DD6 /* AudioControlsViewController.h */,
+				D5E47079127DA55E00BA3DD6 /* AudioControlsViewController.mm */,
+				D5E4707A127DA55E00BA3DD6 /* AudioControlsViewController.xib */,
+				C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */,
+				C4BA1184127DE668009D8053 /* PinkNoiseViewController.mm */,
+				C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */,
+				C4571E18127E6B660070147C /* PlaylistViewController.h */,
+				C4571E19127E6B660070147C /* PlaylistViewController.mm */,
+				C4571E14127E6A130070147C /* PlaylistViewController.xib */,
+				C4232E5B12837EDE00F5A4A6 /* SupportViewController.h */,
+				C4232E5C12837EDE00F5A4A6 /* SupportViewController.mm */,
+				C4571E26127E6CB80070147C /* SupportViewController.xib */,
+				C4232E5D12837EDE00F5A4A6 /* SweepGeneratorViewController.h */,
+				C4232E5E12837EDE00F5A4A6 /* SweepGeneratorViewController.mm */,
+				C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */,
+				D5E47060127D2DAC00BA3DD6 /* ToneGeneratorViewController.h */,
+				D5E47061127D2DAC00BA3DD6 /* ToneGeneratorViewController.mm */,
+				D5E47062127D2DAC00BA3DD6 /* ToneGeneratorViewController.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		D57B54111369028B00DA62D8 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				D57B541E136908F100DA62D8 /* iPhonePinkNoiseViewController.h */,
+				D57B541F136908F200DA62D8 /* iPhonePinkNoiseViewController.m */,
+				D57B5420136908F200DA62D8 /* iPhonePinkNoiseViewController.xib */,
+				D57B54281369091B00DA62D8 /* iPhonePlaylistViewController.h */,
+				D57B54291369091C00DA62D8 /* iPhonePlaylistViewController.m */,
+				D57B542A1369091C00DA62D8 /* iPhonePlaylistViewController.xib */,
+				D57B54231369090D00DA62D8 /* iPhoneSupportViewController.h */,
+				D57B54241369090E00DA62D8 /* iPhoneSupportViewController.m */,
+				D57B54251369090E00DA62D8 /* iPhoneSupportViewController.xib */,
+				D57B5412136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.h */,
+				D57B5413136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.m */,
+				D57B5414136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.xib */,
+				D57B54171369048E00DA62D8 /* iPhoneToneGeneratorViewController.h */,
+				D57B54181369048E00DA62D8 /* iPhoneToneGeneratorViewController.m */,
+				D57B54191369048E00DA62D8 /* iPhoneToneGeneratorViewController.xib */,
+			);
+			name = iPhone;
 			sourceTree = "<group>";
 		};
 		D5D83EAB1319E52C00494175 /* FFT */ = {
@@ -583,6 +642,12 @@
 				D5F78C7E1313759700F62B27 /* noartwork.png in Resources */,
 				D5ABAEFD13273B4F00FB8C07 /* oscilloscope.png in Resources */,
 				D50F1DED132DBCB800D3AB60 /* bode-sound-spectrum.png in Resources */,
+				D57B5416136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.xib in Resources */,
+				D57B541B1369048E00DA62D8 /* iPhoneToneGeneratorViewController.xib in Resources */,
+				D57B541D1369064300DA62D8 /* iPhoneMainWindow.xib in Resources */,
+				D57B5422136908F200DA62D8 /* iPhonePinkNoiseViewController.xib in Resources */,
+				D57B54271369090E00DA62D8 /* iPhoneSupportViewController.xib in Resources */,
+				D57B542C1369091C00DA62D8 /* iPhonePlaylistViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +684,11 @@
 				D5D83EC61319E64700494175 /* CAStreamBasicDescription.cpp in Sources */,
 				D5D83EC71319E64700494175 /* CAXException.cpp in Sources */,
 				D5AA06BF131B636800D236FC /* StyleController.m in Sources */,
+				D57B5415136902BB00DA62D8 /* iPhoneSweepGeneratorViewController.m in Sources */,
+				D57B541A1369048E00DA62D8 /* iPhoneToneGeneratorViewController.m in Sources */,
+				D57B5421136908F200DA62D8 /* iPhonePinkNoiseViewController.m in Sources */,
+				D57B54261369090E00DA62D8 /* iPhoneSupportViewController.m in Sources */,
+				D57B542B1369091C00DA62D8 /* iPhonePlaylistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,7 +740,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 i386";
 			};
 			name = Debug;
@@ -692,7 +762,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
 			};

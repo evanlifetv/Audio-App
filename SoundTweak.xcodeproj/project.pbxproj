@@ -40,6 +40,13 @@
 		C47A7ECD12EFB69500F619B0 /* tab-bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = C47A7ECC12EFB69500F619B0 /* tab-bar-background.png */; };
 		C47DCDE81311C68600EAF745 /* playlist-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C47DCDE61311C68600EAF745 /* playlist-bg.png */; };
 		C47DCDE91311C68600EAF745 /* selected-freq-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C47DCDE71311C68600EAF745 /* selected-freq-bg.png */; };
+		C48D148A13779B4300AB3955 /* iphone-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C48D148913779B4300AB3955 /* iphone-bg@2x.png */; };
+		C48D148C13779BD300AB3955 /* iphone-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C48D148B13779BD300AB3955 /* iphone-bg.png */; };
+		C48D14921377A2E800AB3955 /* pinknoise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C48D148D1377A2E800AB3955 /* pinknoise@2x.png */; };
+		C48D14931377A2E800AB3955 /* playlist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C48D148E1377A2E800AB3955 /* playlist@2x.png */; };
+		C48D14941377A2E800AB3955 /* support@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C48D148F1377A2E800AB3955 /* support@2x.png */; };
+		C48D14951377A2E800AB3955 /* sweep@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C48D14901377A2E800AB3955 /* sweep@2x.png */; };
+		C48D14961377A2E800AB3955 /* tone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C48D14911377A2E800AB3955 /* tone@2x.png */; };
 		C4BA1185127DE668009D8053 /* PinkNoiseViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C4BA1184127DE668009D8053 /* PinkNoiseViewController.mm */; };
 		C4BA11E2127DEF23009D8053 /* SweepGeneratorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */; };
 		C4F2B8F7127DCA7100B1B7C9 /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2B8F6127DCA7100B1B7C9 /* PinkNoiseViewController.xib */; };
@@ -135,6 +142,13 @@
 		C47A7ECC12EFB69500F619B0 /* tab-bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-bar-background.png"; sourceTree = "<group>"; };
 		C47DCDE61311C68600EAF745 /* playlist-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playlist-bg.png"; sourceTree = "<group>"; };
 		C47DCDE71311C68600EAF745 /* selected-freq-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected-freq-bg.png"; sourceTree = "<group>"; };
+		C48D148913779B4300AB3955 /* iphone-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-bg@2x.png"; sourceTree = "<group>"; };
+		C48D148B13779BD300AB3955 /* iphone-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-bg.png"; sourceTree = "<group>"; };
+		C48D148D1377A2E800AB3955 /* pinknoise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinknoise@2x.png"; sourceTree = "<group>"; };
+		C48D148E1377A2E800AB3955 /* playlist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playlist@2x.png"; sourceTree = "<group>"; };
+		C48D148F1377A2E800AB3955 /* support@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "support@2x.png"; sourceTree = "<group>"; };
+		C48D14901377A2E800AB3955 /* sweep@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sweep@2x.png"; sourceTree = "<group>"; };
+		C48D14911377A2E800AB3955 /* tone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tone@2x.png"; sourceTree = "<group>"; };
 		C4BA1183127DE668009D8053 /* PinkNoiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinkNoiseViewController.h; sourceTree = "<group>"; };
 		C4BA1184127DE668009D8053 /* PinkNoiseViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PinkNoiseViewController.mm; sourceTree = "<group>"; };
 		C4BA11E1127DEF23009D8053 /* SweepGeneratorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SweepGeneratorViewController.xib; sourceTree = "<group>"; };
@@ -340,6 +354,11 @@
 		D513929A12CA6D23003451C1 /* Tab Icons */ = {
 			isa = PBXGroup;
 			children = (
+				C48D148D1377A2E800AB3955 /* pinknoise@2x.png */,
+				C48D148E1377A2E800AB3955 /* playlist@2x.png */,
+				C48D148F1377A2E800AB3955 /* support@2x.png */,
+				C48D14901377A2E800AB3955 /* sweep@2x.png */,
+				C48D14911377A2E800AB3955 /* tone@2x.png */,
 				C4499120127F7C4D009FD582 /* pinknoise.png */,
 				C4499124127F7C4D009FD582 /* playlist.png */,
 				C4499121127F7C4D009FD582 /* support.png */,
@@ -393,6 +412,8 @@
 				D519657D1292400B00D14563 /* sliderbackmin-small.png */,
 				C4602AEE12910576002D4FEF /* sliderthumb-small.png */,
 				C4751FA5128A1A2800BC216A /* controlbackground.png */,
+				C48D148B13779BD300AB3955 /* iphone-bg.png */,
+				C48D148913779B4300AB3955 /* iphone-bg@2x.png */,
 				C4751FD9128A202F00BC216A /* playbutton.png */,
 				C4F44B6812FCBBC300DD7803 /* fft-mock.png */,
 				D5F78C7D1313759700F62B27 /* noartwork.png */,
@@ -648,6 +669,13 @@
 				D57B5422136908F200DA62D8 /* iPhonePinkNoiseViewController.xib in Resources */,
 				D57B54271369090E00DA62D8 /* iPhoneSupportViewController.xib in Resources */,
 				D57B542C1369091C00DA62D8 /* iPhonePlaylistViewController.xib in Resources */,
+				C48D148A13779B4300AB3955 /* iphone-bg@2x.png in Resources */,
+				C48D148C13779BD300AB3955 /* iphone-bg.png in Resources */,
+				C48D14921377A2E800AB3955 /* pinknoise@2x.png in Resources */,
+				C48D14931377A2E800AB3955 /* playlist@2x.png in Resources */,
+				C48D14941377A2E800AB3955 /* support@2x.png in Resources */,
+				C48D14951377A2E800AB3955 /* sweep@2x.png in Resources */,
+				C48D14961377A2E800AB3955 /* tone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

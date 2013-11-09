@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9408CAFD182E0E76006283A7 /* UIColor+SDTColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9408CAFC182E0E76006283A7 /* UIColor+SDTColor.m */; };
+		9408CAFF182E102C006283A7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9408CAFE182E102C006283A7 /* MediaPlayer.framework */; };
+		9408CB01182E1321006283A7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9408CB00182E1321006283A7 /* AVFoundation.framework */; };
+		9408CB04182E1377006283A7 /* NSData+SDTData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9408CB03182E1377006283A7 /* NSData+SDTData.m */; };
+		9408CB07182E1868006283A7 /* NSFileManager+SDTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9408CB06182E1868006283A7 /* NSFileManager+SDTFileManager.m */; };
+		9408CB0C182E1895006283A7 /* SDTAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9408CB0B182E1895006283A7 /* SDTAudioManager.m */; };
+		9408CB0F182E1ECF006283A7 /* OSDCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9408CB0E182E1ECF006283A7 /* OSDCoreDataManager.m */; };
+		9408CB13182E1EE9006283A7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9408CB12182E1EE9006283A7 /* CoreData.framework */; };
+		9408CB17182E1F10006283A7 /* SoundTweak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9408CB15182E1F10006283A7 /* SoundTweak.xcdatamodeld */; };
+		9408CB1A182E20A1006283A7 /* AudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9408CB19182E20A1006283A7 /* AudioFile.m */; };
 		944F6D0D182DD7920067EB1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944F6D0C182DD7920067EB1B /* Foundation.framework */; };
 		944F6D0F182DD7920067EB1B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944F6D0E182DD7920067EB1B /* CoreGraphics.framework */; };
 		944F6D11182DD7920067EB1B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944F6D10182DD7920067EB1B /* UIKit.framework */; };
@@ -45,6 +55,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9408CAFB182E0E76006283A7 /* UIColor+SDTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SDTColor.h"; sourceTree = "<group>"; };
+		9408CAFC182E0E76006283A7 /* UIColor+SDTColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SDTColor.m"; sourceTree = "<group>"; };
+		9408CAFE182E102C006283A7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		9408CB00182E1321006283A7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9408CB02182E1377006283A7 /* NSData+SDTData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SDTData.h"; sourceTree = "<group>"; };
+		9408CB03182E1377006283A7 /* NSData+SDTData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SDTData.m"; sourceTree = "<group>"; };
+		9408CB05182E1868006283A7 /* NSFileManager+SDTFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SDTFileManager.h"; sourceTree = "<group>"; };
+		9408CB06182E1868006283A7 /* NSFileManager+SDTFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+SDTFileManager.m"; sourceTree = "<group>"; };
+		9408CB0A182E1895006283A7 /* SDTAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTAudioManager.h; sourceTree = "<group>"; };
+		9408CB0B182E1895006283A7 /* SDTAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTAudioManager.m; sourceTree = "<group>"; };
+		9408CB0D182E1ECF006283A7 /* OSDCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSDCoreDataManager.h; path = lib/OSDCoreDataManager/OSDCoreDataManager.h; sourceTree = SOURCE_ROOT; };
+		9408CB0E182E1ECF006283A7 /* OSDCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSDCoreDataManager.m; path = lib/OSDCoreDataManager/OSDCoreDataManager.m; sourceTree = SOURCE_ROOT; };
+		9408CB12182E1EE9006283A7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9408CB16182E1F10006283A7 /* SoundTweak.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoundTweak.xcdatamodel; sourceTree = "<group>"; };
+		9408CB18182E20A1006283A7 /* AudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFile.h; sourceTree = "<group>"; };
+		9408CB19182E20A1006283A7 /* AudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFile.m; sourceTree = "<group>"; };
 		944F6D09182DD7920067EB1B /* Sound Tweak 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sound Tweak 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		944F6D0C182DD7920067EB1B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		944F6D0E182DD7920067EB1B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +115,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9408CB13182E1EE9006283A7 /* CoreData.framework in Frameworks */,
+				9408CB01182E1321006283A7 /* AVFoundation.framework in Frameworks */,
+				9408CAFF182E102C006283A7 /* MediaPlayer.framework in Frameworks */,
 				944F6D0F182DD7920067EB1B /* CoreGraphics.framework in Frameworks */,
 				944F6D11182DD7920067EB1B /* UIKit.framework in Frameworks */,
 				944F6D0D182DD7920067EB1B /* Foundation.framework in Frameworks */,
@@ -108,6 +137,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9408CAFA182E0E5E006283A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9408CB09182E1880006283A7 /* Globals */,
+				9408CB08182E1875006283A7 /* Extentions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9408CB08182E1875006283A7 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				9408CAFB182E0E76006283A7 /* UIColor+SDTColor.h */,
+				9408CAFC182E0E76006283A7 /* UIColor+SDTColor.m */,
+				9408CB02182E1377006283A7 /* NSData+SDTData.h */,
+				9408CB03182E1377006283A7 /* NSData+SDTData.m */,
+				9408CB05182E1868006283A7 /* NSFileManager+SDTFileManager.h */,
+				9408CB06182E1868006283A7 /* NSFileManager+SDTFileManager.m */,
+			);
+			name = Extentions;
+			sourceTree = "<group>";
+		};
+		9408CB09182E1880006283A7 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				9408CB0A182E1895006283A7 /* SDTAudioManager.h */,
+				9408CB0B182E1895006283A7 /* SDTAudioManager.m */,
+			);
+			name = Globals;
+			sourceTree = "<group>";
+		};
+		9408CB10182E1ED6006283A7 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				9408CB11182E1EDC006283A7 /* OSDCoreDataManager */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		9408CB11182E1EDC006283A7 /* OSDCoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				9408CB0D182E1ECF006283A7 /* OSDCoreDataManager.h */,
+				9408CB0E182E1ECF006283A7 /* OSDCoreDataManager.m */,
+			);
+			name = OSDCoreDataManager;
+			sourceTree = "<group>";
+		};
+		9408CB14182E1F04006283A7 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9408CB15182E1F10006283A7 /* SoundTweak.xcdatamodeld */,
+				9408CB18182E20A1006283A7 /* AudioFile.h */,
+				9408CB19182E20A1006283A7 /* AudioFile.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		944F6D00182DD7920067EB1B = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +217,9 @@
 		944F6D0B182DD7920067EB1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9408CB12182E1EE9006283A7 /* CoreData.framework */,
+				9408CB00182E1321006283A7 /* AVFoundation.framework */,
+				9408CAFE182E102C006283A7 /* MediaPlayer.framework */,
 				944F6D0C182DD7920067EB1B /* Foundation.framework */,
 				944F6D0E182DD7920067EB1B /* CoreGraphics.framework */,
 				944F6D10182DD7920067EB1B /* UIKit.framework */,
@@ -141,6 +231,9 @@
 		944F6D12182DD7920067EB1B /* Sound Tweak 2 */ = {
 			isa = PBXGroup;
 			children = (
+				9408CB10182E1ED6006283A7 /* lib */,
+				9408CB14182E1F04006283A7 /* Database */,
+				9408CAFA182E0E5E006283A7 /* Helpers */,
 				944F6D3B182DD7C50067EB1B /* User Interface */,
 				944F6D1B182DD7920067EB1B /* SDTAppDelegate.h */,
 				944F6D1C182DD7920067EB1B /* SDTAppDelegate.m */,
@@ -303,6 +396,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "OpenSky, LLC";
 				TargetAttributes = {
+					944F6D08182DD7920067EB1B = {
+						DevelopmentTeam = 8562T99L73;
+					};
 					944F6D23182DD7920067EB1B = {
 						TestTargetID = 944F6D08182DD7920067EB1B;
 					};
@@ -356,15 +452,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9408CAFD182E0E76006283A7 /* UIColor+SDTColor.m in Sources */,
 				944F6D5A182DDC540067EB1B /* TopViewController.m in Sources */,
 				944F6D52182DDB1D0067EB1B /* MyMusicViewController.m in Sources */,
 				944F6D41182DD8540067EB1B /* SDTViewController.m in Sources */,
+				9408CB17182E1F10006283A7 /* SoundTweak.xcdatamodeld in Sources */,
 				944F6D44182DD8690067EB1B /* SweepGeneratorViewController.m in Sources */,
+				9408CB1A182E20A1006283A7 /* AudioFile.m in Sources */,
+				9408CB0F182E1ECF006283A7 /* OSDCoreDataManager.m in Sources */,
 				944F6D4C182DDAFD0067EB1B /* ToneGeneratorViewController.m in Sources */,
 				944F6D3E182DD7D70067EB1B /* SDTTabBarController.m in Sources */,
 				944F6D4F182DDB100067EB1B /* PinkNoiseViewController.m in Sources */,
 				944F6D1D182DD7920067EB1B /* SDTAppDelegate.m in Sources */,
 				944F6D56182DDC3D0067EB1B /* SDTRootViewController.m in Sources */,
+				9408CB0C182E1895006283A7 /* SDTAudioManager.m in Sources */,
+				9408CB04182E1377006283A7 /* NSData+SDTData.m in Sources */,
+				9408CB07182E1868006283A7 /* NSFileManager+SDTFileManager.m in Sources */,
 				944F6D19182DD7920067EB1B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,10 +589,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sound Tweak 2/Sound Tweak 2-Prefix.pch";
 				INFOPLIST_FILE = "Sound Tweak 2/Sound Tweak 2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -499,10 +604,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sound Tweak 2/Sound Tweak 2-Prefix.pch";
 				INFOPLIST_FILE = "Sound Tweak 2/Sound Tweak 2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -568,6 +675,7 @@
 				944F6D37182DD7920067EB1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		944F6D38182DD7920067EB1B /* Build configuration list for PBXNativeTarget "Sound Tweak 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -576,8 +684,22 @@
 				944F6D3A182DD7920067EB1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9408CB15182E1F10006283A7 /* SoundTweak.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9408CB16182E1F10006283A7 /* SoundTweak.xcdatamodel */,
+			);
+			currentVersion = 9408CB16182E1F10006283A7 /* SoundTweak.xcdatamodel */;
+			path = SoundTweak.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 944F6D01182DD7920067EB1B /* Project object */;
 }

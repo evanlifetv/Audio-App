@@ -28,6 +28,12 @@
 }
 
 #pragma mark -
+#pragma mark - Style
++ (void)initialize {
+    [[UITabBar appearanceWhenContainedIn:[self class], nil] setTintColor:[UIColor soundTweakPurple]];
+}
+
+#pragma mark -
 #pragma mark - Helpers
 - (UIViewController *)currentTabViewController {
     return [self.sectionViewController selectedViewController];

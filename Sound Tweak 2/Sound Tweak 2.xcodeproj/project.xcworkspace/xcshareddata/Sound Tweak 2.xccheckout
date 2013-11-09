@@ -10,6 +10,8 @@
 	<string>Sound Tweak 2</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>369FD291-03FD-414A-BD0A-00601C339A25</key>
+		<string>https://github.com/OpenSkyDev/OSDCoreDataManager.git</string>
 		<key>D8E67D6C-54E2-481A-B0B6-66964941509D</key>
 		<string>https://github.com/evanlifetv/Audio-App.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Sound Tweak 2/Sound Tweak 2.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>369FD291-03FD-414A-BD0A-00601C339A25</key>
+		<string>../../lib/OSDCoreDataManager</string>
 		<key>D8E67D6C-54E2-481A-B0B6-66964941509D</key>
 		<string>../../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>D8E67D6C-54E2-481A-B0B6-66964941509D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Audio-App</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>369FD291-03FD-414A-BD0A-00601C339A25</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OSDCoreDataManager</string>
 		</dict>
 	</array>
 </dict>

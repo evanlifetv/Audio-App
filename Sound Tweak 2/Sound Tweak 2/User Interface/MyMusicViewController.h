@@ -9,9 +9,14 @@
 #ifndef MyMusicViewController_h
 #define MyMusicViewController_h
 
+@import MediaPlayer;
+@import AVFoundation;
+
 #import "SDTViewController.h"
 
-@interface MyMusicViewController : SDTViewController
+@interface MyMusicViewController : SDTViewController <MPMediaPickerControllerDelegate>
+
+- (IBAction)pickMediaButtonAction:(id)sender;
 
 @end
 

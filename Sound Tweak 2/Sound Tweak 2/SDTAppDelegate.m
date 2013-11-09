@@ -19,8 +19,10 @@
 @implementation SDTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [OSDCoreDataManager setManagedObjectModelName:@"SoundTweak"];
     
-    
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"AudioFile"];
+    NSLog(@"%@",[[[OSDCoreDataManager sharedManager] managedObjectContext] executeFetchRequest:fetch error:nil]);
     
     [self setupMainInterface];
     return YES;

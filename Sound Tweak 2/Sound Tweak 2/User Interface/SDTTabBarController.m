@@ -55,9 +55,23 @@ static NSTimeInterval const SDTTabBarControllerAnimationDuration = 0.2;
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (context == SDTTabBarControllerChangeViewControllerContext) {
         [[NSNotificationCenter defaultCenter] postNotificationName:TabBarControllerDidChangeSelectedViewControllerNotification object:self];
+        SDTStateSaverLastTab tab = LastTabForViewController((SDTViewController *)[self selectedViewController]);
+        [[SDTStateSaver sharedState] setLastTab:tab];
         return;
     }
     [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+}
+
+- (void)pickViewControllerFromLastTab:(SDTStateSaverLastTab)lastTab {
+    if (lastTab == SDTStateSaverLastTabUnknown) {
+        return;
+    }
+    for (SDTViewController *viewController in self.viewControllers) {
+        if (lastTab == LastTabForViewController(viewController)) {
+            [self setSelectedViewController:viewController];
+            return;
+        }
+    }
 }
 
 @end
@@ -71,6 +85,10 @@ static NSTimeInterval const SDTTabBarControllerAnimationDuration = 0.2;
     
     NSUInteger toIndex = [viewControllers indexOfObject:toVC];
     NSUInteger fromIndex = [viewControllers indexOfObject:fromVC];
+    
+    if (!tabBarController.view.window) {
+        return nil;
+    }
     
     if (toIndex == fromIndex) {
         return nil;

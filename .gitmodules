@@ -1,3 +1,6 @@
 [submodule "Sound Tweak 2/lib/OSDCoreDataManager"]
 	path = Sound Tweak 2/lib/OSDCoreDataManager
 	url = https://github.com/OpenSkyDev/OSDCoreDataManager.git
+[submodule "Sound Tweak 2/lib/UIImage-OSDImageHelpers"]
+	path = Sound Tweak 2/lib/UIImage-OSDImageHelpers
+	url = https://github.com/OpenSkyDev/UIImage-OSDImageHelpers.git

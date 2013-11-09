@@ -14,7 +14,9 @@
 
 #import "SDTViewController.h"
 
-@interface MyMusicViewController : SDTViewController <MPMediaPickerControllerDelegate>
+@interface MyMusicViewController : SDTViewController <MPMediaPickerControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 - (IBAction)pickMediaButtonAction:(id)sender;
 

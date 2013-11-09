@@ -10,6 +10,12 @@
 
 @implementation SDTViewController
 
+- (void)loadView {
+    [super loadView];
+    
+    self.view.clipsToBounds = YES;
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }

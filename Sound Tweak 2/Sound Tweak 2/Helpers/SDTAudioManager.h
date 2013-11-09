@@ -35,6 +35,11 @@
 
 - (void)willDeleteAudioFile:(AudioFile *)audioFile;
 
+- (UIImage *)imageForAudioFile:(AudioFile *)audioFile;
+- (NSURL *)audioURLForAudioFile:(AudioFile *)audioFile;
+
+- (void)dumpMemCache;
+
 @end
 
 #endif

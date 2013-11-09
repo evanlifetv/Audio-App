@@ -9,12 +9,16 @@
 #import "TopViewController.h"
 #import "SDTTabBarController.h"
 #import "SDTRootViewController.h"
+#import "UIDevice+SDTDevice.h"
 
 @implementation TopViewController
 
 - (CGSize)preferredContentSize {
     // Width is ignored
-    return CGSizeMake(0, 300);
+    if ([[UIDevice currentDevice] isPad]) {
+        return CGSizeMake(0, 300);
+    }
+    return CGSizeMake(0, 200);
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

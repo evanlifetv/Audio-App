@@ -11,18 +11,12 @@
 // View Controllers
 #import "SDTRootViewController.h"
 #import "SDTTabBarController.h"
-#import "SweepGeneratorViewController.h"
-#import "PinkNoiseViewController.h"
-#import "MyMusicViewController.h"
-#import "ToneGeneratorViewController.h"
+#import "UIDevice+SDTDevice.h"
 
 @implementation SDTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [OSDCoreDataManager setManagedObjectModelName:@"SoundTweak"];
-    
-    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"AudioFile"];
-    NSLog(@"%@",[[[OSDCoreDataManager sharedManager] managedObjectContext] executeFetchRequest:fetch error:nil]);
     
     [self setupMainInterface];
     return YES;
@@ -40,6 +34,7 @@
     TopViewController *top = [[TopViewController alloc] initWithNibName:@"TopViewController" bundle:nil];
     
     SDTRootViewController *root = [[SDTRootViewController alloc] initWithTopViewController:top sectionViewController:tabBar];
+    [tabBar pickViewControllerFromLastTab:[[SDTStateSaver sharedState] lastTab]];
     
     self.window.rootViewController = root;
     

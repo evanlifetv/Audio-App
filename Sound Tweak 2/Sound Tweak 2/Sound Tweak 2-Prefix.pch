@@ -17,3 +17,5 @@
 
 #import "UIColor+SDTColor.h"
 #import "OSDCoreDataManager.h"
+#import "SDTStateSaver.h"
+#import "UIDevice+SDTDevice.h"

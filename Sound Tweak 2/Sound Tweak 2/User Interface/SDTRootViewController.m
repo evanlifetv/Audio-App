@@ -30,7 +30,8 @@
 #pragma mark -
 #pragma mark - Style
 + (void)initialize {
-    [[UITabBar appearanceWhenContainedIn:[self class], nil] setTintColor:[UIColor soundTweakPurple]];
+    [[UIView appearance] setTintColor:[UIColor soundTweakPurple]];
+    [[UILabel appearance] setTintColor:[UIColor soundTweakPurple]];
 }
 
 #pragma mark -
@@ -124,7 +125,7 @@
     if (!_separatorView) {
         UIView *v = [[UIView alloc] init];
         v.translatesAutoresizingMaskIntoConstraints = NO;
-        v.backgroundColor = [UIColor lightGrayColor];
+        v.backgroundColor = [UIColor soundTweakPurple];
         
         _separatorView = v;
         [self.view addSubview:v];

@@ -42,6 +42,10 @@
 		944F6D60182DE3EA0067EB1B /* PinkNoiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F6D5F182DE3EA0067EB1B /* PinkNoiseViewController.xib */; };
 		944F6D62182DE4180067EB1B /* MyMusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F6D61182DE4180067EB1B /* MyMusicViewController.xib */; };
 		944F6D64182DEA050067EB1B /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F6D63182DEA050067EB1B /* TopViewController.xib */; };
+		9451CB75182EE76600E8E1F5 /* MyMusicAddMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9451CB74182EE76600E8E1F5 /* MyMusicAddMusicCell.m */; };
+		9451CB78182EEF2100E8E1F5 /* AudioFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9451CB77182EEF2100E8E1F5 /* AudioFileCell.m */; };
+		94556C1C182EACAD008AC329 /* SDTStateSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 94556C1B182EACAD008AC329 /* SDTStateSaver.m */; };
+		94556C1F182EE24A008AC329 /* UIDevice+SDTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 94556C1E182EE24A008AC329 /* UIDevice+SDTDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +112,14 @@
 		944F6D5F182DE3EA0067EB1B /* PinkNoiseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinkNoiseViewController.xib; sourceTree = "<group>"; };
 		944F6D61182DE4180067EB1B /* MyMusicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMusicViewController.xib; sourceTree = "<group>"; };
 		944F6D63182DEA050067EB1B /* TopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopViewController.xib; sourceTree = "<group>"; };
+		9451CB73182EE76600E8E1F5 /* MyMusicAddMusicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMusicAddMusicCell.h; sourceTree = "<group>"; };
+		9451CB74182EE76600E8E1F5 /* MyMusicAddMusicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMusicAddMusicCell.m; sourceTree = "<group>"; };
+		9451CB76182EEF2100E8E1F5 /* AudioFileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileCell.h; sourceTree = "<group>"; };
+		9451CB77182EEF2100E8E1F5 /* AudioFileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileCell.m; sourceTree = "<group>"; };
+		94556C1A182EACAD008AC329 /* SDTStateSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTStateSaver.h; sourceTree = "<group>"; };
+		94556C1B182EACAD008AC329 /* SDTStateSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTStateSaver.m; sourceTree = "<group>"; };
+		94556C1D182EE24A008AC329 /* UIDevice+SDTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SDTDevice.h"; sourceTree = "<group>"; };
+		94556C1E182EE24A008AC329 /* UIDevice+SDTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SDTDevice.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +167,8 @@
 				9408CB03182E1377006283A7 /* NSData+SDTData.m */,
 				9408CB05182E1868006283A7 /* NSFileManager+SDTFileManager.h */,
 				9408CB06182E1868006283A7 /* NSFileManager+SDTFileManager.m */,
+				94556C1D182EE24A008AC329 /* UIDevice+SDTDevice.h */,
+				94556C1E182EE24A008AC329 /* UIDevice+SDTDevice.m */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -164,6 +178,8 @@
 			children = (
 				9408CB0A182E1895006283A7 /* SDTAudioManager.h */,
 				9408CB0B182E1895006283A7 /* SDTAudioManager.m */,
+				94556C1A182EACAD008AC329 /* SDTStateSaver.h */,
+				94556C1B182EACAD008AC329 /* SDTStateSaver.m */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -320,6 +336,7 @@
 		944F6D48182DDACC0067EB1B /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
+				9451CB72182EE73F00E8E1F5 /* Cells */,
 				944F6D50182DDB1D0067EB1B /* MyMusicViewController.h */,
 				944F6D51182DDB1D0067EB1B /* MyMusicViewController.m */,
 				944F6D61182DE4180067EB1B /* MyMusicViewController.xib */,
@@ -346,6 +363,17 @@
 				944F6D63182DEA050067EB1B /* TopViewController.xib */,
 			);
 			name = "Top View";
+			sourceTree = "<group>";
+		};
+		9451CB72182EE73F00E8E1F5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9451CB73182EE76600E8E1F5 /* MyMusicAddMusicCell.h */,
+				9451CB74182EE76600E8E1F5 /* MyMusicAddMusicCell.m */,
+				9451CB76182EEF2100E8E1F5 /* AudioFileCell.h */,
+				9451CB77182EEF2100E8E1F5 /* AudioFileCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,7 +480,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94556C1F182EE24A008AC329 /* UIDevice+SDTDevice.m in Sources */,
+				9451CB75182EE76600E8E1F5 /* MyMusicAddMusicCell.m in Sources */,
 				9408CAFD182E0E76006283A7 /* UIColor+SDTColor.m in Sources */,
+				94556C1C182EACAD008AC329 /* SDTStateSaver.m in Sources */,
 				944F6D5A182DDC540067EB1B /* TopViewController.m in Sources */,
 				944F6D52182DDB1D0067EB1B /* MyMusicViewController.m in Sources */,
 				944F6D41182DD8540067EB1B /* SDTViewController.m in Sources */,
@@ -464,6 +495,7 @@
 				944F6D3E182DD7D70067EB1B /* SDTTabBarController.m in Sources */,
 				944F6D4F182DDB100067EB1B /* PinkNoiseViewController.m in Sources */,
 				944F6D1D182DD7920067EB1B /* SDTAppDelegate.m in Sources */,
+				9451CB78182EEF2100E8E1F5 /* AudioFileCell.m in Sources */,
 				944F6D56182DDC3D0067EB1B /* SDTRootViewController.m in Sources */,
 				9408CB0C182E1895006283A7 /* SDTAudioManager.m in Sources */,
 				9408CB04182E1377006283A7 /* NSData+SDTData.m in Sources */,

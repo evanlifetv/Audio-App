@@ -29,6 +29,9 @@
 
 @implementation AudioFileDisplayView
 
+
+#pragma mark -
+#pragma mark - Hide show
 - (void)setAudioFile:(AudioFile *)audioFile {
     _audioFile = audioFile;
     
@@ -37,11 +40,20 @@
     self.artworkView.image = [[SDTAudioManager sharedManager] imageForAudioFile:audioFile];
     self.progressPlayedLabel.text = @"-:--";
     self.progressTotalLabel.text = @"-:--";
+    
+    if ([[OSDAudioPlayer sharedPlayer] isPlaying] && [_audioFile isPlayerItem:[[OSDAudioPlayer sharedPlayer] currentlyPlayingItem]]) {
+        [self.playButton setTitle:NSLocalizedString(@"Pause", nil) forState:UIControlStateNormal];
+    } else {
+        [self.playButton setTitle:NSLocalizedString(@"Play", nil) forState:UIControlStateNormal];
+    }
 }
 
 - (void)showInterfaceCompletion:(void (^)(void))completion {
     _interfaceShowing = YES;
     [self updateConstraints];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerUpdatePlayback:) name:OSDAudioPlayerPlaybackProgressUpdatedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerStateChanged:) name:OSDAudioPlayerStateDidChangeNotification object:nil];
     
     [UIView animateWithDuration:0.9 delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:10 options:0 animations:^{
         [self layoutIfNeeded];
@@ -58,10 +70,35 @@
     [UIView animateWithDuration:0.2 delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:10 options:0 animations:^{
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:OSDAudioPlayerPlaybackProgressUpdatedNotification object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:OSDAudioPlayerStateDidChangeNotification object:nil];
+        
         if (completion) {
             completion();
         }
     }];
+}
+
+#pragma mark -
+#pragma mark - Player
+- (void)playerUpdatePlayback:(NSNotification *)notif {
+    if ([self.audioFile isPlayerItem:[[OSDAudioPlayer sharedPlayer] currentlyPlayingItem]]) {
+        CFTimeInterval playerTime = [[OSDAudioPlayer sharedPlayer] currentItemProgress];
+        CFTimeInterval totalTime = [[OSDAudioPlayer sharedPlayer] currentItemDuration];
+        
+        self.progressPlayedLabel.text = OSDAudioPlayerTimeToString(playerTime);
+        self.progressTotalLabel.text = OSDAudioPlayerTimeToString(totalTime);
+        
+        self.progressSlider.maximumValue = totalTime;
+        self.progressSlider.value = playerTime;
+    }
+}
+- (void)playerStateChanged:(NSNotification *)notif {
+    if ([[OSDAudioPlayer sharedPlayer] isPlaying] && [_audioFile isPlayerItem:[[OSDAudioPlayer sharedPlayer] currentlyPlayingItem]]) {
+        [self.playButton setTitle:NSLocalizedString(@"Pause", nil) forState:UIControlStateNormal];
+    } else {
+        [self.playButton setTitle:NSLocalizedString(@"Play", nil) forState:UIControlStateNormal];
+    }
 }
 
 #pragma mark -
@@ -139,6 +176,10 @@
         slider.tintColor = [UIColor soundTweakDarkPurple];
         slider.maximumTrackTintColor = [UIColor soundTweakHairLinePurple];
         
+        [slider addTarget:self action:@selector(startSeeking:) forControlEvents:UIControlEventTouchDown];
+        [slider addTarget:self action:@selector(endSeeking:) forControlEvents:UIControlEventTouchUpInside|UIControlEventTouchUpOutside];
+        [slider addTarget:self action:@selector(seek:) forControlEvents:UIControlEventValueChanged];
+        
         _progressSlider = slider;
         [self addSubview:slider];
     }
@@ -149,7 +190,7 @@
         UILabel *l = [[UILabel alloc] init];
         l.translatesAutoresizingMaskIntoConstraints = NO;
         l.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-        l.textColor = [UIColor soundTweakPurple];
+        l.textColor = [UIColor soundTweakDarkPurple];
         
         _progressPlayedLabel = l;
         [self addSubview:l];
@@ -161,13 +202,37 @@
         UILabel *l = [[UILabel alloc] init];
         l.translatesAutoresizingMaskIntoConstraints = NO;
         l.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-        l.textColor = [UIColor soundTweakPurple];
+        l.textColor = [UIColor soundTweakDarkPurple];
         l.textAlignment = NSTextAlignmentRight;
         
         _progressTotalLabel = l;
         [self addSubview:l];
     }
     return _progressTotalLabel;
+}
+
+#pragma mark -
+#pragma mark - Seeking
+- (void)startSeeking:(id)sender {
+    if (![self.audioFile isPlayerItem:[[OSDAudioPlayer sharedPlayer] currentlyPlayingItem]]) {
+        return;
+    }
+    [[OSDAudioPlayer sharedPlayer] beginSeeking];
+}
+
+- (void)seek:(id)sender {
+    if ([[OSDAudioPlayer sharedPlayer] currentState] != OSDAudioPlayerStateSeeking || ![self.audioFile isPlayerItem:[[OSDAudioPlayer sharedPlayer] currentlyPlayingItem]]) {
+        return;
+    }
+    CGFloat progress = self.progressSlider.value;
+    [[OSDAudioPlayer sharedPlayer] seekToProgress:progress];
+}
+
+- (void)endSeeking:(id)sender {
+    if ([[OSDAudioPlayer sharedPlayer] currentState] != OSDAudioPlayerStateSeeking || ![self.audioFile isPlayerItem:[[OSDAudioPlayer sharedPlayer] currentlyPlayingItem]]) {
+        return;
+    }
+    [[OSDAudioPlayer sharedPlayer] endSeeking];
 }
 
 #pragma mark -

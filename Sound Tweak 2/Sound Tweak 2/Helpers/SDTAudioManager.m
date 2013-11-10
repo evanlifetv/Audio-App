@@ -132,9 +132,11 @@ id static _sharedSDTAudioManager = nil;
                 NSString *imagePath = [self.artworkDirectory stringByAppendingPathComponent:imageName];
                 UIImage *artworkImage = [artwork imageWithSize:CGSizeMake(300, 300)];
                 NSData *imageData = UIImagePNGRepresentation(artworkImage);
-                [imageData writeToFile:imagePath atomically:YES];
-                info[@"artworkName"] = imageName;
-                [self.imageFileCache setObject:artworkImage forKey:imageName];
+                if (imageData) {
+                    [imageData writeToFile:imagePath atomically:YES];
+                    info[@"artworkName"] = imageName;
+                    [self.imageFileCache setObject:artworkImage forKey:imageName];
+                }
             }];
         }
     }
@@ -213,6 +215,9 @@ id static _sharedSDTAudioManager = nil;
     return [self imageForAudioFileNamed:audioFile.artworkName];
 }
 - (UIImage *)imageForAudioFileNamed:(NSString *)fileName {
+    if (!fileName) {
+        return [UIImage imageNamed:@"missingArtwork"];
+    }
     UIImage *image = [self.imageFileCache objectForKey:fileName];
     if (image) {
         return image;

@@ -22,14 +22,25 @@
     [super tintColorDidChange];
     [self setNeedsDisplay];
 }
+- (void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
+    [self setNeedsDisplay];
+}
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    [self setNeedsDisplay];
+}
 
 - (void)drawRect:(CGRect)rect {
     [self.tintColor setStroke];
     
-    CGFloat h,s,b,a;
-    [self.tintColor getHue:&h saturation:&s brightness:&b alpha:&a];
-    
-    [[UIColor colorWithHue:h saturation:s brightness:1.0 alpha:0.8] setFill];
+    if (self.selected || self.highlighted) {
+        [self.tintColor setFill];
+    } else {
+        CGFloat h,s,b,a;
+        [self.tintColor getHue:&h saturation:&s brightness:&b alpha:&a];
+        [[UIColor colorWithHue:h saturation:s brightness:1.0 alpha:0.8] setFill];
+    }
     
     CGFloat cornerRadii = CGRectGetHeight(self.bounds) / 2;
     

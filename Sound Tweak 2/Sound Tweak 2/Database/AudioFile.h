@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#import "OSDAudioPlayer.h"
 
 @interface AudioFile : NSManagedObject
 
@@ -19,5 +20,7 @@
 @property (nonatomic, retain) NSString * artworkName;
 @property (nonatomic, retain) NSString * assetName;
 @property (nonatomic, retain) NSNumber * playbackDuration;
+
+- (BOOL)isPlayerItem:(OSDAudioPlayerItem *)playerItem;
 
 @end

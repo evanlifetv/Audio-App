@@ -222,9 +222,18 @@ static NSString * const kAudioPickItemsCell = @"kAudioPickItemsCell";
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
 }
 - (void)audioFileDisplayView:(AudioFileDisplayView *)displayView shouldPlayAudioFile:(AudioFile *)audioFile {
-    OSDAudioPlayerItem *item = [[SDTAudioManager sharedManager] playerItemForAudioFile:audioFile];
-    [[OSDAudioPlayer sharedPlayer] insertItemIntoQueue:item atIndex:0];
-    [[OSDAudioPlayer sharedPlayer] playNextItem];
+    BOOL isCurrent = [audioFile isPlayerItem:[[OSDAudioPlayer sharedPlayer] currentlyPlayingItem]];
+    if (isCurrent && [[OSDAudioPlayer sharedPlayer] isPlaying]) {
+        [[OSDAudioPlayer sharedPlayer] pause];
+    } else if (isCurrent && [[OSDAudioPlayer sharedPlayer] isPaused]) {
+        [[OSDAudioPlayer sharedPlayer] play];
+    } else if (isCurrent) {
+        [[OSDAudioPlayer sharedPlayer] playCurrentItem];
+    } else {
+        OSDAudioPlayerItem *item = [[SDTAudioManager sharedManager] playerItemForAudioFile:audioFile];
+        [[OSDAudioPlayer sharedPlayer] insertItemIntoQueue:item atIndex:0];
+        [[OSDAudioPlayer sharedPlayer] playNextItem];
+    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -235,6 +244,9 @@ static NSString * const kAudioPickItemsCell = @"kAudioPickItemsCell";
 }
 
 - (void)commitDeleteForItem:(AudioFile *)audioFile {
+    if ([audioFile isPlayerItem:[[OSDAudioPlayer sharedPlayer] currentlyPlayingItem]]) {
+        [[OSDAudioPlayer sharedPlayer] stop];
+    }
     [[[OSDCoreDataManager sharedManager] managedObjectContext] deleteObject:audioFile];
     [[OSDCoreDataManager sharedManager] save];
     [self.collectionView reloadData];

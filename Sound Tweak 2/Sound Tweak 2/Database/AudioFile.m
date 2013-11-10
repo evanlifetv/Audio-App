@@ -24,4 +24,11 @@
     [[SDTAudioManager sharedManager] willDeleteAudioFile:self];
 }
 
+- (BOOL)isPlayerItem:(OSDAudioPlayerItem *)playerItem {
+    if (!self.persistentID) {
+        return NO;
+    }
+    return [playerItem.userInfo[@"persistentID"] isEqualToNumber:self.persistentID];
+}
+
 @end

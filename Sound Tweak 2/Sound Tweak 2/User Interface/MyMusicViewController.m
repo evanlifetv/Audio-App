@@ -221,6 +221,11 @@ static NSString * const kAudioPickItemsCell = @"kAudioPickItemsCell";
     
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
 }
+- (void)audioFileDisplayView:(AudioFileDisplayView *)displayView shouldPlayAudioFile:(AudioFile *)audioFile {
+    OSDAudioPlayerItem *item = [[SDTAudioManager sharedManager] playerItemForAudioFile:audioFile];
+    [[OSDAudioPlayer sharedPlayer] insertItemIntoQueue:item atIndex:0];
+    [[OSDAudioPlayer sharedPlayer] playNextItem];
+}
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == actionSheet.destructiveButtonIndex) {

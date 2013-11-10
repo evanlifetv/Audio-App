@@ -239,4 +239,12 @@ id static _sharedSDTAudioManager = nil;
     return [NSURL fileURLWithPath:[self.mediaDirectory stringByAppendingPathComponent:audioFile.assetName]];
 }
 
+- (OSDAudioPlayerItem *)playerItemForAudioFile:(AudioFile *)audioFile {
+    return [OSDAudioPlayerItem newPlayerItemWithURL:[NSURL fileURLWithPath:[self.mediaDirectory stringByAppendingPathComponent:audioFile.assetName]]
+                                        displayName:audioFile.title
+                                           userInfo:@{
+                                                      @"persistentID": audioFile.persistentID
+                                                      }];
+}
+
 @end

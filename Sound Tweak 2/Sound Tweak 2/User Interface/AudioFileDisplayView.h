@@ -17,6 +17,7 @@
 
 @required
 - (void)audioFileDisplayView:(AudioFileDisplayView *)displayView shouldRemoveAudioFile:(AudioFile *)audioFile;
+- (void)audioFileDisplayView:(AudioFileDisplayView *)displayView shouldPlayAudioFile:(AudioFile *)audioFile;
 
 @end
 

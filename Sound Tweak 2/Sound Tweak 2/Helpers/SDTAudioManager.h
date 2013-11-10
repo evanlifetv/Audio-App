@@ -14,6 +14,7 @@
 @import AVFoundation;
 
 #import "AudioFile.h"
+#import "OSDAudioPlayer.h"
 
 /*!
  *  <#Description#>
@@ -40,6 +41,8 @@
 - (NSURL *)audioURLForAudioFile:(AudioFile *)audioFile;
 
 - (void)dumpMemCache;
+
+- (OSDAudioPlayerItem *)playerItemForAudioFile:(AudioFile *)audioFile;
 
 @end
 

@@ -108,6 +108,8 @@
         
         [b setTitle:NSLocalizedString(@"Play", nil) forState:UIControlStateNormal];
         
+        [b addTarget:self action:@selector(playButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        
         _playButton = b;
         [self addSubview:b];
     }
@@ -172,6 +174,9 @@
 #pragma mark - Button Actions
 - (void)deleteButtonAction:(id)sender {
     [self.delegate audioFileDisplayView:self shouldRemoveAudioFile:self.audioFile];
+}
+- (void)playButtonAction:(id)sender {
+    [self.delegate audioFileDisplayView:self shouldPlayAudioFile:self.audioFile];
 }
 
 #pragma mark -

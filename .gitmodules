@@ -4,3 +4,6 @@
 [submodule "Sound Tweak 2/lib/UIImage-OSDImageHelpers"]
 	path = Sound Tweak 2/lib/UIImage-OSDImageHelpers
 	url = https://github.com/OpenSkyDev/UIImage-OSDImageHelpers.git
+[submodule "Sound Tweak 2/lib/OSDAudioPlayer"]
+	path = Sound Tweak 2/lib/OSDAudioPlayer
+	url = https://github.com/skylarsch/OSDAudioPlayer.git

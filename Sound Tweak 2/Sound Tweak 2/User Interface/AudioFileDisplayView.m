@@ -18,6 +18,10 @@
 @property (nonatomic, weak) UILabel *titleLabel;
 @property (nonatomic, weak) UILabel *artistLabel;
 
+@property (nonatomic, weak) UISlider *progressSlider;
+@property (nonatomic, weak) UILabel *progressPlayedLabel;
+@property (nonatomic, weak) UILabel *progressTotalLabel;
+
 @property (nonatomic, weak) AudioFileDetailsButton *playButton;
 @property (nonatomic, weak) AudioFileDetailsButton *deleteButton;
 
@@ -31,6 +35,8 @@
     self.titleLabel.text = audioFile.title;
     self.artistLabel.text = audioFile.artist;
     self.artworkView.image = [[SDTAudioManager sharedManager] imageForAudioFile:audioFile];
+    self.progressPlayedLabel.text = @"-:--";
+    self.progressTotalLabel.text = @"-:--";
 }
 
 - (void)showInterfaceCompletion:(void (^)(void))completion {
@@ -124,6 +130,43 @@
     }
     return _deleteButton;
 }
+- (UISlider *)progressSlider {
+    if (!_progressSlider) {
+        UISlider *slider = [[UISlider alloc] init];
+        slider.translatesAutoresizingMaskIntoConstraints = NO;
+        slider.tintColor = [UIColor soundTweakDarkPurple];
+        slider.maximumTrackTintColor = [UIColor soundTweakHairLinePurple];
+        
+        _progressSlider = slider;
+        [self addSubview:slider];
+    }
+    return _progressSlider;
+}
+- (UILabel *)progressPlayedLabel {
+    if (!_progressPlayedLabel) {
+        UILabel *l = [[UILabel alloc] init];
+        l.translatesAutoresizingMaskIntoConstraints = NO;
+        l.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+        l.textColor = [UIColor soundTweakPurple];
+        
+        _progressPlayedLabel = l;
+        [self addSubview:l];
+    }
+    return _progressPlayedLabel;
+}
+- (UILabel *)progressTotalLabel {
+    if (!_progressTotalLabel) {
+        UILabel *l = [[UILabel alloc] init];
+        l.translatesAutoresizingMaskIntoConstraints = NO;
+        l.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+        l.textColor = [UIColor soundTweakPurple];
+        l.textAlignment = NSTextAlignmentRight;
+        
+        _progressTotalLabel = l;
+        [self addSubview:l];
+    }
+    return _progressTotalLabel;
+}
 
 #pragma mark -
 #pragma mark - Button Actions
@@ -162,7 +205,10 @@
              @"titleLabel": self.titleLabel,
              @"artistLabel": self.artistLabel,
              @"playButton": self.playButton,
-             @"deleteButton": self.deleteButton
+             @"deleteButton": self.deleteButton,
+             @"progressSlider": self.progressSlider,
+             @"progressPlayedLabel": self.progressPlayedLabel,
+             @"progressTotalLabel": self.progressTotalLabel
              };
 }
 - (void)_setFirmConstraints {
@@ -173,6 +219,37 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-padding-[titleLabel]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[titleLabel]-padding-[artistLabel]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-padding-[playButton]-padding-[deleteButton(==playButton)]-padding-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-padding-[progressSlider]-padding-|" options:0 metrics:metrics views:views]];
+    
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.progressPlayedLabel
+                                                     attribute:NSLayoutAttributeLeft
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self.progressSlider
+                                                     attribute:NSLayoutAttributeLeft
+                                                    multiplier:1.0
+                                                      constant:6.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.progressPlayedLabel
+                                                     attribute:NSLayoutAttributeTop
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self.progressSlider
+                                                     attribute:NSLayoutAttributeBottom
+                                                    multiplier:1.0
+                                                      constant:0.0]];
+    
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.progressTotalLabel
+                                                     attribute:NSLayoutAttributeRight
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self.progressSlider
+                                                     attribute:NSLayoutAttributeRight
+                                                    multiplier:1.0
+                                                      constant:-6.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.progressTotalLabel
+                                                     attribute:NSLayoutAttributeTop
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self.progressSlider
+                                                     attribute:NSLayoutAttributeBottom
+                                                    multiplier:1.0
+                                                      constant:0.0]];
 }
 - (void)_hiddenConstraints {
     NSDictionary *metrics = [self metrics];
@@ -216,6 +293,13 @@
                                                      attribute:NSLayoutAttributeBottom
                                                     multiplier:1.0
                                                       constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.progressSlider
+                                                     attribute:NSLayoutAttributeTop
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:self
+                                                     attribute:NSLayoutAttributeBottom
+                                                    multiplier:1.0
+                                                      constant:0.0]];
 }
 - (void)_showingConstraints {
     NSDictionary *metrics = [self metrics];
@@ -225,6 +309,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[artworkView]-[artistLabel]-padding-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[deleteButton]-bottomOffset-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[playButton]-bottomOffset-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[artworkView]-padding-[progressSlider]" options:0 metrics:metrics views:views]];
 }
 
 @end

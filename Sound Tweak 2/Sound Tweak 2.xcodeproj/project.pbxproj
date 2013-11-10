@@ -51,6 +51,7 @@
 		94B524A7182EFB5300CD4AC0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B524A6182EFB5300CD4AC0 /* Accelerate.framework */; };
 		94B524AA182EFCC500CD4AC0 /* AudioFileDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B524A9182EFCC500CD4AC0 /* AudioFileDisplayView.m */; };
 		94B524B0182F08A800CD4AC0 /* AudioFileDetailsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B524AF182F08A800CD4AC0 /* AudioFileDetailsButton.m */; };
+		94B524BA182F11EB00CD4AC0 /* OSDAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B524B9182F11EB00CD4AC0 /* OSDAudioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,8 @@
 		94B524A9182EFCC500CD4AC0 /* AudioFileDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileDisplayView.m; sourceTree = "<group>"; };
 		94B524AE182F08A800CD4AC0 /* AudioFileDetailsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileDetailsButton.h; sourceTree = "<group>"; };
 		94B524AF182F08A800CD4AC0 /* AudioFileDetailsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileDetailsButton.m; sourceTree = "<group>"; };
+		94B524B8182F11EB00CD4AC0 /* OSDAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDAudioPlayer.h; sourceTree = "<group>"; };
+		94B524B9182F11EB00CD4AC0 /* OSDAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDAudioPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,7 @@
 		9408CB10182E1ED6006283A7 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				94B524B1182F11D300CD4AC0 /* OSDAudioPlayer */,
 				94B5249A182EFB1200CD4AC0 /* UIImage-OSDImageHelpers */,
 				9408CB11182E1EDC006283A7 /* OSDCoreDataManager */,
 			);
@@ -408,6 +412,16 @@
 			path = "lib/UIImage-OSDImageHelpers";
 			sourceTree = SOURCE_ROOT;
 		};
+		94B524B1182F11D300CD4AC0 /* OSDAudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				94B524B8182F11EB00CD4AC0 /* OSDAudioPlayer.h */,
+				94B524B9182F11EB00CD4AC0 /* OSDAudioPlayer.m */,
+			);
+			name = OSDAudioPlayer;
+			path = lib/OSDAudioPlayer;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -530,6 +544,7 @@
 				944F6D1D182DD7920067EB1B /* SDTAppDelegate.m in Sources */,
 				9451CB78182EEF2100E8E1F5 /* AudioFileCell.m in Sources */,
 				94B524AA182EFCC500CD4AC0 /* AudioFileDisplayView.m in Sources */,
+				94B524BA182F11EB00CD4AC0 /* OSDAudioPlayer.m in Sources */,
 				94B524A3182EFB1200CD4AC0 /* UIImage+OSDImageHelpers.m in Sources */,
 				944F6D56182DDC3D0067EB1B /* SDTRootViewController.m in Sources */,
 				9408CB0C182E1895006283A7 /* SDTAudioManager.m in Sources */,

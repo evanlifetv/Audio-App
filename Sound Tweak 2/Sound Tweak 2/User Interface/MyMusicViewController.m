@@ -16,12 +16,14 @@
 static NSString * const kAudioFileCell = @"kAudioFileCell";
 static NSString * const kAudioPickItemsCell = @"kAudioPickItemsCell";
 
-@interface MyMusicViewController () <NSFetchedResultsControllerDelegate, AudioFileDisplayViewDelegate>
+@interface MyMusicViewController () <NSFetchedResultsControllerDelegate, AudioFileDisplayViewDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @property (nonatomic, weak) AudioFileDisplayView *displayView;
 @property (nonatomic, weak) UIView *backdropView;
+
+@property (nonatomic, weak) AudioFile *stagedToDelete;
 
 @end
 
@@ -187,7 +189,6 @@ static NSString * const kAudioPickItemsCell = @"kAudioPickItemsCell";
     }];
 }
 - (void)dismissAudioFile:(UITapGestureRecognizer *)tapper {
-    
     [_displayView hideInterfaceCompletion:^{
         [UIView animateWithDuration:0.2 animations:^{
             _backdropView.alpha = 0.0;
@@ -203,6 +204,32 @@ static NSString * const kAudioPickItemsCell = @"kAudioPickItemsCell";
 #pragma mark -
 #pragma mark - AudioFileDisplayViewDelegate
 - (void)audioFileDisplayView:(AudioFileDisplayView *)displayView shouldRemoveAudioFile:(AudioFile *)audioFile {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                             delegate:self
+                                                    cancelButtonTitle:nil
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:nil, nil];
+    actionSheet.tintColor = [UIColor soundTweakPurple];
+    
+    self.stagedToDelete = audioFile;
+    
+    NSInteger removeIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"Remove", nil)];
+    actionSheet.destructiveButtonIndex = removeIndex;
+    
+    NSInteger cancelIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+    actionSheet.cancelButtonIndex = cancelIndex;
+    
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == actionSheet.destructiveButtonIndex) {
+        [self commitDeleteForItem:self.stagedToDelete];
+    }
+    _stagedToDelete = nil;
+}
+
+- (void)commitDeleteForItem:(AudioFile *)audioFile {
     [[[OSDCoreDataManager sharedManager] managedObjectContext] deleteObject:audioFile];
     [[OSDCoreDataManager sharedManager] save];
     [self.collectionView reloadData];

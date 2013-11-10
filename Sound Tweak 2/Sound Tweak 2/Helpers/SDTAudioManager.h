@@ -36,6 +36,7 @@
 - (void)willDeleteAudioFile:(AudioFile *)audioFile;
 
 - (UIImage *)imageForAudioFile:(AudioFile *)audioFile;
+- (void)asyncronousImageForAudioFile:(AudioFile *)audioFile completion:(void(^)(UIImage *image, NSNumber *audioFilePersistentID))completion;
 - (NSURL *)audioURLForAudioFile:(AudioFile *)audioFile;
 
 - (void)dumpMemCache;

@@ -15,6 +15,9 @@ id static _sharedSDTAudioManager = nil;
 @interface SDTAudioManager ()
 
 @property (nonatomic, strong) NSCache *imageFileCache;
+@property (nonatomic, strong) dispatch_queue_t fileIOQueue;
+@property (nonatomic, strong) NSManagedObjectContext *fileIOContext;
+
 
 @end
 
@@ -45,10 +48,16 @@ id static _sharedSDTAudioManager = nil;
     @synchronized (self) {
         if (!_imageFileCache) {
             _imageFileCache = [[NSCache alloc] init];
-            _imageFileCache.countLimit = 100;
+            _imageFileCache.countLimit = 30;
         }
         return _imageFileCache;
     }
+}
+- (dispatch_queue_t)fileIOQueue {
+    if (!_fileIOQueue) {
+        _fileIOQueue = dispatch_queue_create("com.soundtweak.AudioFileIO", DISPATCH_QUEUE_CONCURRENT);
+    }
+    return _fileIOQueue;
 }
 
 #pragma mark -
@@ -63,24 +72,40 @@ id static _sharedSDTAudioManager = nil;
 }
 
 #pragma mark -
+#pragma mark - Multithread
+- (void)performFileIO:(void(^)(void))block {
+    dispatch_async(self.fileIOQueue, ^{ @autoreleasepool {
+        if (!_fileIOContext) {
+            _fileIOContext = [[NSManagedObjectContext alloc] init];
+            _fileIOContext.parentContext = [[OSDCoreDataManager sharedManager] managedObjectContext];
+        }
+        block();
+    }});
+}
+
+#pragma mark -
 #pragma mark - Helpers
 - (NSString *)mediaDirectory {
-    if (!_mediaDirectory) {
-        _mediaDirectory = [[[NSFileManager defaultManager] cacheDirectory] stringByAppendingPathComponent:@"audio_cache"];
-        if (![[NSFileManager defaultManager] fileExistsAtPath:_mediaDirectory]) {
-            [[NSFileManager defaultManager] createDirectoryAtPath:_mediaDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+    @synchronized (self) {
+        if (!_mediaDirectory) {
+            _mediaDirectory = [[[NSFileManager defaultManager] cacheDirectory] stringByAppendingPathComponent:@"audio_cache"];
+            if (![[NSFileManager defaultManager] fileExistsAtPath:_mediaDirectory]) {
+                [[NSFileManager defaultManager] createDirectoryAtPath:_mediaDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+            }
         }
+        return _mediaDirectory;
     }
-    return _mediaDirectory;
 }
 - (NSString *)artworkDirectory {
-    if (!_artworkDirectory) {
-        _artworkDirectory = [[[NSFileManager defaultManager] cacheDirectory] stringByAppendingPathComponent:@"artwork_cache"];
-        if (![[NSFileManager defaultManager] fileExistsAtPath:_artworkDirectory]) {
-            [[NSFileManager defaultManager] createDirectoryAtPath:_artworkDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+    @synchronized (self) {
+        if (!_artworkDirectory) {
+            _artworkDirectory = [[[NSFileManager defaultManager] cacheDirectory] stringByAppendingPathComponent:@"artwork_cache"];
+            if (![[NSFileManager defaultManager] fileExistsAtPath:_artworkDirectory]) {
+                [[NSFileManager defaultManager] createDirectoryAtPath:_artworkDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+            }
         }
+        return _artworkDirectory;
     }
-    return _artworkDirectory;
 }
 - (void)saveMediaItem:(MPMediaItem *)mediaItem {
     [self saveMediaItem:mediaItem completion:nil];
@@ -102,13 +127,15 @@ id static _sharedSDTAudioManager = nil;
     @autoreleasepool {
         MPMediaItemArtwork *artwork = [mediaItem valueForProperty:MPMediaItemPropertyArtwork];
         if (artwork) {
-            NSString *imageName = [NSString stringWithFormat:@"%@.png",info[MPMediaItemPropertyPersistentID]];
-            NSString *imagePath = [self.artworkDirectory stringByAppendingPathComponent:imageName];
-            UIImage *artworkImage = [artwork imageWithSize:CGSizeMake(300, 300)];
-            NSData *imageData = UIImagePNGRepresentation(artworkImage);
-            [imageData writeToFile:imagePath atomically:YES];
-            info[@"artworkName"] = imageName;
-            [self.imageFileCache setObject:artworkImage forKey:imageName];
+            [self performFileIO:^{
+                NSString *imageName = [NSString stringWithFormat:@"%@.png",info[MPMediaItemPropertyPersistentID]];
+                NSString *imagePath = [self.artworkDirectory stringByAppendingPathComponent:imageName];
+                UIImage *artworkImage = [artwork imageWithSize:CGSizeMake(300, 300)];
+                NSData *imageData = UIImagePNGRepresentation(artworkImage);
+                [imageData writeToFile:imagePath atomically:YES];
+                info[@"artworkName"] = imageName;
+                [self.imageFileCache setObject:artworkImage forKey:imageName];
+            }];
         }
     }
     
@@ -144,40 +171,69 @@ id static _sharedSDTAudioManager = nil;
 }
 
 - (void)writeAudioFileForInfo:(NSDictionary *)info {
-    NSManagedObjectContext *context = [[NSManagedObjectContext alloc] init];
-    context.parentContext = [[OSDCoreDataManager sharedManager] managedObjectContext];
-    
-    AudioFile *file = [AudioFile insertIntoContext:context];
-    [file setValuesForKeysWithDictionary:info];
-    
-    if ([context save:nil]) {
-        [[OSDCoreDataManager sharedManager] save];
-    }
+    [self performFileIO:^{
+        AudioFile *file = [AudioFile insertIntoContext:self.fileIOContext];
+        [file setValuesForKeysWithDictionary:info];
+        
+        if ([self.fileIOContext save:nil]) {
+            [[OSDCoreDataManager sharedManager] save];
+        }
+    }];
 }
 
 - (void)willDeleteAudioFile:(AudioFile *)audioFile {
+    if (![audioFile isDeleted]) {
+        return;
+    }
+    NSString *imageName = audioFile.artworkName;
     NSString *filePath = [self.mediaDirectory stringByAppendingPathComponent:audioFile.assetName];
-    NSString *imagePath = [self.artworkDirectory stringByAppendingPathComponent:audioFile.artworkName];
-    NSError *fileError = nil;
-    NSError *imageError = nil;
+    NSString *imagePath = [self.artworkDirectory stringByAppendingPathComponent:imageName];
     
-    if (![[NSFileManager defaultManager] removeItemAtPath:filePath error:&fileError]) {
-        NSLog(@"File Error: %@",fileError);
-    }
-    if (![[NSFileManager defaultManager] removeItemAtPath:imagePath error:&imageError]) {
-        NSLog(@"Image Error: %@",imageError);
-    }
+    [self performFileIO:^{
+        NSError *fileError = nil;
+        NSError *imageError = nil;
+        
+        if ([[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:NULL]) {
+            if (![[NSFileManager defaultManager] removeItemAtPath:filePath error:&fileError]) {
+                NSLog(@"File Error: %@",fileError);
+            }
+        }
+        if ([[NSFileManager defaultManager] fileExistsAtPath:imagePath isDirectory:NULL]) {
+            if (![[NSFileManager defaultManager] removeItemAtPath:imagePath error:&imageError]) {
+                NSLog(@"Image Error: %@",imageError);
+            } else {
+                [self.imageFileCache removeObjectForKey:imageName];
+            }
+        }
+    }];
 }
 
 
 - (UIImage *)imageForAudioFile:(AudioFile *)audioFile {
-    UIImage *image = [self.imageFileCache objectForKey:audioFile.artworkName];
+    return [self imageForAudioFileNamed:audioFile.artworkName];
+}
+- (UIImage *)imageForAudioFileNamed:(NSString *)fileName {
+    UIImage *image = [self.imageFileCache objectForKey:fileName];
     if (image) {
         return image;
     }
-    image = [UIImage imageWithContentsOfFile:[self.artworkDirectory stringByAppendingPathComponent:audioFile.artworkName]];
-    [self.imageFileCache setObject:image forKey:audioFile.artworkName];
+    image = [UIImage imageWithContentsOfFile:[self.artworkDirectory stringByAppendingPathComponent:fileName]];
+    if (image) {
+        [self.imageFileCache setObject:image forKey:fileName];
+    }
     return image;
+}
+- (void)asyncronousImageForAudioFile:(AudioFile *)audioFile completion:(void(^)(UIImage *image, NSNumber *audioFilePersistentID))completion {
+    NSNumber *preID = audioFile.persistentID;
+    NSString *artwork = audioFile.artworkName;
+    dispatch_async(self.fileIOQueue, ^{
+        UIImage *image = [self imageForAudioFileNamed:artwork];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (completion) {
+                completion(image, preID);
+            }
+        });
+    });
 }
 - (NSURL *)audioURLForAudioFile:(AudioFile *)audioFile {
     return [NSURL fileURLWithPath:[self.mediaDirectory stringByAppendingPathComponent:audioFile.assetName]];

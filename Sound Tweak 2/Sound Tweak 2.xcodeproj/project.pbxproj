@@ -46,6 +46,11 @@
 		9451CB78182EEF2100E8E1F5 /* AudioFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9451CB77182EEF2100E8E1F5 /* AudioFileCell.m */; };
 		94556C1C182EACAD008AC329 /* SDTStateSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 94556C1B182EACAD008AC329 /* SDTStateSaver.m */; };
 		94556C1F182EE24A008AC329 /* UIDevice+SDTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 94556C1E182EE24A008AC329 /* UIDevice+SDTDevice.m */; };
+		94B524A3182EFB1200CD4AC0 /* UIImage+OSDImageHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B5249F182EFB1200CD4AC0 /* UIImage+OSDImageHelpers.m */; };
+		94B524A5182EFB4E00CD4AC0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B524A4182EFB4E00CD4AC0 /* ImageIO.framework */; };
+		94B524A7182EFB5300CD4AC0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B524A6182EFB5300CD4AC0 /* Accelerate.framework */; };
+		94B524AA182EFCC500CD4AC0 /* AudioFileDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B524A9182EFCC500CD4AC0 /* AudioFileDisplayView.m */; };
+		94B524B0182F08A800CD4AC0 /* AudioFileDetailsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B524AF182F08A800CD4AC0 /* AudioFileDetailsButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +125,14 @@
 		94556C1B182EACAD008AC329 /* SDTStateSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTStateSaver.m; sourceTree = "<group>"; };
 		94556C1D182EE24A008AC329 /* UIDevice+SDTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SDTDevice.h"; sourceTree = "<group>"; };
 		94556C1E182EE24A008AC329 /* UIDevice+SDTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SDTDevice.m"; sourceTree = "<group>"; };
+		94B5249E182EFB1200CD4AC0 /* UIImage+OSDImageHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OSDImageHelpers.h"; sourceTree = "<group>"; };
+		94B5249F182EFB1200CD4AC0 /* UIImage+OSDImageHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OSDImageHelpers.m"; sourceTree = "<group>"; };
+		94B524A4182EFB4E00CD4AC0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		94B524A6182EFB5300CD4AC0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		94B524A8182EFCC500CD4AC0 /* AudioFileDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileDisplayView.h; sourceTree = "<group>"; };
+		94B524A9182EFCC500CD4AC0 /* AudioFileDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileDisplayView.m; sourceTree = "<group>"; };
+		94B524AE182F08A800CD4AC0 /* AudioFileDetailsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileDetailsButton.h; sourceTree = "<group>"; };
+		94B524AF182F08A800CD4AC0 /* AudioFileDetailsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileDetailsButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94B524A7182EFB5300CD4AC0 /* Accelerate.framework in Frameworks */,
+				94B524A5182EFB4E00CD4AC0 /* ImageIO.framework in Frameworks */,
 				9408CB13182E1EE9006283A7 /* CoreData.framework in Frameworks */,
 				9408CB01182E1321006283A7 /* AVFoundation.framework in Frameworks */,
 				9408CAFF182E102C006283A7 /* MediaPlayer.framework in Frameworks */,
@@ -187,6 +202,7 @@
 		9408CB10182E1ED6006283A7 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				94B5249A182EFB1200CD4AC0 /* UIImage-OSDImageHelpers */,
 				9408CB11182E1EDC006283A7 /* OSDCoreDataManager */,
 			);
 			name = lib;
@@ -233,6 +249,8 @@
 		944F6D0B182DD7920067EB1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94B524A6182EFB5300CD4AC0 /* Accelerate.framework */,
+				94B524A4182EFB4E00CD4AC0 /* ImageIO.framework */,
 				9408CB12182E1EE9006283A7 /* CoreData.framework */,
 				9408CB00182E1321006283A7 /* AVFoundation.framework */,
 				9408CAFE182E102C006283A7 /* MediaPlayer.framework */,
@@ -372,9 +390,23 @@
 				9451CB74182EE76600E8E1F5 /* MyMusicAddMusicCell.m */,
 				9451CB76182EEF2100E8E1F5 /* AudioFileCell.h */,
 				9451CB77182EEF2100E8E1F5 /* AudioFileCell.m */,
+				94B524A8182EFCC500CD4AC0 /* AudioFileDisplayView.h */,
+				94B524A9182EFCC500CD4AC0 /* AudioFileDisplayView.m */,
+				94B524AE182F08A800CD4AC0 /* AudioFileDetailsButton.h */,
+				94B524AF182F08A800CD4AC0 /* AudioFileDetailsButton.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
+		};
+		94B5249A182EFB1200CD4AC0 /* UIImage-OSDImageHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				94B5249E182EFB1200CD4AC0 /* UIImage+OSDImageHelpers.h */,
+				94B5249F182EFB1200CD4AC0 /* UIImage+OSDImageHelpers.m */,
+			);
+			name = "UIImage-OSDImageHelpers";
+			path = "lib/UIImage-OSDImageHelpers";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -487,6 +519,7 @@
 				944F6D5A182DDC540067EB1B /* TopViewController.m in Sources */,
 				944F6D52182DDB1D0067EB1B /* MyMusicViewController.m in Sources */,
 				944F6D41182DD8540067EB1B /* SDTViewController.m in Sources */,
+				94B524B0182F08A800CD4AC0 /* AudioFileDetailsButton.m in Sources */,
 				9408CB17182E1F10006283A7 /* SoundTweak.xcdatamodeld in Sources */,
 				944F6D44182DD8690067EB1B /* SweepGeneratorViewController.m in Sources */,
 				9408CB1A182E20A1006283A7 /* AudioFile.m in Sources */,
@@ -496,6 +529,8 @@
 				944F6D4F182DDB100067EB1B /* PinkNoiseViewController.m in Sources */,
 				944F6D1D182DD7920067EB1B /* SDTAppDelegate.m in Sources */,
 				9451CB78182EEF2100E8E1F5 /* AudioFileCell.m in Sources */,
+				94B524AA182EFCC500CD4AC0 /* AudioFileDisplayView.m in Sources */,
+				94B524A3182EFB1200CD4AC0 /* UIImage+OSDImageHelpers.m in Sources */,
 				944F6D56182DDC3D0067EB1B /* SDTRootViewController.m in Sources */,
 				9408CB0C182E1895006283A7 /* SDTAudioManager.m in Sources */,
 				9408CB04182E1377006283A7 /* NSData+SDTData.m in Sources */,

@@ -18,7 +18,10 @@ NS_INLINE UIColor *_RGBA(CGFloat r, CGFloat g, CGFloat b, CGFloat a) {
 
 + (UIColor *)soundTweakPurple;
 + (UIColor *)soundTweakLightPurple;
++ (UIColor *)soundTweakDarkPurple;
 + (UIColor *)soundTweakHairLinePurple;
 + (UIColor *)selectedSoundTweakPurple;
+
++ (UIColor *)deleteColorRed;
 
 @end

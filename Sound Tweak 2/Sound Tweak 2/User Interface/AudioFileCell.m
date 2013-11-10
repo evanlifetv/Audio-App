@@ -29,7 +29,15 @@
     
     self.artistLabel.text = audioFile.artist;
     self.titleLabel.text = audioFile.title;
-    self.albumArtwork.image = [[SDTAudioManager sharedManager] imageForAudioFile:audioFile];
+    self.albumArtwork.image = nil;
+    if (_audioFile) {
+        [[SDTAudioManager sharedManager] asyncronousImageForAudioFile:audioFile completion:^(UIImage *image, NSNumber *audioFilePersistentID) {
+            if (_audioFile && [_audioFile.persistentID isEqual:audioFilePersistentID]) {
+                self.albumArtwork.image = image;
+            }
+        }];
+    }
+    
     self.separator.backgroundColor = [UIColor soundTweakHairLinePurple];
 }
 

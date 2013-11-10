@@ -10,14 +10,17 @@
 #import "SDTAudioManager.h"
 #import "MyMusicAddMusicCell.h"
 #import "AudioFileCell.h"
+#import "UIImage+OSDImageHelpers.h"
+#import "AudioFileDisplayView.h"
 
 static NSString * const kAudioFileCell = @"kAudioFileCell";
 static NSString * const kAudioPickItemsCell = @"kAudioPickItemsCell";
 
-@interface MyMusicViewController () <NSFetchedResultsControllerDelegate>
+@interface MyMusicViewController () <NSFetchedResultsControllerDelegate, AudioFileDisplayViewDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
+@property (nonatomic, weak) AudioFileDisplayView *displayView;
 @property (nonatomic, weak) UIView *backdropView;
 
 @end
@@ -149,30 +152,61 @@ static NSString * const kAudioPickItemsCell = @"kAudioPickItemsCell";
 - (void)showAudioFile:(AudioFile *)audioFile {
     if (!_backdropView) {
         UIView *back = [[UIView alloc] initWithFrame:self.view.bounds];
-        back.backgroundColor = [[UIColor soundTweakHairLinePurple] colorWithAlphaComponent:0.8];
-        [back addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissAudioFile:)]];
+        back.backgroundColor = [UIColor whiteColor];
         _backdropView = back;
         [self.view addSubview:back];
     }
     _backdropView.alpha = 0.0;
     
-    UIView *snapshot = [self.collectionView snapshotViewAfterScreenUpdates:YES];
-    snapshot.frame = _backdropView.bounds;
+    UIGraphicsBeginImageContextWithOptions(_backdropView.bounds.size, YES, 0.5);
     
-    [_backdropView addSubview:snapshot];
+    [self.collectionView drawViewHierarchyInRect:CGRectMake(0, 0, _backdropView.bounds.size.width, _backdropView.bounds.size.height) afterScreenUpdates:YES];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:_backdropView.bounds];
+    
+    imageView.image = [image osd_bluredImageWithRadius:10 tintColor:[[UIColor soundTweakHairLinePurple] colorWithAlphaComponent:0.2] error:nil];
+    [_backdropView addSubview:imageView];
+    
+    AudioFileDisplayView *display = [[AudioFileDisplayView alloc] initWithFrame:_backdropView.frame];
+    display.audioFile = audioFile;
+    display.backgroundColor = [UIColor clearColor];
+    display.bottomOffset = CGRectGetHeight(self.tabBarController.tabBar.bounds);
+    display.delegate = self;
+    [_backdropView addSubview:display];
+    
+    [display addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissAudioFile:)]];
+    
+    _displayView = display;
     
     [UIView animateWithDuration:0.2 animations:^{
         _backdropView.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        [_displayView showInterfaceCompletion:nil];
     }];
 }
 - (void)dismissAudioFile:(UITapGestureRecognizer *)tapper {
     
-    [UIView animateWithDuration:0.2 animations:^{
-        _backdropView.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        [_backdropView removeFromSuperview];
-        _backdropView = nil;
+    [_displayView hideInterfaceCompletion:^{
+        [UIView animateWithDuration:0.2 animations:^{
+            _backdropView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [_displayView removeFromSuperview];
+            _displayView = nil;
+            [_backdropView removeFromSuperview];
+            _backdropView = nil;
+        }];
     }];
+}
+
+#pragma mark -
+#pragma mark - AudioFileDisplayViewDelegate
+- (void)audioFileDisplayView:(AudioFileDisplayView *)displayView shouldRemoveAudioFile:(AudioFile *)audioFile {
+    [[[OSDCoreDataManager sharedManager] managedObjectContext] deleteObject:audioFile];
+    [[OSDCoreDataManager sharedManager] save];
+    [self.collectionView reloadData];
+    [self dismissAudioFile:nil];
 }
 
 #pragma mark -
